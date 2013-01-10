@@ -43,10 +43,10 @@ void Robot::RobotInit() {
 	
 	
 	
-	Robot::driveTrain->frontLeft->SetOffset(0);
-	Robot::driveTrain->frontRight->SetOffset(0);
-	Robot::driveTrain->rearLeft->SetOffset(0);
-	Robot::driveTrain->rearRight->SetOffset(0);
+	Robot::driveTrain->frontLeft->SetOffset(FLOffset);
+	Robot::driveTrain->frontRight->SetOffset(FROffset);
+	Robot::driveTrain->rearLeft->SetOffset(RLOffset);
+	Robot::driveTrain->rearRight->SetOffset(RROffset);
 	
 	
 //	drivetrain->frontLeft->Enable();

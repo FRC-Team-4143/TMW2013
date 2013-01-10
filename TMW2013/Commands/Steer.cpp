@@ -82,10 +82,10 @@ void Steer::Execute() {
 	RRRatio = RR/maxspeed;
 	
 	//Set drive speeds
-	Robot::driveTrain->frontLeftDrive->Set(-FLRatio);
-	Robot::driveTrain->frontLeftDrive->Set(FRRatio);
-	Robot::driveTrain->frontLeftDrive->Set(-RLRatio);
-	Robot::driveTrain->frontLeftDrive->Set(RRRatio);
+	Robot::driveTrain->frontLeftDrive->Set(-FLRatio*Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->frontLeftDrive->Set(FRRatio*Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->frontLeftDrive->Set(-RLRatio*Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->frontLeftDrive->Set(RRRatio*Robot::oi->getDriverJoystick()->GetY());
 	
 	//Set Steering PID Setpoints
 	Robot::driveTrain->frontLeft->SetSetpoint(((-2.5 / pi) * thetaFL) + 3.75);
