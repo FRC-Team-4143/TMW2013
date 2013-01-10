@@ -388,7 +388,8 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h \
+  C:/WindRiver/vxworks-6.3/target/h/math.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Steer.h:
 
@@ -1165,3 +1166,5 @@ C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 C:/WindRiver/workspace/WPILib/WPILib.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h:
+
+C:/WindRiver/vxworks-6.3/target/h/math.h:
