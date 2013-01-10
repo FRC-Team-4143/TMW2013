@@ -15,6 +15,8 @@ void _GLOBAL__I__ZN5SteerC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
 
+void _GLOBAL__I__ZN13RAWCConstants17singletonInstanceE();
+
 void _GLOBAL__I__ZN5Robot10driveTrainE();
 
 void _GLOBAL__I__ZN8RobotMap23driveTrainFrontRightPosE();
@@ -74,6 +76,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN4CrabC2Ev,
     _GLOBAL__I__ZN5SteerC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
+    _GLOBAL__I__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__I__ZN5Robot10driveTrainE,
     _GLOBAL__I__ZN8RobotMap23driveTrainFrontRightPosE,
     _GLOBAL__I__ZN10DriveTrainC2Ev,
@@ -110,6 +113,8 @@ void _GLOBAL__D__ZN4CrabC2Ev();
 void _GLOBAL__D__ZN5SteerC2Ev();
 
 void _GLOBAL__D__ZN2OIC2Ev();
+
+void _GLOBAL__D__ZN13RAWCConstants17singletonInstanceE();
 
 void _GLOBAL__D__ZN5Robot10driveTrainE();
 
@@ -162,6 +167,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN4CrabC2Ev,
     _GLOBAL__D__ZN5SteerC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
+    _GLOBAL__D__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__D__ZN5Robot10driveTrainE,
     _GLOBAL__D__ZN8RobotMap23driveTrainFrontRightPosE,
     _GLOBAL__D__ZN10DriveTrainC2Ev,
