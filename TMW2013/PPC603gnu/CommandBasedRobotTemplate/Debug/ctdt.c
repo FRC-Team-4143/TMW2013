@@ -11,6 +11,8 @@ void _GLOBAL__I__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__I__ZN4CrabC2Ev();
 
+void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
+
 void _GLOBAL__I__ZN5SteerC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
@@ -74,6 +76,7 @@ void (*_ctors[])() =
     {
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN4CrabC2Ev,
+    _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__I__ZN5SteerC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
     _GLOBAL__I__ZN13RAWCConstants17singletonInstanceE,
@@ -109,6 +112,8 @@ void (*_ctors[])() =
 void _GLOBAL__D__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__D__ZN4CrabC2Ev();
+
+void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
 
 void _GLOBAL__D__ZN5SteerC2Ev();
 
@@ -165,6 +170,7 @@ void (*_dtors[])() =
     {
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN4CrabC2Ev,
+    _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__D__ZN5SteerC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
     _GLOBAL__D__ZN13RAWCConstants17singletonInstanceE,
