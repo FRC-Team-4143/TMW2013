@@ -51,17 +51,17 @@ Children:
           validators: &id007 [ChildDropdownSelected]
           value: DriveTrain FrontRightPos
         Limit Output: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Output, validators: null, value: false}
+          name: Limit Output, validators: null, value: true}
         F: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: F, validators: null,
           value: 0.0}
         Tolerance: !!robotbuilder.data.properties.DoubleProperty {default: 0.2, name: Tolerance,
           validators: null, value: 0.2}
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Continuous, validators: null, value: false}
+          name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
           name: Maximum Output, validators: null, value: 1.0}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Input, validators: null, value: false}
+          name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
           default: 0
           name: Output
@@ -75,9 +75,9 @@ Children:
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-          value: 1.0}
+          value: 0.01}
         Maximum Input: !!robotbuilder.data.properties.DoubleProperty {default: 5,
-          name: Maximum Input, validators: null, value: 5.0}
+          name: Maximum Input, validators: null, value: 1024.0}
     - Name: FrontLeft
       Base: PID Controller
       Children:
@@ -119,17 +119,17 @@ Children:
           validators: *id007
           value: DriveTrain FrontLeftPos
         Limit Output: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Output, validators: null, value: false}
+          name: Limit Output, validators: null, value: true}
         F: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: F, validators: null,
           value: 0.0}
         Tolerance: !!robotbuilder.data.properties.DoubleProperty {default: 0.2, name: Tolerance,
           validators: null, value: 0.2}
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Continuous, validators: null, value: false}
+          name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
           name: Maximum Output, validators: null, value: 1.0}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Input, validators: null, value: false}
+          name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
           default: 0
           name: Output
@@ -143,9 +143,9 @@ Children:
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-          value: 1.0}
+          value: 0.01}
         Maximum Input: !!robotbuilder.data.properties.DoubleProperty {default: 5,
-          name: Maximum Input, validators: null, value: 5.0}
+          name: Maximum Input, validators: null, value: 1024.0}
     - Name: RearRight
       Base: PID Controller
       Children:
@@ -187,17 +187,17 @@ Children:
           validators: *id007
           value: DriveTrain RearRightPos
         Limit Output: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Output, validators: null, value: false}
+          name: Limit Output, validators: null, value: true}
         F: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: F, validators: null,
           value: 0.0}
         Tolerance: !!robotbuilder.data.properties.DoubleProperty {default: 0.2, name: Tolerance,
           validators: null, value: 0.2}
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Continuous, validators: null, value: false}
+          name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
           name: Maximum Output, validators: null, value: 1.0}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Input, validators: null, value: false}
+          name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
           default: 0
           name: Output
@@ -211,9 +211,9 @@ Children:
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-          value: 1.0}
+          value: 0.01}
         Maximum Input: !!robotbuilder.data.properties.DoubleProperty {default: 5,
-          name: Maximum Input, validators: null, value: 5.0}
+          name: Maximum Input, validators: null, value: 1024.0}
     - Name: RearLeft
       Base: PID Controller
       Children:
@@ -255,17 +255,17 @@ Children:
           validators: *id007
           value: DriveTrain RearLeftPos
         Limit Output: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Output, validators: null, value: false}
+          name: Limit Output, validators: null, value: true}
         F: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: F, validators: null,
           value: 0.0}
         Tolerance: !!robotbuilder.data.properties.DoubleProperty {default: 0.2, name: Tolerance,
           validators: null, value: 0.2}
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Continuous, validators: null, value: false}
+          name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
           name: Maximum Output, validators: null, value: 1.0}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
-          name: Limit Input, validators: null, value: false}
+          name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
           default: 0
           name: Output
@@ -279,9 +279,9 @@ Children:
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-          value: 1.0}
+          value: 0.01}
         Maximum Input: !!robotbuilder.data.properties.DoubleProperty {default: 5,
-          name: Maximum Input, validators: null, value: 5.0}
+          name: Maximum Input, validators: null, value: 1024.0}
     - Name: FrontRightDrive
       Base: CAN Jaguar
       Children: []
@@ -312,7 +312,7 @@ Children:
           name: CAN ID
           validators: *id006
           value: '5'
-    - Name: RearleftDrive
+    - Name: RearLeftDrive
       Base: CAN Jaguar
       Children: []
       Properties:
@@ -429,6 +429,6 @@ Properties:
     validators: null, value: 16}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
-  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\clemenj\NetBeansProjects',
+  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Owner\NetBeansProjects',
     extension: null, folder: true, name: Java Project Directory, validators: null,
     value: 'C:\Users\clemenj\NetBeansProjects'}

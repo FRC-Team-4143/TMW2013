@@ -34,8 +34,6 @@ private:
 	void LeftTurn4Wheels();	//Calculates a left hand turn
 	void RightTurn4Wheels();	//Calculates a right hand turn
 	
-	//Varibles used in class
-
 	//Varibles needed to be defined in constructor
 	double radian; // input steering angle in radians
 	double pi;	//3.14159
