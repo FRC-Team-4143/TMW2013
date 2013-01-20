@@ -35,21 +35,21 @@ void Robot::RobotInit() {
 	FROffset = File->getValueForKey("FROff");
 	RLOffset = File->getValueForKey("RLOff");
 	RROffset = File->getValueForKey("RROff");
-	
-	Robot::driveTrain->frontLeft->SetOffset(335);
-	Robot::driveTrain->frontRight->SetOffset(590);
-	Robot::driveTrain->rearLeft->SetOffset(512);
-	Robot::driveTrain->rearRight->SetOffset(465);
+		
+	Robot::driveTrain->frontLeft->SetOffset(554-512);
+	Robot::driveTrain->frontRight->SetOffset(577-512);
+	Robot::driveTrain->rearLeft->SetOffset(522-512);
+	Robot::driveTrain->rearRight->SetOffset(469-512);
 	
 	Robot::driveTrain->frontLeftPos->SetAverageBits(256);
 	Robot::driveTrain->frontRightPos->SetAverageBits(256);
 	Robot::driveTrain->rearLeftPos->SetAverageBits(256);
 	Robot::driveTrain->rearRightPos->SetAverageBits(256);
 	
-//	drivetrain->frontLeft->Enable();
-//	drivetrain->frontRight->Enable();
-//	drivetrain->rearLeft->Enable();
-//	drivetrain->rearRight->Enable();
+	Robot::driveTrain->frontLeft->Enable();
+	Robot::driveTrain->frontRight->Enable();
+	Robot::driveTrain->rearLeft->Enable();
+	Robot::driveTrain->rearRight->Enable();
   }
 	
 void Robot::DisabledPeriodic(){
@@ -58,6 +58,16 @@ void Robot::DisabledPeriodic(){
 	SmartDashboard::PutNumber("RearLeftPos",Robot::driveTrain->rearLeftPos->GetAverageValue());
 	SmartDashboard::PutNumber("RearRightPos",Robot::driveTrain->rearRightPos->GetAverageValue());
 	SmartDashboard::PutNumber("SW",Robot::oi->getSteeringWheel());	
+	
+	FLOffset = File->getValueForKey("FLOff");
+	FROffset = File->getValueForKey("FROff");
+	RLOffset = File->getValueForKey("RLOff");
+	RROffset = File->getValueForKey("RROff");
+	
+	SmartDashboard::PutNumber("FrontLeftFileOff",FLOffset);
+	SmartDashboard::PutNumber("FrontRightFileOff",FROffset);
+	SmartDashboard::PutNumber("RearLeftFileOff",RLOffset);
+	SmartDashboard::PutNumber("RearRightFileOff",RROffset);
 }
 void Robot::AutonomousInit() {
 	if (autonomousCommand != NULL)

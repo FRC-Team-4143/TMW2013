@@ -29,7 +29,9 @@ public:
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	double SWConversion;
+	double radian;
+	double position;
+	double pi;	//3.14159
 };
 
 #endif

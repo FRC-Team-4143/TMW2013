@@ -8,8 +8,8 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "Crab.h"
-Crab::Crab():
-SWConversion(204.8)
+Crab::Crab()
+
 {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
@@ -24,16 +24,19 @@ void Crab::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void Crab::Execute() {
 	//Set drive speeds
-	Robot::driveTrain->frontLeftDrive->Set(Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->frontLeftDrive->Set(Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->frontLeftDrive->Set(Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->frontLeftDrive->Set(Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->frontLeftDrive->Set(-Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->frontRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->rearLeftDrive->Set(-Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->rearRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
 	
+	radian = (Robot::oi->getSteeringWheel()-0.264)*1.418; //converts SW input to radians
+	position = 768 - 163.1*radian; //converts radians to counts
+			
 	//Set Steering PID Setpoints
-	Robot::driveTrain->frontLeft->SetSetpoint(Robot::oi->getSteeringWheel()*SWConversion);
-	Robot::driveTrain->frontRight->SetSetpoint(Robot::oi->getSteeringWheel()*SWConversion);
-	Robot::driveTrain->rearLeft->SetSetpoint(Robot::oi->getSteeringWheel()*SWConversion);
-	Robot::driveTrain->rearRight->SetSetpoint(Robot::oi->getSteeringWheel()*SWConversion);
+	Robot::driveTrain->frontLeft->SetSetpoint(position);
+	Robot::driveTrain->frontRight->SetSetpoint(position);
+	Robot::driveTrain->rearLeft->SetSetpoint(position);
+	Robot::driveTrain->rearRight->SetSetpoint(position);
 	
 }
 // Make this return true when this Command no longer needs to run execute()

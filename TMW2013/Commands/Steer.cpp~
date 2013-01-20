@@ -25,11 +25,8 @@ void Steer::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void Steer::Execute() {
-	//Converting from a range of 0.0v to 2.2v to a range of 0 degress to 180 degrees
-	//180 / 2.2 = 81.45
 	
-	radian = (Robot::oi->getSteeringWheel() - 0/*SWOffset*/) * 81.45 * pi / 180; //practice driver station = 58.82; //competetion driver station = 81.45;
-	//!!!NEED TO CLEAN UP THE CALC AND CREATE SW OFFSET!!!!
+	radian = (Robot::oi->getSteeringWheel()-0.264)*1.418; //converts SW input to radians
 	
 	thetaRC = pi - radian;  //convert steering angle to rear center wheel angle
 	
@@ -79,10 +76,10 @@ void Steer::Execute() {
 	Robot::driveTrain->frontLeftDrive->Set(RRRatio*Robot::oi->getDriverJoystick()->GetY());
 	
 	//Set Steering PID Setpoints
-	Robot::driveTrain->frontLeft->SetSetpoint(((-2.5 / pi) * thetaFL) + 3.75);
-	Robot::driveTrain->frontRight->SetSetpoint(((-2.5 / pi) * thetaFR) + 3.75);
-	Robot::driveTrain->rearLeft->SetSetpoint(((-2.5 / pi) * thetaRL) + 3.75);
-	Robot::driveTrain->rearRight->SetSetpoint(((-2.5 / pi) * thetaRR) + 3.75);
+	Robot::driveTrain->frontLeft->SetSetpoint(768 - 163.1*thetaFL);
+	Robot::driveTrain->frontRight->SetSetpoint(768 - 163.1*thetaFR);
+	Robot::driveTrain->rearLeft->SetSetpoint(768 - 163.1*thetaRL);
+	Robot::driveTrain->rearRight->SetSetpoint(768 - 163.1*thetaRR);
 }
 void Steer::LeftTurn4Wheels()
 {

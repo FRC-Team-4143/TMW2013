@@ -10,7 +10,7 @@
 #include "Steer.h"
 #include "math.h"
 Steer::Steer():
-pi(3.14159), A(.5), W(26), X(30), Y(26), thetaRC(0.0), FRRatio(0.0), FLRatio(0.0), 
+pi(3.14159), A(.5), W(14.75), X(23.25), Y(14.75), thetaRC(0.0), FRRatio(0.0), FLRatio(0.0), 
 RRRatio(0.0), RLRatio(0.0)
 {
 	// Use requires() here to declare subsystem dependencies
@@ -25,11 +25,8 @@ void Steer::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void Steer::Execute() {
-	//Converting from a range of 0.0v to 2.2v to a range of 0 degress to 180 degrees
-	//180 / 2.2 = 81.45
 	
-	radian = (Robot::oi->getSteeringWheel() - 0/*SWOffset*/) * 81.45 * pi / 180; //practice driver station = 58.82; //competetion driver station = 81.45;
-	//!!!NEED TO CLEAN UP THE CALC AND CREATE SW OFFSET!!!!
+	radian = (Robot::oi->getSteeringWheel()-0.264)*1.418; //converts SW input to radians
 	
 	thetaRC = pi - radian;  //convert steering angle to rear center wheel angle
 	
@@ -74,15 +71,15 @@ void Steer::Execute() {
 	
 	//Set drive speeds
 	Robot::driveTrain->frontLeftDrive->Set(-FLRatio*Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->frontLeftDrive->Set(FRRatio*Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->frontLeftDrive->Set(-RLRatio*Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->frontLeftDrive->Set(RRRatio*Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->frontRightDrive->Set(FRRatio*Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->rearLeftDrive->Set(-RLRatio*Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->rearRightDrive->Set(RRRatio*Robot::oi->getDriverJoystick()->GetY());
 	
 	//Set Steering PID Setpoints
-	Robot::driveTrain->frontLeft->SetSetpoint(((-2.5 / pi) * thetaFL) + 3.75);
-	Robot::driveTrain->frontRight->SetSetpoint(((-2.5 / pi) * thetaFR) + 3.75);
-	Robot::driveTrain->rearLeft->SetSetpoint(((-2.5 / pi) * thetaRL) + 3.75);
-	Robot::driveTrain->rearRight->SetSetpoint(((-2.5 / pi) * thetaRR) + 3.75);
+	Robot::driveTrain->frontLeft->SetSetpoint(768 - 512/pi*thetaFL);
+	Robot::driveTrain->frontRight->SetSetpoint(768 - 512/pi*thetaFR);
+	Robot::driveTrain->rearLeft->SetSetpoint(768 - 512/pi*thetaRL);
+	Robot::driveTrain->rearRight->SetSetpoint(768 - 512/pi*thetaRR);
 }
 void Steer::LeftTurn4Wheels()
 {

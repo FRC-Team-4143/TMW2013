@@ -373,6 +373,28 @@ Children:
         name: Number
         validators: [Joystick]
         value: '1'
+  - Name: wheeloffset
+    Base: Digital Button
+    Children: []
+    Properties:
+      Command: !!robotbuilder.data.properties.TypeSelectionProperty
+        default: None
+        name: Command
+        type: Command
+        validators: [TypeDropdownSelected]
+        value: SetWheelOffsets
+      When to Run: !!robotbuilder.data.properties.ChoicesProperty
+        choices: [whileHeld, whenPressed, whenReleased]
+        default: whileHeld
+        name: When to Run
+        validators: null
+        value: whenPressed
+      Digital Pin: !!robotbuilder.data.properties.ChoicesProperty
+        choices: ['1', '2', '3', '4', '5', '6', '7', '8']
+        default: '1'
+        name: Digital Pin
+        validators: null
+        value: '6'
   Properties: {}
 - Name: Commands
   Base: Commands

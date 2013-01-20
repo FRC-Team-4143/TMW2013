@@ -40,10 +40,16 @@ void SetWheelOffsets::Execute() {
 		Robot::driveTrain->frontRight->SetOffset(FROffset);
 		Robot::driveTrain->rearLeft->SetOffset(RLOffset);
 		Robot::driveTrain->rearRight->SetOffset(RROffset);
+		
+		loopcounter ++;
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SetWheelOffsets::IsFinished() {
-	return false;
+	if (loopcounter > 0)
+		return true;
+	else
+		return false;
+	
 }
 // Called once after isFinished returns true
 void SetWheelOffsets::End() {
