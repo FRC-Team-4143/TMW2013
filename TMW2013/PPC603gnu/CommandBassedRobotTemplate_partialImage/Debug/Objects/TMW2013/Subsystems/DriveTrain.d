@@ -378,6 +378,7 @@
   C:/WindRiver/workspace/WPILib/Vision/HSLImage.h \
   C:/WindRiver/workspace/WPILib/Vision/ColorImage.h \
   C:/WindRiver/workspace/WPILib/WPIErrors.h \
+  C:/WindRiver/vxworks-6.3/target/h/Math.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/Crab.h \
@@ -1149,6 +1150,8 @@ C:/WindRiver/workspace/WPILib/Vision/HSLImage.h:
 C:/WindRiver/workspace/WPILib/Vision/ColorImage.h:
 
 C:/WindRiver/workspace/WPILib/WPIErrors.h:
+
+C:/WindRiver/vxworks-6.3/target/h/Math.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h:
 

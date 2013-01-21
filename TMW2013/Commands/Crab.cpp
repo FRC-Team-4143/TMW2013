@@ -23,21 +23,9 @@ void Crab::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void Crab::Execute() {
-	//Set drive speeds
-	Robot::driveTrain->frontLeftDrive->Set(-Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->frontRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->rearLeftDrive->Set(-Robot::oi->getDriverJoystick()->GetY());
-	Robot::driveTrain->rearRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
-	
 	radian = (Robot::oi->getSteeringWheel()-0.264)*pi/2.214; //converts SW input to radians
-	position = 768 - 512/pi*radian; //converts radians to counts
-			
-	//Set Steering PID Setpoints
-	Robot::driveTrain->frontLeft->SetSetpoint(position);
-	Robot::driveTrain->frontRight->SetSetpoint(position);
-	Robot::driveTrain->rearLeft->SetSetpoint(position);
-	Robot::driveTrain->rearRight->SetSetpoint(position);
-	
+
+	Robot::driveTrain->Crabbing(radian);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Crab::IsFinished() {
