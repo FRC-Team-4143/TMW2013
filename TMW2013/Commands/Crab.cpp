@@ -24,7 +24,6 @@ void Crab::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void Crab::Execute() {
 	radian = (Robot::oi->getSteeringWheel()-0.264)*pi/2.214; //converts SW input to radians
-
 	Robot::driveTrain->Crabbing(radian);
 }
 // Make this return true when this Command no longer needs to run execute()

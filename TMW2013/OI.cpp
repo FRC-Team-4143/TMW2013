@@ -21,7 +21,7 @@ OI::OI() {
 	driverJoystick = new Joystick(1);
 	
 	wheelOffsetButton = new JoystickButton(driverJoystick, 6);
-	wheelOffsetButton->WhileHeld(new SetWheelOffsets());
+	wheelOffsetButton->WhenPressed(new SetWheelOffsets());
 	trigger = new JoystickButton(driverJoystick, 1);
 	trigger->WhileHeld(new Crab());
      

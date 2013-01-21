@@ -324,7 +324,7 @@ Children:
           value: '4'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: Crab}
+        name: Default Command, type: Command, validators: null, value: Steer}
   Properties: {}
 - Name: Operator Interface
   Base: OI
@@ -350,10 +350,11 @@ Children:
           default: None
           name: Command
           type: Command
-          validators: [TypeDropdownSelected]
-          value: Steer
+          validators: &id009 [TypeDropdownSelected]
+          value: Crab
         Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+          choices: &id010 ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
+            '12']
           default: '1'
           name: Button
           validators: null
@@ -361,11 +362,35 @@ Children:
         Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
           name: Joystick, validators: null, value: DriverJoystick}
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: [whileHeld, whenPressed, whenReleased]
+          choices: &id011 [whileHeld, whenPressed, whenReleased]
           default: whileHeld
           name: When to Run
           validators: null
           value: whileHeld
+    - Name: WheelOffsetButton
+      Base: Joystick Button
+      Children: []
+      Properties:
+        Command: !!robotbuilder.data.properties.TypeSelectionProperty
+          default: None
+          name: Command
+          type: Command
+          validators: *id009
+          value: SetWheelOffsets
+        Button: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id010
+          default: '1'
+          name: Button
+          validators: null
+          value: '6'
+        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
+          name: Joystick, validators: null, value: DriverJoystick}
+        When to Run: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id011
+          default: whileHeld
+          name: When to Run
+          validators: null
+          value: whenPressed
     Properties:
       Number: !!robotbuilder.data.properties.ChoicesProperty
         choices: ['1', '2', '3', '4']
@@ -373,28 +398,6 @@ Children:
         name: Number
         validators: [Joystick]
         value: '1'
-  - Name: wheeloffset
-    Base: Digital Button
-    Children: []
-    Properties:
-      Command: !!robotbuilder.data.properties.TypeSelectionProperty
-        default: None
-        name: Command
-        type: Command
-        validators: [TypeDropdownSelected]
-        value: SetWheelOffsets
-      When to Run: !!robotbuilder.data.properties.ChoicesProperty
-        choices: [whileHeld, whenPressed, whenReleased]
-        default: whileHeld
-        name: When to Run
-        validators: null
-        value: whenPressed
-      Digital Pin: !!robotbuilder.data.properties.ChoicesProperty
-        choices: ['1', '2', '3', '4', '5', '6', '7', '8']
-        default: '1'
-        name: Digital Pin
-        validators: null
-        value: '6'
   Properties: {}
 - Name: Commands
   Base: Commands
@@ -451,6 +454,6 @@ Properties:
     validators: null, value: 16}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
-  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Owner\NetBeansProjects',
+  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\clemenj\NetBeansProjects',
     extension: null, folder: true, name: Java Project Directory, validators: null,
     value: 'C:\Users\clemenj\NetBeansProjects'}

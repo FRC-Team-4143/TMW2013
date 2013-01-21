@@ -41,8 +41,6 @@ void DriveTrain::InitDefaultCommand() {
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-
-
 void DriveTrain::Crabbing(float radian) {
 	
 		position = 768 - 512/pi*radian; //converts radians to counts for encoders
@@ -59,8 +57,6 @@ void DriveTrain::Crabbing(float radian) {
 		Robot::driveTrain->rearLeftDrive->Set(-Robot::oi->getDriverJoystick()->GetY());
 		Robot::driveTrain->rearRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
 }
-
-
 void DriveTrain::Steering(float radian) {
 		
 	thetaRC = pi - radian;  //convert steering angle to rear center wheel angle
