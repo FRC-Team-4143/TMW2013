@@ -101,10 +101,10 @@ void DriveTrain::Steer(float radian, float speed) {
 	RRRatio = RR/maxspeed;
 	
 	//Set drive speeds
-	frontLeftDrive->Set(-FLRatio*Robot::oi->getDriverJoystick()->GetY());
-	frontRightDrive->Set(FRRatio*Robot::oi->getDriverJoystick()->GetY());
-	rearLeftDrive->Set(-RLRatio*Robot::oi->getDriverJoystick()->GetY());
-	rearRightDrive->Set(RRRatio*Robot::oi->getDriverJoystick()->GetY());
+	frontLeftDrive->Set(-FLRatio*speed);
+	frontRightDrive->Set(FRRatio*speed);
+	rearLeftDrive->Set(-RLRatio*speed);
+	rearRightDrive->Set(RRRatio*speed);
 	
 	//Set Steering PID Setpoints
 	frontLeft->SetSetpoint(768 - 512/pi*thetaFL);

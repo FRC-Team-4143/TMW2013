@@ -74,6 +74,6 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void Steer(float radian, float speed);
-	void Crab(float radian);
+	void Crab(float radian, float speed);
 };
 #endif

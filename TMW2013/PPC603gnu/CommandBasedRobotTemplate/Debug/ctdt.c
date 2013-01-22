@@ -11,9 +11,9 @@ void _GLOBAL__I__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__I__ZN9CrabDriveC2Ev();
 
-void _GLOBAL__I__ZN9DriveSideC2Ev();
+void _GLOBAL__I__ZN5DriveC2Ev();
 
-void _GLOBAL__I__ZN13DriveStraightC2Ev();
+void _GLOBAL__I__ZN13RandomDrivingC2Ev();
 
 void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
 
@@ -21,9 +21,7 @@ void _GLOBAL__I__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__I__ZN9TurnRobotC2Ev();
 
-void _GLOBAL__I__ZN14TurnWheelsSideC2Ev();
-
-void _GLOBAL__I__ZN18TurnWheelsStraightC2Ev();
+void _GLOBAL__I__ZN10TurnWheelsC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
 
@@ -86,13 +84,12 @@ void (*_ctors[])() =
     {
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN9CrabDriveC2Ev,
-    _GLOBAL__I__ZN9DriveSideC2Ev,
-    _GLOBAL__I__ZN13DriveStraightC2Ev,
+    _GLOBAL__I__ZN5DriveC2Ev,
+    _GLOBAL__I__ZN13RandomDrivingC2Ev,
     _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__I__ZN10SteerDriveC2Ev,
     _GLOBAL__I__ZN9TurnRobotC2Ev,
-    _GLOBAL__I__ZN14TurnWheelsSideC2Ev,
-    _GLOBAL__I__ZN18TurnWheelsStraightC2Ev,
+    _GLOBAL__I__ZN10TurnWheelsC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
     _GLOBAL__I__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__I__ZN5Robot10driveTrainE,
@@ -128,9 +125,9 @@ void _GLOBAL__D__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__D__ZN9CrabDriveC2Ev();
 
-void _GLOBAL__D__ZN9DriveSideC2Ev();
+void _GLOBAL__D__ZN5DriveC2Ev();
 
-void _GLOBAL__D__ZN13DriveStraightC2Ev();
+void _GLOBAL__D__ZN13RandomDrivingC2Ev();
 
 void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
 
@@ -138,9 +135,7 @@ void _GLOBAL__D__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__D__ZN9TurnRobotC2Ev();
 
-void _GLOBAL__D__ZN14TurnWheelsSideC2Ev();
-
-void _GLOBAL__D__ZN18TurnWheelsStraightC2Ev();
+void _GLOBAL__D__ZN10TurnWheelsC2Ev();
 
 void _GLOBAL__D__ZN2OIC2Ev();
 
@@ -195,13 +190,12 @@ void (*_dtors[])() =
     {
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN9CrabDriveC2Ev,
-    _GLOBAL__D__ZN9DriveSideC2Ev,
-    _GLOBAL__D__ZN13DriveStraightC2Ev,
+    _GLOBAL__D__ZN5DriveC2Ev,
+    _GLOBAL__D__ZN13RandomDrivingC2Ev,
     _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__D__ZN10SteerDriveC2Ev,
     _GLOBAL__D__ZN9TurnRobotC2Ev,
-    _GLOBAL__D__ZN14TurnWheelsSideC2Ev,
-    _GLOBAL__D__ZN18TurnWheelsStraightC2Ev,
+    _GLOBAL__D__ZN10TurnWheelsC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
     _GLOBAL__D__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__D__ZN5Robot10driveTrainE,
