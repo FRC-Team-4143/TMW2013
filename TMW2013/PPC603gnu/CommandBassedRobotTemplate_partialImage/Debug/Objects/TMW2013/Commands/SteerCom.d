@@ -1,6 +1,7 @@
-CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Crab.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Crab.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Crab.h \
+ \
+ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/SteerCom.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/ErrorBase.h \
   C:/WindRiver/workspace/WPILib/Base.h \
@@ -390,9 +391,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Crab.o:  \
   C:/WindRiver/vxworks-6.3/target/h/Math.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
+  C:/WindRiver/vxworks-6.3/target/h/math.h
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Crab.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
@@ -1173,3 +1175,5 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream:
+
+C:/WindRiver/vxworks-6.3/target/h/math.h:

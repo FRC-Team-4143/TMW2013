@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef CRAB_H
-#define CRAB_H
+#ifndef STEERCOM_H
+#define STEERCOM_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,17 +21,18 @@
  *
  * @author ExampleAuthor
  */
-class Crab: public Command {
+class SteerCom: public Command {
 public:
-	Crab();
+	SteerCom();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	double radian;
-	double position;
-	double pi;	//3.14159
-};
+	
+private:
+	float	radian; // input steering angle in radians
+	float	speed;
+	};
 
 #endif

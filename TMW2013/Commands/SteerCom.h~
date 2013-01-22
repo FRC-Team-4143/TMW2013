@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef STEER_H
-#define STEER_H
+#ifndef STEERCOM_H
+#define STEERCOM_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class Steer: public Command {
+class SteerCom: public Command {
 public:
-	Steer();
+	SteerCom();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

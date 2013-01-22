@@ -9,11 +9,15 @@
 
 void _GLOBAL__I__ZN17AutonomousCommandC2Ev();
 
-void _GLOBAL__I__ZN4CrabC2Ev();
+void _GLOBAL__I__ZN7CrabComC2Ev();
+
+void _GLOBAL__I__ZN5DriveC2Ev();
 
 void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
 
-void _GLOBAL__I__ZN5SteerC2Ev();
+void _GLOBAL__I__ZN8SteerComC2Ev();
+
+void _GLOBAL__I__ZN10TurnWheelsC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
 
@@ -32,6 +36,8 @@ void _GLOBAL__I__ZN9Scheduler9_instanceE();
 void _GLOBAL__I__ZN11WaitCommandC2Ed();
 
 void _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange();
+
+void _GLOBAL__I__ZN10LiveWindow10m_instanceE();
 
 void _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE();
 
@@ -75,9 +81,11 @@ extern void (*_ctors[])();
 void (*_ctors[])() =
     {
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
-    _GLOBAL__I__ZN4CrabC2Ev,
+    _GLOBAL__I__ZN7CrabComC2Ev,
+    _GLOBAL__I__ZN5DriveC2Ev,
     _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
-    _GLOBAL__I__ZN5SteerC2Ev,
+    _GLOBAL__I__ZN8SteerComC2Ev,
+    _GLOBAL__I__ZN10TurnWheelsC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
     _GLOBAL__I__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__I__ZN5Robot10driveTrainE,
@@ -87,6 +95,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN9Scheduler9_instanceE,
     _GLOBAL__I__ZN11WaitCommandC2Ed,
     _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange,
+    _GLOBAL__I__ZN10LiveWindow10m_instanceE,
     _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE,
     _GLOBAL__I__ZN8Notifier21kTimerInterruptNumberE,
     _GLOBAL__I__ZN8Resource12m_createLockE,
@@ -111,11 +120,15 @@ void (*_ctors[])() =
 
 void _GLOBAL__D__ZN17AutonomousCommandC2Ev();
 
-void _GLOBAL__D__ZN4CrabC2Ev();
+void _GLOBAL__D__ZN7CrabComC2Ev();
+
+void _GLOBAL__D__ZN5DriveC2Ev();
 
 void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
 
-void _GLOBAL__D__ZN5SteerC2Ev();
+void _GLOBAL__D__ZN8SteerComC2Ev();
+
+void _GLOBAL__D__ZN10TurnWheelsC2Ev();
 
 void _GLOBAL__D__ZN2OIC2Ev();
 
@@ -169,9 +182,11 @@ extern void (*_dtors[])();
 void (*_dtors[])() =
     {
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
-    _GLOBAL__D__ZN4CrabC2Ev,
+    _GLOBAL__D__ZN7CrabComC2Ev,
+    _GLOBAL__D__ZN5DriveC2Ev,
     _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
-    _GLOBAL__D__ZN5SteerC2Ev,
+    _GLOBAL__D__ZN8SteerComC2Ev,
+    _GLOBAL__D__ZN10TurnWheelsC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
     _GLOBAL__D__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__D__ZN5Robot10driveTrainE,

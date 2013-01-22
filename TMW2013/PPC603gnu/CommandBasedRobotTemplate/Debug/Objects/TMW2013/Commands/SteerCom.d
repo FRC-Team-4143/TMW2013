@@ -1,7 +1,6 @@
- \
- CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Subsystems/DriveTrain.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/DriveTrain.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/DriveTrain.h \
+CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/SteerCom.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/ErrorBase.h \
   C:/WindRiver/workspace/WPILib/Base.h \
@@ -109,6 +108,7 @@
   C:/WindRiver/workspace/WPILib/networktables2/type/ComplexData.h \
   C:/WindRiver/workspace/WPILib/tables/ITableListener.h \
   C:/WindRiver/workspace/WPILib/tables/ITable.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h \
   C:/WindRiver/workspace/WPILib/Accelerometer.h \
@@ -378,26 +378,22 @@
   C:/WindRiver/workspace/WPILib/Vision/HSLImage.h \
   C:/WindRiver/workspace/WPILib/Vision/ColorImage.h \
   C:/WindRiver/workspace/WPILib/WPIErrors.h \
-  C:/WindRiver/vxworks-6.3/target/h/Math.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h \
-  C:/WindRiver/workspace/WPILib/WPILib.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/CrabCom.h \
-  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Robot.h \
-  C:/WindRiver/workspace/WPILib/WPILib.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RobotMap.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h \
   C:/WindRiver/workspace/WPILib/LiveWindow/LiveWindow.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/AutonomousCommand.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/../Robot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/DriveTrain.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RAWCConstants.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h \
+  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
+  C:/WindRiver/workspace/WPILib/WPILib.h \
+  C:/WindRiver/vxworks-6.3/target/h/Math.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/SteerCom.h
+  C:/WindRiver/vxworks-6.3/target/h/math.h
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/DriveTrain.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
@@ -612,6 +608,8 @@ C:/WindRiver/workspace/WPILib/networktables2/type/ComplexData.h:
 C:/WindRiver/workspace/WPILib/tables/ITableListener.h:
 
 C:/WindRiver/workspace/WPILib/tables/ITable.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
 
 C:/WindRiver/workspace/WPILib/WPILib.h:
 
@@ -1151,38 +1149,30 @@ C:/WindRiver/workspace/WPILib/Vision/ColorImage.h:
 
 C:/WindRiver/workspace/WPILib/WPIErrors.h:
 
-C:/WindRiver/vxworks-6.3/target/h/Math.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h:
-
-C:/WindRiver/workspace/WPILib/WPILib.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/CrabCom.h:
-
-C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Robot.h:
-
-C:/WindRiver/workspace/WPILib/WPILib.h:
-
 C:/WindRiver/workspace/WPILib/Commands/Command.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RobotMap.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h:
 
 C:/WindRiver/workspace/WPILib/LiveWindow/LiveWindow.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/AutonomousCommand.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/../Robot.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/DriveTrain.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h:
+C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RAWCConstants.h:
+C:/WindRiver/workspace/WPILib/WPILib.h:
+
+C:/WindRiver/vxworks-6.3/target/h/Math.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/SteerCom.h:
+C:/WindRiver/vxworks-6.3/target/h/math.h:
