@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef TURNWHEELS_H
-#define TURNWHEELS_H
+#ifndef TURNWHEELSSTRAIGHT_H
+#define TURNWHEELSSTRAIGHT_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,17 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class TurnWheels: public Command {
+class TurnWheelsStraight: public Command {
 public:
-	TurnWheels();
+	TurnWheelsStraight();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	
-private:
-	float radian;
 };
 
 #endif

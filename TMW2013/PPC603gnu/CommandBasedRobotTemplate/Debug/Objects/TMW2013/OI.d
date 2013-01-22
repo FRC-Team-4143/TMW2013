@@ -394,12 +394,15 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabCom.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveSide.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveStraight.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheelsSide.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheelsStraight.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/OI.h:
 
@@ -1189,14 +1192,20 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabCom.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveSide.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveStraight.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerCom.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheelsSide.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheelsStraight.h:

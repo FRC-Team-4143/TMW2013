@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef DRIVE_H
-#define DRIVE_H
+#ifndef DRIVESTRAIGHT_H
+#define DRIVESTRAIGHT_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class Drive: public Command {
+class DriveStraight: public Command {
 public:
-	Drive();
+	DriveStraight();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef CRABCOM_H
-#define CRABCOM_H
+#ifndef DRIVESIDE_H
+#define DRIVESIDE_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,17 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class CrabCom: public Command {
+class DriveSide: public Command {
 public:
-	CrabCom();
+	DriveSide();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	double radian;
-	double position;
-	double pi;	//3.14159
 };
 
 #endif

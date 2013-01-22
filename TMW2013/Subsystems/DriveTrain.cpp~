@@ -57,7 +57,7 @@ void DriveTrain::Crab(float radian) {
 		Robot::driveTrain->rearLeftDrive->Set(-Robot::oi->getDriverJoystick()->GetY());
 		Robot::driveTrain->rearRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
 }
-void DriveTrain::Steer(float radian) {
+void DriveTrain::Steer(float radian, float speed) {
 		
 	thetaRC = pi - radian;  //convert steering angle to rear center wheel angle
 	
@@ -112,7 +112,8 @@ void DriveTrain::Steer(float radian) {
 	Robot::driveTrain->rearLeft->SetSetpoint(768 - 512/pi*thetaRL);
 	Robot::driveTrain->rearRight->SetSetpoint(768 - 512/pi*thetaRR);
 }
-void SteerCom::LeftTurn4Wheels()
+
+void DriveTrain::LeftTurn4Wheels()
 {
 	Z = ((A * X) * tan(pi - thetaRC));				//pi was subtracted out of this earlier
 	
@@ -132,7 +133,7 @@ void SteerCom::LeftTurn4Wheels()
 	RL = (Z - W) / sin(pi - thetaRL);
 	RR = (Z + W) / sin(pi - thetaRR);
 }
-void SteerCom::RightTurn4Wheels()
+void DriveTrain::RightTurn4Wheels()
 {	
 	Z = ((A * X) * tan(thetaRC));				//pi was subtracted out of this earlier
 	
