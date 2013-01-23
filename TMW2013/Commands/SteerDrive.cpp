@@ -19,7 +19,7 @@ SteerDrive::SteerDrive() {
 void SteerDrive::Initialize() {
 	radian = (Robot::oi->getSteeringWheel()-0.264)*1.418; //converts SW input to radians
 	speed = Robot::oi->getDriverJoystick()->GetY();
-	Robot::driveTrain->Steer(radian, speed);
+	Robot::driveTrain->Steer(radian, speed, 0.5);
 }
 // Called repeatedly when this Command is scheduled to run
 void SteerDrive::Execute() {
