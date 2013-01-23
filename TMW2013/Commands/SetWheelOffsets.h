@@ -35,7 +35,7 @@ public:
 	float RLOffset;
 	float RROffset;
 	RAWCConstants* File;
-	int loopcounter;
+	bool complete;
 	static const int StOffAvLoops = 50;
 
 };

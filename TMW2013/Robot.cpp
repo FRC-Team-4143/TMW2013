@@ -55,6 +55,9 @@ void Robot::RobotInit() {
   }
 	
 void Robot::DisabledPeriodic(){
+	
+	Scheduler::GetInstance()->Run();
+	
 	SmartDashboard::PutNumber("FrontLeftPos",Robot::driveTrain->frontLeftPos->GetAverageValue());
 	SmartDashboard::PutNumber("FrontRightPos",Robot::driveTrain->frontRightPos->GetAverageValue());
 	SmartDashboard::PutNumber("RearLeftPos",Robot::driveTrain->rearLeftPos->GetAverageValue());
