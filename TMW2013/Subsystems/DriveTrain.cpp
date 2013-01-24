@@ -304,10 +304,11 @@ void DriveTrain::Pivot(float twistinput, float speedinput)
 			thetaRL = 2*pi - robotangle + deltaRL - 2*pi;
 	else
 		thetaRL = 2*pi - robotangle + deltaRL;
+	
 	//Set Steering PID Setpoints  ----THIS NEEDS TO BE DEBUGGED... NOT SURE WHERE 0RAD IS FOR THIS MATH
-	frontLeft->SetSetpoint(768 - 512/pi*thetaFL);
-	frontRight->SetSetpoint(768 - 512/pi*thetaFR);
-	rearLeft->SetSetpoint(768 - 512/pi*thetaRL);
-	rearRight->SetSetpoint(768 - 512/pi*thetaRR);
+	frontLeft->SetSetpoint(512/pi*thetaFL);
+	frontRight->SetSetpoint(512/pi*thetaFR);
+	rearLeft->SetSetpoint(512/pi*thetaRL);
+	rearRight->SetSetpoint(512/pi*thetaRR);
 	
 }
