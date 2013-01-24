@@ -396,6 +396,7 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h \
@@ -1195,6 +1196,8 @@ c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h:
 

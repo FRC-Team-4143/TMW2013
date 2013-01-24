@@ -1,7 +1,6 @@
- \
- CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/TurnWheelsSide.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheelsSide.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheelsSide.h \
+CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/PivotDrive.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/ErrorBase.h \
   C:/WindRiver/workspace/WPILib/Base.h \
@@ -393,7 +392,7 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheelsSide.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
