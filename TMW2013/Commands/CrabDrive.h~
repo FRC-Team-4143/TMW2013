@@ -32,8 +32,7 @@ public:
 
 private:
 	double radian;
-	double position;
-	double pi;	//3.14159
+	static const double pi=3.14159;
 	double speed;
 
 };
