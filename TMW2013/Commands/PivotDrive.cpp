@@ -26,7 +26,7 @@ void PivotDrive::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void PivotDrive::Execute() {
-	
+	Robot::driveTrain->Pivot(.5, Robot::oi->getDriverJoystick()->GetY());
 }
 
 // Make this return true when this Command no longer needs to run execute()
