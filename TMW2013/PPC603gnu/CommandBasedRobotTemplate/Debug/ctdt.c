@@ -19,6 +19,8 @@ void _GLOBAL__I__ZN13RandomDrivingC2Ev();
 
 void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
 
+void _GLOBAL__I__ZN22ShooterAtDefinedOutputC2Ev();
+
 void _GLOBAL__I__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__I__ZN9TurnRobotC2Ev();
@@ -34,6 +36,8 @@ void _GLOBAL__I__ZN5Robot10driveTrainE();
 void _GLOBAL__I__ZN8RobotMap23driveTrainFrontRightPosE();
 
 void _GLOBAL__I__ZN10DriveTrainC2Ev();
+
+void _GLOBAL__I__ZN7ShooterC2Ev();
 
 void _GLOBAL__I__ZN12PrintCommandC2EPKc();
 
@@ -90,6 +94,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN10PivotDriveC2Ev,
     _GLOBAL__I__ZN13RandomDrivingC2Ev,
     _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
+    _GLOBAL__I__ZN22ShooterAtDefinedOutputC2Ev,
     _GLOBAL__I__ZN10SteerDriveC2Ev,
     _GLOBAL__I__ZN9TurnRobotC2Ev,
     _GLOBAL__I__ZN10TurnWheelsC2Ev,
@@ -98,6 +103,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN5Robot10driveTrainE,
     _GLOBAL__I__ZN8RobotMap23driveTrainFrontRightPosE,
     _GLOBAL__I__ZN10DriveTrainC2Ev,
+    _GLOBAL__I__ZN7ShooterC2Ev,
     _GLOBAL__I__ZN12PrintCommandC2EPKc,
     _GLOBAL__I__ZN9Scheduler9_instanceE,
     _GLOBAL__I__ZN11WaitCommandC2Ed,
@@ -136,6 +142,8 @@ void _GLOBAL__D__ZN13RandomDrivingC2Ev();
 
 void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
 
+void _GLOBAL__D__ZN22ShooterAtDefinedOutputC2Ev();
+
 void _GLOBAL__D__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__D__ZN9TurnRobotC2Ev();
@@ -151,6 +159,8 @@ void _GLOBAL__D__ZN5Robot10driveTrainE();
 void _GLOBAL__D__ZN8RobotMap23driveTrainFrontRightPosE();
 
 void _GLOBAL__D__ZN10DriveTrainC2Ev();
+
+void _GLOBAL__D__ZN7ShooterC2Ev();
 
 void _GLOBAL__D__ZN9Scheduler9_instanceE();
 
@@ -199,6 +209,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN10PivotDriveC2Ev,
     _GLOBAL__D__ZN13RandomDrivingC2Ev,
     _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
+    _GLOBAL__D__ZN22ShooterAtDefinedOutputC2Ev,
     _GLOBAL__D__ZN10SteerDriveC2Ev,
     _GLOBAL__D__ZN9TurnRobotC2Ev,
     _GLOBAL__D__ZN10TurnWheelsC2Ev,
@@ -207,6 +218,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN5Robot10driveTrainE,
     _GLOBAL__D__ZN8RobotMap23driveTrainFrontRightPosE,
     _GLOBAL__D__ZN10DriveTrainC2Ev,
+    _GLOBAL__D__ZN7ShooterC2Ev,
     _GLOBAL__D__ZN9Scheduler9_instanceE,
     _GLOBAL__D_wpi_error_s_ModuleIndexOutOfRange,
     _GLOBAL__D__ZN17MotorSafetyHelper12m_headHelperE,

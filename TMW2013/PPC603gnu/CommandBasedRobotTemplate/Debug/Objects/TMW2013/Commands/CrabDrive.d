@@ -388,6 +388,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/CrabDrive.o:  \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
   C:/WindRiver/vxworks-6.3/target/h/Math.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Shooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream
@@ -1167,6 +1168,8 @@ C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 C:/WindRiver/workspace/WPILib/WPILib.h:
 
 C:/WindRiver/vxworks-6.3/target/h/Math.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Shooter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h:
 

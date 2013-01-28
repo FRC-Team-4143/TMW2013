@@ -392,6 +392,9 @@
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/../Robot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/DriveTrain.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Shooter.h \
+  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
+  C:/WindRiver/workspace/WPILib/WPILib.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
@@ -1178,6 +1181,12 @@ C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/../Robot.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/DriveTrain.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Shooter.h:
+
+C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
+
+C:/WindRiver/workspace/WPILib/WPILib.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h:
 

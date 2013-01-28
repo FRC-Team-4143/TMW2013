@@ -24,6 +24,9 @@ private:
 	
 	static const double pi=3.14159;
 	
+	AnalogChannel gyroChannel;
+	Gyro gyro;
+	
 	float gyroreference;
 	
 	
