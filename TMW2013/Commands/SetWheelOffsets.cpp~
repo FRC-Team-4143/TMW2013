@@ -37,10 +37,10 @@ void SetWheelOffsets::Execute() {
 			
 		File->save();
 		
-		Robot::driveTrain->frontLeft->SetOffset(FLOffset);
-		Robot::driveTrain->frontRight->SetOffset(FROffset);
-		Robot::driveTrain->rearLeft->SetOffset(RLOffset);
-		Robot::driveTrain->rearRight->SetOffset(RROffset);
+		Robot::driveTrain->frontLeft->SetOffset(FLOffset-512);
+		Robot::driveTrain->frontRight->SetOffset(FROffset-512);
+		Robot::driveTrain->rearLeft->SetOffset(RLOffset-512);
+		Robot::driveTrain->rearRight->SetOffset(RROffset-512);
 		
 		complete = true;
 }

@@ -342,7 +342,7 @@ Children:
           value: '1'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: CrabDrive}
+        name: Default Command, type: Command, validators: null, value: SteerDrive}
   Properties: {}
 - Name: Operator Interface
   Base: OI
@@ -534,6 +534,6 @@ Properties:
     validators: null, value: 16}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
-  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\clemenj\NetBeansProjects',
+  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Owner\NetBeansProjects',
     extension: null, folder: true, name: Java Project Directory, validators: null,
     value: 'C:\Users\clemenj\NetBeansProjects'}

@@ -31,6 +31,7 @@ void Robot::RobotInit() {
 	
 	Robot::driveTrain->SetWheelbase(14.75, 23.25, 14.75);
 	
+	
 	File = RAWCConstants::getInstance();
 	 
 	FLOffset = File->getValueForKey("FLOff");
@@ -38,10 +39,10 @@ void Robot::RobotInit() {
 	RLOffset = File->getValueForKey("RLOff");
 	RROffset = File->getValueForKey("RROff");
 		
-	Robot::driveTrain->frontLeft->SetOffset(554-512);
-	Robot::driveTrain->frontRight->SetOffset(577-512);
-	Robot::driveTrain->rearLeft->SetOffset(522-512);
-	Robot::driveTrain->rearRight->SetOffset(469-512);
+	Robot::driveTrain->frontLeft->SetOffset(FLOffset-512);
+	Robot::driveTrain->frontRight->SetOffset(FROffset-512);
+	Robot::driveTrain->rearLeft->SetOffset(RLOffset-512);
+	Robot::driveTrain->rearRight->SetOffset(RROffset-512);
 	
 	Robot::driveTrain->frontLeftPos->SetAverageBits(256);
 	Robot::driveTrain->frontRightPos->SetAverageBits(256);
@@ -69,10 +70,30 @@ void Robot::DisabledPeriodic(){
 	RLOffset = File->getValueForKey("RLOff");
 	RROffset = File->getValueForKey("RROff");
 	
-	SmartDashboard::PutNumber("FrontLeftFileOff",FLOffset);
-	SmartDashboard::PutNumber("FrontRightFileOff",FROffset);
-	SmartDashboard::PutNumber("RearLeftFileOff",RLOffset);
-	SmartDashboard::PutNumber("RearRightFileOff",RROffset);
+	if (Robot::oi->getDriverJoystick()->GetRawButton(6))
+	{
+		FLOffset = FROffset = RLOffset = RROffset = 3.14159/2;
+
+		FLOffset = Robot::driveTrain->frontLeftPos->GetAverageValue();
+		FROffset = Robot::driveTrain->frontRightPos->GetAverageValue();
+		RLOffset = Robot::driveTrain->rearLeftPos->GetAverageValue();
+		RROffset = Robot::driveTrain->rearRightPos->GetAverageValue();
+		
+		File->restoreData();
+		
+		File->insertKeyAndValue("FLOff", FLOffset);
+		File->insertKeyAndValue("FROff", FROffset);
+		File->insertKeyAndValue("RLOff", RLOffset);
+		File->insertKeyAndValue("RROff", RROffset);
+			
+		File->save();
+		
+		Robot::driveTrain->frontLeft->SetOffset(FLOffset-512);
+		Robot::driveTrain->frontRight->SetOffset(FROffset-512);
+		Robot::driveTrain->rearLeft->SetOffset(RLOffset-512);
+		Robot::driveTrain->rearRight->SetOffset(RROffset-512);
+	
+	}
 }
 void Robot::AutonomousInit() {
 	if (autonomousCommand != NULL)
@@ -94,6 +115,8 @@ void Robot::TeleopInit() {
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
 		Scheduler::GetInstance()->Run();
+	
+	
 }
 void Robot::TestPeriodic() {
 	lw->Run();

@@ -43,8 +43,6 @@ void _GLOBAL__I__ZN11WaitCommandC2Ed();
 
 void _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange();
 
-void _GLOBAL__I__ZN10LiveWindow10m_instanceE();
-
 void _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE();
 
 void _GLOBAL__I__ZN8Notifier21kTimerInterruptNumberE();
@@ -104,7 +102,6 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN9Scheduler9_instanceE,
     _GLOBAL__I__ZN11WaitCommandC2Ed,
     _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange,
-    _GLOBAL__I__ZN10LiveWindow10m_instanceE,
     _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE,
     _GLOBAL__I__ZN8Notifier21kTimerInterruptNumberE,
     _GLOBAL__I__ZN8Resource12m_createLockE,
