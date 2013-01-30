@@ -56,8 +56,10 @@ void DriveTrain::SetGyroReference(){
 }
 void DriveTrain::Crab(float radian, float speed) {
 	
-		position = 768 - 512/pi*radian; //converts radians to counts for encoders
-				
+		position = 512 - 512/pi*radian; //converts radians to counts for encoders
+		
+		SmartDashboard::PutNumber("CrabPosition", position);
+		
 		//Set Steering PID Setpoints
 		frontLeft->SetSetpoint(position);
 		frontRight->SetSetpoint(position);
@@ -65,10 +67,10 @@ void DriveTrain::Crab(float radian, float speed) {
 		rearRight->SetSetpoint(position);
 		
 		//Set drive speeds
-		frontLeftDrive->Set(-speed);
-		frontRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
-		rearLeftDrive->Set(-Robot::oi->getDriverJoystick()->GetY());
-		rearRightDrive->Set(Robot::oi->getDriverJoystick()->GetY());
+		frontLeftDrive->Set(speed);
+		frontRightDrive->Set(-speed);
+		rearLeftDrive->Set(speed);
+		rearRightDrive->Set(-speed);
 }
 void DriveTrain::Steer(float radian, float speed, float a) {
 	

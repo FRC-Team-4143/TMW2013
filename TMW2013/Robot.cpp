@@ -55,6 +55,8 @@ void Robot::RobotInit() {
 	Robot::driveTrain->frontRight->Enable();
 	Robot::driveTrain->rearLeft->Enable();
 	Robot::driveTrain->rearRight->Enable();
+	
+
   }
 	
 void Robot::DisabledPeriodic(){
@@ -71,6 +73,17 @@ void Robot::DisabledPeriodic(){
 	FROffset = File->getValueForKey("FROff");
 	RLOffset = File->getValueForKey("RLOff");
 	RROffset = File->getValueForKey("RROff");
+
+	
+	joystickrad = (5*3.14159/2+Robot::oi->getDriverJoystick()->GetDirectionRadians());
+		
+		if (joystickrad > 2*3.14159)
+			joystickrad = joystickrad-2*3.14159;
+	
+	SmartDashboard::PutNumber("JoystickRak", Robot::oi->getDriverJoystick()->GetDirectionRadians());	
+	SmartDashboard::PutNumber("JoystickRadFixed",joystickrad);	
+	SmartDashboard::PutNumber("JoystickSpeed", sqrt(pow(Robot::oi->getDriverJoystick()->GetY(),2))+pow(Robot::oi->getDriverJoystick()->GetX(),2));
+	SmartDashboard::PutNumber("WheelPos",768 - 512/3.14159*joystickrad);	
 	
 	if (Robot::oi->getDriverJoystick()->GetRawButton(6))
 	{
@@ -93,7 +106,8 @@ void Robot::DisabledPeriodic(){
 		Robot::driveTrain->frontRight->SetOffset(FROffset-512);
 		Robot::driveTrain->rearLeft->SetOffset(RLOffset-512);
 		Robot::driveTrain->rearRight->SetOffset(RROffset-512);
-	
+		
+		
 	}
 }
 void Robot::AutonomousInit() {
@@ -117,7 +131,9 @@ void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
 		Scheduler::GetInstance()->Run();
 	
-	Robot::shooter->RunAtOutput(-.7,.7);
+	Robot::shooter->RunAtOutput(-.55,.55);
+	
+
 	
 	
 }
