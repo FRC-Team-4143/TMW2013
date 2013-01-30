@@ -40,6 +40,7 @@ public:
 	float joystickrad;
 	
 	RAWCConstants* File;
+	Preferences* Prefs;
 	float FLOffset;
 	float FROffset;
 	float RLOffset;

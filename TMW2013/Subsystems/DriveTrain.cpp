@@ -61,6 +61,14 @@ void DriveTrain::Crab(float radian, float speed) {
 		SmartDashboard::PutNumber("CrabPosition", position);
 		
 		//Set Steering PID Setpoints
+		if (fabs(frontLeftPos->GetAverageValue() - position) > 256) {
+			speed = -speed;
+			if(position >= 512)
+				position = position - 512;
+			else
+				position = position +512;
+		}
+		
 		frontLeft->SetSetpoint(position);
 		frontRight->SetSetpoint(position);
 		rearLeft->SetSetpoint(position);
