@@ -29,7 +29,7 @@ public:
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	bool counter;
+	Preferences* Prefs;
 };
 
 #endif

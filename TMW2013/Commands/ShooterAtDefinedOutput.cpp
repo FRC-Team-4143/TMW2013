@@ -17,17 +17,15 @@ ShooterAtDefinedOutput::ShooterAtDefinedOutput() {
 }
 // Called just before this Command runs the first time
 void ShooterAtDefinedOutput::Initialize() {
-	counter = false;
+	Prefs = Preferences::GetInstance();
+	Robot::shooter->ToggleRun();
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterAtDefinedOutput::Execute() {
-	Robot::shooter->ToggleRun();
-	counter = true;
+	Robot::shooter->RunAtOutput(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterAtDefinedOutput::IsFinished() {
-	if(counter)
-		return true;
 	return false;
 }
 // Called once after isFinished returns true

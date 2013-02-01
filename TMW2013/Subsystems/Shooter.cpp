@@ -40,21 +40,12 @@ void Shooter::ToggleRun() {
 	
 }
 void Shooter::RunAtOutput(float entry, float exit) {
-	SmartDashboard::PutBoolean("ShooterToggle",runtoggle);
+	
 	if (runtoggle) {
-		if (fabs(entryset - entry) > .002) {
-			entryset = entryset - .002;
-			wheelShooterEntry->Set(entryset);
-		}
-			else
 			wheelShooterEntry->Set(entry);
-		
-		if (fabs(exitset - exit) > .002) {
-			exitset = exitset + .002;
-			wheelShooterExit->Set(exitset);
-		}
-			else
 			wheelShooterExit->Set(exit);
+			entryset = entry;
+			exitset = exit;
 	}
 		else {
 			if(entryset < 0) {
