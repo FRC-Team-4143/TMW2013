@@ -19,10 +19,14 @@ ShooterAtDefinedOutput::ShooterAtDefinedOutput() {
 void ShooterAtDefinedOutput::Initialize() {
 	Prefs = Preferences::GetInstance();
 	Robot::shooter->ToggleRun();
+	SetTimeout(Prefs->GetFloat("StartupTime",2.0));
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterAtDefinedOutput::Execute() {
-	Robot::shooter->RunAtOutput(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
+	if(!IsTimedOut())
+		Robot::shooter->RunAtOutput(1.0,1.0);
+	else
+		Robot::shooter->RunAtOutput(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterAtDefinedOutput::IsFinished() {

@@ -59,6 +59,7 @@ void Robot::RobotInit() {
 	Robot::driveTrain->rearLeft->Enable();
 	Robot::driveTrain->rearRight->Enable();
 	
+	Prefs->PutFloat("StartupTime",2.0);
 	Prefs->PutFloat("EntrySpeed",0);
 	Prefs->PutFloat("ExitSpeed",0);
 
