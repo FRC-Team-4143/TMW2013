@@ -182,7 +182,7 @@ void DriveTrain::RightTurn4Wheels()
 void DriveTrain::Pivot(float twistinput, float speedinput)
 {
 	
-	robotangle = gyro.GetAngle() - gyroreference;
+	robotangle = (gyro.GetAngle() - gyroreference)*2*pi/180;
 	
 	diagonal = sqrt(pow(Y,2)/4+pow(X,2)/4);
 	
