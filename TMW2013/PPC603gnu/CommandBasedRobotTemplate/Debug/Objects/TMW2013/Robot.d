@@ -388,6 +388,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Robot.o:  \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
   C:/WindRiver/vxworks-6.3/target/h/Math.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/Pickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/Shooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/RAWCConstants.h \
@@ -1168,6 +1169,8 @@ C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 C:/WindRiver/workspace/WPILib/WPILib.h:
 
 C:/WindRiver/vxworks-6.3/target/h/Math.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/Pickup.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/Shooter.h:
 

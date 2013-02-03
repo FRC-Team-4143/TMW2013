@@ -391,18 +391,22 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
   C:/WindRiver/vxworks-6.3/target/h/Math.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Pickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Shooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DropDisk.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterAtDefinedOutput.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h
@@ -1189,6 +1193,8 @@ C:/WindRiver/workspace/WPILib/WPILib.h:
 
 C:/WindRiver/vxworks-6.3/target/h/Math.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Pickup.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Shooter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h:
@@ -1201,6 +1207,10 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DropDisk.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h:
@@ -1212,6 +1222,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterAtDefinedOutput.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h:
 

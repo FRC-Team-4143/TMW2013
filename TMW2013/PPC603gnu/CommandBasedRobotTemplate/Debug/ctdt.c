@@ -13,6 +13,10 @@ void _GLOBAL__I__ZN9CrabDriveC2Ev();
 
 void _GLOBAL__I__ZN5DriveC2Ev();
 
+void _GLOBAL__I__ZN8DropDiskC2Ev();
+
+void _GLOBAL__I__ZN14PickupPositionC2Ev();
+
 void _GLOBAL__I__ZN10PivotDriveC2Ev();
 
 void _GLOBAL__I__ZN13RandomDrivingC2Ev();
@@ -20,6 +24,8 @@ void _GLOBAL__I__ZN13RandomDrivingC2Ev();
 void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
 
 void _GLOBAL__I__ZN22ShooterAtDefinedOutputC2Ev();
+
+void _GLOBAL__I__ZN11ShooterStopC2Ev();
 
 void _GLOBAL__I__ZN10SteerDriveC2Ev();
 
@@ -37,6 +43,8 @@ void _GLOBAL__I__ZN8RobotMap23driveTrainFrontRightPosE();
 
 void _GLOBAL__I__ZN10DriveTrainC2Ev();
 
+void _GLOBAL__I__ZN6PickupC2Ev();
+
 void _GLOBAL__I__ZN7ShooterC2Ev();
 
 void _GLOBAL__I__ZN12PrintCommandC2EPKc();
@@ -46,8 +54,6 @@ void _GLOBAL__I__ZN9Scheduler9_instanceE();
 void _GLOBAL__I__ZN11WaitCommandC2Ed();
 
 void _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange();
-
-void _GLOBAL__I__ZN10LiveWindow10m_instanceE();
 
 void _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE();
 
@@ -93,10 +99,13 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN9CrabDriveC2Ev,
     _GLOBAL__I__ZN5DriveC2Ev,
+    _GLOBAL__I__ZN8DropDiskC2Ev,
+    _GLOBAL__I__ZN14PickupPositionC2Ev,
     _GLOBAL__I__ZN10PivotDriveC2Ev,
     _GLOBAL__I__ZN13RandomDrivingC2Ev,
     _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__I__ZN22ShooterAtDefinedOutputC2Ev,
+    _GLOBAL__I__ZN11ShooterStopC2Ev,
     _GLOBAL__I__ZN10SteerDriveC2Ev,
     _GLOBAL__I__ZN9TurnRobotC2Ev,
     _GLOBAL__I__ZN10TurnWheelsC2Ev,
@@ -105,12 +114,12 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN5Robot10driveTrainE,
     _GLOBAL__I__ZN8RobotMap23driveTrainFrontRightPosE,
     _GLOBAL__I__ZN10DriveTrainC2Ev,
+    _GLOBAL__I__ZN6PickupC2Ev,
     _GLOBAL__I__ZN7ShooterC2Ev,
     _GLOBAL__I__ZN12PrintCommandC2EPKc,
     _GLOBAL__I__ZN9Scheduler9_instanceE,
     _GLOBAL__I__ZN11WaitCommandC2Ed,
     _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange,
-    _GLOBAL__I__ZN10LiveWindow10m_instanceE,
     _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE,
     _GLOBAL__I__ZN8Notifier21kTimerInterruptNumberE,
     _GLOBAL__I__ZN8Resource12m_createLockE,
@@ -139,6 +148,10 @@ void _GLOBAL__D__ZN9CrabDriveC2Ev();
 
 void _GLOBAL__D__ZN5DriveC2Ev();
 
+void _GLOBAL__D__ZN8DropDiskC2Ev();
+
+void _GLOBAL__D__ZN14PickupPositionC2Ev();
+
 void _GLOBAL__D__ZN10PivotDriveC2Ev();
 
 void _GLOBAL__D__ZN13RandomDrivingC2Ev();
@@ -146,6 +159,8 @@ void _GLOBAL__D__ZN13RandomDrivingC2Ev();
 void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
 
 void _GLOBAL__D__ZN22ShooterAtDefinedOutputC2Ev();
+
+void _GLOBAL__D__ZN11ShooterStopC2Ev();
 
 void _GLOBAL__D__ZN10SteerDriveC2Ev();
 
@@ -162,6 +177,8 @@ void _GLOBAL__D__ZN5Robot10driveTrainE();
 void _GLOBAL__D__ZN8RobotMap23driveTrainFrontRightPosE();
 
 void _GLOBAL__D__ZN10DriveTrainC2Ev();
+
+void _GLOBAL__D__ZN6PickupC2Ev();
 
 void _GLOBAL__D__ZN7ShooterC2Ev();
 
@@ -209,10 +226,13 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN9CrabDriveC2Ev,
     _GLOBAL__D__ZN5DriveC2Ev,
+    _GLOBAL__D__ZN8DropDiskC2Ev,
+    _GLOBAL__D__ZN14PickupPositionC2Ev,
     _GLOBAL__D__ZN10PivotDriveC2Ev,
     _GLOBAL__D__ZN13RandomDrivingC2Ev,
     _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__D__ZN22ShooterAtDefinedOutputC2Ev,
+    _GLOBAL__D__ZN11ShooterStopC2Ev,
     _GLOBAL__D__ZN10SteerDriveC2Ev,
     _GLOBAL__D__ZN9TurnRobotC2Ev,
     _GLOBAL__D__ZN10TurnWheelsC2Ev,
@@ -221,6 +241,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN5Robot10driveTrainE,
     _GLOBAL__D__ZN8RobotMap23driveTrainFrontRightPosE,
     _GLOBAL__D__ZN10DriveTrainC2Ev,
+    _GLOBAL__D__ZN6PickupC2Ev,
     _GLOBAL__D__ZN7ShooterC2Ev,
     _GLOBAL__D__ZN9Scheduler9_instanceE,
     _GLOBAL__D_wpi_error_s_ModuleIndexOutOfRange,

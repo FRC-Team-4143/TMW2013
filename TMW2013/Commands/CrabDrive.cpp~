@@ -8,6 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "CrabDrive.h"
+#include "math.h"
 CrabDrive::CrabDrive() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
@@ -20,8 +21,8 @@ void CrabDrive::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void CrabDrive::Execute() {
-	radian = (Robot::oi->getSteeringWheel()-0.264)*pi/2.214; //converts SW input to radians
-	speed = Robot::oi->getDriverJoystick()->GetY();
+	radian = (Robot::oi->getDriverJoystick()->GetDirectionRadians());
+	speed = sqrt(pow(Robot::oi->getDriverJoystick()->GetY(),2))+pow(Robot::oi->getDriverJoystick()->GetX(),2);
 	Robot::driveTrain->Crab(radian , speed);
 }
 // Make this return true when this Command no longer needs to run execute()

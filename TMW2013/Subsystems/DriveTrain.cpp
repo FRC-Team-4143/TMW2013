@@ -68,7 +68,7 @@ void DriveTrain::Crab(float radian, float speed) {
 			else
 				position = position +512;
 		}
-		
+		if(speed > .1 || speed < -.1) {
 		frontLeft->SetSetpoint(position);
 		frontRight->SetSetpoint(position);
 		rearLeft->SetSetpoint(position);
@@ -79,6 +79,20 @@ void DriveTrain::Crab(float radian, float speed) {
 		frontRightDrive->Set(-speed);
 		rearLeftDrive->Set(speed);
 		rearRightDrive->Set(-speed);
+		}
+		
+		else {
+			frontLeft->SetSetpoint(512);
+			frontRight->SetSetpoint(512);
+			rearLeft->SetSetpoint(512);
+			rearRight->SetSetpoint(512);
+					
+			//Set drive speeds
+			frontLeftDrive->Set(0);
+			frontRightDrive->Set(0);
+			rearLeftDrive->Set(0);
+			rearRightDrive->Set(0);
+		}
 }
 void DriveTrain::Steer(float radian, float speed, float a) {
 	
@@ -327,16 +341,16 @@ void DriveTrain::Pivot(float twistinput, float speedinput)
 	else
 		thetaRL = 2*pi - robotangle + deltaRL;
 	
-	SmartDashboard::PutNumber("FLPosSet", 512/pi*thetaFL);
-	SmartDashboard::PutNumber("FRPosSet", 512/pi*thetaFR);
-	SmartDashboard::PutNumber("RLPosSet", 512/pi*thetaRL);
-	SmartDashboard::PutNumber("RRPosSet", 512/pi*thetaRR);
+	SmartDashboard::PutNumber("FLPosSet", floor(512/pi*thetaFL));
+	SmartDashboard::PutNumber("FRPosSet", floor(512/pi*thetaFR));
+	SmartDashboard::PutNumber("RLPosSet", floor(512/pi*thetaRL));
+	SmartDashboard::PutNumber("RRPosSet", floor(512/pi*thetaRR));
 	
 	/*
 	//Set Steering PID Setpoints  ----THIS NEEDS TO BE DEBUGGED... NOT SURE WHERE 0RAD IS FOR THIS MATH
-	frontLeft->SetSetpoint(512/pi*thetaFL);
-	frontRight->SetSetpoint(512/pi*thetaFR);
-	rearLeft->SetSetpoint(512/pi*thetaRL);
-	rearRight->SetSetpoint(512/pi*thetaRR);
+	frontLeft->SetSetpoint(floor(512/pi*thetaFL));
+	frontRight->SetSetpoint(floor(512/pi*thetaFR));
+	rearLeft->SetSetpoint(floor(512/pi*thetaRL));
+	rearRight->SetSetpoint(floor(512/pi*thetaRR));
 	*/
 }
