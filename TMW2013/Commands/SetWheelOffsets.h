@@ -36,7 +36,7 @@ public:
 	float RROffset;
 	RAWCConstants* File;
 	bool complete;
-	static const int StOffAvLoops = 50;
+
 
 };
 

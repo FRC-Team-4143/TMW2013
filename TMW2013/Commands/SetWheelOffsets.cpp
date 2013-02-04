@@ -24,7 +24,6 @@ void SetWheelOffsets::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void SetWheelOffsets::Execute() {
 	
-	RobotBase->
 	
 		FLOffset = Robot::driveTrain->frontLeftPos->GetAverageValue();
 		FROffset = Robot::driveTrain->frontRightPos->GetAverageValue();
