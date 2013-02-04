@@ -42,31 +42,21 @@ void Shooter::ToggleRun() {
 	
 }
 void Shooter::RunAtOutput(float entry, float exit) {
-	SmartDashboard::PutBoolean("ShooterToggle", runtoggle);
+
+	
+	entryset = entryset + (entry - wheelShooterEntry->GetOutputVoltage())/12;
+	exitset = exitset + (exit - wheelShooterExit->GetOutputVoltage())/12;
+			
+	wheelShooterEntry->Set(entryset);
+	wheelShooterExit->Set(exitset);
+
 	SmartDashboard::PutNumber("EntrySet",entryset);
 	SmartDashboard::PutNumber("ExitSet",exitset);
 	
-	if (runtoggle) {
-			wheelShooterEntry->Set(entry);
-			wheelShooterExit->Set(exit);
-			entryset = entry;
-			exitset = exit;
-	}
-		else {
-			if(entryset < 0) {
-				entryset = entryset + .002;
-				wheelShooterEntry->Set(entryset);
-			}
-				else
-				wheelShooterEntry->Set(0);
-			if(exitset > 0) {
-				exitset = exitset - .002;
-				wheelShooterExit->Set(exitset);
-			}
-				else
-				wheelShooterExit->Set(0);
-		}
-		
-		
+	SmartDashboard::PutNumber("EntryVoltage", wheelShooterEntry->GetOutputVoltage());
+	SmartDashboard::PutNumber("ExitVoltage", wheelShooterExit->GetOutputVoltage());
 	
+	SmartDashboard::PutNumber("EntryCurrent", wheelShooterEntry->GetOutputCurrent());
+	SmartDashboard::PutNumber("ExitCurrent", wheelShooterExit->GetOutputCurrent());
+
 }
