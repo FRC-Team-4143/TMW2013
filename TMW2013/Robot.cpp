@@ -44,6 +44,7 @@ void Robot::RobotInit() {
 	RROffset = File->getValueForKey("RROff");
 		
 	Robot::driveTrain->SetWheelbase(14.75, 23.25, 14.75);
+	Robot::driveTrain->SetMaxSpeed(100);
 	
 	Robot::driveTrain->frontLeft->SetOffset(FLOffset-512);
 	Robot::driveTrain->frontRight->SetOffset(FROffset-512);
