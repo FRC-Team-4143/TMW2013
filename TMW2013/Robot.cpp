@@ -38,7 +38,7 @@ void Robot::RobotInit() {
 	autoChooser = new SendableChooser();
 	autoChooser->AddDefault("Random Driving", new RandomDriving);
 	autoChooser->AddObject("Drive 2.0", new Drive(2.0, 3.141/2, .5));
-		
+			
 	Prefs = Preferences::GetInstance();
 	File = RAWCConstants::getInstance();
 	 
