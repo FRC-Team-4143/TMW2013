@@ -27,5 +27,6 @@ public:
 	Pickup();
 	void InitDefaultCommand();
 	void DropDisk();
+	void SetPickupPosition();
 };
 #endif

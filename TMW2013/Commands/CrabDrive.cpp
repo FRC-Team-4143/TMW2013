@@ -22,8 +22,11 @@ void CrabDrive::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void CrabDrive::Execute() {
 	radian = (Robot::oi->getDriverJoystick()->GetDirectionRadians());
-	speed = (Robot::oi->getDriverJoystick()->GetY()+Robot::oi->getDriverJoystick()->GetX())/2;
-	Robot::driveTrain->Crab(radian , speed);
+	speed = sqrt(pow(Robot::oi->getDriverJoystick()->GetY(),2)+pow(Robot::oi->getDriverJoystick()->GetX(),2));
+	if(speed < .1 && speed > -.1)
+		Robot::driveTrain->Crab(0 , 0);
+	else
+		Robot::driveTrain->Crab(radian , speed);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CrabDrive::IsFinished() {

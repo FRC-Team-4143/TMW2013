@@ -68,7 +68,6 @@ void DriveTrain::Crab(float radian, float speed) {
 			else
 				position = position +512;
 		}
-		if(speed > .1 || speed < -.1) {
 		frontLeft->SetSetpoint(position);
 		frontRight->SetSetpoint(position);
 		rearLeft->SetSetpoint(position);
@@ -79,20 +78,6 @@ void DriveTrain::Crab(float radian, float speed) {
 		frontRightDrive->Set(-speed);
 		rearLeftDrive->Set(speed);
 		rearRightDrive->Set(-speed);
-		}
-		
-		else {
-			frontLeft->SetSetpoint(512);
-			frontRight->SetSetpoint(512);
-			rearLeft->SetSetpoint(512);
-			rearRight->SetSetpoint(512);
-					
-			//Set drive speeds
-			frontLeftDrive->Set(0);
-			frontRightDrive->Set(0);
-			rearLeftDrive->Set(0);
-			rearRightDrive->Set(0);
-		}
 }
 void DriveTrain::Steer(float radian, float speed, float a) {
 	
@@ -300,7 +285,6 @@ void DriveTrain::Pivot(float twistinput, float speedinput)
 			deltaRR = atan(RRYVel/RRXVel) - pi;
 	else
 		deltaRR = atan(RRYVel/RRXVel);
-
 	if(RLXVel <= 0)
 		if(RLPos < pi/2)
 			deltaRL = atan(RLYVel/RLXVel) + pi;

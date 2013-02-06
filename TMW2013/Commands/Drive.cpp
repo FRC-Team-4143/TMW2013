@@ -17,7 +17,7 @@ Drive::Drive() {
 }
 Drive::Drive(double timeout, double direction, double velocity) {
 	Requires(Robot::driveTrain);
-	this->SetTimeout(timeout);
+	SetTimeout(timeout);
 	radian = direction;
 	speed = velocity;
 }

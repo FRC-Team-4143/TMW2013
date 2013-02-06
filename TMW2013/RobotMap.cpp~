@@ -41,7 +41,7 @@ void RobotMap::init() {
 	
 	driveTrainFrontRight = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontRightPos, driveTrainFrontRightSteer, 0.02);
 	lw->AddActuator("DriveTrain", "FrontRight", driveTrainFrontRight);
-	driveTrainFrontRight->SetContinuous(true); driveTrainFrontRight->SetAbsoluteTolerance(0.2); 
+	driveTrainFrontRight->SetContinuous(true); driveTrainFrontRight->SetAbsoluteTolerance(5.0); 
         driveTrainFrontRight->SetInputRange(0.0, 1024.0);
         driveTrainFrontRight->SetOutputRange(-1.0, 1.0);
 	driveTrainFrontLeftPos = new AnalogChannel(1, 2);
@@ -52,7 +52,7 @@ void RobotMap::init() {
 	
 	driveTrainFrontLeft = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontLeftPos, driveTrainFrontLeftSteer, 0.02);
 	lw->AddActuator("DriveTrain", "FrontLeft", driveTrainFrontLeft);
-	driveTrainFrontLeft->SetContinuous(true); driveTrainFrontLeft->SetAbsoluteTolerance(0.2); 
+	driveTrainFrontLeft->SetContinuous(true); driveTrainFrontLeft->SetAbsoluteTolerance(5.0); 
         driveTrainFrontLeft->SetInputRange(0.0, 1024.0);
         driveTrainFrontLeft->SetOutputRange(-1.0, 1.0);
 	driveTrainRearRightPos = new AnalogChannel(1, 5);
@@ -63,7 +63,7 @@ void RobotMap::init() {
 	
 	driveTrainRearRight = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainRearRightPos, driveTrainRearRightSteer, 0.02);
 	lw->AddActuator("DriveTrain", "RearRight", driveTrainRearRight);
-	driveTrainRearRight->SetContinuous(true); driveTrainRearRight->SetAbsoluteTolerance(0.2); 
+	driveTrainRearRight->SetContinuous(true); driveTrainRearRight->SetAbsoluteTolerance(5.0); 
         driveTrainRearRight->SetInputRange(0.0, 1024.0);
         driveTrainRearRight->SetOutputRange(-1.0, 1.0);
 	driveTrainRearLeftPos = new AnalogChannel(1, 4);
@@ -74,7 +74,7 @@ void RobotMap::init() {
 	
 	driveTrainRearLeft = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainRearLeftPos, driveTrainRearLeftSteer, 0.02);
 	lw->AddActuator("DriveTrain", "RearLeft", driveTrainRearLeft);
-	driveTrainRearLeft->SetContinuous(true); driveTrainRearLeft->SetAbsoluteTolerance(0.2); 
+	driveTrainRearLeft->SetContinuous(true); driveTrainRearLeft->SetAbsoluteTolerance(5.0); 
         driveTrainRearLeft->SetInputRange(0.0, 1024.0);
         driveTrainRearLeft->SetOutputRange(-1.0, 1.0);
 	driveTrainFrontRightDrive = new CANJaguar(3);

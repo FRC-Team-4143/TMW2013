@@ -29,7 +29,7 @@ void TurnWheels::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool TurnWheels::IsFinished() {
-	return false;
+	return Robot::driveTrain->frontLeft->OnTarget() && Robot::driveTrain->frontRight->OnTarget() && Robot::driveTrain->rearLeft->OnTarget() && Robot::driveTrain->rearRight->OnTarget();
 }
 // Called once after isFinished returns true
 void TurnWheels::End() {

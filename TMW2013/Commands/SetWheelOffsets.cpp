@@ -20,11 +20,20 @@ void SetWheelOffsets::Initialize() {
 	File = RAWCConstants::getInstance();
 	FLOffset = FROffset = RLOffset = RROffset = 512;
 	complete = false;
+
+
 }
 // Called repeatedly when this Command is scheduled to run
 void SetWheelOffsets::Execute() {
 	
-	
+		//beginning testing
+		bool b = false;
+		if (!DriverStation::GetInstance()->IsEnabled())
+		{
+			b = true;
+		}
+		//end testing
+	    
 		FLOffset = Robot::driveTrain->frontLeftPos->GetAverageValue();
 		FROffset = Robot::driveTrain->frontRightPos->GetAverageValue();
 		RLOffset = Robot::driveTrain->rearLeftPos->GetAverageValue();
