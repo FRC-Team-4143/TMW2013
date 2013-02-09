@@ -1,7 +1,7 @@
  \
- CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/PivotDrive.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
+ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/TargetDrive.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/ErrorBase.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h \
@@ -408,7 +408,7 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
 

@@ -24,6 +24,14 @@ void SetWheelOffsets::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void SetWheelOffsets::Execute() {
 	
+		//beginning testing
+		bool b = false;
+		if (!DriverStation::GetInstance()->IsEnabled())
+		{
+			b = true;
+		}
+		//end testing
+	    
 		FLOffset = Robot::driveTrain->frontLeftPos->GetAverageValue();
 		FROffset = Robot::driveTrain->frontRightPos->GetAverageValue();
 		RLOffset = Robot::driveTrain->rearLeftPos->GetAverageValue();
@@ -37,11 +45,6 @@ void SetWheelOffsets::Execute() {
 		File->insertKeyAndValue("RROff", RROffset);
 			
 		File->save();
-		
-		Robot::driveTrain->frontLeft->SetOffset(FLOffset-512);
-		Robot::driveTrain->frontRight->SetOffset(FROffset-512);
-		Robot::driveTrain->rearLeft->SetOffset(RLOffset-512);
-		Robot::driveTrain->rearRight->SetOffset(RROffset-512);
 		
 		complete = true;
 }

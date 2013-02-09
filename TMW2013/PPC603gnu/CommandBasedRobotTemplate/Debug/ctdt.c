@@ -29,6 +29,8 @@ void _GLOBAL__I__ZN11ShooterStopC2Ev();
 
 void _GLOBAL__I__ZN10SteerDriveC2Ev();
 
+void _GLOBAL__I__ZN11TargetDriveC2Ev();
+
 void _GLOBAL__I__ZN9TurnRobotC2Ev();
 
 void _GLOBAL__I__ZN10TurnWheelsC2Ev();
@@ -54,6 +56,8 @@ void _GLOBAL__I__ZN9Scheduler9_instanceE();
 void _GLOBAL__I__ZN11WaitCommandC2Ed();
 
 void _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange();
+
+void _GLOBAL__I__ZN10LiveWindow10m_instanceE();
 
 void _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE();
 
@@ -107,6 +111,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN22ShooterAtDefinedOutputC2Ev,
     _GLOBAL__I__ZN11ShooterStopC2Ev,
     _GLOBAL__I__ZN10SteerDriveC2Ev,
+    _GLOBAL__I__ZN11TargetDriveC2Ev,
     _GLOBAL__I__ZN9TurnRobotC2Ev,
     _GLOBAL__I__ZN10TurnWheelsC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
@@ -120,6 +125,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN9Scheduler9_instanceE,
     _GLOBAL__I__ZN11WaitCommandC2Ed,
     _GLOBAL__I_wpi_error_s_ModuleIndexOutOfRange,
+    _GLOBAL__I__ZN10LiveWindow10m_instanceE,
     _GLOBAL__I__ZN17MotorSafetyHelper12m_headHelperE,
     _GLOBAL__I__ZN8Notifier21kTimerInterruptNumberE,
     _GLOBAL__I__ZN8Resource12m_createLockE,
@@ -163,6 +169,8 @@ void _GLOBAL__D__ZN22ShooterAtDefinedOutputC2Ev();
 void _GLOBAL__D__ZN11ShooterStopC2Ev();
 
 void _GLOBAL__D__ZN10SteerDriveC2Ev();
+
+void _GLOBAL__D__ZN11TargetDriveC2Ev();
 
 void _GLOBAL__D__ZN9TurnRobotC2Ev();
 
@@ -234,6 +242,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN22ShooterAtDefinedOutputC2Ev,
     _GLOBAL__D__ZN11ShooterStopC2Ev,
     _GLOBAL__D__ZN10SteerDriveC2Ev,
+    _GLOBAL__D__ZN11TargetDriveC2Ev,
     _GLOBAL__D__ZN9TurnRobotC2Ev,
     _GLOBAL__D__ZN10TurnWheelsC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,

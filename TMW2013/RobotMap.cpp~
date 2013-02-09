@@ -39,10 +39,10 @@ void RobotMap::init() {
 	driveTrainFrontRightSteer = new CANJaguar(7);
 	
 	
-	driveTrainFrontRight = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontRightPos, driveTrainFrontRightSteer, 0.02);
+	driveTrainFrontRight = new PIDController(0.03, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontRightPos, driveTrainFrontRightSteer, 0.02);
 	lw->AddActuator("DriveTrain", "FrontRight", driveTrainFrontRight);
-	driveTrainFrontRight->SetContinuous(true); driveTrainFrontRight->SetAbsoluteTolerance(5.0); 
-        driveTrainFrontRight->SetInputRange(0.0, 1024.0);
+	driveTrainFrontRight->SetContinuous(true); driveTrainFrontRight->SetAbsoluteTolerance(20.0); 
+        driveTrainFrontRight->SetInputRange(0.0, 1023.0);
         driveTrainFrontRight->SetOutputRange(-1.0, 1.0);
 	driveTrainFrontLeftPos = new AnalogChannel(1, 2);
 	lw->AddSensor("DriveTrain", "FrontLeftPos", driveTrainFrontLeftPos);
@@ -50,10 +50,10 @@ void RobotMap::init() {
 	driveTrainFrontLeftSteer = new CANJaguar(6);
 	
 	
-	driveTrainFrontLeft = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontLeftPos, driveTrainFrontLeftSteer, 0.02);
+	driveTrainFrontLeft = new PIDController(0.03, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontLeftPos, driveTrainFrontLeftSteer, 0.02);
 	lw->AddActuator("DriveTrain", "FrontLeft", driveTrainFrontLeft);
-	driveTrainFrontLeft->SetContinuous(true); driveTrainFrontLeft->SetAbsoluteTolerance(5.0); 
-        driveTrainFrontLeft->SetInputRange(0.0, 1024.0);
+	driveTrainFrontLeft->SetContinuous(true); driveTrainFrontLeft->SetAbsoluteTolerance(20.0); 
+        driveTrainFrontLeft->SetInputRange(0.0, 1023.0);
         driveTrainFrontLeft->SetOutputRange(-1.0, 1.0);
 	driveTrainRearRightPos = new AnalogChannel(1, 5);
 	lw->AddSensor("DriveTrain", "RearRightPos", driveTrainRearRightPos);
@@ -61,10 +61,10 @@ void RobotMap::init() {
 	driveTrainRearRightSteer = new CANJaguar(9);
 	
 	
-	driveTrainRearRight = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainRearRightPos, driveTrainRearRightSteer, 0.02);
+	driveTrainRearRight = new PIDController(0.03, 0.0, 0.0,/* F: 0.0, */ driveTrainRearRightPos, driveTrainRearRightSteer, 0.02);
 	lw->AddActuator("DriveTrain", "RearRight", driveTrainRearRight);
-	driveTrainRearRight->SetContinuous(true); driveTrainRearRight->SetAbsoluteTolerance(5.0); 
-        driveTrainRearRight->SetInputRange(0.0, 1024.0);
+	driveTrainRearRight->SetContinuous(true); driveTrainRearRight->SetAbsoluteTolerance(20.0); 
+        driveTrainRearRight->SetInputRange(0.0, 1023.0);
         driveTrainRearRight->SetOutputRange(-1.0, 1.0);
 	driveTrainRearLeftPos = new AnalogChannel(1, 4);
 	lw->AddSensor("DriveTrain", "RearLeftPos", driveTrainRearLeftPos);
@@ -72,10 +72,10 @@ void RobotMap::init() {
 	driveTrainRearLeftSteer = new CANJaguar(8);
 	
 	
-	driveTrainRearLeft = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainRearLeftPos, driveTrainRearLeftSteer, 0.02);
+	driveTrainRearLeft = new PIDController(0.03, 0.0, 0.0,/* F: 0.0, */ driveTrainRearLeftPos, driveTrainRearLeftSteer, 0.02);
 	lw->AddActuator("DriveTrain", "RearLeft", driveTrainRearLeft);
-	driveTrainRearLeft->SetContinuous(true); driveTrainRearLeft->SetAbsoluteTolerance(5.0); 
-        driveTrainRearLeft->SetInputRange(0.0, 1024.0);
+	driveTrainRearLeft->SetContinuous(true); driveTrainRearLeft->SetAbsoluteTolerance(20.0); 
+        driveTrainRearLeft->SetInputRange(0.0, 1023.0);
         driveTrainRearLeft->SetOutputRange(-1.0, 1.0);
 	driveTrainFrontRightDrive = new CANJaguar(3);
 	
