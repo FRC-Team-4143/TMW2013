@@ -14,6 +14,7 @@
 #include "Commands/CrabDrive.h"
 #include "Commands/Drive.h"
 #include "Commands/DropDisk.h"
+#include "Commands/OperatorClimb.h"
 #include "Commands/PickupPosition.h"
 #include "Commands/PivotDrive.h"
 #include "Commands/RandomDriving.h"
@@ -31,7 +32,7 @@ OI::OI() {
 	driverJoystick = new Joystick(1);
 	
 	joystickButton2 = new JoystickButton(driverJoystick, 2);
-	joystickButton2->WhileHeld(new PivotDrive());
+	joystickButton2->WhileHeld(new TargetDrive());
 	wheelOffsetButton = new JoystickButton(driverJoystick, 6);
 	wheelOffsetButton->WhenPressed(new SetWheelOffsets());
 	trigger = new JoystickButton(driverJoystick, 1);

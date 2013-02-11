@@ -42,7 +42,7 @@ void Shooter::ToggleRun() {
 	
 }
 void Shooter::RunAtOutput(float entry, float exit) {
-	
+/*	
 	entryset = entryset + (entry - wheelShooterEntry->GetOutputVoltage())/12;
 	exitset = exitset + (exit - wheelShooterExit->GetOutputVoltage())/12;
 			
@@ -56,4 +56,5 @@ void Shooter::RunAtOutput(float entry, float exit) {
 	
 	SmartDashboard::PutNumber("EntryCurrent", wheelShooterEntry->GetOutputCurrent());
 	SmartDashboard::PutNumber("ExitCurrent", wheelShooterExit->GetOutputCurrent());
+*/
 }

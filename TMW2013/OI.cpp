@@ -14,6 +14,7 @@
 #include "Commands/CrabDrive.h"
 #include "Commands/Drive.h"
 #include "Commands/DropDisk.h"
+#include "Commands/OperatorClimb.h"
 #include "Commands/PickupPosition.h"
 #include "Commands/PivotDrive.h"
 #include "Commands/RandomDriving.h"

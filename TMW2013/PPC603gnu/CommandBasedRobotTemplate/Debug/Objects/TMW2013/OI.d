@@ -398,9 +398,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/LiveWindow/LiveWindow.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h \
   C:/WindRiver/vxworks-6.3/target/h/Math.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/../RAWCConstants.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
@@ -412,6 +413,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DropDisk.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../GamePad.h \
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/GenericHID.h \
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
@@ -1221,11 +1226,13 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/LiveWindow/LiveWindow.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h:
 
 C:/WindRiver/vxworks-6.3/target/h/Math.h:
 
@@ -1248,6 +1255,14 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DropDisk.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../GamePad.h:
+
+C:/WindRiver/vxworks-6.3/target/h/WPILib/GenericHID.h:
+
+C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h:
 
