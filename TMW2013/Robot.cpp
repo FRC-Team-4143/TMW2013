@@ -60,7 +60,7 @@ void Robot::RobotInit() {
 	
 	Prefs->PutFloat("EntrySpeed",-5);
 	Prefs->PutFloat("ExitSpeed",5);
-	Prefs->PutFloat("ClimberAngleP",.001);
+	Prefs->PutFloat("ClimberAngleP",0.0);
 	Prefs->PutFloat("ClimberAngleI",0.0);
 	
 	autoChooser = new SendableChooser();
