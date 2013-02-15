@@ -9,35 +9,26 @@
 // it from being updated in th future.
 
 
-#ifndef OPERATORCLIMB_H
-#define OPERATORCLIMB_H
+#ifndef SETCLIMBERDISTANCEHOME_H
+#define SETCLIMBERDISTANCEHOME_H
 
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
-#include "../GamePad.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class OperatorClimb: public Command 
-{
-private: 
-	GamePad GPad;
-	float climberset;
-	bool button4press;
-	bool button2press;
-	
+class SetClimberDistanceHome: public Command {
 public:
-	OperatorClimb();
+	SetClimberDistanceHome();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-
 };
 
 #endif

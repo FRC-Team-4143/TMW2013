@@ -35,7 +35,8 @@ private:
 	void RightTurn4Wheels();	//Calculates a right hand turn
 	
 	
-	
+	//DriveDirection
+	bool driveFront;
 	
 	//Steering Variables	
 	double radian; // input steering angle in radians
@@ -119,6 +120,7 @@ private:
 	double deltaRR;
 	
 	void SetSteerSetpoint(float FLSetPoint, float FRSetPoint, float RLSetPoint, float RRSetPoint);
+	void SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, float RRSpeed);
 	void CurrentLimit();
 	
 	float FLSOTimer;
@@ -150,6 +152,8 @@ public:
 	void SetWheelbase(float w, float x, float y);
 	void SetMaxSpeed(float MaxSpeed);
 	void SetGyroReference();
+	void SetOffsets(float FLOff, float FROff, float RLOff, float RROff);
+	void ToggleFrontBack();
 	void InitDefaultCommand();
 	void Steer(float radian, float speed, float a);
 	void Crab(float radian, float speed);

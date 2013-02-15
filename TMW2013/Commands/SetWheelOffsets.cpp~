@@ -23,7 +23,9 @@ void SetWheelOffsets::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void SetWheelOffsets::Execute() {
+//this code moved to Robot::Disabled.  Scheduler does not call commands in disabled.
 	
+/*	
 		//beginning testing
 		bool b = false;
 		if (!DriverStation::GetInstance()->IsEnabled())
@@ -47,6 +49,7 @@ void SetWheelOffsets::Execute() {
 		File->save();
 		
 		complete = true;
+		*/
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SetWheelOffsets::IsFinished() {

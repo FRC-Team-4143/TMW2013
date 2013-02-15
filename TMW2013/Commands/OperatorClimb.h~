@@ -26,7 +26,7 @@ class OperatorClimb: public Command
 {
 private: 
 	GamePad GPad;
-	int climberset;
+	float climberset;
 	bool button4press;
 	bool button2press;
 	

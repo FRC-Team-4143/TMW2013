@@ -57,11 +57,13 @@ void Robot::RobotInit() {
 	Robot::driveTrain->rearLeft->Enable();
 	Robot::driveTrain->rearRight->Enable();
 	Robot::climber->angle->Enable();
+	Robot::shooter->shooterAngle->Enable();
 	
 	Prefs->PutFloat("EntrySpeed",-5);
 	Prefs->PutFloat("ExitSpeed",5);
 	Prefs->PutFloat("ClimberAngleP",0.0);
 	Prefs->PutFloat("ClimberAngleI",0.0);
+	Prefs->PutInt("ShooterAngleSetpoint",350);
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddDefault("Random Driving", new RandomDriving());
@@ -92,6 +94,8 @@ void Robot::DisabledPeriodic(){
 		File->insertKeyAndValue("RROff", RROffset);
 			
 		File->save();
+		
+		Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
 	}
 	SmartDashboard::PutNumber("StickDirection",Robot::oi->getDriverJoystick()->GetDirectionRadians());
 }
@@ -132,16 +136,29 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
 	
+	SmartDashboard::PutNumber("FLCurrent", Robot::driveTrain->frontLeftSteer->GetOutputCurrent());
+	SmartDashboard::PutNumber("FRCurrent", Robot::driveTrain->frontRightSteer->GetOutputCurrent());
+	SmartDashboard::PutNumber("RLCurrent", Robot::driveTrain->rearLeftSteer->GetOutputCurrent());
+	SmartDashboard::PutNumber("RRCurrent", Robot::driveTrain->rearRightSteer->GetOutputCurrent());
+	
 	SmartDashboard::PutNumber("ClimbAngleSetpoint",Robot::climber->angle->GetSetpoint());
+	SmartDashboard::PutNumber("ClimberDistance",Robot::climber->climberDistance->GetDistance());
+	SmartDashboard::PutNumber("ClimberRaw",Robot::climber->climberDistance->GetRaw());
 	SmartDashboard::PutNumber("ClimbAngleError",Robot::climber->angle->GetError());
 	SmartDashboard::PutNumber("ClimberAngle",Robot::climber->anglePos->GetAverageValue());
 	SmartDashboard::PutNumber("ClimberAngleLeftVolt", Robot::climber->angleLeft->GetOutputVoltage());
 	SmartDashboard::PutNumber("ClimberAngleRightVolt", Robot::climber->angleRight->GetOutputVoltage());
+	SmartDashboard::PutNumber("ClimberAngleLeftCurrent", Robot::climber->angleLeft->GetOutputCurrent());
+	SmartDashboard::PutNumber("ClimberAngleRightCurrent", Robot::climber->angleRight->GetOutputCurrent());
 	SmartDashboard::PutNumber("FLCurrent",Robot::driveTrain->frontLeftSteer->GetOutputCurrent());
 	SmartDashboard::PutNumber("FRCurrent",Robot::driveTrain->frontRightSteer->GetOutputCurrent());
 	SmartDashboard::PutNumber("RLCurrent",Robot::driveTrain->rearLeftSteer->GetOutputCurrent());
 	SmartDashboard::PutNumber("RRCurrent",Robot::driveTrain->rearRightSteer->GetOutputCurrent());
 	
+	SmartDashboard::PutNumber("ShooterAngleError",Robot::shooter->shooterAngle->GetError());
+	SmartDashboard::PutNumber("ShooterAngleVolts",Robot::shooter->shooterAngleSteer->GetOutputVoltage());
+	SmartDashboard::PutNumber("ShooterAngleSetpoint",Robot::shooter->shooterAngle->GetSetpoint());
+	SmartDashboard::PutNumber("ShooterAngleInput",Robot::shooter->shooterAnglePos->GetAverageValue());
 	
 	Robot::climber->angle->SetPID(Prefs->GetFloat("ClimberAngleP",.001),Prefs->GetFloat("ClimberAngleI",0.0),0);
 }

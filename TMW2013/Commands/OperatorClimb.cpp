@@ -28,25 +28,11 @@ void OperatorClimb::Execute() {
 	Robot::climber->climbLeft->Set(GPad.GetRightY());
 	Robot::climber->climbRight->Set(GPad.GetRightY());
 	
-	if(GPad.GetButton04() && !button4press){
-		climberset = climberset + 25;
-		button4press = true;
-	}
-	
-	if(!GPad.GetButton04())
-		button4press = false;
-	
-	if(GPad.GetButton02() && !button2press){
-		climberset = climberset - 25;
-		button2press = true;
-	}
-	
-	if(!GPad.GetButton02())
-		button2press = false;
+	if(fabs(GPad.GetLeftY()) > .02)
+	climberset = climberset - GPad.GetLeftY();
 	
 	Robot::climber->angle->SetSetpoint(climberset);
 	Robot::climber->angleRight->Set(-(Robot::climber->angle->Get()));
-	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool OperatorClimb::IsFinished() {

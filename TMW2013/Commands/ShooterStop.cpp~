@@ -17,10 +17,12 @@ ShooterStop::ShooterStop() {
 }
 // Called just before this Command runs the first time
 void ShooterStop::Initialize() {
+	Prefs = Preferences::GetInstance();
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterStop::Execute() {
 	Robot::shooter->RunAtOutput(0,0);
+	Robot::shooter->shooterAngle->SetSetpoint(Prefs->GetInt("ShooterAngleSetpoint",350));
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterStop::IsFinished() {

@@ -9,35 +9,26 @@
 // it from being updated in th future.
 
 
-#ifndef OPERATORCLIMB_H
-#define OPERATORCLIMB_H
+#ifndef TOGGLEFRONT_H
+#define TOGGLEFRONT_H
 
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
-#include "../GamePad.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class OperatorClimb: public Command 
-{
-private: 
-	GamePad GPad;
-	float climberset;
-	bool button4press;
-	bool button2press;
-	
+class ToggleFront: public Command {
 public:
-	OperatorClimb();
+	ToggleFront();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-
 };
 
 #endif
