@@ -78,6 +78,8 @@ void Robot::DisabledPeriodic(){
 	SmartDashboard::PutNumber("RearLeftPos",Robot::driveTrain->rearLeftPos->GetAverageValue());
 	SmartDashboard::PutNumber("RearRightPos",Robot::driveTrain->rearRightPos->GetAverageValue());
 	SmartDashboard::PutNumber("SW",Robot::oi->getSteeringWheel());	
+	SmartDashboard::PutBoolean("OffsetButton",Robot::oi->getWheelOffset());
+	
 	if (Robot::oi->getDriverJoystick()->GetRawButton(6))
 	{
 		FLOffset = FROffset = RLOffset = RROffset = 512;

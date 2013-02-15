@@ -62,18 +62,15 @@ void DriveTrain::SetMaxSpeed(float MaxSpeed) {
 void DriveTrain::SetGyroReference(){
 	gyroreference = gyro.GetAngle();
 }
-
 void DriveTrain::SetOffsets(float FLOff, float FROff, float RLOff, float RROff) {
 	FLOffset = FLOff;
 	FROffset = FROff;
 	RLOffset = RLOff;
 	RROffset = RROff;
 }
-
 void DriveTrain::ToggleFrontBack(){
 	driveFront = !driveFront;
 }
-
 void DriveTrain::Crab(float radian, float speed) {
 	
 		position = 512 + 512/pi*radian; //converts radians to counts for encoders
@@ -91,7 +88,6 @@ void DriveTrain::Crab(float radian, float speed) {
 		SetSteerSetpoint(position, position, position, position);
 		SetDriveSpeed(speed, -speed, speed, -speed);
 }
-
 void DriveTrain::Steer(float radian, float speed, float a) {
 	
 	A=a;
@@ -136,7 +132,6 @@ void DriveTrain::Steer(float radian, float speed, float a) {
 	FRRatio = FR/maxspeed;
 	RLRatio = RL/maxspeed;
 	RRRatio = RR/maxspeed;
-
 	
 	//Set drive speeds
 	SetDriveSpeed(-FLRatio*speed, FRRatio*speed, -RLRatio*speed, RRRatio*speed);
@@ -189,7 +184,6 @@ void DriveTrain::RightTurn4Wheels()
 	RL = (Z + W) / sin(thetaRL);
 	RR = (Z - W) / sin(thetaRR);
 }
-
 void DriveTrain::SetSteerSetpoint(float FLSetPoint, float FRSetPoint, float RLSetPoint, float RRSetPoint)
 {	
 	if(driveFront) {
@@ -305,7 +299,6 @@ void DriveTrain::SetSteerSetpoint(float FLSetPoint, float FRSetPoint, float RLSe
 		}		
 	}
 }
-
 void DriveTrain::SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, float RRSpeed) {
 	if(driveFront) {
 		frontLeftDrive->Set(FLSpeed);
@@ -320,7 +313,6 @@ void DriveTrain::SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, floa
 		rearRightDrive->Set(FLSpeed);
 	}
 }
-
 void DriveTrain::Pivot(float twistinput, float speedinput)
 {
 	
@@ -467,7 +459,6 @@ void DriveTrain::CurrentLimit(){
 	float currentlimit = 100;
 	float currenttimeout = 1.5;
 	float timeoutreset = 1.5;
-
 	if(frontLeft->IsEnabled() && frontLeftSteer->GetOutputCurrent() > currentlimit){
 		if(FLSOTimer < GetClock()){
 			FLSOTimer = GetClock()+currenttimeout;
