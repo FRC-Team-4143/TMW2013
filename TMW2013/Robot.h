@@ -49,6 +49,8 @@ public:
 	float FROffset;
 	float RLOffset;
 	float RROffset;
+	float ShooterAngleOffset;
+	float ClimberAngleOffset;
 	
 	float* pFLOffset;
 	float* pFROffset;

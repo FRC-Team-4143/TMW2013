@@ -40,7 +40,8 @@ public:
 	static AnalogChannel* shooterShooterAnglePos;
 	static CANJaguar* shooterShooterAngleSteer;
 	static PIDController* shooterShooterAngle;
-	static Servo* pickupServo1;
+	static Relay* shooterTrigger;
+	static CANJaguar* pickupPickup;
 	static SpeedController* climberClimbLeft;
 	static SpeedController* climberClimbRight;
 	static CANJaguar* climberAngleRight;

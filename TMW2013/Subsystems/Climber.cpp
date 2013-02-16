@@ -32,16 +32,21 @@ void Climber::InitDefaultCommand() {
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 void Climber::SetAngle(int Angle) {
-	angle->SetSetpoint(Angle);
-	angleRight->Set(-angle->Get());
 	CurrentLimit();
+	if(fabs(anglePos->GetAverageValue() - Angle) < 30) {
+		angle->SetSetpoint(anglePos->GetAverageValue());
+	}
+	else {
+		angle->SetSetpoint(Angle - angleOffset);
+	}
+	angleRight->Set(-angle->Get());
 }
 void Climber::RunClimber(float speed) {
 	climbLeft->Set(speed);
 	climbRight->Set(speed);
 }
 void Climber::CurrentLimit(){
-	float currentlimit = 100;
+	float currentlimit = 20;
 	float currenttimeout = 1.5;
 	float timeoutreset = 1.5;
 	if(angle->IsEnabled() && (angleLeft->GetOutputCurrent() > currentlimit || angleRight->GetOutputCurrent() > currentlimit)){
@@ -57,4 +62,7 @@ void Climber::CurrentLimit(){
 	if(!angle->IsEnabled() && SOTimer > GetClock())
 		angle->Enable();
 	
+}
+void Climber::SetAngleOffset(float offset) {
+	angleOffset = offset;
 }

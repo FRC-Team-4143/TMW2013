@@ -1,8 +1,8 @@
- \
- CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Subsystems/Shooter.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/Shooter.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/Shooter.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
+CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/FireSequence.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h \
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h \
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/ErrorBase.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/ChipObject/NiRio.h \
@@ -109,6 +109,16 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/networktables2/type/ComplexData.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/tables/ITableListener.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/tables/ITable.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory \
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroupEntry.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Accelerometer.h \
@@ -150,10 +160,6 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Buttons/Trigger.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/SmartDashboard/Sendable.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Buttons/DigitalIOButton.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Buttons/InternalButton.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Buttons/JoystickButton.h \
@@ -168,10 +174,6 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/tables/ITable.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroupEntry.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/PIDCommand.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/PIDSource.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/PIDOutput.h \
@@ -389,36 +391,31 @@
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/HSLImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/WindRiver/vxworks-6.3/target/h/math.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/ShooterStop.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Robot.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RobotMap.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/LiveWindow/LiveWindow.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/AutonomousCommand.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/../Robot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Climber.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/DriveTrain.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h \
   C:/WindRiver/vxworks-6.3/target/h/Math.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/../RAWCConstants.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/../RAWCConstants.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Pickup.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Shooter.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RAWCConstants.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Pickup.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Shooter.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/ShooterRun.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/Shooter.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
+C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h:
+
+C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/ErrorBase.h:
 
@@ -632,6 +629,26 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/tables/ITableListener.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/tables/ITable.h:
 
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory:
+
+C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroupEntry.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
+
+C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
+
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h:
@@ -714,14 +731,6 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/SmartDashboard/Sendable.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory:
-
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Buttons/DigitalIOButton.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Buttons/InternalButton.h:
@@ -749,14 +758,6 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/tables/ITable.h:
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroupEntry.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/PIDCommand.h:
 
@@ -1192,54 +1193,40 @@ C:/WindRiver/vxworks-6.3/target/h/WPILib/Vision/ColorImage.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPIErrors.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
-
-C:/WindRiver/vxworks-6.3/target/h/math.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/ShooterStop.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Robot.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
-
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Command.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RobotMap.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/LiveWindow/LiveWindow.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/AutonomousCommand.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/../Robot.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Climber.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/Subsystem.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/DriveTrain.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h:
 
 C:/WindRiver/vxworks-6.3/target/h/Math.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/../RAWCConstants.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/../RAWCConstants.h:
 
 C:/WindRiver/vxworks-6.3/target/h/WPILib/WPILib.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Pickup.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Pickup.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Subsystems/Shooter.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Shooter.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../OI.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RAWCConstants.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/ShooterRun.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h:
