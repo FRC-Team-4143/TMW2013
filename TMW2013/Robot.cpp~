@@ -65,11 +65,11 @@ void Robot::RobotInit() {
 	//Robot::climber->angle->Enable();
 	Robot::shooter->shooterAngle->Enable();
 	
-	Prefs->PutFloat("EntrySpeed",-5);
-	Prefs->PutFloat("ExitSpeed",5);
-	Prefs->PutFloat("ClimberAngleP",0.0);
-	Prefs->PutFloat("ClimberAngleI",0.0);
-	Prefs->PutInt("ShooterAngleSetpoint",200);
+	Prefs->PutFloat("EntrySpeed",-6.5);
+	Prefs->PutFloat("ExitSpeed",8);
+//	Prefs->PutFloat("ClimberAngleP",0.0);
+//	Prefs->PutFloat("ClimberAngleI",0.0);
+	Prefs->PutInt("ShooterAngleSetpoint",150);
 	Prefs->PutFloat("TriggerTime",.6);
 	
 	autoChooser = new SendableChooser();
@@ -87,7 +87,7 @@ void Robot::DisabledPeriodic(){
 	SmartDashboard::PutNumber("SW",Robot::oi->getSteeringWheel());	
 	SmartDashboard::PutBoolean("OffsetButton",Robot::oi->getWheelOffset());
 	
-	if (Robot::oi->getDriverJoystick()->GetRawButton(6))
+	if (!Robot::oi->getWheelOffset())
 	{
 		FLOffset = FROffset = RLOffset = RROffset = 512;
 		FLOffset = Robot::driveTrain->frontLeftPos->GetAverageValue()-512;
@@ -190,7 +190,7 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("ShooterAngleSetpoint",Robot::shooter->shooterAngle->GetSetpoint());
 	SmartDashboard::PutNumber("ShooterAngleInput",Robot::shooter->shooterAnglePos->GetAverageValue());
 	
-	Robot::climber->angle->SetPID(Prefs->GetFloat("ClimberAngleP",.001),Prefs->GetFloat("ClimberAngleI",0.0),0);
+//	Robot::climber->angle->SetPID(Prefs->GetFloat("ClimberAngleP",.001),Prefs->GetFloat("ClimberAngleI",0.0),0);
 }
 void Robot::TestPeriodic() {
 	lw->Run();

@@ -179,6 +179,8 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("ClimberAngleRightVolt", Robot::climber->angleRight->GetOutputVoltage());
 	SmartDashboard::PutNumber("ClimberAngleLeftCurrent", Robot::climber->angleLeft->GetOutputCurrent());
 	SmartDashboard::PutNumber("ClimberAngleRightCurrent", Robot::climber->angleRight->GetOutputCurrent());
+	SmartDashboard::PutBoolean("ExtendLimit", Robot::climber->extendLimit->Get());
+	SmartDashboard::PutBoolean("RetractLimit", Robot::climber->retractLimit->Get());
 	
 	SmartDashboard::PutNumber("FLCurrent",Robot::driveTrain->frontLeftSteer->GetOutputCurrent());
 	SmartDashboard::PutNumber("FRCurrent",Robot::driveTrain->frontRightSteer->GetOutputCurrent());

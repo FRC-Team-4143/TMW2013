@@ -25,8 +25,15 @@ void OperatorClimb::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void OperatorClimb::Execute() {
-	Robot::climber->climbLeft->Set(GPad.GetRightY());
-	Robot::climber->climbRight->Set(GPad.GetRightY());
+	if ((GPad.GetRightY() < 0 && !Robot::climber->retractLimit->Get()) || (GPad.GetRightY() > 0 && !Robot::climber->extendLimit->Get())) {
+		Robot::climber->climbLeft->Set(0);
+		Robot::climber->climbRight->Set(0);
+	}
+	else {
+		Robot::climber->climbLeft->Set(GPad.GetRightY());
+		Robot::climber->climbRight->Set(GPad.GetRightY());
+	}
+		
 	
 	Robot::climber->angleLeft->Set(GPad.GetLeftY());
 	Robot::climber->angleRight->Set(-GPad.GetLeftY());
