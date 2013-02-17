@@ -13,6 +13,14 @@ void _GLOBAL__I__ZN15ClimberPullDownC2Ev();
 
 void _GLOBAL__I__ZN16ClimberPullUnderC2Ev();
 
+void _GLOBAL__I__ZN14ClimbingExtendC2Effiff();
+
+void _GLOBAL__I__ZN15ClimbingRetractC2Effiff();
+
+void _GLOBAL__I__ZN16ClimbingSequenceC2Ev();
+
+void _GLOBAL__I__ZN15ClimbingShooterC2Eiff();
+
 void _GLOBAL__I__ZN9CrabDriveC2Ev();
 
 void _GLOBAL__I__ZN5DriveC2Ev();
@@ -119,6 +127,10 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN15ClimberPullDownC2Ev,
     _GLOBAL__I__ZN16ClimberPullUnderC2Ev,
+    _GLOBAL__I__ZN14ClimbingExtendC2Effiff,
+    _GLOBAL__I__ZN15ClimbingRetractC2Effiff,
+    _GLOBAL__I__ZN16ClimbingSequenceC2Ev,
+    _GLOBAL__I__ZN15ClimbingShooterC2Eiff,
     _GLOBAL__I__ZN9CrabDriveC2Ev,
     _GLOBAL__I__ZN5DriveC2Ev,
     _GLOBAL__I__ZN4FireC2Ev,
@@ -177,6 +189,14 @@ void _GLOBAL__D__ZN17AutonomousCommandC2Ev();
 void _GLOBAL__D__ZN15ClimberPullDownC2Ev();
 
 void _GLOBAL__D__ZN16ClimberPullUnderC2Ev();
+
+void _GLOBAL__D__ZN14ClimbingExtendC2Effiff();
+
+void _GLOBAL__D__ZN15ClimbingRetractC2Effiff();
+
+void _GLOBAL__D__ZN16ClimbingSequenceC2Ev();
+
+void _GLOBAL__D__ZN15ClimbingShooterC2Eiff();
 
 void _GLOBAL__D__ZN9CrabDriveC2Ev();
 
@@ -274,6 +294,10 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN15ClimberPullDownC2Ev,
     _GLOBAL__D__ZN16ClimberPullUnderC2Ev,
+    _GLOBAL__D__ZN14ClimbingExtendC2Effiff,
+    _GLOBAL__D__ZN15ClimbingRetractC2Effiff,
+    _GLOBAL__D__ZN16ClimbingSequenceC2Ev,
+    _GLOBAL__D__ZN15ClimbingShooterC2Eiff,
     _GLOBAL__D__ZN9CrabDriveC2Ev,
     _GLOBAL__D__ZN5DriveC2Ev,
     _GLOBAL__D__ZN4FireC2Ev,

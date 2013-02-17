@@ -412,11 +412,15 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullUnder.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingExtend.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingRetract.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingSequence.h \
+  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingShooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../GamePad.h \
   C:/WindRiver/vxworks-6.3/target/h/WPILib/GenericHID.h \
@@ -425,8 +429,6 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetClimberDistanceHome.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h \
@@ -1259,6 +1261,16 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullUnder.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingExtend.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingRetract.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingSequence.h:
+
+C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingShooter.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
@@ -1266,8 +1278,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h:
-
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Commands/CommandGroup.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h:
 
@@ -1284,10 +1294,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetClimberDistanceHome.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h:
 

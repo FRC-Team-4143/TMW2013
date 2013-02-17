@@ -35,13 +35,15 @@ void Climber::InitDefaultCommand() {
 // here. Call these from Commands.
 void Climber::SetAngle(int Angle) {
 	CurrentLimit();
-	if(fabs(anglePos->GetAverageValue() - Angle) < 30) {
+/*	if(fabs(anglePos->GetAverageValue() - Angle) < 30) {
 		angle->SetSetpoint(anglePos->GetAverageValue());
 	}
 	else {
 		angle->SetSetpoint(Angle - angleOffset);
 	}
 	angleRight->Set(-angle->Get());
+*/
+	int correctedAngle = Angle - angleOffset;
 }
 void Climber::RunClimber(float speed) {
 	climbLeft->Set(speed);
@@ -63,8 +65,8 @@ void Climber::CurrentLimit(){
 	
 	if(!angle->IsEnabled() && SOTimer > GetClock())
 		angle->Enable();
-	
 }
-void Climber::SetAngleOffset(float offset) {
-	angleOffset = offset;
+
+int Climber::GetCorrectedAngle() {
+	return anglePos->GetAverageValue() - angleOffset;
 }
