@@ -43,11 +43,18 @@ void Climber::SetAngle(int Angle) {
 	}
 	angleRight->Set(-angle->Get());
 */
+	
 	int correctedAngle = Angle - angleOffset;
 }
 void Climber::RunClimber(float speed) {
-	climbLeft->Set(speed);
-	climbRight->Set(speed);
+	if ((speed < 0 && !retractLimit->Get()) || (speed > 0 && !extendLimit->Get())) {
+		Robot::climber->climbLeft->Set(0);
+		Robot::climber->climbRight->Set(0);
+	}
+	else {
+		Robot::climber->climbLeft->Set(speed);
+		Robot::climber->climbRight->Set(speed);
+	}
 }
 void Climber::CurrentLimit(){
 	float currentlimit = 20;
@@ -66,7 +73,6 @@ void Climber::CurrentLimit(){
 	if(!angle->IsEnabled() && SOTimer > GetClock())
 		angle->Enable();
 }
-
 int Climber::GetCorrectedAngle() {
 	return anglePos->GetAverageValue() - angleOffset;
 }

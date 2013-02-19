@@ -14,12 +14,32 @@
 #include "ClimbingShooter.h"
 #include "ClimbingRetract.h"
 #include "ClimbingExtend.h"
+#include "ClimbExtendFinalStage.h"
+#include "ClimbingAngleChange.h"
 
 ClimbingSequence::ClimbingSequence() {
 	
 	AddSequential (new ClimbingRetract(1.0, .5, 200, 20, 2));//start climbing first stage
+	AddSequential (new ClimbingShooter(228, 0.0, 0.0));//extend hooks using shooter
+	AddParallel (new ClimbingExtend(1.0, .5, 250, 2, 20));//extend climber to reach next section
+	AddSequential (new ClimbingShooter(310, 0.0, 0.0));//extend hooks using shooter
+	
+	//10 points!
+	
+	AddSequential (new ClimbingAngleChange(150, .5));//drops hooks over bar
+	AddSequential (new ClimbingRetract(1.0, .5, 200, 20, 2));//start climbing second stage
 	AddSequential (new ClimbingShooter(125, 0.0, 0.0));//extend hooks using shooter
 	AddSequential (new ClimbingExtend(1.0, .5, 250, 2, 20));//extend climber to reach next section
+
+	//20 points!!
+	
+	AddSequential (new ClimbingAngleChange(150, .5));//drops hooks over bar
+	AddSequential (new ClimbingRetract(1.0, .5, 500, 20, 2));//start climbing third stage
+	AddSequential (new ClimbingAngleChange(150, .5));//set top hooks onto bar
+	AddSequential (new ClimbExtendFinalStage(1.0, .5, 250, 5));//drives bottom of bars up above 2nd stage until rotate
+	AddSequential (new ClimbExtendFinalStage(1.0, .5, 300, 15));//drives bottom of bars up above 2nd stage)
+
+	//30 points!!!
 	
 	
 	// Add Commands here:

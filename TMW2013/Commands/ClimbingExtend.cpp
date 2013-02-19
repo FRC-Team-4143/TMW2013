@@ -19,7 +19,6 @@ ClimbingExtend::ClimbingExtend(float extendspeed, float anglespeed, int angle, f
 	Angle = angle;
 	StartAngChange = startangchange;
 	EndAngChange = endangchange;
-
 }
 // Called just before this Command runs the first time
 void ClimbingExtend::Initialize() {
@@ -31,13 +30,10 @@ void ClimbingExtend::Execute() {
 			(Robot::climber->climberDistance->GetDistance() < EndAngChange) || 
 			(Robot::climber->climberDistance->GetDistance() >= EndAngChange && (Angle - Robot::climber->GetCorrectedAngle()) < -10)
 		) {
-		Robot::climber->climbLeft->Set(ExtendSpeed);
-		Robot::climber->climbRight->Set(ExtendSpeed);
+		Robot::climber->RunClimber(ExtendSpeed);
 	}
 	else {
-		Robot::climber->climbLeft->Set(0);
-		Robot::climber->climbRight->Set(0);
-		
+		Robot::climber->RunClimber(0);
 	}
 	
 	if((Angle - Robot::climber->GetCorrectedAngle()) > 10) {

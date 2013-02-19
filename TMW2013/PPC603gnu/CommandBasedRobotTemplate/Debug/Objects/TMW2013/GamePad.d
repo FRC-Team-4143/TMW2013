@@ -1,7 +1,7 @@
 CommandBasedRobotTemplate/Debug/Objects/TMW2013/GamePad.o:  \
  C:/WindRiver/workspace/TMW2013/TMW2013/GamePad.cpp \
   C:/WindRiver/workspace/TMW2013/TMW2013/GamePad.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/GenericHID.h \
+  C:/WindRiver/workspace/WPILib/GenericHID.h \
   C:/WindRiver/vxworks-6.3/target/h/vxWorks.h \
   C:/WindRiver/vxworks-6.3/target/h/vxWorksCommon.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxCpu.h \
@@ -41,15 +41,15 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/GamePad.o:  \
   C:/WindRiver/vxworks-6.3/target/h/tool/gnu/toolMacros.h \
   C:/WindRiver/vxworks-6.3/target/h/version.h \
   C:/WindRiver/vxworks-6.3/target/h/sys/vxLibCfgDefsP.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/DriverStation.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Dashboard.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/DashboardBase.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/ErrorBase.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/ChipObject/NiRio.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/ChipObject/NiFpga.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Error.h \
+  C:/WindRiver/workspace/WPILib/Base.h \
+  C:/WindRiver/workspace/WPILib/DriverStation.h \
+  C:/WindRiver/workspace/WPILib/Dashboard.h \
+  C:/WindRiver/workspace/WPILib/DashboardBase.h \
+  C:/WindRiver/workspace/WPILib/ErrorBase.h \
+  C:/WindRiver/workspace/WPILib/Base.h \
+  C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h \
+  C:/WindRiver/workspace/WPILib/ChipObject/NiFpga.h \
+  C:/WindRiver/workspace/WPILib/Error.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/string \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/istream \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ostream \
@@ -106,15 +106,15 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/GamePad.o:  \
   C:/WindRiver/vxworks-6.3/target/h/semLib.h \
   C:/WindRiver/vxworks-6.3/target/h/vwModNum.h \
   C:/WindRiver/vxworks-6.3/target/h/semLibCommon.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/NetworkCommunication/FRCComm.h \
+  C:/WindRiver/workspace/WPILib/NetworkCommunication/FRCComm.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/stack \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/deque \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/DriverStationEnhancedIO.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/SensorBase.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Task.h \
-  C:/WindRiver/vxworks-6.3/target/h/WPILib/Utility.h \
+  C:/WindRiver/workspace/WPILib/DriverStationEnhancedIO.h \
+  C:/WindRiver/workspace/WPILib/SensorBase.h \
+  C:/WindRiver/workspace/WPILib/Task.h \
+  C:/WindRiver/workspace/WPILib/Utility.h \
   C:/WindRiver/vxworks-6.3/target/h/taskLib.h \
   C:/WindRiver/vxworks-6.3/target/h/classLib.h \
   C:/WindRiver/vxworks-6.3/target/h/qLib.h \
@@ -152,7 +152,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/GamePad.o:  \
 
 C:/WindRiver/workspace/TMW2013/TMW2013/GamePad.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/GenericHID.h:
+C:/WindRiver/workspace/WPILib/GenericHID.h:
 
 C:/WindRiver/vxworks-6.3/target/h/vxWorks.h:
 
@@ -232,23 +232,23 @@ C:/WindRiver/vxworks-6.3/target/h/version.h:
 
 C:/WindRiver/vxworks-6.3/target/h/sys/vxLibCfgDefsP.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h:
+C:/WindRiver/workspace/WPILib/Base.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/DriverStation.h:
+C:/WindRiver/workspace/WPILib/DriverStation.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Dashboard.h:
+C:/WindRiver/workspace/WPILib/Dashboard.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/DashboardBase.h:
+C:/WindRiver/workspace/WPILib/DashboardBase.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/ErrorBase.h:
+C:/WindRiver/workspace/WPILib/ErrorBase.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Base.h:
+C:/WindRiver/workspace/WPILib/Base.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/ChipObject/NiRio.h:
+C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/ChipObject/NiFpga.h:
+C:/WindRiver/workspace/WPILib/ChipObject/NiFpga.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Error.h:
+C:/WindRiver/workspace/WPILib/Error.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/string:
 
@@ -362,7 +362,7 @@ C:/WindRiver/vxworks-6.3/target/h/vwModNum.h:
 
 C:/WindRiver/vxworks-6.3/target/h/semLibCommon.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/NetworkCommunication/FRCComm.h:
+C:/WindRiver/workspace/WPILib/NetworkCommunication/FRCComm.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/stack:
 
@@ -372,13 +372,13 @@ c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/DriverStationEnhancedIO.h:
+C:/WindRiver/workspace/WPILib/DriverStationEnhancedIO.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/SensorBase.h:
+C:/WindRiver/workspace/WPILib/SensorBase.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Task.h:
+C:/WindRiver/workspace/WPILib/Task.h:
 
-C:/WindRiver/vxworks-6.3/target/h/WPILib/Utility.h:
+C:/WindRiver/workspace/WPILib/Utility.h:
 
 C:/WindRiver/vxworks-6.3/target/h/taskLib.h:
 

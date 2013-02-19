@@ -8,8 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "OperatorClimb.h"
-OperatorClimb::OperatorClimb():
-GPad(2)
+OperatorClimb::OperatorClimb()
 {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
@@ -20,30 +19,14 @@ GPad(2)
 // Called just before this Command runs the first time
 void OperatorClimb::Initialize() {
 	climberset = Robot::climber->anglePos->GetAverageValue();
-	button4press = false;
-	button2press = false;
 }
 // Called repeatedly when this Command is scheduled to run
 void OperatorClimb::Execute() {
-	if ((GPad.GetRightY() < 0 && !Robot::climber->retractLimit->Get()) || (GPad.GetRightY() > 0 && !Robot::climber->extendLimit->Get())) {
-		Robot::climber->climbLeft->Set(0);
-		Robot::climber->climbRight->Set(0);
-	}
-	else {
-		Robot::climber->climbLeft->Set(GPad.GetRightY());
-		Robot::climber->climbRight->Set(GPad.GetRightY());
-	}
-		
 	
-	Robot::climber->angleLeft->Set(GPad.GetLeftY());
-	Robot::climber->angleRight->Set(-GPad.GetLeftY());
+	Robot::climber->RunClimber(Robot::oi->getGamePad()->GetRightY());		
 	
-	/*
-	if(fabs(GPad.GetLeftY()) > .02)
-	climberset = climberset - GPad.GetLeftY();
-	
-	Robot::climber->SetAngle(int(climberset));
-	*/
+	Robot::climber->angleLeft->Set(Robot::oi->getGamePad()->GetLeftY());
+	Robot::climber->angleRight->Set(-Robot::oi->getGamePad()->GetLeftY());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool OperatorClimb::IsFinished() {

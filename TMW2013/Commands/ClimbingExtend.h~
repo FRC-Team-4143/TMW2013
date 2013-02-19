@@ -24,11 +24,19 @@
 class ClimbingExtend: public Command {
 public:
 	ClimbingExtend();
+	ClimbingExtend(float extendspeed, float anglespeed, int angle, float startangchange, float endangchange);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
+	
+private:
+	float ExtendSpeed;
+	float AngleSpeed;
+	int Angle;
+	float StartAngChange;
+	float EndAngChange;
 };
 
 #endif

@@ -30,6 +30,9 @@ public:
 	virtual void End();
 	virtual void Interrupted();
 	Preferences* Prefs;
+
+private:
+	float delay;
 };
 
 #endif

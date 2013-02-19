@@ -24,11 +24,12 @@ void ClimbingShooter::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ClimbingShooter::Execute() {
-	
+	Robot::shooter->SetAngle(Angle);
+	Robot::shooter->RunAtOutput(EntrySpeed,ExitSpeed);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ClimbingShooter::IsFinished() {
-	return false;
+	return Robot::shooter->shooterAngle->OnTarget();
 }
 // Called once after isFinished returns true
 void ClimbingShooter::End() {

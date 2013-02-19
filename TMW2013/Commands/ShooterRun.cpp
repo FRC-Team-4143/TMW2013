@@ -21,7 +21,7 @@ void ShooterRun::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterRun::Execute() {
-	Robot::shooter->shooterAngle->SetSetpoint(Prefs->GetInt("ShooterAngleSetpoint",200));
+	Robot::shooter->SetAngle(Prefs->GetInt("ShooterAngleSetpoint",200));
 	Robot::shooter->RunAtOutput(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
 }
 // Make this return true when this Command no longer needs to run execute()

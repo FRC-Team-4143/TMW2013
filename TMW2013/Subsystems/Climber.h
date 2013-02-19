@@ -25,7 +25,7 @@ private:
 	
 	//Caclulate the angleOffset by fully extending the climber and laying flat on ground.  
 	//The expected value is 224.  
-	//Subtract the actual from 224 and set to angleOffset in contructor in climber.cpp.
+	//Subtract the actual from 224 and set to angleOffset below.
 	//Verify that the rollover value isn't within the travel of the climber
 	static const int angleOffset = 0;
 public:

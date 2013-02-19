@@ -15,7 +15,6 @@
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
-#include "../GamePad.h"
 
 /**
  *
@@ -25,10 +24,7 @@
 class OperatorClimb: public Command 
 {
 private: 
-	GamePad GPad;
 	float climberset;
-	bool button4press;
-	bool button2press;
 	
 public:
 	OperatorClimb();

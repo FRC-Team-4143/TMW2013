@@ -23,9 +23,16 @@
 #include "OI.h"
 #include "RAWCConstants.h"
 #include <iostream>
+#include "Commands/ShooterInFront.h"
+#include "Commands/ShooterInMiddle.h"
+#include "Commands/ShooterInBack.h"
+#include "Gamepad.h"
 class Robot : public IterativeRobot {
 public:
 	Command *autonomousCommand;
+	Command *shooterInBack;
+	Command *shooterInMiddle;
+	Command *shooterInFront;
 	SendableChooser *autoChooser;
 	static OI *oi;
 	LiveWindow *lw;
@@ -56,5 +63,6 @@ public:
 	float* pFROffset;
 	float* pRLOffset;
 	float* pRROffset;
+	
 };
 #endif

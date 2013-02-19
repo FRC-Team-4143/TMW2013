@@ -19,7 +19,6 @@ ClimbingRetract::ClimbingRetract(float extendspeed, float anglespeed, int angle,
 	Angle = angle;
 	StartAngChange = startangchange;
 	EndAngChange = endangchange;
-
 }
 // Called just before this Command runs the first time
 void ClimbingRetract::Initialize() {

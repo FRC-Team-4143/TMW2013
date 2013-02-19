@@ -18,17 +18,24 @@ Fire::Fire() {
 }
 // Called just before this Command runs the first time
 void Fire::Initialize() {
-	SetTimeout(Prefs->GetFloat("TriggerTime",.6));
+	SetTimeout(0.2);
+	delay = GetClock()+20;
 }
 // Called repeatedly when this Command is scheduled to run
 void Fire::Execute() {
 	Robot::shooter->trigger->Set(Relay::kForward);
 	Robot::shooter->shooterAngle->SetSetpoint(Prefs->GetInt("ShooterAngleSetpoint",350));
 	Robot::shooter->RunAtOutput(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
+	
+	if(!Robot::shooter->triggerStop->Get() && IsTimedOut())
+		delay = GetClock() + .01;
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Fire::IsFinished() {
-	return IsTimedOut();
+	if(delay < GetClock())
+		return true;
+	else
+		return false;
 }
 // Called once after isFinished returns true
 void Fire::End() {
@@ -37,4 +44,5 @@ void Fire::End() {
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Fire::Interrupted() {
+	Robot::shooter->trigger->Set(Relay::kOff);
 }
