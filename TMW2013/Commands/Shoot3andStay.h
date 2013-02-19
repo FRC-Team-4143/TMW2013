@@ -9,31 +9,20 @@
 // it from being updated in th future.
 
 
-#ifndef FIRE_H
-#define FIRE_H
 
+#ifndef SHOOT3ANDSTAY_H
+#define SHOOT3ANDSTAY_H
 
-#include "Commands/Subsystem.h"
-#include "../Robot.h"
+#include "Commands/CommandGroup.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class Fire: public Command {
-public:
-	Fire();
-	virtual void Initialize();
-	virtual void Execute();
-	virtual bool IsFinished();
-	virtual void End();
-	virtual void Interrupted();
-	Preferences* Prefs;
-
-private:
-	float delay;
-	float fireClock;
+class Shoot3andStay: public CommandGroup {
+public:	
+	Shoot3andStay();
 };
 
 #endif

@@ -1,9 +1,15 @@
-CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/OI.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/OI.h \
-  C:/WindRiver/workspace/WPILib/WPILib.h \
-  C:/WindRiver/vxworks-6.3/target/h/string.h \
-  C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h \
+ \
+ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/Shoot3andStay.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h \
+  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
+  C:/WindRiver/workspace/WPILib/Commands/Command.h \
+  C:/WindRiver/workspace/WPILib/ErrorBase.h \
+  C:/WindRiver/workspace/WPILib/Base.h \
+  C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h \
+  C:/WindRiver/workspace/WPILib/ChipObject/NiFpga.h \
+  C:/WindRiver/vxworks-6.3/target/h/vxWorks.h \
+  C:/WindRiver/vxworks-6.3/target/h/vxWorksCommon.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxCpu.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxArch.h \
   C:/WindRiver/vxworks-6.3/target/h/arch/ppc/archPpc.h \
@@ -13,25 +19,6 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/vxworks-6.3/target/h/types/vxParams.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxTypesBase.h \
   c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/stddef.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/istream \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ostream \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ios \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xlocnum \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cerrno \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/yvals.h \
-  C:/WindRiver/vxworks-6.3/target/h/errno.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/climits \
-  c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/limits.h \
-  c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/syslimits.h \
-  C:/WindRiver/vxworks-6.3/target/h/limits.h \
-  C:/WindRiver/vxworks-6.3/target/h/tool/gnu/limits.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cstdio \
-  C:/WindRiver/vxworks-6.3/target/h/stdio.h \
-  C:/WindRiver/vxworks-6.3/target/h/errno.h \
-  C:/WindRiver/vxworks-6.3/target/h/private/handleLibP.h \
-  C:/WindRiver/vxworks-6.3/target/h/vxWorks.h \
-  C:/WindRiver/vxworks-6.3/target/h/vxWorksCommon.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxTypes.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h \
   C:/WindRiver/vxworks-6.3/target/h/base/b_ssize_t.h \
@@ -60,6 +47,25 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/vxworks-6.3/target/h/tool/gnu/toolMacros.h \
   C:/WindRiver/vxworks-6.3/target/h/version.h \
   C:/WindRiver/vxworks-6.3/target/h/sys/vxLibCfgDefsP.h \
+  C:/WindRiver/workspace/WPILib/Error.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/string \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/istream \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ostream \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ios \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xlocnum \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cerrno \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/yvals.h \
+  C:/WindRiver/vxworks-6.3/target/h/errno.h \
+  C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/climits \
+  c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/limits.h \
+  c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/syslimits.h \
+  C:/WindRiver/vxworks-6.3/target/h/limits.h \
+  C:/WindRiver/vxworks-6.3/target/h/tool/gnu/limits.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cstdio \
+  C:/WindRiver/vxworks-6.3/target/h/stdio.h \
+  C:/WindRiver/vxworks-6.3/target/h/errno.h \
+  C:/WindRiver/vxworks-6.3/target/h/private/handleLibP.h \
   c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/stdarg.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cstdlib \
   C:/WindRiver/vxworks-6.3/target/h/stdlib.h \
@@ -88,7 +94,6 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/vxworks-6.3/target/h/locale.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ctime \
   C:/WindRiver/vxworks-6.3/target/h/time.h \
-  C:/WindRiver/vxworks-6.3/target/h/vxWorks.h \
   C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h \
   C:/WindRiver/vxworks-6.3/target/h/objLib.h \
   C:/WindRiver/vxworks-6.3/target/h/vxWorks.h \
@@ -96,11 +101,30 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/vxworks-6.3/target/h/vwModNum.h \
   C:/WindRiver/vxworks-6.3/target/h/base/b_struct_timespec.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xlocinfo.h \
+  C:/WindRiver/vxworks-6.3/target/h/semLib.h \
+  C:/WindRiver/vxworks-6.3/target/h/vwModNum.h \
+  C:/WindRiver/vxworks-6.3/target/h/semLibCommon.h \
+  C:/WindRiver/workspace/WPILib/SmartDashboard/NamedSendable.h \
+  C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h \
+  C:/WindRiver/workspace/WPILib/tables/ITable.h \
+  C:/WindRiver/workspace/WPILib/networktables2/type/ComplexData.h \
+  C:/WindRiver/workspace/WPILib/tables/ITableListener.h \
+  C:/WindRiver/workspace/WPILib/tables/ITable.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory \
+  C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h \
+  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
+  C:/WindRiver/workspace/WPILib/WPILib.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h \
   C:/WindRiver/workspace/WPILib/Accelerometer.h \
   C:/WindRiver/workspace/WPILib/AnalogChannel.h \
   C:/WindRiver/workspace/WPILib/ChipObject.h \
-  C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h \
-  C:/WindRiver/workspace/WPILib/ChipObject/NiFpga.h \
   C:/WindRiver/workspace/WPILib/ChipObject/tAccumulator.h \
   C:/WindRiver/workspace/WPILib/ChipObject/tSystemInterface.h \
   C:/WindRiver/workspace/WPILib/ChipObject/tAI.h \
@@ -115,24 +139,14 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/ChipObject/tInterruptManager.h \
   C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h \
   C:/WindRiver/workspace/WPILib/ChipObject/tSystem.h \
-  C:/WindRiver/vxworks-6.3/target/h/semLib.h \
-  C:/WindRiver/vxworks-6.3/target/h/vwModNum.h \
-  C:/WindRiver/vxworks-6.3/target/h/semLibCommon.h \
   C:/WindRiver/workspace/WPILib/ChipObject/tSolenoid.h \
   C:/WindRiver/workspace/WPILib/ChipObject/tSPI.h \
   C:/WindRiver/workspace/WPILib/ChipObject/tWatchdog.h \
   C:/WindRiver/workspace/WPILib/SensorBase.h \
   C:/WindRiver/workspace/WPILib/ErrorBase.h \
-  C:/WindRiver/workspace/WPILib/Base.h \
-  C:/WindRiver/workspace/WPILib/Error.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/string \
   C:/WindRiver/workspace/WPILib/PIDSource.h \
   C:/WindRiver/workspace/WPILib/LiveWindow/LiveWindowSendable.h \
   C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h \
-  C:/WindRiver/workspace/WPILib/tables/ITable.h \
-  C:/WindRiver/workspace/WPILib/networktables2/type/ComplexData.h \
-  C:/WindRiver/workspace/WPILib/tables/ITableListener.h \
-  C:/WindRiver/workspace/WPILib/tables/ITable.h \
   C:/WindRiver/workspace/WPILib/ADXL345_I2C.h \
   C:/WindRiver/workspace/WPILib/ADXL345_SPI.h \
   C:/WindRiver/workspace/WPILib/AnalogModule.h \
@@ -147,13 +161,6 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/Buttons/Trigger.h \
   C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/WPILib/ErrorBase.h \
-  C:/WindRiver/workspace/WPILib/SmartDashboard/NamedSendable.h \
-  C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory \
   C:/WindRiver/workspace/WPILib/Buttons/DigitalIOButton.h \
   C:/WindRiver/workspace/WPILib/Buttons/InternalButton.h \
   C:/WindRiver/workspace/WPILib/Buttons/JoystickButton.h \
@@ -168,10 +175,6 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/tables/ITable.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
-  C:/WindRiver/workspace/WPILib/Commands/Command.h \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
   C:/WindRiver/workspace/WPILib/Commands/PIDCommand.h \
   C:/WindRiver/workspace/WPILib/PIDSource.h \
   C:/WindRiver/workspace/WPILib/PIDOutput.h \
@@ -390,11 +393,6 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/Vision/HSLImage.h \
   C:/WindRiver/workspace/WPILib/Vision/ColorImage.h \
   C:/WindRiver/workspace/WPILib/WPIErrors.h \
-  C:/WindRiver/workspace/WPILib/SmartDashboard/SmartDashboard.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h \
-  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
-  C:/WindRiver/workspace/WPILib/WPILib.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h \
   C:/WindRiver/workspace/WPILib/LiveWindow/LiveWindow.h \
@@ -417,48 +415,25 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbExtendFinalStage.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullUnder.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingAngleChange.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingExtend.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingRetract.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingSequence.h \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingShooter.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetClimberDistanceHome.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterDrop.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterPyramidGoal.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ToggleFront.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h
 
-C:/WindRiver/workspace/TMW2013/TMW2013/OI.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
 
-C:/WindRiver/workspace/WPILib/WPILib.h:
+C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
 
-C:/WindRiver/vxworks-6.3/target/h/string.h:
+C:/WindRiver/workspace/WPILib/Commands/Command.h:
 
-C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h:
+C:/WindRiver/workspace/WPILib/ErrorBase.h:
+
+C:/WindRiver/workspace/WPILib/Base.h:
+
+C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h:
+
+C:/WindRiver/workspace/WPILib/ChipObject/NiFpga.h:
+
+C:/WindRiver/vxworks-6.3/target/h/vxWorks.h:
+
+C:/WindRiver/vxworks-6.3/target/h/vxWorksCommon.h:
 
 C:/WindRiver/vxworks-6.3/target/h/types/vxCpu.h:
 
@@ -477,44 +452,6 @@ C:/WindRiver/vxworks-6.3/target/h/types/vxParams.h:
 C:/WindRiver/vxworks-6.3/target/h/types/vxTypesBase.h:
 
 c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/stddef.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/istream:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ostream:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ios:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xlocnum:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cerrno:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/yvals.h:
-
-C:/WindRiver/vxworks-6.3/target/h/errno.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/climits:
-
-c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/limits.h:
-
-c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/syslimits.h:
-
-C:/WindRiver/vxworks-6.3/target/h/limits.h:
-
-C:/WindRiver/vxworks-6.3/target/h/tool/gnu/limits.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cstdio:
-
-C:/WindRiver/vxworks-6.3/target/h/stdio.h:
-
-C:/WindRiver/vxworks-6.3/target/h/errno.h:
-
-C:/WindRiver/vxworks-6.3/target/h/private/handleLibP.h:
-
-C:/WindRiver/vxworks-6.3/target/h/vxWorks.h:
-
-C:/WindRiver/vxworks-6.3/target/h/vxWorksCommon.h:
 
 C:/WindRiver/vxworks-6.3/target/h/types/vxTypes.h:
 
@@ -572,6 +509,44 @@ C:/WindRiver/vxworks-6.3/target/h/version.h:
 
 C:/WindRiver/vxworks-6.3/target/h/sys/vxLibCfgDefsP.h:
 
+C:/WindRiver/workspace/WPILib/Error.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/string:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/istream:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ostream:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/ios:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xlocnum:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cerrno:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/yvals.h:
+
+C:/WindRiver/vxworks-6.3/target/h/errno.h:
+
+C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/climits:
+
+c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/limits.h:
+
+c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/syslimits.h:
+
+C:/WindRiver/vxworks-6.3/target/h/limits.h:
+
+C:/WindRiver/vxworks-6.3/target/h/tool/gnu/limits.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cstdio:
+
+C:/WindRiver/vxworks-6.3/target/h/stdio.h:
+
+C:/WindRiver/vxworks-6.3/target/h/errno.h:
+
+C:/WindRiver/vxworks-6.3/target/h/private/handleLibP.h:
+
 c:\windriver\gnu\3.4.4-vxworks-6.3\x86-win32\bin\../lib/gcc/powerpc-wrs-vxworks/3.4.4/include/stdarg.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/cstdlib:
@@ -628,8 +603,6 @@ c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/
 
 C:/WindRiver/vxworks-6.3/target/h/time.h:
 
-C:/WindRiver/vxworks-6.3/target/h/vxWorks.h:
-
 C:/WindRiver/vxworks-6.3/target/h/types/vxANSI.h:
 
 C:/WindRiver/vxworks-6.3/target/h/objLib.h:
@@ -644,15 +617,53 @@ C:/WindRiver/vxworks-6.3/target/h/base/b_struct_timespec.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xlocinfo.h:
 
+C:/WindRiver/vxworks-6.3/target/h/semLib.h:
+
+C:/WindRiver/vxworks-6.3/target/h/vwModNum.h:
+
+C:/WindRiver/vxworks-6.3/target/h/semLibCommon.h:
+
+C:/WindRiver/workspace/WPILib/SmartDashboard/NamedSendable.h:
+
+C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h:
+
+C:/WindRiver/workspace/WPILib/tables/ITable.h:
+
+C:/WindRiver/workspace/WPILib/networktables2/type/ComplexData.h:
+
+C:/WindRiver/workspace/WPILib/tables/ITableListener.h:
+
+C:/WindRiver/workspace/WPILib/tables/ITable.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory:
+
+C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h:
+
+C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
+
+C:/WindRiver/workspace/WPILib/WPILib.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h:
+
 C:/WindRiver/workspace/WPILib/Accelerometer.h:
 
 C:/WindRiver/workspace/WPILib/AnalogChannel.h:
 
 C:/WindRiver/workspace/WPILib/ChipObject.h:
-
-C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h:
-
-C:/WindRiver/workspace/WPILib/ChipObject/NiFpga.h:
 
 C:/WindRiver/workspace/WPILib/ChipObject/tAccumulator.h:
 
@@ -682,12 +693,6 @@ C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h:
 
 C:/WindRiver/workspace/WPILib/ChipObject/tSystem.h:
 
-C:/WindRiver/vxworks-6.3/target/h/semLib.h:
-
-C:/WindRiver/vxworks-6.3/target/h/vwModNum.h:
-
-C:/WindRiver/vxworks-6.3/target/h/semLibCommon.h:
-
 C:/WindRiver/workspace/WPILib/ChipObject/tSolenoid.h:
 
 C:/WindRiver/workspace/WPILib/ChipObject/tSPI.h:
@@ -698,25 +703,11 @@ C:/WindRiver/workspace/WPILib/SensorBase.h:
 
 C:/WindRiver/workspace/WPILib/ErrorBase.h:
 
-C:/WindRiver/workspace/WPILib/Base.h:
-
-C:/WindRiver/workspace/WPILib/Error.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/string:
-
 C:/WindRiver/workspace/WPILib/PIDSource.h:
 
 C:/WindRiver/workspace/WPILib/LiveWindow/LiveWindowSendable.h:
 
 C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h:
-
-C:/WindRiver/workspace/WPILib/tables/ITable.h:
-
-C:/WindRiver/workspace/WPILib/networktables2/type/ComplexData.h:
-
-C:/WindRiver/workspace/WPILib/tables/ITableListener.h:
-
-C:/WindRiver/workspace/WPILib/tables/ITable.h:
 
 C:/WindRiver/workspace/WPILib/ADXL345_I2C.h:
 
@@ -746,20 +737,6 @@ C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Command.h:
 
-C:/WindRiver/workspace/WPILib/ErrorBase.h:
-
-C:/WindRiver/workspace/WPILib/SmartDashboard/NamedSendable.h:
-
-C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory:
-
 C:/WindRiver/workspace/WPILib/Buttons/DigitalIOButton.h:
 
 C:/WindRiver/workspace/WPILib/Buttons/InternalButton.h:
@@ -787,14 +764,6 @@ C:/WindRiver/workspace/WPILib/tables/ITable.h:
 C:/WindRiver/workspace/WPILib/Commands/Command.h:
 
 C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
-
-C:/WindRiver/workspace/WPILib/Commands/Command.h:
-
-C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
 
 C:/WindRiver/workspace/WPILib/Commands/PIDCommand.h:
 
@@ -1232,16 +1201,6 @@ C:/WindRiver/workspace/WPILib/Vision/ColorImage.h:
 
 C:/WindRiver/workspace/WPILib/WPIErrors.h:
 
-C:/WindRiver/workspace/WPILib/SmartDashboard/SmartDashboard.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h:
-
-C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
-
-C:/WindRiver/workspace/WPILib/WPILib.h:
-
 C:/WindRiver/workspace/WPILib/Commands/Command.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h:
@@ -1286,70 +1245,4 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbExtendFinalStage.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullUnder.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingAngleChange.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingExtend.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingRetract.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingSequence.h:
-
-C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingShooter.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetClimberDistanceHome.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterDrop.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterPyramidGoal.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ToggleFront.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h:

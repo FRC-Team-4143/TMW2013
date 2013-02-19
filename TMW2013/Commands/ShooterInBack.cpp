@@ -21,12 +21,12 @@ void ShooterInBack::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ShooterInBack::Execute() {
 	Robot::shooter->SetAngle(330);
-	Robot::shooter->RunAtOutput(-7, 7.8);
+	Robot::shooter->SetSpeeds(-7, 7.8);
 	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterInBack::IsFinished() {
-	return false;
+	return true;
 }
 // Called once after isFinished returns true
 void ShooterInBack::End() {

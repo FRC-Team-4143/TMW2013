@@ -20,12 +20,15 @@ Fire::Fire() {
 void Fire::Initialize() {
 	SetTimeout(0.2);
 	delay = GetClock()+20;
+	fireClock = GetClock()+1;
 }
 // Called repeatedly when this Command is scheduled to run
 void Fire::Execute() {
-	Robot::shooter->trigger->Set(Relay::kForward);
-	Robot::shooter->shooterAngle->SetSetpoint(Prefs->GetInt("ShooterAngleSetpoint",350));
-	Robot::shooter->RunAtOutput(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
+		
+	//if(fireClock > GetClock())
+		Robot::shooter->trigger->Set(Relay::kForward);
+	//else
+		//Robot::shooter->trigger->Set(Relay::kReverse);
 	
 	if(!Robot::shooter->triggerStop->Get() && IsTimedOut())
 		delay = GetClock() + .01;

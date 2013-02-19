@@ -391,7 +391,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/Vision/ColorImage.h \
   C:/WindRiver/workspace/WPILib/WPIErrors.h \
   C:/WindRiver/workspace/WPILib/SmartDashboard/SmartDashboard.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
@@ -399,6 +399,8 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h \
   C:/WindRiver/workspace/WPILib/LiveWindow/LiveWindow.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h \
+  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
@@ -412,11 +414,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInFront.h \
-  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbExtendFinalStage.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullUnder.h \
@@ -437,6 +438,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetClimberDistanceHome.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterDrop.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h \
@@ -1232,7 +1234,7 @@ C:/WindRiver/workspace/WPILib/WPIErrors.h:
 
 C:/WindRiver/workspace/WPILib/SmartDashboard/SmartDashboard.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
@@ -1247,6 +1249,10 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RobotMap.h:
 C:/WindRiver/workspace/WPILib/LiveWindow/LiveWindow.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h:
+
+C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h:
 
@@ -1274,15 +1280,13 @@ c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInFront.h:
 
-C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbExtendFinalStage.h:
 
@@ -1323,6 +1327,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetClimberDistanceHome.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterDrop.h:
 

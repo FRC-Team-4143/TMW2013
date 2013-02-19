@@ -21,12 +21,11 @@ void ShooterStop::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterStop::Execute() {
-	Robot::shooter->RunAtOutput(0,0);
-	Robot::shooter->shooterAngle->SetSetpoint(Prefs->GetInt("ShooterAngleSetpoint",350));
+	Robot::shooter->SetSpeeds(0,0);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterStop::IsFinished() {
-	return false;
+	return true;
 }
 // Called once after isFinished returns true
 void ShooterStop::End() {

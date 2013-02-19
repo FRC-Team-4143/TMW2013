@@ -7,6 +7,8 @@
 /*       -fdollars-in-identifiers flag.                   */
 
 
+void _GLOBAL__I__ZN11AutoShooterC2Ev();
+
 void _GLOBAL__I__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__I__ZN21ClimbExtendFinalStageC2Effif();
@@ -48,6 +50,8 @@ void _GLOBAL__I__ZN12RetractHooksC2Ev();
 void _GLOBAL__I__ZN22SetClimberDistanceHomeC2Ev();
 
 void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
+
+void _GLOBAL__I__ZN13Shoot3andStayC2Ev();
 
 void _GLOBAL__I__ZN11ShooterDropC2Ev();
 
@@ -140,6 +144,7 @@ void _GLOBAL__I__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_ctors[])();
 void (*_ctors[])() =
     {
+    _GLOBAL__I__ZN11AutoShooterC2Ev,
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN21ClimbExtendFinalStageC2Effif,
     _GLOBAL__I__ZN15ClimberPullDownC2Ev,
@@ -161,6 +166,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN12RetractHooksC2Ev,
     _GLOBAL__I__ZN22SetClimberDistanceHomeC2Ev,
     _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
+    _GLOBAL__I__ZN13Shoot3andStayC2Ev,
     _GLOBAL__I__ZN11ShooterDropC2Ev,
     _GLOBAL__I__ZN13ShooterInBackC2Ev,
     _GLOBAL__I__ZN14ShooterInFrontC2Ev,
@@ -208,6 +214,8 @@ void (*_ctors[])() =
     0
     };
 
+void _GLOBAL__D__ZN11AutoShooterC2Ev();
+
 void _GLOBAL__D__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__D__ZN21ClimbExtendFinalStageC2Effif();
@@ -249,6 +257,8 @@ void _GLOBAL__D__ZN12RetractHooksC2Ev();
 void _GLOBAL__D__ZN22SetClimberDistanceHomeC2Ev();
 
 void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
+
+void _GLOBAL__D__ZN13Shoot3andStayC2Ev();
 
 void _GLOBAL__D__ZN11ShooterDropC2Ev();
 
@@ -331,6 +341,7 @@ void _GLOBAL__D__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_dtors[])();
 void (*_dtors[])() =
     {
+    _GLOBAL__D__ZN11AutoShooterC2Ev,
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN21ClimbExtendFinalStageC2Effif,
     _GLOBAL__D__ZN15ClimberPullDownC2Ev,
@@ -352,6 +363,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN12RetractHooksC2Ev,
     _GLOBAL__D__ZN22SetClimberDistanceHomeC2Ev,
     _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
+    _GLOBAL__D__ZN13Shoot3andStayC2Ev,
     _GLOBAL__D__ZN11ShooterDropC2Ev,
     _GLOBAL__D__ZN13ShooterInBackC2Ev,
     _GLOBAL__D__ZN14ShooterInFrontC2Ev,

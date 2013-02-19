@@ -22,11 +22,11 @@ void ShooterRun::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ShooterRun::Execute() {
 	Robot::shooter->SetAngle(Prefs->GetInt("ShooterAngleSetpoint",200));
-	Robot::shooter->RunAtOutput(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
+	Robot::shooter->SetSpeeds(Prefs->GetFloat("EntrySpeed",0),Prefs->GetFloat("ExitSpeed",0));
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterRun::IsFinished() {
-	return false;
+	return true;
 }
 // Called once after isFinished returns true
 void ShooterRun::End() {

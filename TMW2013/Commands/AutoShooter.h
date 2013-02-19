@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef FIRE_H
-#define FIRE_H
+#ifndef AUTOSHOOTER_H
+#define AUTOSHOOTER_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,19 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class Fire: public Command {
+class AutoShooter: public Command {
 public:
-	Fire();
+	AutoShooter();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	Preferences* Prefs;
-
-private:
-	float delay;
-	float fireClock;
 };
 
 #endif

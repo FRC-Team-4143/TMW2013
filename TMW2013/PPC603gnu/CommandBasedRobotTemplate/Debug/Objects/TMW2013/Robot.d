@@ -412,9 +412,8 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Robot.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h \
+  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Robot.h:
 
@@ -1240,8 +1239,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
 
 C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
