@@ -43,6 +43,8 @@ void _GLOBAL__I__ZN14PickupPositionC2Ev();
 
 void _GLOBAL__I__ZN10PivotDriveC2Ev();
 
+void _GLOBAL__I__ZN10PyramidAimC2Ev();
+
 void _GLOBAL__I__ZN13RandomDrivingC2Ev();
 
 void _GLOBAL__I__ZN12RetractHooksC2Ev();
@@ -162,6 +164,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN13OperatorClimbC2Ev,
     _GLOBAL__I__ZN14PickupPositionC2Ev,
     _GLOBAL__I__ZN10PivotDriveC2Ev,
+    _GLOBAL__I__ZN10PyramidAimC2Ev,
     _GLOBAL__I__ZN13RandomDrivingC2Ev,
     _GLOBAL__I__ZN12RetractHooksC2Ev,
     _GLOBAL__I__ZN22SetClimberDistanceHomeC2Ev,
@@ -249,6 +252,8 @@ void _GLOBAL__D__ZN13OperatorClimbC2Ev();
 void _GLOBAL__D__ZN14PickupPositionC2Ev();
 
 void _GLOBAL__D__ZN10PivotDriveC2Ev();
+
+void _GLOBAL__D__ZN10PyramidAimC2Ev();
 
 void _GLOBAL__D__ZN13RandomDrivingC2Ev();
 
@@ -359,6 +364,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN13OperatorClimbC2Ev,
     _GLOBAL__D__ZN14PickupPositionC2Ev,
     _GLOBAL__D__ZN10PivotDriveC2Ev,
+    _GLOBAL__D__ZN10PyramidAimC2Ev,
     _GLOBAL__D__ZN13RandomDrivingC2Ev,
     _GLOBAL__D__ZN12RetractHooksC2Ev,
     _GLOBAL__D__ZN22SetClimberDistanceHomeC2Ev,

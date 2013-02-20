@@ -32,6 +32,8 @@ void Shooter::InitDefaultCommand() {
 	runtoggle = true;
 	entryset = 0;
 	exitset = 0;
+	entryvolt = 0;
+	exitvolt = 0;
 	prevAngle = 0;
 	shutoffTimer = GetClock() + 3;
 }

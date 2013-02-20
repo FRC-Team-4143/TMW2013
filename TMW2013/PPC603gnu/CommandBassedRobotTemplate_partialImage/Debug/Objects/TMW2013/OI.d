@@ -435,6 +435,7 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetClimberDistanceHome.h \
@@ -1321,6 +1322,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RandomDriving.h:
 
