@@ -27,6 +27,11 @@ private:
 	float exitvolt;
 	int prevAngle;
 	float shutoffTimer;
+	float shootertimer;
+	float EntrySOTimer;
+	bool EntrySOFlag;
+	float ExitSOTimer;
+	bool ExitSOFlag;
 	
 	//Caclulate the angleOffset by pulling the shooter back until fully vertical.  
 	//The expected value is XXX.  
@@ -50,7 +55,11 @@ public:
 	void InitDefaultCommand();
 	void RunAtOutput();
 	void SetAngle(int angle);
+	float GetEntrySpeed();
+	float GetExitSpeed();
 	int GetCorrectedAngle();
-	void SetSpeeds(float entry, float exit);
+	void SetSpeeds(float entry, float exit, bool resetTimer);
+	bool IsShooterReady();
+	void SetFireTimer();
 };
 #endif

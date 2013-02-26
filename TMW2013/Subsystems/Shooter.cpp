@@ -36,17 +36,58 @@ void Shooter::InitDefaultCommand() {
 	exitvolt = 0;
 	prevAngle = 0;
 	shutoffTimer = GetClock() + 3;
+	shootertimer = 0;
+	EntrySOTimer = 0;
+	EntrySOFlag = false;
+	ExitSOTimer = 0;
+	ExitSOFlag = false;
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 void Shooter::RunAtOutput() {
 	
+	//control output voltages of shooter motors
 	entryset = entryset + (entryvolt - wheelShooterEntry->GetOutputVoltage())/12;
 	exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
 			
 	wheelShooterEntry->Set(entryset);
 	wheelShooterExit->Set(exitset);
 	
+	float currentlimit = 30;
+	float currenttimeout = 1.5;
+	
+	//protect shooter exit motor
+	if(wheelShooterExit->GetOutputCurrent() > currentlimit) {
+		if(ExitSOTimer < GetClock() && !ExitSOFlag) {
+			ExitSOTimer = GetClock()+currenttimeout;
+			ExitSOFlag = true;
+		}
+		if(ExitSOTimer < GetClock() && ExitSOFlag) {
+			exitvolt = 0;
+			ExitSOFlag = false;
+		}
+	}
+	else
+	{
+		ExitSOFlag = false;
+	}
+	
+	//protect shooter entry motor
+	if(wheelShooterEntry->GetOutputCurrent() > currentlimit) {
+		if(EntrySOTimer < GetClock() && !EntrySOFlag) {
+			EntrySOTimer = GetClock()+currenttimeout;
+			EntrySOFlag = true;
+		}
+		if(EntrySOTimer < GetClock() && EntrySOFlag) {
+			entryvolt = 0;
+			EntrySOFlag = false;
+		}
+	}
+	else
+	{
+		EntrySOFlag = false;
+	}
+	//protect angle motor
 	if(shutoffTimer < GetClock())
 		shooterAngle->Disable();
 }
@@ -61,7 +102,25 @@ void Shooter::SetAngle(int angle) {
 int Shooter::GetCorrectedAngle() {
 	return shooterAnglePos->GetAverageValue() - angleOffset;
 }
-void Shooter::SetSpeeds(float entry, float exit) {
+void Shooter::SetSpeeds(float entry, float exit, bool resetTimer) {
+	if((entryvolt != entry || exitvolt != exit) && resetTimer)
+		shootertimer = GetClock() + 2;
+		
 	entryvolt = entry;
 	exitvolt = exit;
+}
+float Shooter::GetEntrySpeed() {
+	return entryvolt;
+}
+float Shooter::GetExitSpeed() {
+	return exitvolt;
+}
+bool Shooter::IsShooterReady() {
+	if(shootertimer < GetClock())
+		return true;
+		else
+			return false;
+}
+void Shooter::SetFireTimer() {
+	shootertimer = GetClock() + .5;
 }

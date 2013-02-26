@@ -61,11 +61,6 @@ OI::OI() {
 	trigger->WhileHeld(new CrabDrive());
      
         // SmartDashboard Buttons
-	SmartDashboard::PutData("ToggleFront", new ToggleFront());
-	SmartDashboard::PutData("ClimberPullDown", new ClimberPullDown());
-	SmartDashboard::PutData("ClimberPullUnder", new ClimberPullUnder());
-	SmartDashboard::PutData("SetClimberDistanceHome", new SetClimberDistanceHome());
-	SmartDashboard::PutData("ClimbingSequence", new ClimbingSequence());
 	SmartDashboard::PutData("ShooterRun", new ShooterRun());
 	SmartDashboard::PutData("ShooterStop", new ShooterStop());
 	SmartDashboard::PutData("Fire", new Fire());

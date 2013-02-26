@@ -29,6 +29,11 @@ public:
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
+	
+private:
+	float	radian; // input steering angle in radians
+	float	speed;
+
 };
 
 #endif

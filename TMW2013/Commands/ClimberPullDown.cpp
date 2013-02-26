@@ -21,13 +21,12 @@ void ClimberPullDown::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ClimberPullDown::Execute() {
-	Robot::climber->SetAngle(398);
-	if(Robot::climber->climberDistance->GetDistance() < 3.78)
-		Robot::climber->RunClimber(.5);
+	Robot::climber->angleLeft->Set(0.1);
+	Robot::climber->angleRight->Set(-0.1);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ClimberPullDown::IsFinished() {
-	if(Robot::climber->anglePos->GetAverageValue() < 400 && Robot::climber->climberDistance->GetDistance() < 3.78)
+	if(Robot::climber->anglePos->GetAverageValue() < 400)
 		return true;
 	else
 		return false;

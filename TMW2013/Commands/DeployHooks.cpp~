@@ -22,7 +22,7 @@ void DeployHooks::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void DeployHooks::Execute() {
 	Robot::shooter->SetAngle(228);
-	Robot::shooter->SetSpeeds(0, 0);
+	Robot::shooter->SetSpeeds(0, 0, true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool DeployHooks::IsFinished() {

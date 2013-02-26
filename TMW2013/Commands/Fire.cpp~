@@ -19,30 +19,45 @@ Fire::Fire() {
 // Called just before this Command runs the first time
 void Fire::Initialize() {
 	SetTimeout(0.2);
-	delay = GetClock()+20;
-	fireClock = GetClock()+1;
+	delay = GetClock()+2.5;
+	fireClock = GetClock()+2;
+	
+	entrySpeed = Robot::shooter->GetEntrySpeed();
+	exitSpeed = Robot::shooter->GetExitSpeed();
+
+	if(exitSpeed <= 0 || entrySpeed >=0)
+		delay =0;
 }
 // Called repeatedly when this Command is scheduled to run
 void Fire::Execute() {
-		
-	//if(fireClock > GetClock())
-		Robot::shooter->trigger->Set(Relay::kForward);
-	//else
-		//Robot::shooter->trigger->Set(Relay::kReverse);
-	
-	if(!Robot::shooter->triggerStop->Get() && IsTimedOut())
-		delay = GetClock() + .01;
+	if(delay != 0) {
+		if(Robot::shooter->IsShooterReady() && Robot::climber->anglePos->GetAverageValue() < 300) {
+				
+			if(fireClock > GetClock()) {
+				Robot::shooter->trigger->Set(Relay::kForward);
+			}
+			else {
+				Robot::shooter->trigger->Set(Relay::kReverse);
+				Robot::shooter->SetSpeeds(12, exitSpeed, false);
+			}
+			
+			if(!Robot::shooter->triggerStop->Get() && IsTimedOut())
+				delay = GetClock() + .01;
+		}
+		else {
+			Initialize();
+		}
+	}
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Fire::IsFinished() {
-	if(delay < GetClock())
-		return true;
-	else
-		return false;
+	return delay < GetClock();
 }
 // Called once after isFinished returns true
 void Fire::End() {
 	Robot::shooter->trigger->Set(Relay::kOff);
+	Robot::shooter->SetFireTimer();
+	Robot::shooter->SetSpeeds(entrySpeed, exitSpeed, true);
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run

@@ -21,16 +21,11 @@ void ClimberPullUnder::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ClimberPullUnder::Execute() {
-	Robot::climber->SetAngle(int(431 - (8.93*Robot::climber->climberDistance->GetDistance())));
-	if(Robot::climber->climberDistance->GetDistance() < 17.5)
-		Robot::climber->RunClimber(.5);
+		Robot::climber->RunClimber(1.0);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ClimberPullUnder::IsFinished() {
-	if(Robot::climber->angle->OnTarget() && Robot::climber->climberDistance->GetDistance() < 17.5)
-		return true;
-	else
-		return false;
+	return Robot::climber->climberDistance->GetDistance() < 17.5;
 }
 // Called once after isFinished returns true
 void ClimberPullUnder::End() {

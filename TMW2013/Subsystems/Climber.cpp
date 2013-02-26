@@ -33,19 +33,6 @@ void Climber::InitDefaultCommand() {
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-void Climber::SetAngle(int Angle) {
-	CurrentLimit();
-/*	if(fabs(anglePos->GetAverageValue() - Angle) < 30) {
-		angle->SetSetpoint(anglePos->GetAverageValue());
-	}
-	else {
-		angle->SetSetpoint(Angle - angleOffset);
-	}
-	angleRight->Set(-angle->Get());
-*/
-	
-	int correctedAngle = Angle - angleOffset;
-}
 void Climber::RunClimber(float speed) {
 	if ((speed < 0 && !retractLimit->Get()) || (speed > 0 && !extendLimit->Get())) {
 		Robot::climber->climbLeft->Set(0);

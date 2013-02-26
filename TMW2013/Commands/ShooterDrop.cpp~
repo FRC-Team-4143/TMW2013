@@ -22,7 +22,7 @@ void ShooterDrop::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ShooterDrop::Execute() {
 	Robot::shooter->SetAngle(475);
-	Robot::shooter->SetSpeeds(0, 0);
+	Robot::shooter->SetSpeeds(0, 0, true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterDrop::IsFinished() {

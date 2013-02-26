@@ -34,6 +34,8 @@ public:
 private:
 	float delay;
 	float fireClock;
+	float entrySpeed;
+	float exitSpeed;
 };
 
 #endif

@@ -42,7 +42,6 @@ public:
 	static PIDController* shooterShooterAngle;
 	static Relay* shooterTrigger;
 	static DigitalInput* shooterTriggerStop;
-	static CANJaguar* pickupPickup;
 	static SpeedController* climberClimbLeft;
 	static SpeedController* climberClimbRight;
 	static CANJaguar* climberAngleRight;

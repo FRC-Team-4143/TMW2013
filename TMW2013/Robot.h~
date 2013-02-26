@@ -30,9 +30,6 @@
 class Robot : public IterativeRobot {
 public:
 	Command *autonomousCommand;
-	Command *shooterInBack;
-	Command *shooterInMiddle;
-	Command *shooterInFront;
 	SendableChooser *autoChooser;
 	static OI *oi;
 	LiveWindow *lw;
@@ -49,6 +46,8 @@ public:
 	virtual void TeleopInit();
 	virtual void TeleopPeriodic();
 	virtual void TestPeriodic();
+
+	void SMDB();
 	
 	RAWCConstants* File;
 	Preferences* Prefs;

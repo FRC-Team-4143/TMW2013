@@ -12,14 +12,16 @@
 
 #include "Shoot3andStay.h"
 #include "ClimberPullDown.h"
+#include "ClimberPullUnder.h"
 #include "Fire.h"
 
 Shoot3andStay::Shoot3andStay() {
-	AddSequential (new ShooterInBack);
-//	AddSequential (new ClimberPullDown);
-	AddSequential (new Fire);
-	AddSequential (new Fire);
-	AddSequential (new Fire);
+	AddParallel (new ShooterInBack());
+	AddSequential (new ClimberPullDown());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	AddSequential (new ClimberPullUnder());
 	
 	
 	// Add Commands here:

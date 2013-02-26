@@ -25,7 +25,7 @@ void ClimbingShooter::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ClimbingShooter::Execute() {
 	Robot::shooter->SetAngle(Angle);
-	Robot::shooter->SetSpeeds(EntrySpeed,ExitSpeed);
+	Robot::shooter->SetSpeeds(EntrySpeed,ExitSpeed,true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ClimbingShooter::IsFinished() {

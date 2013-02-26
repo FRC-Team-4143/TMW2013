@@ -92,18 +92,8 @@ void Robot::DisabledPeriodic(){
 		Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
 	}
 	
-	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) {
-	SmartDashboard::PutNumber("FrontLeftPos",Robot::driveTrain->frontLeftPos->GetAverageValue());
-	SmartDashboard::PutNumber("FrontRightPos",Robot::driveTrain->frontRightPos->GetAverageValue());
-	SmartDashboard::PutNumber("RearLeftPos",Robot::driveTrain->rearLeftPos->GetAverageValue());
-	SmartDashboard::PutNumber("RearRightPos",Robot::driveTrain->rearRightPos->GetAverageValue());
-	SmartDashboard::PutNumber("SW",Robot::oi->getSteeringWheel());	
-	SmartDashboard::PutBoolean("OffsetButton",Robot::oi->getWheelOffset());
-	SmartDashboard::PutBoolean("GPad1",Robot::oi->getGamePad()->GetRawButton(1));
-	SmartDashboard::PutBoolean("GPad2",Robot::oi->getGamePad()->GetRawButton(2));
-	SmartDashboard::PutBoolean("GPad3",Robot::oi->getGamePad()->GetRawButton(3));
-	SmartDashboard::PutBoolean("GPad4",Robot::oi->getGamePad()->GetRawButton(4));
-	}
+	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) 
+		SMDB();
 }
 void Robot::AutonomousInit() {
 	autonomousCommand = (Command*) autoChooser->GetSelected();
@@ -133,8 +123,13 @@ void Robot::TeleopPeriodic() {
 	
 	Robot::shooter->RunAtOutput();
 	
-	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) {
-		
+	if (Robot::oi->getDriverJoystick()->GetRawButton(8))
+		SMDB();
+}
+void Robot::TestPeriodic() {
+	lw->Run();
+}
+void Robot::SMDB() {
 	SmartDashboard::PutNumber("FrontLeftPos",Robot::driveTrain->frontLeftPos->GetAverageValue());
 	SmartDashboard::PutNumber("FrontRightPos",Robot::driveTrain->frontRightPos->GetAverageValue());
 	SmartDashboard::PutNumber("RearLeftPos",Robot::driveTrain->rearLeftPos->GetAverageValue());
@@ -146,15 +141,9 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("FRError", Robot::driveTrain->frontRight->GetError());
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
-	
-	SmartDashboard::PutNumber("FLCurrent", Robot::driveTrain->frontLeftSteer->GetOutputCurrent());
-	SmartDashboard::PutNumber("FRCurrent", Robot::driveTrain->frontRightSteer->GetOutputCurrent());
-	SmartDashboard::PutNumber("RLCurrent", Robot::driveTrain->rearLeftSteer->GetOutputCurrent());
-	SmartDashboard::PutNumber("RRCurrent", Robot::driveTrain->rearRightSteer->GetOutputCurrent());
-	
+			
 	SmartDashboard::PutNumber("ClimbAngleSetpoint",Robot::climber->angle->GetSetpoint());
 	SmartDashboard::PutNumber("ClimberDistance",Robot::climber->climberDistance->GetDistance());
-	SmartDashboard::PutNumber("ClimberRaw",Robot::climber->climberDistance->GetRaw());
 	SmartDashboard::PutNumber("ClimbAngleError",Robot::climber->angle->GetError());
 	SmartDashboard::PutNumber("ClimberAngle",Robot::climber->anglePos->GetAverageValue());
 	SmartDashboard::PutNumber("ClimberAngleLeftVolt", Robot::climber->angleLeft->GetOutputVoltage());
@@ -163,12 +152,7 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("ClimberAngleRightCurrent", Robot::climber->angleRight->GetOutputCurrent());
 	SmartDashboard::PutBoolean("ExtendLimit", Robot::climber->extendLimit->Get());
 	SmartDashboard::PutBoolean("RetractLimit", Robot::climber->retractLimit->Get());
-	
-	SmartDashboard::PutNumber("FLCurrent",Robot::driveTrain->frontLeftSteer->GetOutputCurrent());
-	SmartDashboard::PutNumber("FRCurrent",Robot::driveTrain->frontRightSteer->GetOutputCurrent());
-	SmartDashboard::PutNumber("RLCurrent",Robot::driveTrain->rearLeftSteer->GetOutputCurrent());
-	SmartDashboard::PutNumber("RRCurrent",Robot::driveTrain->rearRightSteer->GetOutputCurrent());
-	
+			
 	SmartDashboard::PutNumber("ShooterAngleError",Robot::shooter->shooterAngle->GetError());
 	SmartDashboard::PutNumber("ShooterAngleVolts",Robot::shooter->shooterAngleSteer->GetOutputVoltage());
 	SmartDashboard::PutNumber("ShooterAngleSetpoint",Robot::shooter->shooterAngle->GetSetpoint());
@@ -178,10 +162,5 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("EntryCurrent", Robot::shooter->wheelShooterEntry->GetOutputCurrent());
 	SmartDashboard::PutNumber("ExitCurrent", Robot::shooter->wheelShooterExit->GetOutputCurrent());
 	SmartDashboard::PutBoolean("TriggerForward",Robot::shooter->trigger->Get() == Relay::kForward);
-	}
-//	Robot::climber->angle->SetPID(Prefs->GetFloat("ClimberAngleP",.001),Prefs->GetFloat("ClimberAngleI",0.0),0);
-}
-void Robot::TestPeriodic() {
-	lw->Run();
 }
 START_ROBOT_CLASS(Robot);
