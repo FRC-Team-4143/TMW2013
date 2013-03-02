@@ -114,7 +114,7 @@ void RobotMap::init() {
 	shooterShooterAngleSteer = new CANJaguar(12);
 	
 	
-	shooterShooterAngle = new PIDController(0.1, 0.001, 0.0,/* F: 0.0, */ shooterShooterAnglePos, shooterShooterAngleSteer, 0.02);
+	shooterShooterAngle = new PIDController(0.1, 0.0, 0.0,/* F: 0.0, */ shooterShooterAnglePos, shooterShooterAngleSteer, 0.02);
 	lw->AddActuator("Shooter", "ShooterAngle", shooterShooterAngle);
 	shooterShooterAngle->SetContinuous(true); shooterShooterAngle->SetAbsoluteTolerance(2.0); 
         shooterShooterAngle->SetInputRange(0.0, 1023.0);

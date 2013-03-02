@@ -87,12 +87,10 @@ void Shooter::RunAtOutput() {
 	{
 		EntrySOFlag = false;
 	}
-
 	//protect angle motor
 	if(shutoffTimer < GetClock())
 		shooterAngle->Disable();
 }
-
 void Shooter::SetAngle(int angle) {
 	if(prevAngle != angle) {
 		shooterAngle->Enable();
@@ -111,7 +109,6 @@ void Shooter::SetSpeeds(float entry, float exit, bool resetTimer) {
 	entryvolt = entry;
 	exitvolt = exit;
 }
-
 float Shooter::GetEntrySpeed() {
 	return entryvolt;
 }

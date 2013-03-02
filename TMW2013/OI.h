@@ -28,6 +28,7 @@ private:
 	JoystickButton* retractHooks;
 	JoystickButton* shooterPyramid;
 	JoystickButton* gpadfire;
+
 public:
 	OI();
  

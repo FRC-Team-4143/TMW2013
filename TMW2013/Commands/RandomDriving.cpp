@@ -19,9 +19,9 @@ RandomDriving::RandomDriving() {
 	const double pi = 3.14159;
 	
 	AddSequential (new TurnWheels(pi/2));
-	AddSequential (new Drive(2.0, pi/2, .5));
+	AddSequential (new Drive(pi/2, .5));
 	AddSequential (new TurnWheels(pi));
-	AddSequential (new Drive(3.0, pi, .5));
+	AddSequential (new Drive(pi, .5));
 	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());

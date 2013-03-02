@@ -24,7 +24,7 @@
 class Drive: public Command {
 public:
 	Drive();
-	Drive(double timeout, double direction, double velocity);
+	Drive(double direction, double velocity);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

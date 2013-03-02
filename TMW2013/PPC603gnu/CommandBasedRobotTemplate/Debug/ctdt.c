@@ -29,13 +29,17 @@ void _GLOBAL__I__ZN15ClimbingShooterC2Eiff();
 
 void _GLOBAL__I__ZN9CrabDriveC2Ev();
 
+void _GLOBAL__I__ZN20DecreaseShooterAngleC2Ev();
+
 void _GLOBAL__I__ZN11DeployHooksC2Ev();
 
 void _GLOBAL__I__ZN5DriveC2Ev();
 
-void _GLOBAL__I__ZN4FireC2Ev();
+void _GLOBAL__I__ZN4FireC2Eb();
 
 void _GLOBAL__I__ZN12FireSequenceC2Ev();
+
+void _GLOBAL__I__ZN8NoneAutoC2Ev();
 
 void _GLOBAL__I__ZN13OperatorClimbC2Ev();
 
@@ -62,6 +66,8 @@ void _GLOBAL__I__ZN13ShooterInBackC2Ev();
 void _GLOBAL__I__ZN14ShooterInFrontC2Ev();
 
 void _GLOBAL__I__ZN15ShooterInMiddleC2Ev();
+
+void _GLOBAL__I__ZN20ShooterIncreaseAngleC2Ev();
 
 void _GLOBAL__I__ZN18ShooterPyramidGoalC2Ev();
 
@@ -157,10 +163,12 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN16ClimbingSequenceC2Ev,
     _GLOBAL__I__ZN15ClimbingShooterC2Eiff,
     _GLOBAL__I__ZN9CrabDriveC2Ev,
+    _GLOBAL__I__ZN20DecreaseShooterAngleC2Ev,
     _GLOBAL__I__ZN11DeployHooksC2Ev,
     _GLOBAL__I__ZN5DriveC2Ev,
-    _GLOBAL__I__ZN4FireC2Ev,
+    _GLOBAL__I__ZN4FireC2Eb,
     _GLOBAL__I__ZN12FireSequenceC2Ev,
+    _GLOBAL__I__ZN8NoneAutoC2Ev,
     _GLOBAL__I__ZN13OperatorClimbC2Ev,
     _GLOBAL__I__ZN14PickupPositionC2Ev,
     _GLOBAL__I__ZN10PivotDriveC2Ev,
@@ -174,6 +182,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN13ShooterInBackC2Ev,
     _GLOBAL__I__ZN14ShooterInFrontC2Ev,
     _GLOBAL__I__ZN15ShooterInMiddleC2Ev,
+    _GLOBAL__I__ZN20ShooterIncreaseAngleC2Ev,
     _GLOBAL__I__ZN18ShooterPyramidGoalC2Ev,
     _GLOBAL__I__ZN10ShooterRunC2Ev,
     _GLOBAL__I__ZN11ShooterStopC2Ev,
@@ -239,13 +248,17 @@ void _GLOBAL__D__ZN15ClimbingShooterC2Eiff();
 
 void _GLOBAL__D__ZN9CrabDriveC2Ev();
 
+void _GLOBAL__D__ZN20DecreaseShooterAngleC2Ev();
+
 void _GLOBAL__D__ZN11DeployHooksC2Ev();
 
 void _GLOBAL__D__ZN5DriveC2Ev();
 
-void _GLOBAL__D__ZN4FireC2Ev();
+void _GLOBAL__D__ZN4FireC2Eb();
 
 void _GLOBAL__D__ZN12FireSequenceC2Ev();
+
+void _GLOBAL__D__ZN8NoneAutoC2Ev();
 
 void _GLOBAL__D__ZN13OperatorClimbC2Ev();
 
@@ -272,6 +285,8 @@ void _GLOBAL__D__ZN13ShooterInBackC2Ev();
 void _GLOBAL__D__ZN14ShooterInFrontC2Ev();
 
 void _GLOBAL__D__ZN15ShooterInMiddleC2Ev();
+
+void _GLOBAL__D__ZN20ShooterIncreaseAngleC2Ev();
 
 void _GLOBAL__D__ZN18ShooterPyramidGoalC2Ev();
 
@@ -357,10 +372,12 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN16ClimbingSequenceC2Ev,
     _GLOBAL__D__ZN15ClimbingShooterC2Eiff,
     _GLOBAL__D__ZN9CrabDriveC2Ev,
+    _GLOBAL__D__ZN20DecreaseShooterAngleC2Ev,
     _GLOBAL__D__ZN11DeployHooksC2Ev,
     _GLOBAL__D__ZN5DriveC2Ev,
-    _GLOBAL__D__ZN4FireC2Ev,
+    _GLOBAL__D__ZN4FireC2Eb,
     _GLOBAL__D__ZN12FireSequenceC2Ev,
+    _GLOBAL__D__ZN8NoneAutoC2Ev,
     _GLOBAL__D__ZN13OperatorClimbC2Ev,
     _GLOBAL__D__ZN14PickupPositionC2Ev,
     _GLOBAL__D__ZN10PivotDriveC2Ev,
@@ -374,6 +391,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN13ShooterInBackC2Ev,
     _GLOBAL__D__ZN14ShooterInFrontC2Ev,
     _GLOBAL__D__ZN15ShooterInMiddleC2Ev,
+    _GLOBAL__D__ZN20ShooterIncreaseAngleC2Ev,
     _GLOBAL__D__ZN18ShooterPyramidGoalC2Ev,
     _GLOBAL__D__ZN10ShooterRunC2Ev,
     _GLOBAL__D__ZN11ShooterStopC2Ev,

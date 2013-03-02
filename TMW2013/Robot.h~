@@ -46,7 +46,6 @@ public:
 	virtual void TeleopInit();
 	virtual void TeleopPeriodic();
 	virtual void TestPeriodic();
-
 	void SMDB();
 	
 	RAWCConstants* File;

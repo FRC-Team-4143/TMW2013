@@ -14,13 +14,17 @@
 #include "ClimberPullDown.h"
 #include "ClimberPullUnder.h"
 #include "Fire.h"
+#include "Drive.h"
 
 Shoot3andStay::Shoot3andStay() {
+	AddParallel (new Drive(3.14159, 0));
 	AddParallel (new ShooterInBack());
 	AddSequential (new ClimberPullDown());
-	AddSequential (new Fire());
-	AddSequential (new Fire());
-	AddSequential (new Fire());
+	AddSequential (new Fire(true));
+	AddSequential (new Fire(true));
+	AddSequential (new Fire(true));
+	AddSequential (new Fire(true));
+	AddSequential (new Fire(true));
 	AddSequential (new ClimberPullUnder());
 	
 	

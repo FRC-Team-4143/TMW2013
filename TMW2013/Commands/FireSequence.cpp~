@@ -16,7 +16,7 @@
 
 FireSequence::FireSequence() {
 	
-	AddSequential(new Fire());
+	AddSequential(new Fire(true));
 	AddSequential(new ShooterRun());
 	
 	// Add Commands here:

@@ -21,8 +21,8 @@ void ClimberPullDown::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ClimberPullDown::Execute() {
-	Robot::climber->angleLeft->Set(0.1);
-	Robot::climber->angleRight->Set(-0.1);
+	Robot::climber->angleLeft->Set(-0.40);
+	Robot::climber->angleRight->Set(0.40);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ClimberPullDown::IsFinished() {

@@ -428,10 +428,12 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingShooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DecreaseShooterAngle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupPosition.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
@@ -444,6 +446,7 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterIncreaseAngle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterPyramidGoal.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h \
@@ -1309,6 +1312,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimbingShooter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DecreaseShooterAngle.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
@@ -1316,6 +1321,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FireSequence.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h:
 
@@ -1340,6 +1347,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterIncreaseAngle.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterPyramidGoal.h:
 

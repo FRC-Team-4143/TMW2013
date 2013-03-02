@@ -17,15 +17,17 @@ ClimberPullUnder::ClimberPullUnder() {
 }
 // Called just before this Command runs the first time
 void ClimberPullUnder::Initialize() {
+	SetTimeout(3);
 	
 }
 // Called repeatedly when this Command is scheduled to run
 void ClimberPullUnder::Execute() {
-		Robot::climber->RunClimber(1.0);
+		Robot::climber->RunClimber(-1.0);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ClimberPullUnder::IsFinished() {
-	return Robot::climber->climberDistance->GetDistance() < 17.5;
+	//return Robot::climber->climberDistance->GetDistance() < 17.5;
+	return IsTimedOut();
 }
 // Called once after isFinished returns true
 void ClimberPullUnder::End() {
