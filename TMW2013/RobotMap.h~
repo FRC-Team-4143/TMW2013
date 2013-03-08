@@ -35,6 +35,7 @@ public:
 	static SpeedController* driveTrainFrontRightDrive;
 	static SpeedController* driveTrainRearLeftDrive;
 	static SpeedController* driveTrainRearRightDrive;
+	static Gyro* driveTrainGyroscope;
 	static CANJaguar* shooterWheelShooterEntry;
 	static CANJaguar* shooterWheelShooterExit;
 	static AnalogChannel* shooterShooterAnglePos;

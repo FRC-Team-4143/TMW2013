@@ -54,6 +54,8 @@ void Robot::RobotInit() {
 	Robot::driveTrain->rearLeftPos->SetAverageBits(256);
 	Robot::driveTrain->rearRightPos->SetAverageBits(256);
 	
+	Robot::shooter->shooterAngle->SetSetpoint(330);
+	
 	Robot::driveTrain->frontLeft->Enable();
 	Robot::driveTrain->frontRight->Enable();
 	Robot::driveTrain->rearLeft->Enable();
@@ -71,9 +73,7 @@ void Robot::RobotInit() {
 	autoChooser->AddDefault("Shoot3andStay", new Shoot3andStay());
 	autoChooser->AddObject("None", new NoneAuto());
 	SmartDashboard::PutData("Autonomous Chooser", autoChooser);
-	
-	Robot::shooter->shooterAngle->SetSetpoint(330);
-  }
+}
 	
 void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
@@ -109,6 +109,9 @@ void Robot::AutonomousInit() {
 void Robot::AutonomousPeriodic() {
 	Scheduler::GetInstance()->Run();
 	Robot::shooter->RunAtOutput();
+	
+	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) 
+		SMDB();
 }
 	
 void Robot::TeleopInit() {
@@ -130,6 +133,13 @@ void Robot::TeleopPeriodic() {
 	
 	if (Robot::oi->getDriverJoystick()->GetRawButton(8))
 		SMDB();
+	
+	if (Robot::oi->getGamePad()->GetRockerY() > 0.5)
+		Robot::shooter->SetAngle(Robot::shooter->GetCorrectedAngle() + 6);
+	
+	if (Robot::oi->getGamePad()->GetRockerY() < -0.5)
+			Robot::shooter->SetAngle(Robot::shooter->GetCorrectedAngle() - 6);
+	
 }
 void Robot::TestPeriodic() {
 	lw->Run();

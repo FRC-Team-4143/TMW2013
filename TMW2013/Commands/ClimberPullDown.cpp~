@@ -21,8 +21,8 @@ void ClimberPullDown::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ClimberPullDown::Execute() {
-	Robot::climber->angleLeft->Set(-0.2);
-	Robot::climber->angleRight->Set(0.2);
+	Robot::climber->angleLeft->Set(-0.40);
+	Robot::climber->angleRight->Set(0.40);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ClimberPullDown::IsFinished() {
@@ -33,9 +33,12 @@ bool ClimberPullDown::IsFinished() {
 }
 // Called once after isFinished returns true
 void ClimberPullDown::End() {
-	
+	Robot::climber->angleLeft->Set(0.0);
+	Robot::climber->angleRight->Set(0.0);
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ClimberPullDown::Interrupted() {
+	Robot::climber->angleLeft->Set(0.0);
+	Robot::climber->angleRight->Set(0.0);
 }

@@ -371,6 +371,24 @@ Children:
           name: Output Channel (PWM)
           validators: *id013
           value: '4'
+    - Name: Gyroscope
+      Base: Gyro
+      Children: []
+      Properties:
+        Sensitivity: !!robotbuilder.data.properties.DoubleProperty {default: 0.007,
+          name: Sensitivity, validators: null, value: 0.007}
+        Input Module (Analog): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1']
+          default: '1'
+          name: Input Module (Analog)
+          validators: [AnalogInput]
+          value: '1'
+        Input Channel (Analog): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2']
+          default: '1'
+          name: Input Channel (Analog)
+          validators: [AnalogInput]
+          value: '1'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Default Command, type: Command, validators: null, value: SteerDrive}
@@ -840,11 +858,21 @@ Children:
     Children: []
     Properties:
       Digital Pin: !!robotbuilder.data.properties.ChoicesProperty
-        choices: ['1', '2', '3', '4', '5', '6', '7', '8']
+        choices: &id021 ['1', '2', '3', '4', '5', '6', '7', '8']
         default: '1'
         name: Digital Pin
-        validators: [OI Digital Input]
+        validators: &id022 [OI Digital Input]
         value: '6'
+  - Name: GyroReset
+    Base: OI Digital Input
+    Children: []
+    Properties:
+      Digital Pin: !!robotbuilder.data.properties.ChoicesProperty
+        choices: *id021
+        default: '1'
+        name: Digital Pin
+        validators: *id022
+        value: '5'
   Properties: {}
 - Name: Commands
   Base: Commands

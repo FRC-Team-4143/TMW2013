@@ -17,7 +17,7 @@ PivotDrive::PivotDrive() {
 }
 // Called just before this Command runs the first time
 void PivotDrive::Initialize() {
-	Robot::driveTrain->SetGyroReference();
+	Robot::driveTrain->gyroscope->Reset();
 }
 // Called repeatedly when this Command is scheduled to run
 void PivotDrive::Execute() {

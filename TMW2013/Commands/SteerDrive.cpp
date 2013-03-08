@@ -24,9 +24,9 @@ void SteerDrive::Execute() {
 	if(radian > 3.14159*15/16 || radian < 3.14159/16)
 		correctedradians = radian;
 	else if(radian >= 3.14159/2)
-			correctedradians = (radian - 3.14159/2)/2 + 3.14159/2;
-		else
-			correctedradians = 3.14159/2 - (3.14159/2 - radian)/2;
+		correctedradians = (radian - 3.14159/2)/2 + 3.14159/2;
+	else
+		correctedradians = 3.14159/2 - (3.14159/2 - radian)/2;
 		
 	speed = Robot::oi->getDriverJoystick()->GetY();
 	Robot::driveTrain->Steer(correctedradians, speed, 0.5);	

@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef STEERDRIVE_H
-#define STEERDRIVE_H
+#ifndef SHOOTERINCREASEANGLE_H
+#define SHOOTERINCREASEANGLE_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,20 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class SteerDrive: public Command {
+class ShooterIncreaseAngle: public Command {
 public:
-	SteerDrive();
+	ShooterIncreaseAngle();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	
-private:
-	float	radian; // input steering angle in radians
-	float	speed;
-	float   correctedradians; // slow down driver input
-
 };
 
 #endif

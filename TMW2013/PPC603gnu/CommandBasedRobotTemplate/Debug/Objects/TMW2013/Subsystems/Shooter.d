@@ -278,7 +278,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Subsystems/Shooter.o:  \
   C:/WindRiver/workspace/WPILib/DriverStationEnhancedIO.h \
   C:/WindRiver/workspace/WPILib/DriverStationLCD.h \
   C:/WindRiver/workspace/WPILib/Encoder.h \
-  C:/WindRiver/workspace/WPILib/Gamepad.h \
+  C:/WindRiver/workspace/WPILib/GamePad.h \
   C:/WindRiver/workspace/WPILib/GenericHID.h \
   C:/WindRiver/workspace/WPILib/GearTooth.h \
   C:/WindRiver/workspace/WPILib/Gyro.h \
@@ -976,7 +976,7 @@ C:/WindRiver/workspace/WPILib/DriverStationLCD.h:
 
 C:/WindRiver/workspace/WPILib/Encoder.h:
 
-C:/WindRiver/workspace/WPILib/Gamepad.h:
+C:/WindRiver/workspace/WPILib/GamePad.h:
 
 C:/WindRiver/workspace/WPILib/GenericHID.h:
 
