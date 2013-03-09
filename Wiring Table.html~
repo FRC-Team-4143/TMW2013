@@ -59,8 +59,7 @@
 	            	    <tr><td>12</td><td>Shooter ShooterAngleSteer</td></tr>
 	            	    <tr><td>13</td><td>Climber AngleLeft</td></tr>
 	            	    <tr><td>14</td><td>Climber AngleRight</td></tr>
-	            	    <tr><td>15</td><td>Pickup Pickup</td></tr>
-	                                                                 	</table>
+	                                                                             	</table>
         
                     <h2>Relays on Digital Sidecar 1</h2>
 	<table><tr>
@@ -73,7 +72,8 @@
 	<table><tr>
 	<th class="pound">#</th>
 	<th>Sensor</th></tr>
-	                        	    <tr><td>2</td><td>DriveTrain FrontLeftPos Input </td></tr>
+	            	    <tr><td>1</td><td>DriveTrain Gyroscope Input </td></tr>
+	            	    <tr><td>2</td><td>DriveTrain FrontLeftPos Input </td></tr>
 	            	    <tr><td>3</td><td>DriveTrain FrontRightPos Input </td></tr>
 	            	    <tr><td>4</td><td>DriveTrain RearLeftPos Input </td></tr>
 	            	    <tr><td>5</td><td>DriveTrain RearRightPos Input </td></tr>

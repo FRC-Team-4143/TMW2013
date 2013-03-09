@@ -78,6 +78,8 @@ void Robot::RobotInit() {
 void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
 	
+	if(!Robot::oi->getGyroReset())
+		Robot::driveTrain->gyroscope->Reset();
 	
 	if (!Robot::oi->getWheelOffset())
 	{

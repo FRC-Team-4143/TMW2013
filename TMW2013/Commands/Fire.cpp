@@ -34,10 +34,10 @@ void Fire::Execute() {
 		if((Robot::shooter->IsShooterReady() && Robot::climber->anglePos->GetAverageValue() < 350) || Robot::shooter->IsShooterReady() && !Autonomous) {
 				
 			if(fireClock > GetClock()) {
-				Robot::shooter->trigger->Set(Relay::kForward);
+				Robot::shooter->trigger->Set(1);
 			}
 			else {
-				Robot::shooter->trigger->Set(Relay::kReverse);
+				Robot::shooter->trigger->Set(-1);
 				Robot::shooter->SetSpeeds(12, exitSpeed, false);
 			}
 			
@@ -55,12 +55,12 @@ bool Fire::IsFinished() {
 }
 // Called once after isFinished returns true
 void Fire::End() {
-	Robot::shooter->trigger->Set(Relay::kOff);
+	Robot::shooter->trigger->Set(0);
 	Robot::shooter->SetFireTimer();
 	Robot::shooter->SetSpeeds(entrySpeed, exitSpeed, true);
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Fire::Interrupted() {
-	Robot::shooter->trigger->Set(Relay::kOff);
+	Robot::shooter->trigger->Set(0);
 }
