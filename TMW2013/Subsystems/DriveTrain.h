@@ -27,6 +27,11 @@ private:
 		
 	float gyroreference;
 	
+	//AnalogChannel gyroChannel;
+	//bool GyroZeroFlag;
+	//float GyroZeroTime;
+	
+	
 	
 	//Steering Functions
 	void LeftTurn4Wheels();	//Calculates a left hand turn
@@ -156,6 +161,7 @@ public:
 	void Steer(float radian, float speed, float a);
 	void Crab(float radian, float speed);
 	void Pivot(float twistinput, float speedinput);
+	bool ZeroGyro(float InitTime);
 	
 };
 #endif

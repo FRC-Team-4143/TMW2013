@@ -32,8 +32,8 @@ CANJaguar* RobotMap::shooterWheelShooterExit = NULL;
 AnalogChannel* RobotMap::shooterShooterAnglePos = NULL;
 CANJaguar* RobotMap::shooterShooterAngleSteer = NULL;
 PIDController* RobotMap::shooterShooterAngle = NULL;
-Relay* RobotMap::shooterTrigger = NULL;
 DigitalInput* RobotMap::shooterTriggerStop = NULL;
+SpeedController* RobotMap::shooterTrigger = NULL;
 SpeedController* RobotMap::climberClimbLeft = NULL;
 SpeedController* RobotMap::climberClimbRight = NULL;
 CANJaguar* RobotMap::climberAngleRight = NULL;
@@ -123,11 +123,11 @@ void RobotMap::init() {
 	shooterShooterAngle->SetContinuous(true); shooterShooterAngle->SetAbsoluteTolerance(2.0); 
         shooterShooterAngle->SetInputRange(0.0, 1023.0);
         shooterShooterAngle->SetOutputRange(-1.0, 1.0);
-	shooterTrigger = new Relay(1, 1);
-	lw->AddActuator("Shooter", "Trigger", shooterTrigger);
-	
 	shooterTriggerStop = new DigitalInput(1, 5);
 	lw->AddSensor("Shooter", "TriggerStop", shooterTriggerStop);
+	
+	shooterTrigger = new Victor(1, 7);
+	lw->AddActuator("Shooter", "Trigger", (Victor*) shooterTrigger);
 	
 	climberClimbLeft = new Victor(1, 5);
 	lw->AddActuator("Climber", "ClimbLeft", (Victor*) climberClimbLeft);

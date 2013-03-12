@@ -879,6 +879,16 @@ Children:
         name: Digital Pin
         validators: *id022
         value: '5'
+  - Name: OI Digital Output 1
+    Base: OI Digital Output
+    Children: []
+    Properties:
+      Digital Pin: !!robotbuilder.data.properties.ChoicesProperty
+        choices: ['1', '2', '3', '4', '5', '6', '7', '8']
+        default: '1'
+        name: Digital Pin
+        validators: [OI Digital Output]
+        value: '1'
   Properties: {}
 - Name: Commands
   Base: Commands

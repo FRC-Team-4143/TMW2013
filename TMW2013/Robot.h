@@ -47,7 +47,7 @@ public:
 	virtual void TeleopPeriodic();
 	virtual void TestPeriodic();
 	void SMDB();
-	
+private:
 	RAWCConstants* File;
 	Preferences* Prefs;
 	float FLOffset;
@@ -62,5 +62,6 @@ public:
 	float* pRLOffset;
 	float* pRROffset;
 	
+	bool GyroReset;
 };
 #endif

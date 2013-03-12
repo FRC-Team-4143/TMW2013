@@ -53,21 +53,17 @@ void Robot::RobotInit() {
 	Robot::driveTrain->frontRightPos->SetAverageBits(256);
 	Robot::driveTrain->rearLeftPos->SetAverageBits(256);
 	Robot::driveTrain->rearRightPos->SetAverageBits(256);
-	
-	Robot::shooter->shooterAngle->SetSetpoint(330);
-	
+		
 	Robot::driveTrain->frontLeft->Enable();
 	Robot::driveTrain->frontRight->Enable();
 	Robot::driveTrain->rearLeft->Enable();
 	Robot::driveTrain->rearRight->Enable();
 	//Robot::climber->angle->Enable();
 	Robot::shooter->shooterAngle->Enable();
-	
+	Prefs->PutFloat("SteerScaling",1.5);
 	Prefs->PutFloat("EntrySpeed",-6.5);
 	Prefs->PutFloat("ExitSpeed",8);
-//	Prefs->PutFloat("ClimberAngleP",0.0);
-//	Prefs->PutFloat("ClimberAngleI",0.0);
-	Prefs->PutInt("ShooterAngleSetpoint",290);
+	Prefs->PutInt("ShooterAngleSetpoint",395);
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddDefault("Shoot3andStay", new Shoot3andStay());
@@ -79,7 +75,19 @@ void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
 	
 	if(!Robot::oi->getGyroReset())
-		Robot::driveTrain->gyroscope->Reset();
+		GyroReset = true;
+	
+	if(GyroReset == true)
+	{
+		if(Robot::driveTrain->ZeroGyro(10.0))
+			GyroReset = false;
+		
+		Robot::oi->setOIDigitalOutput1(true);
+	}
+		
+	if(GyroReset == false)
+		{
+		Robot::oi->setOIDigitalOutput1(false);		}
 	
 	if (!Robot::oi->getWheelOffset())
 	{
@@ -140,7 +148,7 @@ void Robot::TeleopPeriodic() {
 		Robot::shooter->SetAngle(Robot::shooter->GetCorrectedAngle() + 6);
 	
 	if (Robot::oi->getGamePad()->GetRockerY() < -0.5)
-			Robot::shooter->SetAngle(Robot::shooter->GetCorrectedAngle() - 6);
+		Robot::shooter->SetAngle(Robot::shooter->GetCorrectedAngle() - 6);
 	
 }
 void Robot::TestPeriodic() {
@@ -153,7 +161,8 @@ void Robot::SMDB() {
 	SmartDashboard::PutNumber("RearRightPos",Robot::driveTrain->rearRightPos->GetAverageValue());
 	SmartDashboard::PutNumber("SW",Robot::oi->getSteeringWheel());
 	SmartDashboard::PutNumber("StickDirection",Robot::oi->getDriverJoystick()->GetDirectionRadians());
-	SmartDashboard::PutNumber("ClimberRotateStick", oi->getGamePad()->GetLeftY());
+	SmartDashboard::PutNumber("StickVelocity", (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2);
+	SmartDashboard::PutNumber("GyroAngle", Robot::driveTrain->gyroscope->GetAngle());
 	
 	SmartDashboard::PutNumber("FLError", Robot::driveTrain->frontLeft->GetError());
 	SmartDashboard::PutNumber("FRError", Robot::driveTrain->frontRight->GetError());
@@ -170,7 +179,8 @@ void Robot::SMDB() {
 	SmartDashboard::PutNumber("ClimberAngleRightCurrent", Robot::climber->angleRight->GetOutputCurrent());
 	SmartDashboard::PutBoolean("ExtendLimit", Robot::climber->extendLimit->Get());
 	SmartDashboard::PutBoolean("RetractLimit", Robot::climber->retractLimit->Get());
-			
+	SmartDashboard::PutNumber("ClimberRotateStick", oi->getGamePad()->GetLeftY());
+	
 	SmartDashboard::PutNumber("ShooterAngleError",Robot::shooter->shooterAngle->GetError());
 	SmartDashboard::PutNumber("ShooterAngleVolts",Robot::shooter->shooterAngleSteer->GetOutputVoltage());
 	SmartDashboard::PutNumber("ShooterAngleSetpoint",Robot::shooter->shooterAngle->GetSetpoint());
@@ -179,6 +189,6 @@ void Robot::SMDB() {
 	SmartDashboard::PutNumber("ExitVoltage", Robot::shooter->wheelShooterExit->GetOutputVoltage());
 	SmartDashboard::PutNumber("EntryCurrent", Robot::shooter->wheelShooterEntry->GetOutputCurrent());
 	SmartDashboard::PutNumber("ExitCurrent", Robot::shooter->wheelShooterExit->GetOutputCurrent());
-	SmartDashboard::PutBoolean("TriggerForward",Robot::shooter->trigger->Get() == Relay::kForward);
+	SmartDashboard::PutBoolean("TriggerStop",Robot::shooter->triggerStop->Get());
 }
 START_ROBOT_CLASS(Robot);

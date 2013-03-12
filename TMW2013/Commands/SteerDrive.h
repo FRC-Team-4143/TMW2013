@@ -34,6 +34,10 @@ private:
 	float	radian; // input steering angle in radians
 	float	speed;
 	float   correctedradians; // slow down driver input
+	float	scalingFactor;
+	float 	pi;
+	Preferences* Prefs;
+	
 
 };
 
