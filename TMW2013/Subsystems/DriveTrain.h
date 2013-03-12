@@ -27,9 +27,8 @@ private:
 		
 	float gyroreference;
 	
-	//AnalogChannel gyroChannel;
-	//bool GyroZeroFlag;
-	//float GyroZeroTime;
+	bool GyroZeroFlag;
+	float GyroZeroTime;
 	
 	
 	

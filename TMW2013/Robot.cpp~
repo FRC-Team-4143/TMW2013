@@ -60,7 +60,6 @@ void Robot::RobotInit() {
 	Robot::driveTrain->rearRight->Enable();
 	//Robot::climber->angle->Enable();
 	Robot::shooter->shooterAngle->Enable();
-
 	Prefs->PutFloat("SteerScaling",1.5);
 	Prefs->PutFloat("EntrySpeed",-6.5);
 	Prefs->PutFloat("ExitSpeed",8);
@@ -75,22 +74,20 @@ void Robot::RobotInit() {
 void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
 	
-
 	if(!Robot::oi->getGyroReset())
 		GyroReset = true;
 	
 	if(GyroReset == true)
 	{
-		if(Robot::driveTrain->ZeroGyro(10))
+		if(Robot::driveTrain->ZeroGyro(10.0))
 			GyroReset = false;
 		
-		for(int i = 1; i < 7; i++)
-			;//ds->SetDigitalOut(i, true);
+		Robot::oi->setOIDigitalOutput1(true);
 	}
-	
-	
-	
-	
+		
+	if(GyroReset == false)
+		{
+		Robot::oi->setOIDigitalOutput1(false);		}
 	
 	if (!Robot::oi->getWheelOffset())
 	{

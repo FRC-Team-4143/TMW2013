@@ -69,6 +69,8 @@ void Robot::RobotInit() {
 	autoChooser->AddDefault("Shoot3andStay", new Shoot3andStay());
 	autoChooser->AddObject("None", new NoneAuto());
 	SmartDashboard::PutData("Autonomous Chooser", autoChooser);
+	
+	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
 }
 	
 void Robot::DisabledPeriodic(){
@@ -86,8 +88,9 @@ void Robot::DisabledPeriodic(){
 	}
 		
 	if(GyroReset == false)
-		{
-		Robot::oi->setOIDigitalOutput1(false);		}
+	{
+		Robot::oi->setOIDigitalOutput1(false);		
+	}
 	
 	if (!Robot::oi->getWheelOffset())
 	{
@@ -105,6 +108,11 @@ void Robot::DisabledPeriodic(){
 		File->save();
 		
 		Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
+		Robot::oi->setOIDigitalOutput1(true);
+	}
+	else
+	{
+		Robot::oi->setOIDigitalOutput1(false);
 	}
 	
 	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) 

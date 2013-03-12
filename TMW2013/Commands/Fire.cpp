@@ -42,8 +42,8 @@ void Fire::Execute() {
 				Robot::shooter->SetSpeeds(12, exitSpeed, false);
 			}
 			
-			if(!Robot::shooter->triggerStop->Get() && IsTimedOut())
-				delay = GetClock() + .02;
+//			if(!Robot::shooter->triggerStop->Get() && IsTimedOut())
+//				delay = GetClock() + .02;
 			
 		}
 		else {
@@ -53,7 +53,7 @@ void Fire::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Fire::IsFinished() {
-	if(delay < GetClock() || notready)
+	if((!Robot::shooter->triggerStop->Get() && IsTimedOut()) || notready)
 		return true;
 	else
 		return false;
