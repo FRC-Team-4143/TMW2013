@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef TOGGLEFRONT_H
-#define TOGGLEFRONT_H
+#ifndef SMDB_H
+#define SMDB_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class ToggleFront: public Command {
+class SMDB: public Command {
 public:
-	ToggleFront();
+	SMDB();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

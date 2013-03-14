@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef CLIMBEXTENDFINALSTAGE_H
-#define CLIMBEXTENDFINALSTAGE_H
+#ifndef PICKUPDISC_H
+#define PICKUPDISC_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,20 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class ClimbExtendFinalStage: public Command {
+class PickupDisc: public Command {
 public:
-	ClimbExtendFinalStage();
-	ClimbExtendFinalStage(float extendspeed, float anglespeed, int angle, float endtravel);
+	PickupDisc();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	
-private:
-	float ExtendSpeed;
-	float AngleSpeed;
-	int Angle;
-	float EndTravel;
 };
+
 #endif

@@ -499,7 +499,6 @@ bool DriveTrain::ZeroGyro(float InitTime)
 	
 	if(GyroZeroFlag == false)
 	{
-		gyroChannel.InitAccumulator();
 		GyroZeroFlag = true;
 		GyroZeroTime = GetClock();
 	}
@@ -513,5 +512,5 @@ bool DriveTrain::ZeroGyro(float InitTime)
 		}
 	}
 	
-	return true;
+	return GetClock() > GyroZeroTime + InitTime + 6;
 }

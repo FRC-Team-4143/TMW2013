@@ -23,7 +23,7 @@
  */
 class Fire: public Command {
 public:
-	Fire(bool autonomous);
+	Fire();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -36,8 +36,7 @@ private:
 	float fireClock;
 	float entrySpeed;
 	float exitSpeed;
-	bool Autonomous;
-	float delay;
+//	float delay;
 };
 
 #endif

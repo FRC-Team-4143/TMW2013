@@ -414,6 +414,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Robot.o:  \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Robot.h:
@@ -1243,5 +1244,7 @@ C:/WindRiver/workspace/WPILib/Gamepad.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
 
 C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h:

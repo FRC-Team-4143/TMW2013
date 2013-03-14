@@ -10,14 +10,23 @@
 
 
 
-#include "FireSequence.h"
+#include "Shoot3Pickup2.h"
 #include "Fire.h"
-#include "ShooterRun.h"
+#include "Drive.h"
 
-FireSequence::FireSequence() {
+Shoot3Pickup2::Shoot3Pickup2() {
+/*	
+	AddParallel (new Drive(3.14159, 0, 0));
+	AddParallel (new ShooterInMiddle());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+*/
+	AddSequential (new Drive(3.14159/2, .5, 2));
+	//AddSequential (new PickupDisc());
+	//AddSequential (new Fire());
+	//AddSequential (new Fire());
 	
-	AddSequential(new Fire(true));
-	AddSequential(new ShooterRun());
 	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());

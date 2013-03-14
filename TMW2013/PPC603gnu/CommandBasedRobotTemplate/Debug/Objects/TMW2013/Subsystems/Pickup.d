@@ -391,7 +391,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Subsystems/Pickup.o:  \
   C:/WindRiver/workspace/WPILib/WPIErrors.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/PickupPosition.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/OperatorPickup.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Robot.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
@@ -1200,7 +1200,7 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Robotmap.h:
 
 C:/WindRiver/workspace/WPILib/WPILib.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/PickupPosition.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/OperatorPickup.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 

@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef SETCLIMBERDISTANCEHOME_H
-#define SETCLIMBERDISTANCEHOME_H
+#ifndef OPERATORPICKUP_H
+#define OPERATORPICKUP_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class SetClimberDistanceHome: public Command {
+class OperatorPickup: public Command {
 public:
-	SetClimberDistanceHome();
+	OperatorPickup();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

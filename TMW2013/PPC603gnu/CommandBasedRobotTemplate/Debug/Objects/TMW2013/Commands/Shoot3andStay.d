@@ -116,7 +116,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3andStay.o:  \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
@@ -414,7 +414,6 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3andStay.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullUnder.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h
 
@@ -650,7 +649,7 @@ c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullDown.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
@@ -1245,8 +1244,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ClimberPullUnder.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
 

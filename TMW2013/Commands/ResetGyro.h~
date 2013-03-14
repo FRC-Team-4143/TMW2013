@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef CLIMBERPULLDOWN_H
-#define CLIMBERPULLDOWN_H
+#ifndef RESETGYRO_H
+#define RESETGYRO_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class ClimberPullDown: public Command {
+class ResetGyro: public Command {
 public:
-	ClimberPullDown();
+	ResetGyro();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

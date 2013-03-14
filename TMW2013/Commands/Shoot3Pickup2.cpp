@@ -10,18 +10,23 @@
 
 
 
-#include "RandomDriving.h"
+#include "Shoot3Pickup2.h"
+#include "Fire.h"
 #include "Drive.h"
-#include "TurnWheels.h"
 
-RandomDriving::RandomDriving() {
+Shoot3Pickup2::Shoot3Pickup2() {
+/*	
+	AddParallel (new Drive(3.14159, 0, 0));
+	AddParallel (new ShooterInMiddle());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+*/
+	AddSequential (new Drive(3.14159/2, .5, 2));
+	//AddSequential (new PickupDisc());
+	//AddSequential (new Fire());
+	//AddSequential (new Fire());
 	
-	const double pi = 3.14159;
-	
-	AddSequential (new TurnWheels(pi/2));
-	AddSequential (new Drive(pi/2, .5));
-	AddSequential (new TurnWheels(pi));
-	AddSequential (new Drive(pi, .5));
 	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());

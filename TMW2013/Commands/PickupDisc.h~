@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef CLIMBERPULLUNDER_H
-#define CLIMBERPULLUNDER_H
+#ifndef PICKUPDISC_H
+#define PICKUPDISC_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class ClimberPullUnder: public Command {
+class PickupDisc: public Command {
 public:
-	ClimberPullUnder();
+	PickupDisc();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

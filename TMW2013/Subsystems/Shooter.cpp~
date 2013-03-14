@@ -41,6 +41,9 @@ void Shooter::InitDefaultCommand() {
 	EntrySOFlag = false;
 	ExitSOTimer = 0;
 	ExitSOFlag = false;
+	EntryPrevCurrent = 0;
+	ExitPrevCurrent = 0;
+	firetime = GetClock();
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
@@ -55,8 +58,14 @@ void Shooter::RunAtOutput() {
 		entryset = entryset + (entryvolt - wheelShooterEntry->GetOutputVoltage())/12;
 		exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
 	}
+	if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 5)
+		firetime = GetClock();
 	
-	if(shootertimer - .25 > GetClock()) {
+	if(wheelShooterExit->GetOutputCurrent() - ExitPrevCurrent > 5)
+		firetime = GetClock();
+	
+	
+	if(firetime + .25 > GetClock()) {
 		wheelShooterEntry->Set(-1);
 		wheelShooterExit->Set(1);
 	}
@@ -116,7 +125,7 @@ int Shooter::GetCorrectedAngle() {
 }
 void Shooter::SetSpeeds(float entry, float exit, bool resetTimer) {
 	if((entryvolt != entry || exitvolt != exit) && resetTimer)
-		shootertimer = GetClock() + .5;
+		shootertimer = GetClock() + 1;
 		
 	entryvolt = entry;
 	exitvolt = exit;
@@ -128,10 +137,7 @@ float Shooter::GetExitSpeed() {
 	return exitvolt;
 }
 bool Shooter::IsShooterReady() {
-	if(shootertimer < GetClock())
-		return true;
-		else
-			return false;
+	return shootertimer < GetClock() && firetime + .5 < GetClock();
 }
 void Shooter::SetFireTimer() {
 	shootertimer = GetClock() + .5;

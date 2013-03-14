@@ -11,21 +11,18 @@
 
 
 #include "Shoot3andStay.h"
-#include "ClimberPullDown.h"
-#include "ClimberPullUnder.h"
+#include "ShooterInMiddle.h"
 #include "Fire.h"
 #include "Drive.h"
 
 Shoot3andStay::Shoot3andStay() {
-	AddParallel (new Drive(3.14159, 0));
-	AddParallel (new ShooterInBack());
-	AddSequential (new ClimberPullDown());
-	AddSequential (new Fire(true));
-	AddSequential (new Fire(true));
-	AddSequential (new Fire(true));
-	AddSequential (new Fire(true));
-	AddSequential (new Fire(true));
-	AddSequential (new ClimberPullUnder());
+	AddParallel (new Drive(3.14159, 0, 0));
+	AddParallel (new ShooterInMiddle());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	AddSequential (new Fire());
 	
 	
 	// Add Commands here:

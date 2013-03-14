@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef CLIMBINGRETRACT_H
-#define CLIMBINGRETRACT_H
+#ifndef OPERATORPICKUP_H
+#define OPERATORPICKUP_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,22 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class ClimbingRetract: public Command {
+class OperatorPickup: public Command {
 public:
-	ClimbingRetract();
-	ClimbingRetract(float extendspeed, float anglespeed, int angle, float startangchange, float endangchange);
+	OperatorPickup();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	
-private:
-	float ExtendSpeed;
-	float AngleSpeed;
-	int Angle;
-	float StartAngChange;
-	float EndAngChange;
 };
 
 #endif

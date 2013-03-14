@@ -32,6 +32,9 @@ private:
 	bool EntrySOFlag;
 	float ExitSOTimer;
 	bool ExitSOFlag;
+	float firetime;
+	float EntryPrevCurrent;
+	float ExitPrevCurrent;
 	
 	//Caclulate the angleOffset by pulling the shooter back until fully vertical.  
 	//The expected value is XXX.  

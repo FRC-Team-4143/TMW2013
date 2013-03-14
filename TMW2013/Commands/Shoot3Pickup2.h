@@ -10,8 +10,8 @@
 
 
 
-#ifndef FIRESEQUENCE_H
-#define FIRESEQUENCE_H
+#ifndef SHOOT3PICKUP2_H
+#define SHOOT3PICKUP2_H
 
 #include "Commands/CommandGroup.h"
 
@@ -20,9 +20,9 @@
  *
  * @author ExampleAuthor
  */
-class FireSequence: public CommandGroup {
+class Shoot3Pickup2: public CommandGroup {
 public:	
-	FireSequence();
+	Shoot3Pickup2();
 };
 
 #endif

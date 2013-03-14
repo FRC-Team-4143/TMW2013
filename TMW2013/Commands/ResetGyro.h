@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef CLIMBINGANGLECHANGE_H
-#define CLIMBINGANGLECHANGE_H
+#ifndef RESETGYRO_H
+#define RESETGYRO_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,19 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class ClimbingAngleChange: public Command {
+class ResetGyro: public Command {
 public:
-	ClimbingAngleChange();
-	ClimbingAngleChange(int angle, float anglespeed);
+	ResetGyro();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	
-private:
-	int Angle;
-	float AngleSpeed;
 };
 
 #endif
