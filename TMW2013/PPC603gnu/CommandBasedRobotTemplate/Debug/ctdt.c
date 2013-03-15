@@ -63,6 +63,8 @@ void _GLOBAL__I__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__I__ZN11TargetDriveC2Ev();
 
+void _GLOBAL__I__ZN16ToggleRobotFrontC2Ev();
+
 void _GLOBAL__I__ZN9TurnRobotC2Ev();
 
 void _GLOBAL__I__ZN10TurnWheelsC2Ev();
@@ -164,6 +166,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN11ShooterStopC2Ev,
     _GLOBAL__I__ZN10SteerDriveC2Ev,
     _GLOBAL__I__ZN11TargetDriveC2Ev,
+    _GLOBAL__I__ZN16ToggleRobotFrontC2Ev,
     _GLOBAL__I__ZN9TurnRobotC2Ev,
     _GLOBAL__I__ZN10TurnWheelsC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
@@ -258,6 +261,8 @@ void _GLOBAL__D__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__D__ZN11TargetDriveC2Ev();
 
+void _GLOBAL__D__ZN16ToggleRobotFrontC2Ev();
+
 void _GLOBAL__D__ZN9TurnRobotC2Ev();
 
 void _GLOBAL__D__ZN10TurnWheelsC2Ev();
@@ -349,6 +354,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN11ShooterStopC2Ev,
     _GLOBAL__D__ZN10SteerDriveC2Ev,
     _GLOBAL__D__ZN11TargetDriveC2Ev,
+    _GLOBAL__D__ZN16ToggleRobotFrontC2Ev,
     _GLOBAL__D__ZN9TurnRobotC2Ev,
     _GLOBAL__D__ZN10TurnWheelsC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,

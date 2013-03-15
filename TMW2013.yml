@@ -862,7 +862,7 @@ Children:
           name: When to Run
           validators: null
           value: whileHeld
-    - Name: PivotButton
+    - Name: ToggleFront
       Base: Joystick Button
       Children: []
       Properties:
@@ -871,7 +871,7 @@ Children:
           name: Command
           type: Command
           validators: *id018
-          value: PivotDrive
+          value: ToggleRobotFront
         Button: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id019
           default: '1'
@@ -895,7 +895,7 @@ Children:
           name: Command
           type: Command
           validators: *id018
-          value: SmartDashboard
+          value: SMDB
         Button: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id019
           default: '1'
@@ -1062,6 +1062,14 @@ Children:
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
   - Name: PivotDrive
+    Base: Command
+    Children: []
+    Properties:
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: ToggleRobotFront
     Base: Command
     Children: []
     Properties:
@@ -1249,7 +1257,7 @@ Children:
         name: Requires, type: Subsystem, validators: null, value: None}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
-  - Name: SmartDashboard
+  - Name: SMDB
     Base: Command
     Children: []
     Properties:

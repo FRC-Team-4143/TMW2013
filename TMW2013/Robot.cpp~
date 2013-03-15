@@ -61,6 +61,7 @@ void Robot::RobotInit() {
 	Robot::driveTrain->rearRight->Enable();
 	//Robot::climber->angle->Enable();
 	Robot::shooter->shooterAngle->Enable();
+	
 	Prefs->PutFloat("SteerScaling",1.5);
 	Prefs->PutFloat("EntrySpeed",-6.5);
 	Prefs->PutFloat("ExitSpeed",8);
@@ -79,7 +80,7 @@ void Robot::RobotInit() {
 	
 void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
-	
+/*	
 	if(!Robot::oi->getGyroReset())
 		GyroReset = true;
 	
@@ -95,7 +96,7 @@ void Robot::DisabledPeriodic(){
 	{
 		Robot::oi->setOIDigitalOutput1(false);		
 	}
-/*	
+	
 	if (!Robot::oi->getWheelOffset())
 	{
 		FLOffset = FROffset = RLOffset = RROffset = 512;
@@ -125,9 +126,10 @@ void Robot::DisabledPeriodic(){
 	{
 		Robot::oi->setOIDigitalOutput1(false);
 	}
-*/	
+	
 	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) 
 		SMDB();
+*/
 }
 void Robot::AutonomousInit() {
 	autonomousCommand = (Command*) autoChooser->GetSelected();
@@ -139,8 +141,8 @@ void Robot::AutonomousPeriodic() {
 	Scheduler::GetInstance()->Run();
 	Robot::shooter->RunAtOutput();
 	
-	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) 
-		SMDB();
+//	if (Robot::oi->getDriverJoystick()->GetRawButton(8)) 
+//		SMDB();
 }
 	
 void Robot::TeleopInit() {
@@ -160,8 +162,8 @@ void Robot::TeleopPeriodic() {
 	
 	Robot::shooter->RunAtOutput();
 	
-	if (Robot::oi->getDriverJoystick()->GetRawButton(8))
-		SMDB();
+//	if (Robot::oi->getDriverJoystick()->GetRawButton(8))
+//		SMDB();
 	
 	if (Robot::oi->getGamePad()->GetRockerY() > 0.5)
 		Robot::shooter->SetAngle(Robot::shooter->GetCorrectedAngle() + 6);
@@ -173,7 +175,7 @@ void Robot::TeleopPeriodic() {
 void Robot::TestPeriodic() {
 	lw->Run();
 }
-void Robot::SMDB() {
+/*void Robot::SMDB() {
 	SmartDashboard::PutNumber("FrontLeftPos",Robot::driveTrain->frontLeftPos->GetAverageValue());
 	SmartDashboard::PutNumber("FrontRightPos",Robot::driveTrain->frontRightPos->GetAverageValue());
 	SmartDashboard::PutNumber("RearLeftPos",Robot::driveTrain->rearLeftPos->GetAverageValue());
@@ -209,5 +211,5 @@ void Robot::SMDB() {
 	SmartDashboard::PutNumber("EntryCurrent", Robot::shooter->wheelShooterEntry->GetOutputCurrent());
 	SmartDashboard::PutNumber("ExitCurrent", Robot::shooter->wheelShooterExit->GetOutputCurrent());
 	SmartDashboard::PutBoolean("TriggerStop",Robot::shooter->triggerStop->Get());
-}
+}*/
 START_ROBOT_CLASS(Robot);

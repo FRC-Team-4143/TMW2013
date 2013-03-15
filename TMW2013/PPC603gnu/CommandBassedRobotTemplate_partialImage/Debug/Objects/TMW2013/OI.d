@@ -446,6 +446,7 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ToggleRobotFront.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h
 
@@ -1340,6 +1341,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ToggleRobotFront.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
 

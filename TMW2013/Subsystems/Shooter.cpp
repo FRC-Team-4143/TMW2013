@@ -48,9 +48,11 @@ void Shooter::InitDefaultCommand() {
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 void Shooter::RunAtOutput() {
+	entryset = entryset + (entryvolt - wheelShooterEntry->GetOutputVoltage())/12;
+	exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
 	
 	//control output voltages of shooter motors
-	if(wheelShooterEntry->GetOutputVoltage() < -10 || wheelShooterExit->GetOutputVoltage() > 10) {
+/*	if(wheelShooterEntry->GetOutputVoltage() < -10 || wheelShooterExit->GetOutputVoltage() > 10) {
 		entryset = -.6;
 		exitset = .8;
 	}
@@ -58,7 +60,7 @@ void Shooter::RunAtOutput() {
 		entryset = entryset + (entryvolt - wheelShooterEntry->GetOutputVoltage())/12;
 		exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
 	}
-	if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 5)
+//	if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 5)
 		firetime = GetClock();
 	
 	if(wheelShooterExit->GetOutputCurrent() - ExitPrevCurrent > 5)
@@ -69,10 +71,10 @@ void Shooter::RunAtOutput() {
 		wheelShooterEntry->Set(-1);
 		wheelShooterExit->Set(1);
 	}
-	else {
+	else {*/
 		wheelShooterEntry->Set(entryset);
 		wheelShooterExit->Set(exitset);
-	}
+	
 	
 	float currentlimit = 30;
 	float currenttimeout = 1.5;
@@ -137,7 +139,7 @@ float Shooter::GetExitSpeed() {
 	return exitvolt;
 }
 bool Shooter::IsShooterReady() {
-	return shootertimer < GetClock() && firetime + .5 < GetClock();
+	return shootertimer < GetClock() && firetime + .5 < GetClock(); //TODO: CHECK SHOOTER ANGLE
 }
 void Shooter::SetFireTimer() {
 	shootertimer = GetClock() + .5;
