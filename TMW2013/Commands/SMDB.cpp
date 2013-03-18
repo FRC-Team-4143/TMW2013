@@ -35,10 +35,7 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
 			
-//	SmartDashboard::PutNumber("ClimbAngleSetpoint",Robot::climber->angle->GetSetpoint());
 	SmartDashboard::PutNumber("ClimberDistance",Robot::climber->climberDistance->GetDistance());
-//	SmartDashboard::PutNumber("ClimbAngleError",Robot::climber->angle->GetError());
-//	SmartDashboard::PutNumber("ClimberAngle",Robot::climber->anglePos->GetAverageValue());
 	SmartDashboard::PutNumber("ClimberAngleLeftVolt", Robot::climber->angleLeft->GetOutputVoltage());
 	SmartDashboard::PutNumber("ClimberAngleRightVolt", Robot::climber->angleRight->GetOutputVoltage());
 	SmartDashboard::PutNumber("ClimberAngleLeftCurrent", Robot::climber->angleLeft->GetOutputCurrent());

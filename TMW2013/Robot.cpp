@@ -60,13 +60,16 @@ void Robot::RobotInit() {
 	Robot::driveTrain->frontRight->Enable();
 	Robot::driveTrain->rearLeft->Enable();
 	Robot::driveTrain->rearRight->Enable();
-	//Robot::climber->angle->Enable();
 	Robot::shooter->shooterAngle->Enable();
 	
-	Prefs->PutFloat("SteerScaling",1.5);
-	Prefs->PutFloat("EntrySpeed",-6.5);
-	Prefs->PutFloat("ExitSpeed",8);
-	Prefs->PutInt("ShooterAngleSetpoint",395);
+	if(!Prefs->ContainsKey("SteerScaling"))
+		Prefs->PutFloat("SteerScaling",1.5);
+	if(!Prefs->ContainsKey("EntrySpeed"))
+			Prefs->PutFloat("EntrySpeed",-6.5);
+	if(!Prefs->ContainsKey("ExitSpeed"))
+			Prefs->PutFloat("ExitSpeed",8);
+	if(!Prefs->ContainsKey("ShooterAngleSetpoint"))
+			Prefs->PutInt("ShooterAngleSetpoint",395);
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddDefault("Shoot3andStay", new Shoot3andStay());
@@ -75,7 +78,6 @@ void Robot::RobotInit() {
 	SmartDashboard::PutData("Autonomous Chooser", autoChooser);
 		
 	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
-	//triggerMonitor.JankyTask("test", 1);
 }
 	
 void Robot::DisabledPeriodic(){
