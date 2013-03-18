@@ -412,6 +412,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/CrabDrive.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/SMDB.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/vxworks-6.3/target/h/math.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
@@ -1237,5 +1241,13 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/SMDB.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
 
 C:/WindRiver/vxworks-6.3/target/h/math.h:

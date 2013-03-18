@@ -25,7 +25,7 @@ void TurnWheels::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void TurnWheels::Execute() {
-	Robot::driveTrain->Crab(radian, 0);
+	Robot::driveTrain->Steer(radian, 0, .5);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool TurnWheels::IsFinished() {

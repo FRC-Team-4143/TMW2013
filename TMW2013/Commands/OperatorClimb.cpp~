@@ -18,7 +18,6 @@ OperatorClimb::OperatorClimb()
 }
 // Called just before this Command runs the first time
 void OperatorClimb::Initialize() {
-	climberset = Robot::climber->anglePos->GetAverageValue();
 }
 // Called repeatedly when this Command is scheduled to run
 void OperatorClimb::Execute() {

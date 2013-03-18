@@ -35,10 +35,10 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
 			
-	SmartDashboard::PutNumber("ClimbAngleSetpoint",Robot::climber->angle->GetSetpoint());
+//	SmartDashboard::PutNumber("ClimbAngleSetpoint",Robot::climber->angle->GetSetpoint());
 	SmartDashboard::PutNumber("ClimberDistance",Robot::climber->climberDistance->GetDistance());
-	SmartDashboard::PutNumber("ClimbAngleError",Robot::climber->angle->GetError());
-	SmartDashboard::PutNumber("ClimberAngle",Robot::climber->anglePos->GetAverageValue());
+//	SmartDashboard::PutNumber("ClimbAngleError",Robot::climber->angle->GetError());
+//	SmartDashboard::PutNumber("ClimberAngle",Robot::climber->anglePos->GetAverageValue());
 	SmartDashboard::PutNumber("ClimberAngleLeftVolt", Robot::climber->angleLeft->GetOutputVoltage());
 	SmartDashboard::PutNumber("ClimberAngleRightVolt", Robot::climber->angleRight->GetOutputVoltage());
 	SmartDashboard::PutNumber("ClimberAngleLeftCurrent", Robot::climber->angleLeft->GetOutputCurrent());
@@ -56,6 +56,11 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("EntryCurrent", Robot::shooter->wheelShooterEntry->GetOutputCurrent());
 	SmartDashboard::PutNumber("ExitCurrent", Robot::shooter->wheelShooterExit->GetOutputCurrent());
 	SmartDashboard::PutBoolean("TriggerStop",Robot::shooter->triggerStop->Get());
+	SmartDashboard::PutBoolean("TriggerStopFlag", Robot::shooter->GetTriggerStopFlag());
+	SmartDashboard::PutBoolean("FireFlag", Robot::shooter->GetFireFlag());
+	
+	SmartDashboard::PutNumber("PickupAngle", Robot::pickup->pickupAngle->GetAverageValue());
+	SmartDashboard::PutNumber("CorrectedPickupAngle", Robot::pickup->GetCorrectedAngle());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SMDB::IsFinished() {

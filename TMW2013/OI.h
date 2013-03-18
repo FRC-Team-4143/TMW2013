@@ -24,12 +24,15 @@ private:
 	GamePad* gamePad;
 	JoystickButton* middleshooting;
 	JoystickButton* frontshooting;
-	JoystickButton* backshooting;
+	JoystickButton* climbingShooter;
 	JoystickButton* dropShooter;
 	JoystickButton* deployHooks;
+	JoystickButton* climb;
 	JoystickButton* retractHooks;
 	JoystickButton* shooterPyramid;
 	JoystickButton* gpadfire;
+	JoystickButton* forwardPickup;
+	JoystickButton* reversePickup;
 public:
 	OI();
  

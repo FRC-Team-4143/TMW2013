@@ -43,13 +43,12 @@ public:
 	static PIDController* shooterShooterAngle;
 	static DigitalInput* shooterTriggerStop;
 	static SpeedController* shooterTrigger;
+	static AnalogChannel* pickupPickupAngle;
 	static CANJaguar* pickupPickup;
 	static SpeedController* climberClimbLeft;
 	static SpeedController* climberClimbRight;
-	static CANJaguar* climberAngleRight;
 	static CANJaguar* climberAngleLeft;
-	static AnalogChannel* climberAnglePos;
-	static PIDController* climberAngle;
+	static CANJaguar* climberAngleRight;
 	static Encoder* climberClimberDistance;
 	static DigitalInput* climberExtendLimit;
 	static DigitalInput* climberRetractLimit;

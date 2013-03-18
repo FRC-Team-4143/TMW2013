@@ -35,6 +35,9 @@ private:
 	float firetime;
 	float EntryPrevCurrent;
 	float ExitPrevCurrent;
+	bool shooterRamp;
+	bool TriggerStopFlag;
+	bool FireFlag;
 	
 	//Caclulate the angleOffset by pulling the shooter back until fully vertical.  
 	//The expected value is XXX.  
@@ -64,5 +67,9 @@ public:
 	void SetSpeeds(float entry, float exit, bool resetTimer);
 	bool IsShooterReady();
 	void SetFireTimer();
+	bool GetTriggerStopFlag();
+	void SetTriggerStopFlag(bool flag);
+	bool GetFireFlag();
+	void SetFireFlag(bool flag);
 };
 #endif

@@ -8,6 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "Fire.h"
+#include "../Robot.h"
 Fire::Fire() {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
@@ -27,10 +28,11 @@ void Fire::Initialize() {
 	exitSpeed = Robot::shooter->GetExitSpeed();
 	if(exitSpeed <= 0 || entrySpeed >=0)
 		notready = true;
+//	Robot::shooter->SetFireFlag(false);
 }
 // Called repeatedly when this Command is scheduled to run
 void Fire::Execute() {
-	if(!notready || Robot::shooter->IsShooterReady()) {
+	if(!notready && Robot::shooter->IsShooterReady()) {
 			
 		if(fireClock > GetClock()) {
 			Robot::shooter->trigger->Set(-1);
@@ -38,25 +40,27 @@ void Fire::Execute() {
 		else if(fireClock + .1 > GetClock()){
 			Robot::shooter->trigger->Set(1);
 		}
-			else{
+		else{
 			Initialize();
-			}
-//		if(!Robot::shooter->triggerStop->Get() && IsTimedOut())
-//			delay = GetClock() + .02;
-		
+		}
 	}
+
+	if(TimeSinceInitialized() > .1 && TimeSinceInitialized() < .25)
+		Robot::shooter->SetFireFlag(true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Fire::IsFinished() {
-	return(!Robot::shooter->triggerStop->Get() && IsTimedOut()) || notready || TimeSinceInitialized() > 3.3;
+	return Robot::shooter->GetTriggerStopFlag() || notready || TimeSinceInitialized() > 3.3;
 }
 // Called once after isFinished returns true
 void Fire::End() {
 	Robot::shooter->trigger->Set(0);
 	Robot::shooter->SetFireTimer();
+	Robot::shooter->SetTriggerStopFlag(false);
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Fire::Interrupted() {
 	Robot::shooter->trigger->Set(0);
+	Robot::shooter->SetTriggerStopFlag(false);
 }

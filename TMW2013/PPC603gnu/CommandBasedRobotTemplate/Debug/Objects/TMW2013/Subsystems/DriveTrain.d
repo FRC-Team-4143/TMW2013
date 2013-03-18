@@ -416,6 +416,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Subsystems/DriveTrain.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/SMDB.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../TriggerMonitor.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../jankyTask.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Robot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/SteerDrive.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/DriveTrain.h:
@@ -1249,5 +1253,13 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/Shoote
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/SMDB.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../TriggerMonitor.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../jankyTask.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Robot.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/SteerDrive.h:

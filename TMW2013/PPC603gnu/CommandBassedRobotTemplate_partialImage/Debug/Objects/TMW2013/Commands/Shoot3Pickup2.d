@@ -415,7 +415,15 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/SMDB.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h:
 
@@ -1245,4 +1253,20 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/SMDB.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h:

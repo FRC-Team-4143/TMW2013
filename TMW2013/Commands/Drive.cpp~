@@ -28,7 +28,10 @@ void Drive::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void Drive::Execute() {
 	GyroRad = Robot::driveTrain->gyroscope->GetAngle()*3.14159/180;
-	Robot::driveTrain->Steer(radian + GyroRad/5, speed, .5);
+	if(speed > 0)
+		Robot::driveTrain->Steer(radian + GyroRad, speed, .5);
+	else
+		Robot::driveTrain->Steer(radian - GyroRad, speed, .5);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Drive::IsFinished() {
@@ -41,4 +44,5 @@ void Drive::End() {
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Drive::Interrupted() {
+	Robot::driveTrain->Steer(radian, 0, .5);
 }

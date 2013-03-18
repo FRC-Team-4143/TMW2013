@@ -14,17 +14,19 @@
 #include "ShooterInMiddle.h"
 #include "Fire.h"
 #include "Drive.h"
+#include "TurnWheels.h"
+#include "DriveToDiscs.h"
+#include "PickupDisc.h"
 
 Shoot3andStay::Shoot3andStay() {
-	AddParallel (new Drive(3.14159, 0, 0));
-	AddParallel (new ShooterInMiddle());
+	AddSequential (new Drive(3.14159/2, 0, 0));
+	AddSequential (new ShooterInMiddle());
 	AddSequential (new Fire());
 	AddSequential (new Fire());
 	AddSequential (new Fire());
 	AddSequential (new Fire());
 	AddSequential (new Fire());
-	
-	
+
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());

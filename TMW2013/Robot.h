@@ -27,6 +27,8 @@
 #include "Commands/ShooterInMiddle.h"
 #include "Commands/ShooterInBack.h"
 #include "Gamepad.h"
+#include "Commands/SMDB.h"
+#include "TriggerMonitor.h"
 class Robot : public IterativeRobot {
 public:
 	Command *autonomousCommand;
@@ -43,10 +45,13 @@ public:
 	virtual void DisabledPeriodic();
 	virtual void AutonomousInit();
 	virtual void AutonomousPeriodic();
+	virtual void AutonomousContinuous();
 	virtual void TeleopInit();
 	virtual void TeleopPeriodic();
+	virtual void TeleopContinuous();
 	virtual void TestPeriodic();
-	void SMDB();
+	
+	
 private:
 	RAWCConstants* File;
 	Preferences* Prefs;
@@ -63,5 +68,6 @@ private:
 	float* pRROffset;
 	
 	bool GyroReset;
+	
 };
 #endif
