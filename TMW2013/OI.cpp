@@ -97,13 +97,13 @@ OI::OI() {
 	reversePickup = new JoystickButton(gamePad, 6);
 	reversePickup->WhileHeld(new ReverseOpeartorPickup());	
 	
-	/*
-	retractHooks = new JoystickButton(gamePad, 6);
-	retractHooks->WhenPressed(new RetractHooks);
 	
-	shooterPyramid = new JoystickButton(gamePad, 5);
-	shooterPyramid->WhenPressed(new ShooterPyramidGoal);
-*/ 	
+//	retractHooks = new JoystickButton(gamePad, 6);
+//	retractHooks->WhenPressed(new RetractHooks);
+	
+	pickupDisc = new JoystickButton(gamePad, 5);
+	pickupDisc->WhenPressed(new PickupDisc);
+ 	
 	gpadfire = new JoystickButton(gamePad, 7);
 	gpadfire->WhenPressed(new Fire());
 	

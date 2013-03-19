@@ -29,7 +29,7 @@ private:
 	JoystickButton* deployHooks;
 	JoystickButton* climb;
 	JoystickButton* retractHooks;
-	JoystickButton* shooterPyramid;
+	JoystickButton* pickupDisc;
 	JoystickButton* gpadfire;
 	JoystickButton* forwardPickup;
 	JoystickButton* reversePickup;

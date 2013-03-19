@@ -66,18 +66,18 @@ void Shooter::RunAtOutput() {
 */	
 	if(!shooterRamp && shootertimer < GetClock()) {
 		
-		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 20) {
+		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 10) {
 			firetime = GetClock();
 			shooterRamp = true;
 		}
 		
-		if(wheelShooterExit->GetOutputCurrent() - ExitPrevCurrent > 20) {
+		if(wheelShooterExit->GetOutputCurrent() - ExitPrevCurrent > 13) {
 			firetime = GetClock();
 			shooterRamp = true;
 		}
 	}
 		
-	if(firetime + .25 > GetClock()) {
+	if(firetime + .4 > GetClock()) {
 		wheelShooterEntry->Set(-1);
 		wheelShooterExit->Set(1);
 		entryset = -1;

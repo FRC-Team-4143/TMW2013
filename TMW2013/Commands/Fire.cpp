@@ -38,7 +38,7 @@ void Fire::Execute() {
 			Robot::shooter->trigger->Set(-1);
 		}
 		else if(fireClock + .1 > GetClock()){
-			Robot::shooter->trigger->Set(1);
+			Robot::shooter->trigger->Set(0);
 		}
 		else{
 			Initialize();
