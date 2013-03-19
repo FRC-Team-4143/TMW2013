@@ -65,9 +65,9 @@ void Robot::RobotInit() {
 	if(!Prefs->ContainsKey("SteerScaling"))
 		Prefs->PutFloat("SteerScaling",1.5);
 	if(!Prefs->ContainsKey("EntrySpeed"))
-			Prefs->PutFloat("EntrySpeed",-6.5);
+			Prefs->PutFloat("EntrySpeed",-7.5);
 	if(!Prefs->ContainsKey("ExitSpeed"))
-			Prefs->PutFloat("ExitSpeed",8);
+			Prefs->PutFloat("ExitSpeed",9);
 	if(!Prefs->ContainsKey("ShooterAngleSetpoint"))
 			Prefs->PutInt("ShooterAngleSetpoint",395);
 	

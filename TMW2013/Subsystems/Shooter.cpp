@@ -47,6 +47,7 @@ void Shooter::InitDefaultCommand() {
 	shooterRamp = true;
 	TriggerStopFlag = false;
 	FireFlag = false;
+	shootercounter = 0;
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
@@ -64,7 +65,7 @@ void Shooter::RunAtOutput() {
 		exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
 	}
 */	
-	if(!shooterRamp && shootertimer < GetClock()) {
+	if(!shooterRamp < GetClock()) {
 		
 		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 10) {
 			firetime = GetClock();
@@ -77,20 +78,28 @@ void Shooter::RunAtOutput() {
 		}
 	}
 		
-	if(firetime + .4 > GetClock()) {
+	if(firetime + .5 > GetClock()) {
 		wheelShooterEntry->Set(-1);
-		wheelShooterExit->Set(1);
 		entryset = -1;
-		exitset = 1;
 	}
 	else {
 		shooterRamp = false;
 		
 		entryset = entryset + (entryvolt - wheelShooterEntry->GetOutputVoltage())/12;
-		exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
 		wheelShooterEntry->Set(entryset);
-		wheelShooterExit->Set(exitset);
 	}
+	
+	if(firetime + .15 > GetClock()) {
+			wheelShooterExit->Set(1);
+			exitset = 1;
+		}
+		else {
+			shooterRamp = false;
+			
+			exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
+			wheelShooterExit->Set(exitset);
+		}
+	
 	
 	float currentlimit = 30;
 	float currenttimeout = 1.5;
@@ -143,7 +152,7 @@ int Shooter::GetCorrectedAngle() {
 }
 void Shooter::SetSpeeds(float entry, float exit, bool resetTimer) {
 	if((entryvolt != entry || exitvolt != exit) && resetTimer)
-		shootertimer = GetClock() + 2;
+		shootertimer = GetClock() + 1.5;
 		
 	entryvolt = entry;
 	exitvolt = exit;
@@ -155,10 +164,11 @@ float Shooter::GetExitSpeed() {
 	return exitvolt;
 }
 bool Shooter::IsShooterReady() {
-	return shootertimer < GetClock() && firetime + .5 < GetClock(); //TODO: CHECK SHOOTER ANGLE
+	return shootertimer < GetClock() && firetime + .2 < GetClock(); //TODO: CHECK SHOOTER ANGLE
 }
 void Shooter::SetFireTimer() {
-	shootertimer = GetClock() + .5;
+	//shootertimer = GetClock() + .5;
+	shootercounter++;
 }
 bool Shooter::GetTriggerStopFlag() {
 		return TriggerStopFlag;
@@ -171,4 +181,7 @@ void Shooter::SetFireFlag(bool flag) {
 }
 bool Shooter::GetFireFlag() {
 	return FireFlag;
+}
+int Shooter::GetShooterCounter() {
+	return shootercounter;
 }

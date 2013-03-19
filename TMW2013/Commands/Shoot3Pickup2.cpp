@@ -21,19 +21,21 @@
 Shoot3Pickup2::Shoot3Pickup2() {
 	AddSequential (new ShooterInMiddle());
 	AddSequential (new TurnWheels(3.14159/2));
-	AddSequential (new Drive(3.14159/2, -.3, 0.3));
+	AddSequential (new Drive(3.14159/2, -.3, 0.5));
 	AddSequential (new Drive(3.14159/2, -.1, 0.1));
 	AddSequential (new Fire());
 	AddSequential (new Fire());
 	AddSequential (new Fire());
-
+	AddSequential (new Fire());
+	AddSequential (new Fire());
+	
 	AddSequential (new Drive(3.14159/2, -.7, .3));
-	AddSequential (new DriveToDiscs(3.14159/2, -.25, 3.0));
-	AddSequential (new Drive(3.14159/2, -.4, .4));
+	AddSequential (new DriveToDiscs(3.14159/2, -.25, 2.0));
+//	AddSequential (new Drive(3.14159/2, -.25, .1));
 	AddSequential (new Drive(3.14159/2, .15, 0.2));
 	AddSequential (new AutoPickup());
-	AddSequential (new Drive (3.14159/2, .4, 1.5));
-	AddSequential (new Drive (3.14159/2, -.15, 2));
+	AddSequential (new Drive (3.14159/2, .4, 1.3));
+	AddSequential (new Drive (3.14159/2, -.3, .2));
 	AddSequential (new Fire());
 	AddSequential (new Fire());
 	AddSequential (new Fire());

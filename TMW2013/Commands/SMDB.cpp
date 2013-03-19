@@ -55,6 +55,7 @@ void SMDB::Execute() {
 	SmartDashboard::PutBoolean("TriggerStop",Robot::shooter->triggerStop->Get());
 	SmartDashboard::PutBoolean("TriggerStopFlag", Robot::shooter->GetTriggerStopFlag());
 	SmartDashboard::PutBoolean("FireFlag", Robot::shooter->GetFireFlag());
+	SmartDashboard::PutNumber("ShooterCounter", Robot::shooter->GetShooterCounter());
 	
 	SmartDashboard::PutNumber("PickupAngle", Robot::pickup->pickupAngle->GetAverageValue());
 	SmartDashboard::PutNumber("CorrectedPickupAngle", Robot::pickup->GetCorrectedAngle());
