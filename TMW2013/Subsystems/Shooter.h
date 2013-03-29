@@ -39,6 +39,7 @@ private:
 	bool TriggerStopFlag;
 	bool FireFlag;
 	int shootercounter;
+	float firetimer;
 	
 	//Caclulate the angleOffset by pulling the shooter back until fully vertical.  
 	//The expected value is XXX.  
@@ -73,5 +74,7 @@ public:
 	bool GetFireFlag();
 	void SetFireFlag(bool flag);
 	int GetShooterCounter();
+	float GetFireTimer();
+	float GetFireTime();
 };
 #endif

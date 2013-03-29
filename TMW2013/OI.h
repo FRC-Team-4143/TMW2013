@@ -24,6 +24,7 @@ private:
 	GamePad* gamePad;
 	JoystickButton* middleshooting;
 	JoystickButton* frontshooting;
+	JoystickButton* backshooting;
 	JoystickButton* climbingShooter;
 	JoystickButton* dropShooter;
 	JoystickButton* deployHooks;

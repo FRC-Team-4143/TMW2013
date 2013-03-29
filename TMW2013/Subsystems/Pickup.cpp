@@ -26,7 +26,7 @@ void Pickup::InitDefaultCommand() {
 double Pickup::GetCorrectedAngle() {
 	//Subtract value of encoder at point where pickup just begins to lift up (cams just touching arms on the way up).  
 	//This number was 243 when initiated on practice robot.
-	return pickupAngle->GetAverageValue() - 243;
+	return pickupAngle->GetAverageValue() - 27;
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.

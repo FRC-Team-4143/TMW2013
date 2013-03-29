@@ -60,7 +60,7 @@ Children:
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
-          name: Maximum Output, validators: null, value: 1.0}
+          name: Maximum Output, validators: null, value: 0.75}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
@@ -72,7 +72,7 @@ Children:
         Minimum Input: !!robotbuilder.data.properties.DoubleProperty {default: 0,
           name: Minimum Input, validators: null, value: 0.0}
         Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
-          name: Minimum Output, validators: null, value: -1.0}
+          name: Minimum Output, validators: null, value: -0.75}
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
@@ -128,7 +128,7 @@ Children:
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
-          name: Maximum Output, validators: null, value: 1.0}
+          name: Maximum Output, validators: null, value: 0.75}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
@@ -140,7 +140,7 @@ Children:
         Minimum Input: !!robotbuilder.data.properties.DoubleProperty {default: 0,
           name: Minimum Input, validators: null, value: 0.0}
         Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
-          name: Minimum Output, validators: null, value: -1.0}
+          name: Minimum Output, validators: null, value: -0.75}
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
@@ -196,7 +196,7 @@ Children:
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
-          name: Maximum Output, validators: null, value: 1.0}
+          name: Maximum Output, validators: null, value: 0.75}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
@@ -208,7 +208,7 @@ Children:
         Minimum Input: !!robotbuilder.data.properties.DoubleProperty {default: 0,
           name: Minimum Input, validators: null, value: 0.0}
         Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
-          name: Minimum Output, validators: null, value: -1.0}
+          name: Minimum Output, validators: null, value: -0.75}
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
@@ -264,7 +264,7 @@ Children:
         Continuous: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Continuous, validators: null, value: true}
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
-          name: Maximum Output, validators: null, value: 1.0}
+          name: Maximum Output, validators: null, value: 0.75}
         Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
           name: Limit Input, validators: null, value: true}
         Output: !!robotbuilder.data.properties.ChildSelectionProperty
@@ -276,7 +276,7 @@ Children:
         Minimum Input: !!robotbuilder.data.properties.DoubleProperty {default: 0,
           name: Minimum Input, validators: null, value: 0.0}
         Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
-          name: Minimum Output, validators: null, value: -1.0}
+          name: Minimum Output, validators: null, value: -0.75}
         I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
           value: 0.0}
         P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
@@ -1267,6 +1267,34 @@ Children:
     Properties:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: Pickup}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: Shoot3FromCorner
+    Base: Command Group
+    Children: []
+    Properties:
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: AutoShooter
+    Base: Command
+    Children: []
+    Properties:
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Shooter}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: Command Group 1
+    Base: Command Group
+    Children: []
+    Properties:
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: AutoFire
+    Base: Command
+    Children: []
+    Properties:
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Shooter}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
   Properties: {}

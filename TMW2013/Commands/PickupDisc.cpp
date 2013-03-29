@@ -21,10 +21,10 @@ void PickupDisc::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void PickupDisc::Execute() {
-	if(Robot::pickup->GetCorrectedAngle() < 265 && Robot::pickup->GetCorrectedAngle() > -24)
+	if(Robot::pickup->GetCorrectedAngle() < 15 && Robot::pickup->GetCorrectedAngle() > -210)
 		Robot::pickup->pickup->Set(1);
 	else 
-		Robot::pickup->pickup->Set(.60);
+		Robot::pickup->pickup->Set(.45);
 	
 	if(!done && Robot::pickup->GetCorrectedAngle() > 410 && Robot::pickup->GetCorrectedAngle() < 460)
 			done = true;

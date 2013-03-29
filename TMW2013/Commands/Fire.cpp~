@@ -19,13 +19,15 @@ Fire::Fire() {
 }
 // Called just before this Command runs the first time
 void Fire::Initialize() {
-	SetTimeout(.15);
-	notready = false;
+//	SetTimeout(.15);
+//	notready = false;
+//	canFire = false;
 //	delay = GetClock()+.5;
-	fireClock = GetClock()+1;
-	
+//	fireClock = GetClock()+1;
+	fired = false;
 	entrySpeed = Robot::shooter->GetEntrySpeed();
 	exitSpeed = Robot::shooter->GetExitSpeed();
+	notready = false;
 	if(exitSpeed <= 0 || entrySpeed >=0)
 		notready = true;
 //	Robot::shooter->SetFireFlag(false);
@@ -33,34 +35,21 @@ void Fire::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void Fire::Execute() {
 	if(!notready && Robot::shooter->IsShooterReady()) {
-			
-		if(fireClock > GetClock()) {
-			Robot::shooter->trigger->Set(-1);
-		}
-		else if(fireClock + .1 > GetClock()){
+		if(!fired){
 			Robot::shooter->trigger->Set(1);
-		}
-		else{
-			Initialize();
+			fired = true;
+			Robot::shooter->SetFireTimer();
 		}
 	}
-
-	if(TimeSinceInitialized() > .1 && TimeSinceInitialized() < .25)
-		Robot::shooter->SetFireFlag(true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Fire::IsFinished() {
-	return Robot::shooter->GetTriggerStopFlag() || notready || TimeSinceInitialized() > 3.3;
+	return (Robot::shooter->trigger->Get() == 0 && fired == true) || notready;
 }
 // Called once after isFinished returns true
 void Fire::End() {
-	Robot::shooter->trigger->Set(0);
-	Robot::shooter->SetFireTimer();
-	Robot::shooter->SetTriggerStopFlag(false);
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Fire::Interrupted() {
-	Robot::shooter->trigger->Set(0);
-	Robot::shooter->SetTriggerStopFlag(false);
 }

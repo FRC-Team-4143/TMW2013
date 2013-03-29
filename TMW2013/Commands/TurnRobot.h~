@@ -23,12 +23,15 @@
  */
 class TurnRobot: public Command {
 public:
-	TurnRobot();
+	TurnRobot(float angle);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
+private:
+	int ontarget;
+	float Angle;
 };
 
 #endif

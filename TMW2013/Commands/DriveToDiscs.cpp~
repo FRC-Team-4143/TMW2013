@@ -17,14 +17,15 @@ DriveToDiscs::DriveToDiscs(double direction, double velocity, double timeout) {
 	radian = direction;
 	speed = velocity;
 	SetTimeout(timeout);
+	gyroAngle = 0;
 }
 // Called just before this Command runs the first time
 void DriveToDiscs::Initialize() {
-	
+	gyroAngle = Robot::driveTrain->gyroscope->GetAngle();
 }
 // Called repeatedly when this Command is scheduled to run
 void DriveToDiscs::Execute() {
-	GyroRad = Robot::driveTrain->gyroscope->GetAngle()*3.14159/180;
+	GyroRad = (Robot::driveTrain->gyroscope->GetAngle()-gyroAngle)*3.14159/180;
 	if(speed > 0)
 		Robot::driveTrain->Steer(radian + GyroRad, speed, .5);
 	else
@@ -32,7 +33,7 @@ void DriveToDiscs::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool DriveToDiscs::IsFinished() {
-	return IsTimedOut() || (SmartDashboard::GetNumber("FoundDisc") > .5);
+	return IsTimedOut()/* || (SmartDashboard::GetNumber("FoundDisc") > .5)*/;
 }
 // Called once after isFinished returns true
 void DriveToDiscs::End() {

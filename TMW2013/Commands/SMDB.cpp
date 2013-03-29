@@ -52,6 +52,8 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("ExitVoltage", Robot::shooter->wheelShooterExit->GetOutputVoltage());
 	SmartDashboard::PutNumber("EntryCurrent", Robot::shooter->wheelShooterEntry->GetOutputCurrent());
 	SmartDashboard::PutNumber("ExitCurrent", Robot::shooter->wheelShooterExit->GetOutputCurrent());
+	SmartDashboard::PutNumber("EntrySet", Robot::shooter->GetEntrySpeed());
+	SmartDashboard::PutNumber("ExitSet", Robot::shooter->GetExitSpeed());
 	SmartDashboard::PutBoolean("TriggerStop",Robot::shooter->triggerStop->Get());
 	SmartDashboard::PutBoolean("TriggerStopFlag", Robot::shooter->GetTriggerStopFlag());
 	SmartDashboard::PutBoolean("FireFlag", Robot::shooter->GetFireFlag());

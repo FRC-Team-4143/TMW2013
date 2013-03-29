@@ -15,6 +15,9 @@ public:
 	virtual ~TriggerMonitor(void);
 
 	virtual void Run();
+	int donecount;
+	bool done;
+	float lastFireTimer;
 
 };
 

@@ -67,14 +67,20 @@ private:
 	
 	
 	RAWCConstants* File;
-	float FLOffset;
-	float FROffset;
-	float RLOffset;
-	float RROffset;
+	int FLOffset;
+	int FROffset;
+	int RLOffset;
+	int RROffset;
 	
 	//Crab Variables
 	double position; //Input position for crab
 	
+	
+	//Inversion Variabls
+	int FLInv;
+	int FRInv;
+	int RLInv;
+	int RRInv;
 	
 	
 	//Pivot Variables
@@ -121,6 +127,7 @@ private:
 	double deltaRL;
 	double deltaRR;
 	
+	int CorrectSteerSetpoint(int setpoint);
 	void SetSteerSetpoint(float FLSetPoint, float FRSetPoint, float RLSetPoint, float RRSetPoint);
 	void SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, float RRSpeed);
 	void CurrentLimit();
@@ -154,7 +161,7 @@ public:
 	void SetWheelbase(float w, float x, float y);
 	void SetMaxSpeed(float MaxSpeed);
 	void SetGyroReference();
-	void SetOffsets(float FLOff, float FROff, float RLOff, float RROff);
+	void SetOffsets(int FLOff, int FROff, int RLOff, int RROff);
 	void ToggleFrontBack();
 	void InitDefaultCommand();
 	void Steer(float radian, float speed, float a);

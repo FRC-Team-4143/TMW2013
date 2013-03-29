@@ -34,7 +34,7 @@ private:
 	double radian;
 	double speed;
 	double GyroRad;
-
+	float gyroAngle;
 };
 
 #endif

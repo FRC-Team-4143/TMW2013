@@ -30,10 +30,10 @@ public:
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	float FLOffset;
-	float FROffset;
-	float RLOffset;
-	float RROffset;
+	int FLOffset;
+	int FROffset;
+	int RLOffset;
+	int RROffset;
 	RAWCConstants* File;
 	bool complete;
 

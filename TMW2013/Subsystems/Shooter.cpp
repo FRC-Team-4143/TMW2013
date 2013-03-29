@@ -48,6 +48,7 @@ void Shooter::InitDefaultCommand() {
 	TriggerStopFlag = false;
 	FireFlag = false;
 	shootercounter = 0;
+	firetimer = GetClock();
 }
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
@@ -65,40 +66,34 @@ void Shooter::RunAtOutput() {
 		exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
 	}
 */	
-	if(!shooterRamp < GetClock()) {
+	if(!shooterRamp) {
 		
-		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 10) {
+		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 25) {
 			firetime = GetClock();
 			shooterRamp = true;
 		}
 		
-		if(wheelShooterExit->GetOutputCurrent() - ExitPrevCurrent > 13) {
+		if(wheelShooterExit->GetOutputCurrent() - ExitPrevCurrent > 12) {
 			firetime = GetClock();
 			shooterRamp = true;
 		}
 	}
 		
-	if(firetime + .5 > GetClock()) {
-		wheelShooterEntry->Set(-1);
-		entryset = -1;
-	}
+	if(firetime + .25 > GetClock()) {
+		wheelShooterEntry->Set(-.7);
+		entryset = -.7;
+		wheelShooterExit->Set(1);
+		exitset = 1;
+		}
 	else {
 		shooterRamp = false;
 		
 		entryset = entryset + (entryvolt - wheelShooterEntry->GetOutputVoltage())/12;
 		wheelShooterEntry->Set(entryset);
+		exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
+		wheelShooterExit->Set(exitset);
 	}
 	
-	if(firetime + .15 > GetClock()) {
-			wheelShooterExit->Set(1);
-			exitset = 1;
-		}
-		else {
-			shooterRamp = false;
-			
-			exitset = exitset + (exitvolt - wheelShooterExit->GetOutputVoltage())/12;
-			wheelShooterExit->Set(exitset);
-		}
 	
 	
 	float currentlimit = 30;
@@ -158,20 +153,27 @@ void Shooter::SetSpeeds(float entry, float exit, bool resetTimer) {
 	exitvolt = exit;
 }
 float Shooter::GetEntrySpeed() {
-	return entryvolt;
+	return entryset;
 }
 float Shooter::GetExitSpeed() {
-	return exitvolt;
+	return exitset;
 }
 bool Shooter::IsShooterReady() {
-	return shootertimer < GetClock() && firetime + .2 < GetClock(); //TODO: CHECK SHOOTER ANGLE
+	return shootertimer < GetClock()  && firetime + .5 < GetClock() && wheelShooterExit->GetOutputCurrent() > 3 && wheelShooterEntry->GetOutputCurrent() > 3;	
 }
 void Shooter::SetFireTimer() {
 	//shootertimer = GetClock() + .5;
-	shootercounter++;
+	firetimer = GetClock();
+}
+float Shooter::GetFireTime() {
+	return firetime;
+}
+
+float Shooter::GetFireTimer() {
+	return firetimer;
 }
 bool Shooter::GetTriggerStopFlag() {
-		return TriggerStopFlag;
+	return TriggerStopFlag;
 }	
 void Shooter::SetTriggerStopFlag(bool flag) {
 	TriggerStopFlag = flag;

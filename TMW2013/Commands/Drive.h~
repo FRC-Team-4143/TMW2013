@@ -24,7 +24,7 @@
 class Drive: public Command {
 public:
 	Drive();
-	Drive(double direction, double velocity, double timeout);
+	Drive(double direction, double velocity, double timeout, bool usegyro);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -35,6 +35,8 @@ private:
 	double radian;
 	double speed;
 	double GyroRad;
+	bool useGyro;
+	float gyroAngle;
 };
 
 #endif

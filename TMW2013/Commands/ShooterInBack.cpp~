@@ -17,16 +17,18 @@ ShooterInBack::ShooterInBack() {
 }
 // Called just before this Command runs the first time
 void ShooterInBack::Initialize() {
+	//SetTimeout(2.0);
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterInBack::Execute() {
-	Robot::shooter->SetAngle(354);
+	Robot::shooter->SetAngle(455);
 	Robot::shooter->SetSpeeds(-7.5, 9, true);
 	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterInBack::IsFinished() {
-	return true;
+	//return IsTimedOut();
+	return false;
 }
 // Called once after isFinished returns true
 void ShooterInBack::End() {

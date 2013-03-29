@@ -32,10 +32,11 @@ public:
 	Preferences* Prefs;
 
 private:
-	bool notready;;
-	float fireClock;
+	bool notready;
+	//float fireClock;
 	float entrySpeed;
 	float exitSpeed;
+	bool fired;
 //	float delay;
 };
 

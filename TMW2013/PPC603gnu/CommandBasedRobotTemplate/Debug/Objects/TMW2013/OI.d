@@ -391,7 +391,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/WPILib/Vision/ColorImage.h \
   C:/WindRiver/workspace/WPILib/WPIErrors.h \
   C:/WindRiver/workspace/WPILib/SmartDashboard/SmartDashboard.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
@@ -421,7 +421,11 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CommandGroup1.h \
+  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DecreaseShooterAngle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h \
@@ -441,8 +445,8 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SMDB.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterClimb.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterDrop.h \
@@ -1242,7 +1246,7 @@ C:/WindRiver/workspace/WPILib/WPIErrors.h:
 
 C:/WindRiver/workspace/WPILib/SmartDashboard/SmartDashboard.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
@@ -1302,7 +1306,15 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CommandGroup1.h:
+
+C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 
@@ -1342,9 +1354,9 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h:
 
-C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
 

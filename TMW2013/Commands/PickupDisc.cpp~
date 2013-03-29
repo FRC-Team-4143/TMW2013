@@ -21,14 +21,17 @@ void PickupDisc::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void PickupDisc::Execute() {
-	Robot::pickup->pickup->Set(.50);
+	if(Robot::pickup->GetCorrectedAngle() < 15 && Robot::pickup->GetCorrectedAngle() > -210)
+		Robot::pickup->pickup->Set(1);
+	else 
+		Robot::pickup->pickup->Set(.45);
 	
 	if(!done && Robot::pickup->GetCorrectedAngle() > 410 && Robot::pickup->GetCorrectedAngle() < 460)
 			done = true;
 }
 // Make this return true when this Command no longer needs to run execute()
 bool PickupDisc::IsFinished() {
-	return (done && Robot::pickup->GetCorrectedAngle() < 410);
+	return (done && Robot::pickup->GetCorrectedAngle() < 430);
 }
 // Called once after isFinished returns true
 void PickupDisc::End() {

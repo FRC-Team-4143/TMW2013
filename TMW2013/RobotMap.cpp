@@ -57,7 +57,7 @@ void RobotMap::init() {
 	lw->AddActuator("DriveTrain", "FrontRight", driveTrainFrontRight);
 	driveTrainFrontRight->SetContinuous(true); driveTrainFrontRight->SetAbsoluteTolerance(20.0); 
         driveTrainFrontRight->SetInputRange(0.0, 1023.0);
-        driveTrainFrontRight->SetOutputRange(-1.0, 1.0);
+        driveTrainFrontRight->SetOutputRange(-0.75, 0.75);
 	driveTrainFrontLeftPos = new AnalogChannel(1, 2);
 	lw->AddSensor("DriveTrain", "FrontLeftPos", driveTrainFrontLeftPos);
 	
@@ -68,7 +68,7 @@ void RobotMap::init() {
 	lw->AddActuator("DriveTrain", "FrontLeft", driveTrainFrontLeft);
 	driveTrainFrontLeft->SetContinuous(true); driveTrainFrontLeft->SetAbsoluteTolerance(20.0); 
         driveTrainFrontLeft->SetInputRange(0.0, 1023.0);
-        driveTrainFrontLeft->SetOutputRange(-1.0, 1.0);
+        driveTrainFrontLeft->SetOutputRange(-0.75, 0.75);
 	driveTrainRearRightPos = new AnalogChannel(1, 5);
 	lw->AddSensor("DriveTrain", "RearRightPos", driveTrainRearRightPos);
 	
@@ -79,7 +79,7 @@ void RobotMap::init() {
 	lw->AddActuator("DriveTrain", "RearRight", driveTrainRearRight);
 	driveTrainRearRight->SetContinuous(true); driveTrainRearRight->SetAbsoluteTolerance(20.0); 
         driveTrainRearRight->SetInputRange(0.0, 1023.0);
-        driveTrainRearRight->SetOutputRange(-1.0, 1.0);
+        driveTrainRearRight->SetOutputRange(-0.75, 0.75);
 	driveTrainRearLeftPos = new AnalogChannel(1, 4);
 	lw->AddSensor("DriveTrain", "RearLeftPos", driveTrainRearLeftPos);
 	
@@ -90,7 +90,7 @@ void RobotMap::init() {
 	lw->AddActuator("DriveTrain", "RearLeft", driveTrainRearLeft);
 	driveTrainRearLeft->SetContinuous(true); driveTrainRearLeft->SetAbsoluteTolerance(20.0); 
         driveTrainRearLeft->SetInputRange(0.0, 1023.0);
-        driveTrainRearLeft->SetOutputRange(-1.0, 1.0);
+        driveTrainRearLeft->SetOutputRange(-0.75, 0.75);
 	driveTrainFrontLeftDrive = new Victor(1, 1);
 	lw->AddActuator("DriveTrain", "FrontLeftDrive", (Victor*) driveTrainFrontLeftDrive);
 	

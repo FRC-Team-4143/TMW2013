@@ -11,7 +11,7 @@
 
 
 #include "Shoot3andStay.h"
-#include "ShooterInMiddle.h"
+#include "ShooterInBack.h"
 #include "Fire.h"
 #include "Drive.h"
 #include "TurnWheels.h"
@@ -19,12 +19,19 @@
 #include "PickupDisc.h"
 
 Shoot3andStay::Shoot3andStay() {
-	AddSequential (new Drive(3.14159/2, 0, 0));
-	AddSequential (new ShooterInMiddle());
+	//AddSequential (new Drive(3.14159/2, 0, 0, false));
+	AddSequential (new ShooterInBack());
+	AddSequential (new TurnWheels(3.14159/2));
+	AddSequential (new Drive(3.14159/2, -.5, 0.5, true));
+	AddSequential (new Drive(3.14159/2, .1, 0.1, false));
 	AddSequential (new Fire());
+	AddSequential (new ShooterInBack());
 	AddSequential (new Fire());
+	AddSequential (new ShooterInBack());
 	AddSequential (new Fire());
+	AddSequential (new ShooterInBack());
 	AddSequential (new Fire());
+	AddSequential (new ShooterInBack());
 	AddSequential (new Fire());
 
 	// Add Commands here:
