@@ -27,7 +27,7 @@ void TriggerMonitor::Run()
 	
 	if (Robot::shooter->GetFireTimer() + 3.5 > GetClock())
 	{
-		if ((!Robot::shooter->triggerStop->Get() && Robot::shooter->GetFireTimer() + .05 < GetClock()))
+		if ((!Robot::shooter->triggerStop->Get() && Robot::shooter->GetFireTimer() + .15 < GetClock()))
 		{
 			if (Robot::shooter->trigger->Get() > 0)
 			{

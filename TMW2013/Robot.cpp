@@ -82,6 +82,9 @@ void Robot::RobotInit() {
 	SmartDashboard::PutData("Autonomous Chooser", autoChooser);
 		
 	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
+	
+	Robot::driveTrain->wheelSpokeCounter->Start();
+	Robot::driveTrain->wheelSpokeCounter->Reset();
 }
 	
 void Robot::DisabledPeriodic(){
@@ -136,6 +139,9 @@ void Robot::TeleopPeriodic() {
 		Robot::climber->climberDistance->Reset();
 	
 	Robot::shooter->RunAtOutput();
+	
+	if(Robot::oi->getDriverJoystick()->GetRawButton(11))
+		Robot::driveTrain->wheelSpokeCounter->Reset();
 	
 //	if (Robot::oi->getDriverJoystick()->GetRawButton(8))
 //		SMDB();

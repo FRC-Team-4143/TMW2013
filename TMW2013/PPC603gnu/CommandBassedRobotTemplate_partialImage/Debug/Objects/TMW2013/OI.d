@@ -431,6 +431,7 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h \
@@ -440,6 +441,7 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetGyro.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ReverseOpeartorPickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SMDB.h \
@@ -1326,6 +1328,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
@@ -1343,6 +1347,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetGyro.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h:
 

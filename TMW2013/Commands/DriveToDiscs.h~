@@ -24,7 +24,7 @@
 class DriveToDiscs: public Command {
 public:
 	DriveToDiscs();
-	DriveToDiscs(double direction, double velocity, double timeout);
+	DriveToDiscs(double direction, double velocity, double timeout, int count);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -35,6 +35,7 @@ private:
 	double speed;
 	double GyroRad;
 	float gyroAngle;
+	int CounterLimit;
 };
 
 #endif

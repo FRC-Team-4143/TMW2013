@@ -23,7 +23,7 @@
  */
 class TurnRobot: public Command {
 public:
-	TurnRobot(float angle);
+	TurnRobot(float angle, float tolerance);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -32,6 +32,7 @@ public:
 private:
 	int ontarget;
 	float Angle;
+	float Tolerance;
 };
 
 #endif

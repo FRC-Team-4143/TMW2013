@@ -9,35 +9,26 @@
 // it from being updated in th future.
 
 
-#ifndef SETWHEELOFFSETS_H
-#define SETWHEELOFFSETS_H
+#ifndef RESETWHEELCOUNTER_H
+#define RESETWHEELCOUNTER_H
 
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
-#include "../RAWCConstants.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class SetWheelOffsets: public Command {
+class ResetWheelCounter: public Command {
 public:
-	SetWheelOffsets();
+	ResetWheelCounter();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	int FLOffset;
-	int FROffset;
-	int RLOffset;
-	int RROffset;
-	RAWCConstants* File;
-	bool complete;
-
-
 };
 
 #endif

@@ -1,8 +1,8 @@
-CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3Pickup2.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
-  C:/WindRiver/workspace/WPILib/Commands/Command.h \
+ \
+ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/ResetWheelCounter.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
+  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/ErrorBase.h \
   C:/WindRiver/workspace/WPILib/Base.h \
   C:/WindRiver/workspace/WPILib/ChipObject/NiRio.h \
@@ -109,15 +109,6 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3Pickup2.o:  \
   C:/WindRiver/workspace/WPILib/networktables2/type/ComplexData.h \
   C:/WindRiver/workspace/WPILib/tables/ITableListener.h \
   C:/WindRiver/workspace/WPILib/tables/ITable.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
-  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
-  C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream.h \
@@ -160,6 +151,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3Pickup2.o:  \
   C:/WindRiver/workspace/WPILib/Buttons/Trigger.h \
   C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory \
   C:/WindRiver/workspace/WPILib/Buttons/DigitalIOButton.h \
   C:/WindRiver/workspace/WPILib/Buttons/InternalButton.h \
   C:/WindRiver/workspace/WPILib/Buttons/JoystickButton.h \
@@ -174,6 +169,10 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3Pickup2.o:  \
   C:/WindRiver/workspace/WPILib/tables/ITable.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
+  C:/WindRiver/workspace/WPILib/Commands/Command.h \
+  C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
+  c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
   C:/WindRiver/workspace/WPILib/Commands/PIDCommand.h \
   C:/WindRiver/workspace/WPILib/PIDSource.h \
   C:/WindRiver/workspace/WPILib/PIDOutput.h \
@@ -417,24 +416,11 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3Pickup2.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/SMDB.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
 
-C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
-
-C:/WindRiver/workspace/WPILib/Commands/Command.h:
+C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
 C:/WindRiver/workspace/WPILib/ErrorBase.h:
 
@@ -648,24 +634,6 @@ C:/WindRiver/workspace/WPILib/tables/ITableListener.h:
 
 C:/WindRiver/workspace/WPILib/tables/ITable.h:
 
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory:
-
-C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list:
-
-c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
-
-C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
 
 C:/WindRiver/workspace/WPILib/WPILib.h:
@@ -750,6 +718,14 @@ C:/WindRiver/workspace/WPILib/SmartDashboard/Sendable.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Command.h:
 
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/set:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/xtree:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/functional:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/memory:
+
 C:/WindRiver/workspace/WPILib/Buttons/DigitalIOButton.h:
 
 C:/WindRiver/workspace/WPILib/Buttons/InternalButton.h:
@@ -777,6 +753,14 @@ C:/WindRiver/workspace/WPILib/tables/ITable.h:
 C:/WindRiver/workspace/WPILib/Commands/Command.h:
 
 C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
+
+C:/WindRiver/workspace/WPILib/Commands/Command.h:
+
+C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list:
+
+c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
 
 C:/WindRiver/workspace/WPILib/Commands/PIDCommand.h:
 
@@ -1265,25 +1249,3 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h:

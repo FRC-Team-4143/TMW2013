@@ -425,7 +425,10 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2.h:
 
@@ -1276,3 +1279,9 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h:

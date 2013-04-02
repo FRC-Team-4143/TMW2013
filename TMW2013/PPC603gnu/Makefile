@@ -157,6 +157,10 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToDiscs.o : 
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToPyramid.o : $(PRJ_ROOT_DIR)/Commands/DriveToPyramid.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.o : $(PRJ_ROOT_DIR)/Commands/ExtendClimber.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -190,6 +194,10 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PyramidAim.o : $(
 
 
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.o : $(PRJ_ROOT_DIR)/Commands/ResetGyro.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ResetWheelCounter.o : $(PRJ_ROOT_DIR)/Commands/ResetWheelCounter.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -335,6 +343,7 @@ OBJECTS_CommandBasedRobotTemplate = CommandBasedRobotTemplate/$(MODE_DIR)/Object
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DeployHooks.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Drive.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToDiscs.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToPyramid.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Fire.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/NoneAuto.o \
@@ -344,6 +353,7 @@ OBJECTS_CommandBasedRobotTemplate = CommandBasedRobotTemplate/$(MODE_DIR)/Object
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PivotDrive.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PyramidAim.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ResetWheelCounter.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/RetractHooks.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ReverseOpeartorPickup.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/SMDB.o \
@@ -461,6 +471,10 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Dri
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToPyramid.o : $(PRJ_ROOT_DIR)/Commands/DriveToPyramid.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.o : $(PRJ_ROOT_DIR)/Commands/ExtendClimber.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -494,6 +508,10 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Pyr
 
 
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.o : $(PRJ_ROOT_DIR)/Commands/ResetGyro.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ResetWheelCounter.o : $(PRJ_ROOT_DIR)/Commands/ResetWheelCounter.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -639,6 +657,7 @@ OBJECTS_CommandBassedRobotTemplate_partialImage = CommandBassedRobotTemplate_par
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DeployHooks.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Drive.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToDiscs.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToPyramid.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Fire.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/NoneAuto.o \
@@ -648,6 +667,7 @@ OBJECTS_CommandBassedRobotTemplate_partialImage = CommandBassedRobotTemplate_par
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/PivotDrive.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/PyramidAim.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ResetWheelCounter.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/RetractHooks.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ReverseOpeartorPickup.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/SMDB.o \
@@ -697,38 +717,39 @@ force :
 DEP_FILES := CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/AutoFire.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/AutoPickup.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/AutoShooter.d \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/AutonomousCommand.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/CommandGroup1.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/CrabDrive.d \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DecreaseShooterAngle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DeployHooks.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Drive.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToDiscs.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Fire.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/NoneAuto.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/OperatorClimb.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/OperatorPickup.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PickupDisc.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PivotDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PyramidAim.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/RetractHooks.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ReverseOpeartorPickup.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/SMDB.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/SetWheelOffsets.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3CornerPickup2.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3FromCorner.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3Pickup2.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3andStay.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterClimb.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterDrop.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInBack.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInFront.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInMiddle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterIncreaseAngle.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterPyramidGoal.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterRun.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterStop.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/SteerDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TargetDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TenPtClimb.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ToggleRobotFront.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TurnRobot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TurnWheels.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/OI.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/RAWCConstants.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Robot.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/RobotMap.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/Climber.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/DriveTrain.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/Pickup.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/Shooter.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/TriggerMonitor.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/jankyTask.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutoFire.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutoPickup.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutoShooter.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutonomousCommand.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/CommandGroup1.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/CrabDrive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DecreaseShooterAngle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DeployHooks.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Drive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToDiscs.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToDiscs.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToPyramid.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Fire.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/NoneAuto.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/OperatorClimb.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/OperatorPickup.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PickupDisc.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PivotDrive.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/PyramidAim.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ResetWheelCounter.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/RetractHooks.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ReverseOpeartorPickup.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/SMDB.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/SetWheelOffsets.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3CornerPickup2.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3FromCorner.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3Pickup2.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3andStay.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterClimb.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterDrop.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInBack.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInFront.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInMiddle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterIncreaseAngle.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterPyramidGoal.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterRun.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterStop.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/SteerDrive.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TargetDrive.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TenPtClimb.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/ToggleRobotFront.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TurnRobot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Commands/TurnWheels.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/OI.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/RAWCConstants.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Robot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/RobotMap.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/Climber.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/DriveTrain.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/Pickup.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/Subsystems/Shooter.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/TriggerMonitor.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/TMW2013/jankyTask.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutoFire.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutoPickup.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutoShooter.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/AutonomousCommand.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/CommandGroup1.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/CrabDrive.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DecreaseShooterAngle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DeployHooks.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Drive.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToDiscs.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/DriveToPyramid.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ExtendClimber.d \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Fire.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/NoneAuto.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/OperatorClimb.d \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/OperatorPickup.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/PickupDisc.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/PivotDrive.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/PyramidAim.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/RetractHooks.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ReverseOpeartorPickup.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/SMDB.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/SetWheelOffsets.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3CornerPickup2.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3FromCorner.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3Pickup2.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3andStay.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterClimb.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterDrop.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInBack.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInFront.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInMiddle.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterIncreaseAngle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterPyramidGoal.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterRun.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterStop.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/SteerDrive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TargetDrive.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TenPtClimb.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ToggleRobotFront.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TurnRobot.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TurnWheels.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/OI.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/RAWCConstants.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Robot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/RobotMap.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/Climber.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/DriveTrain.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/Pickup.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/Shooter.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/TriggerMonitor.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/jankyTask.d
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/PyramidAim.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ResetGyro.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ResetWheelCounter.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/RetractHooks.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ReverseOpeartorPickup.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/SMDB.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/SetWheelOffsets.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3CornerPickup2.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3FromCorner.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3Pickup2.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/Shoot3andStay.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterClimb.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterDrop.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInBack.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInFront.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterInMiddle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterIncreaseAngle.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterPyramidGoal.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterRun.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ShooterStop.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/SteerDrive.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TargetDrive.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TenPtClimb.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/ToggleRobotFront.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TurnRobot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Commands/TurnWheels.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/OI.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/RAWCConstants.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Robot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/RobotMap.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/Climber.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/DriveTrain.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/Pickup.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/Subsystems/Shooter.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/TriggerMonitor.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/TMW2013/jankyTask.d
 -include $(DEP_FILES)
 
 

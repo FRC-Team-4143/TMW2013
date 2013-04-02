@@ -30,7 +30,7 @@ Shoot3Pickup2::Shoot3Pickup2() {
 	AddSequential (new Fire());
 	
 	AddSequential (new Drive(3.14159/2, -.7, .3, true));
-	AddSequential (new DriveToDiscs(3.14159/2, -.25, 2.0));
+	AddSequential (new DriveToDiscs(3.14159/2, -.25, 2.0, 20));
 //	AddSequential (new Drive(3.14159/2, -.25, .1));
 	AddSequential (new Drive(3.14159/2, .15, 0.2, false));
 	AddSequential (new AutoPickup());

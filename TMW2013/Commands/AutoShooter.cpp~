@@ -17,7 +17,7 @@ AutoShooter::AutoShooter() {
 }
 // Called just before this Command runs the first time
 void AutoShooter::Initialize() {
-	SetTimeout(2.0);
+	SetTimeout(0.25);
 }
 // Called repeatedly when this Command is scheduled to run
 void AutoShooter::Execute() {
@@ -27,6 +27,7 @@ void AutoShooter::Execute() {
 // Make this return true when this Command no longer needs to run execute()
 bool AutoShooter::IsFinished() {
 	return IsTimedOut();
+	//return true;
 }
 // Called once after isFinished returns true
 void AutoShooter::End() {

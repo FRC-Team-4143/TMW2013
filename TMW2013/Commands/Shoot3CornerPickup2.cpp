@@ -19,26 +19,30 @@
 #include "ShooterInMiddle.h"
 #include "AutoPickup.h"
 #include "AutoShooter.h"
+#include "ResetWheelCounter.h"
+#include "DriveToPyramid.h"
+#include "ExtendClimber.h"
 
 
 Shoot3CornerPickup2::Shoot3CornerPickup2() {
 	AddSequential (new TurnWheels(0.0));
 	AddSequential (new AutoShooter());
+	AddParallel (new ExtendClimber());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
-	AddSequential (new TurnRobot(55));
+	AddSequential (new TurnRobot(50, 2));
 	AddSequential (new TurnWheels(3.14159/2));
-	
-	AddSequential (new Drive(3.14159/2, -1.0, .3, true));
-	AddSequential (new DriveToDiscs(3.14159/2, -.6, 1.4));
-	AddSequential (new Drive(3.14159/2, .5, 0.2, false));
+	AddSequential (new ResetWheelCounter());
+	AddSequential (new Drive(3.14159/2, -.5, .3, true));
+	AddSequential (new DriveToDiscs(3.14159/2, -.40, 1.5, 25));
+
 	AddSequential (new AutoPickup());
-	AddSequential (new Drive(3.14159/2, 1.0, .3, true));
-	AddSequential (new Drive (3.14159/2, .6, 1.6, true));
-	AddSequential (new Drive (3.14159/2, -.5, .2, false));
 	AddSequential (new TurnWheels(0));
-	AddSequential (new TurnRobot(0));
+	AddSequential (new TurnRobot(0, 20));
+	AddSequential (new Drive(3.14159/2, .6, .3, true));
+	AddSequential (new DriveToDiscs(3.14159/2, .40, 1.5, 10));
+	AddSequential (new Drive (3.14159/2, -.4, .2, false));
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());

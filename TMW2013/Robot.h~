@@ -55,10 +55,10 @@ public:
 private:
 	RAWCConstants* File;
 	Preferences* Prefs;
-	float FLOffset;
-	float FROffset;
-	float RLOffset;
-	float RROffset;
+	int FLOffset;
+	int FROffset;
+	int RLOffset;
+	int RROffset;
 	float ShooterAngleOffset;
 	float ClimberAngleOffset;
 	

@@ -9,35 +9,32 @@
 // it from being updated in th future.
 
 
-#ifndef SETWHEELOFFSETS_H
-#define SETWHEELOFFSETS_H
+#ifndef AUTOFIRE_H
+#define AUTOFIRE_H
 
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
-#include "../RAWCConstants.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class SetWheelOffsets: public Command {
+class AutoFire: public Command {
 public:
-	SetWheelOffsets();
+	AutoFire();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	int FLOffset;
-	int FROffset;
-	int RLOffset;
-	int RROffset;
-	RAWCConstants* File;
-	bool complete;
-
-
+private:
+	bool notready;
+	float prevFireTime;
+	float entrySpeed;
+	float exitSpeed;
+	bool fired;
 };
 
 #endif

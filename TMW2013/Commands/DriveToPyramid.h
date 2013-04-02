@@ -9,35 +9,32 @@
 // it from being updated in th future.
 
 
-#ifndef SETWHEELOFFSETS_H
-#define SETWHEELOFFSETS_H
+#ifndef DRIVETOPYRAMID_H
+#define DRIVETOPYRAMID_H
 
 
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
-#include "../RAWCConstants.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class SetWheelOffsets: public Command {
+class DriveToPyramid: public Command {
 public:
-	SetWheelOffsets();
+	DriveToPyramid(double direction, double velocity);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	int FLOffset;
-	int FROffset;
-	int RLOffset;
-	int RROffset;
-	RAWCConstants* File;
-	bool complete;
-
-
+private:
+	double radian;
+	double speed;
+	double GyroRad;
+	float gyroAngle;
+	int CounterLimit;
 };
 
 #endif

@@ -17,9 +17,17 @@
 #include "TurnWheels.h"
 #include "ShooterInMiddle.h"
 #include "AutoPickup.h"
+#include "AutoFire.h"
+#include "ResetWheelCounter.h"
+#include "DriveToPyramid.h"
+#include "ExtendClimber.h"
+#include "TurnWheels.h"
+#include "TurnRobot.h"
+#include "AutoShooter.h"
+
 
 Shoot3Pickup2::Shoot3Pickup2() {
-	AddSequential (new ShooterInBack());
+	/*AddSequential (new ShooterInBack());
 	AddSequential (new TurnWheels(3.14159/2));
 	AddSequential (new Drive(3.14159/2, -.3, 0.5, true));
 	AddSequential (new Drive(3.14159/2, .1, 0.1, false));
@@ -27,19 +35,30 @@ Shoot3Pickup2::Shoot3Pickup2() {
 	AddSequential (new Fire());
 	AddSequential (new Fire());
 	AddSequential (new Fire());
-	AddSequential (new Fire());
+	AddSequential (new Fire());*/
 	
-	AddSequential (new Drive(3.14159/2, -.7, .3, true));
-	AddSequential (new DriveToDiscs(3.14159/2, -.25, 2.0));
-//	AddSequential (new Drive(3.14159/2, -.25, .1));
-	AddSequential (new Drive(3.14159/2, .15, 0.2, false));
+	AddSequential (new TurnWheels(0.0));
+	AddSequential (new AutoShooter());
+	AddParallel (new ExtendClimber());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new TurnRobot(50, 2));
+	AddSequential (new TurnWheels(3.14159/2));
+	AddSequential (new ResetWheelCounter());
+	AddSequential (new Drive(3.14159/2, -.5, .3, true));
+	AddSequential (new DriveToDiscs(3.14159/2, -.40, 1.5, 25));
 	AddSequential (new AutoPickup());
+	
+	AddSequential (new TurnWheels(0));
+	AddSequential (new TurnRobot(14, 5));
+	AddSequential (new TurnWheels(3.14159/2));
 	AddSequential (new Drive (3.14159/2, .4, 1.3, true));
 	AddSequential (new Drive (3.14159/2, -.3, .2, false));
-	AddSequential (new Fire());
-	AddSequential (new Fire());
-	AddSequential (new Fire());
-	AddSequential (new Fire());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
 	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());

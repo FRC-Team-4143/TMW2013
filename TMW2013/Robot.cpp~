@@ -46,10 +46,10 @@ void Robot::RobotInit() {
 	Robot::driveTrain->SetWheelbase(8.25, 22, 8.25);
 	Robot::driveTrain->SetMaxSpeed(100);
 	
-	FLOffset = File->getValueForKey("FLOff");
-	FROffset = File->getValueForKey("FROff");
-	RLOffset = File->getValueForKey("RLOff");
-	RROffset = File->getValueForKey("RROff");
+	FLOffset = (int)File->getValueForKey("FLOff");
+	FROffset = (int)File->getValueForKey("FROff");
+	RLOffset = (int)File->getValueForKey("RLOff");
+	RROffset = (int)File->getValueForKey("RROff");
 	
 	Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
 	
@@ -82,6 +82,9 @@ void Robot::RobotInit() {
 	SmartDashboard::PutData("Autonomous Chooser", autoChooser);
 		
 	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
+	
+	Robot::driveTrain->wheelSpokeCounter->Start();
+	Robot::driveTrain->wheelSpokeCounter->Reset();
 }
 	
 void Robot::DisabledPeriodic(){
@@ -136,6 +139,9 @@ void Robot::TeleopPeriodic() {
 		Robot::climber->climberDistance->Reset();
 	
 	Robot::shooter->RunAtOutput();
+	
+	if(Robot::oi->getDriverJoystick()->GetRawButton(11))
+		Robot::driveTrain->wheelSpokeCounter->Reset();
 	
 //	if (Robot::oi->getDriverJoystick()->GetRawButton(8))
 //		SMDB();

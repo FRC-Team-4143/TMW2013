@@ -165,6 +165,9 @@ void Shooter::SetFireTimer() {
 	//shootertimer = GetClock() + .5;
 	firetimer = GetClock();
 }
+float Shooter::GetFireTime() {
+	return firetime;
+}
 float Shooter::GetFireTimer() {
 	return firetimer;
 }
