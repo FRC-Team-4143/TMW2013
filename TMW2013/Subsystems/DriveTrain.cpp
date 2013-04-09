@@ -310,13 +310,55 @@ void DriveTrain::SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, floa
 		rearRightDrive->Set(FLSpeed*RRInv);
 	}
 }
-void DriveTrain::Pivot(float twistinput, float speedinput)
+void DriveTrain::Pivot(float ROT, float y, float x)
 {
 	
 	robotangle = (gyroscope->GetAngle())*2*pi/180;
 	
+	float FWD = y*cos(robotangle) + x*sin(robotangle);
+	float STR = -y*sin(robotangle) + x*cos(robotangle);
+	
 	radius = sqrt(pow(Y,2)/4+pow(X,2)/4);
 	
+	AP = STR - ROT*X/radius;
+	BP = STR + ROT*X/radius;
+	CP = FWD - ROT*W/radius;
+	DP = FWD + ROT*W/radius;
+	
+	float FLSetPoint = (242 + 485/pi*atan(DP/BP));
+	float FRSetPoint = (242 + 485/pi*atan(CP/BP));
+	float RLSetPoint = (242 + 485/pi*atan(DP/AP));
+	float RRSetPoint = (242 + 485/pi*atan(CP/AP));
+
+	SetSteerSetpoint(FLSetPoint, FRSetPoint, RLSetPoint, RRSetPoint);
+
+	FL = sqrt(pow(BP,2)+pow(DP,2));
+	FR = sqrt(pow(BP,2)+pow(CP,2));
+	RL = sqrt(pow(AP,2)+pow(DP,2));
+	RR = sqrt(pow(AP,2)+pow(CP,2));
+	
+	
+	//Solve for fastest wheel speed
+	double speedarray[] = {fabs(FL), fabs(FR), fabs(RL), fabs(RR)};
+		
+	 int length = 4;
+     double maxspeed = speedarray[0];
+     for(int i = 1; i < length; i++)
+     {
+          if(speedarray[i] > maxspeed)
+                maxspeed = speedarray[i];
+     }
+		 
+	//Set ratios based on maximum wheel speed
+	FLRatio = FL/maxspeed;
+	FRRatio = FR/maxspeed;
+	RLRatio = RL/maxspeed;
+	RRRatio = RR/maxspeed;
+	
+	//Set drive speeds
+	SetDriveSpeed(-FLRatio, FRRatio, -RLRatio, RRRatio);
+
+/*	
 	FLWP = pi + atan(Y/X);
 	FRWP = pi - atan(Y/X);
 	RRWP = atan(W/X);
@@ -500,7 +542,7 @@ void DriveTrain::CurrentLimit(){
 	
 	if(!rearLeft->IsEnabled() && RLSOTimer > GetClock())
 		rearLeft->Enable();
-		
+*/
 }
 void DriveTrain::Lock()
 {

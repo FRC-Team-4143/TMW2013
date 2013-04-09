@@ -21,7 +21,7 @@ void PivotDrive::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void PivotDrive::Execute() {
-	Robot::driveTrain->Pivot((Robot::oi->getSteeringWheel()-0.264)*1.418/(2*3.14159), Robot::oi->getDriverJoystick()->GetY());
+	Robot::driveTrain->Pivot((Robot::oi->getSteeringWheel()*.9053-1.24), Robot::oi->getDriverJoystick()->GetY(), Robot::oi->getDriverJoystick()->GetX());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool PivotDrive::IsFinished() {
