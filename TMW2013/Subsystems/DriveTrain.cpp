@@ -502,6 +502,11 @@ void DriveTrain::CurrentLimit(){
 		rearLeft->Enable();
 		
 }
+void DriveTrain::Lock()
+{
+	SetSteerSetpoint(607, 364, 607, 364);
+}
+
 bool DriveTrain::ZeroGyro(float InitTime)
 {
 	bool Done = false;

@@ -35,14 +35,14 @@ Shoot3CornerPickup2::Shoot3CornerPickup2() {
 	AddSequential (new TurnWheels(3.14159/2));
 	AddSequential (new ResetWheelCounter());
 	AddSequential (new Drive(3.14159/2, -.5, .3, true));
-	AddSequential (new DriveToDiscs(3.14159/2, -.40, 1.5, 25));
+	AddSequential (new DriveToDiscs(3.14159/2, -.40, 2, 25));
 
 	AddSequential (new AutoPickup());
-	AddSequential (new TurnWheels(0));
-	AddSequential (new TurnRobot(0, 20));
 	AddSequential (new Drive(3.14159/2, .6, .3, true));
-	AddSequential (new DriveToDiscs(3.14159/2, .40, 1.5, 10));
+	AddSequential (new DriveToPyramid(3.14159/2, .40, 2.4));
 	AddSequential (new Drive (3.14159/2, -.4, .2, false));
+	AddSequential (new TurnWheels(0));
+	AddSequential (new TurnRobot(-5, 10));
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());

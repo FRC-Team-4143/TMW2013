@@ -28,7 +28,7 @@ void TurnRobot::Execute() {
 	else
 		Robot::driveTrain->Steer(0, ((Angle - Robot::driveTrain->gyroscope->GetAngle())/250 - .18), 0.5);
 	
-	if(fabs(Angle - Robot::driveTrain->gyroscope->GetAngle()) < Tolerance )
+	if(fabs(Angle - Robot::driveTrain->gyroscope->GetAngle()) < Tolerance)
 		ontarget ++;
 }
 // Make this return true when this Command no longer needs to run execute()

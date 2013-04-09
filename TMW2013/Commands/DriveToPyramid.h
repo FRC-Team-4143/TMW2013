@@ -23,7 +23,7 @@
  */
 class DriveToPyramid: public Command {
 public:
-	DriveToPyramid(double direction, double velocity);
+	DriveToPyramid(double direction, double velocity, double timeout);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

@@ -169,6 +169,7 @@ public:
 	void Crab(float radian, float speed);
 	void Pivot(float twistinput, float speedinput);
 	bool ZeroGyro(float InitTime);
+	void Lock();
 	
 };
 #endif

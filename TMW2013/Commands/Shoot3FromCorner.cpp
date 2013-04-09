@@ -12,21 +12,22 @@
 
 #include "Shoot3FromCorner.h"
 #include "AutoShooter.h"
-#include "Fire.h"
+#include "AutoFire.h"
+#include "ExtendClimber.h"
+#include "TurnWheels.h"
+#include "Drive.h"
 
 
 Shoot3FromCorner::Shoot3FromCorner() {
 	
+	AddSequential (new TurnWheels(3.14159/2));
 	AddSequential (new AutoShooter());
-	AddSequential (new Fire());
-	//AddSequential (new AutoShooter());
-	AddSequential (new Fire());
-	//AddSequential (new AutoShooter());
-	AddSequential (new Fire());
-	//AddSequential (new AutoShooter());
-	AddSequential (new Fire());
-	//AddSequential (new AutoShooter());
-	AddSequential (new Fire());
+	//AddParallel (new ExtendClimber());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new Drive(3.14159/2, -.5, 2, true));
+	AddSequential (new Drive (3.14159/2, .3, .2, false));
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());

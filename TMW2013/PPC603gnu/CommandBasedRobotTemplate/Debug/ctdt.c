@@ -25,7 +25,7 @@ void _GLOBAL__I__ZN5DriveC2Ev();
 
 void _GLOBAL__I__ZN12DriveToDiscsC2Edddi();
 
-void _GLOBAL__I__ZN14DriveToPyramidC2Edd();
+void _GLOBAL__I__ZN14DriveToPyramidC2Eddd();
 
 void _GLOBAL__I__ZN13ExtendClimberC2Ev();
 
@@ -175,7 +175,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN11DeployHooksC2Ev,
     _GLOBAL__I__ZN5DriveC2Ev,
     _GLOBAL__I__ZN12DriveToDiscsC2Edddi,
-    _GLOBAL__I__ZN14DriveToPyramidC2Edd,
+    _GLOBAL__I__ZN14DriveToPyramidC2Eddd,
     _GLOBAL__I__ZN13ExtendClimberC2Ev,
     _GLOBAL__I__ZN4FireC2Ev,
     _GLOBAL__I__ZN8NoneAutoC2Ev,
@@ -265,7 +265,7 @@ void _GLOBAL__D__ZN5DriveC2Ev();
 
 void _GLOBAL__D__ZN12DriveToDiscsC2Edddi();
 
-void _GLOBAL__D__ZN14DriveToPyramidC2Edd();
+void _GLOBAL__D__ZN14DriveToPyramidC2Eddd();
 
 void _GLOBAL__D__ZN13ExtendClimberC2Ev();
 
@@ -405,7 +405,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN11DeployHooksC2Ev,
     _GLOBAL__D__ZN5DriveC2Ev,
     _GLOBAL__D__ZN12DriveToDiscsC2Edddi,
-    _GLOBAL__D__ZN14DriveToPyramidC2Edd,
+    _GLOBAL__D__ZN14DriveToPyramidC2Eddd,
     _GLOBAL__D__ZN13ExtendClimberC2Ev,
     _GLOBAL__D__ZN4FireC2Ev,
     _GLOBAL__D__ZN8NoneAutoC2Ev,

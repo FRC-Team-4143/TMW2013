@@ -419,7 +419,10 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h:
 
@@ -1257,4 +1260,10 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
