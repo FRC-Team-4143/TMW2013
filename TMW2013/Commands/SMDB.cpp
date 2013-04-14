@@ -31,6 +31,7 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("GyroAngle", Robot::driveTrain->gyroscope->GetAngle());
 	SmartDashboard::PutNumber("WheelSpokeCounter", Robot::driveTrain->wheelSpokeCounter->Get());
 	
+	
 	SmartDashboard::PutNumber("FLError", Robot::driveTrain->frontLeft->GetError());
 	SmartDashboard::PutNumber("FRError", Robot::driveTrain->frontRight->GetError());
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());

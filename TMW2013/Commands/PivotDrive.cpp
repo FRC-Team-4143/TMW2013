@@ -18,10 +18,11 @@ PivotDrive::PivotDrive() {
 // Called just before this Command runs the first time
 void PivotDrive::Initialize() {
 	Robot::driveTrain->gyroscope->Reset();
+	//Robot::driveTrain->ToggleFrontBack();
 }
 // Called repeatedly when this Command is scheduled to run
 void PivotDrive::Execute() {
-	Robot::driveTrain->Pivot((Robot::oi->getSteeringWheel()*.9053-1.24), Robot::oi->getDriverJoystick()->GetY(), Robot::oi->getDriverJoystick()->GetX());
+	Robot::driveTrain->Pivot(Robot::oi->GetSWUnit()/10, -Robot::oi->GetJoystickY(), Robot::oi->GetJoystickX());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool PivotDrive::IsFinished() {
@@ -29,9 +30,10 @@ bool PivotDrive::IsFinished() {
 }
 // Called once after isFinished returns true
 void PivotDrive::End() {
-	
+	//Robot::driveTrain->ToggleFrontBack();
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void PivotDrive::Interrupted() {
+//	Robot::driveTrain->ToggleFrontBack();
 }
