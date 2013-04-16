@@ -21,9 +21,7 @@ void PyramidAim::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void PyramidAim::Execute() {
-	radian = 0;
-	speed = (Robot::oi->getSteeringWheel()*.9053-1.24); //converts SW input to -1:1
-	Robot::driveTrain->Steer(radian, speed, 1.5);
+	Robot::driveTrain->Lock();
 }
 // Make this return true when this Command no longer needs to run execute()
 bool PyramidAim::IsFinished() {

@@ -8,8 +8,6 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "Robot.h"
-#include "Commands/Shoot3andStay.h"
-#include "Commands/Shoot3Pickup2.h"
 #include "Commands/Shoot3FromCorner.h"
 #include "Commands/NoneAuto.h"
 #include "Commands/Shoot3CornerPickup2.h"
@@ -43,7 +41,7 @@ void Robot::RobotInit() {
 	
 	Prefs = Preferences::GetInstance();
 	File = RAWCConstants::getInstance();
-	Robot::driveTrain->SetWheelbase(8.25, 22, 8.25);
+	Robot::driveTrain->SetWheelbase(8, 22, 8);
 	Robot::driveTrain->SetMaxSpeed(100);
 	
 	FLOffset = (int)File->getValueForKey("FLOff");
@@ -74,10 +72,8 @@ void Robot::RobotInit() {
 			Prefs->PutInt("ShooterAngleSetpoint",395);
 	
 	autoChooser = new SendableChooser();
-	autoChooser->AddDefault("Shoot3andStay", new Shoot3andStay());
 	autoChooser->AddObject("None", new NoneAuto());
-	autoChooser->AddObject("Shoot3Pickup2", new Shoot3Pickup2());
-	autoChooser->AddObject("Shoot3FromCorner", new Shoot3FromCorner());
+	autoChooser->AddDefault("Shoot3FromCorner", new Shoot3FromCorner());
 	autoChooser->AddObject("Shoot3CornerPickup2", new Shoot3CornerPickup2());
 	SmartDashboard::PutData("Autonomous Chooser", autoChooser);
 		
@@ -85,6 +81,8 @@ void Robot::RobotInit() {
 	
 	Robot::driveTrain->wheelSpokeCounter->Start();
 	Robot::driveTrain->wheelSpokeCounter->Reset();
+	
+	Robot::climber->comp->Start();
 }
 	
 void Robot::DisabledPeriodic(){
@@ -101,18 +99,7 @@ void Robot::AutonomousPeriodic() {
 	Scheduler::GetInstance()->Run();
 	Robot::shooter->RunAtOutput();
 	
-}
-void Robot::AutonomousContinuous()
-{
-/*	//fail safe to catch trigger
-	if (!Robot::shooter->triggerStop->Get() && !Robot::shooter->GetTriggerStopFlag())
-	{
-		Robot::shooter->SetTriggerStopFlag(true);
-		Robot::shooter->SetFireFlag(false);
-	}
-*/
-}
-	
+}	
 void Robot::TeleopInit() {
 	// This makes sure that the autonomous stops running when
 	// teleop starts running. If you want the autonomous to 
@@ -121,30 +108,14 @@ void Robot::TeleopInit() {
 	autonomousCommand->Cancel();
 	triggerMonitor.Start();
 }
-void Robot::TeleopContinuous()
-{
-	/*	//fail safe to catch trigger
-	if (!Robot::shooter->triggerStop->Get() && Robot::shooter->GetFireFlag())
-	{
-		Robot::shooter->SetTriggerStopFlag(true);
-		Robot::shooter->SetFireFlag(false);
-	}
-	*/
-}
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
 		Scheduler::GetInstance()->Run();
-	
-	if(!Robot::climber->extendLimit->Get())
-		Robot::climber->climberDistance->Reset();
-	
+		
 	Robot::shooter->RunAtOutput();
 	
 	if(Robot::oi->getDriverJoystick()->GetRawButton(11))
 		Robot::driveTrain->wheelSpokeCounter->Reset();
-	
-//	if (Robot::oi->getDriverJoystick()->GetRawButton(8))
-//		SMDB();
 	
 	if (Robot::oi->getGamePad()->GetRockerY() > 0.5)
 		Robot::shooter->SetAngle(Robot::shooter->GetCorrectedAngle() + 6);

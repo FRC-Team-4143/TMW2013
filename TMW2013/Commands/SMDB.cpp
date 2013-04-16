@@ -36,16 +36,7 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("FRError", Robot::driveTrain->frontRight->GetError());
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
-			
-	SmartDashboard::PutNumber("ClimberDistance",Robot::climber->climberDistance->GetDistance());
-	SmartDashboard::PutNumber("ClimberAngleLeftVolt", Robot::climber->angleLeft->GetOutputVoltage());
-	SmartDashboard::PutNumber("ClimberAngleRightVolt", Robot::climber->angleRight->GetOutputVoltage());
-	SmartDashboard::PutNumber("ClimberAngleLeftCurrent", Robot::climber->angleLeft->GetOutputCurrent());
-	SmartDashboard::PutNumber("ClimberAngleRightCurrent", Robot::climber->angleRight->GetOutputCurrent());
-	SmartDashboard::PutBoolean("ExtendLimit", Robot::climber->extendLimit->Get());
-	SmartDashboard::PutBoolean("RetractLimit", Robot::climber->retractLimit->Get());
-	SmartDashboard::PutNumber("ClimberRotateStick", Robot::oi->getGamePad()->GetLeftY());
-	
+				
 	SmartDashboard::PutNumber("ShooterAngleError",Robot::shooter->shooterAngle->GetError());
 	SmartDashboard::PutNumber("ShooterAngleVolts",Robot::shooter->shooterAngleSteer->GetOutputVoltage());
 	SmartDashboard::PutNumber("ShooterAngleSetpoint",Robot::shooter->shooterAngle->GetSetpoint());
@@ -61,8 +52,6 @@ void SMDB::Execute() {
 	SmartDashboard::PutBoolean("FireFlag", Robot::shooter->GetFireFlag());
 	SmartDashboard::PutNumber("ShooterCounter", Robot::shooter->GetShooterCounter());
 	
-	SmartDashboard::PutNumber("PickupAngle", Robot::pickup->pickupAngle->GetAverageValue());
-	SmartDashboard::PutNumber("CorrectedPickupAngle", Robot::pickup->GetCorrectedAngle());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SMDB::IsFinished() {

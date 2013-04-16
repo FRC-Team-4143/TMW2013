@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef REVERSEOPEARTORPICKUP_H
-#define REVERSEOPEARTORPICKUP_H
+#ifndef FOLLOWLINE_H
+#define FOLLOWLINE_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class ReverseOpeartorPickup: public Command {
+class FollowLine: public Command {
 public:
-	ReverseOpeartorPickup();
+	FollowLine();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

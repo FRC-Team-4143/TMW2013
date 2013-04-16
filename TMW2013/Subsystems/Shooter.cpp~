@@ -147,7 +147,7 @@ int Shooter::GetCorrectedAngle() {
 }
 void Shooter::SetSpeeds(float entry, float exit, bool resetTimer) {
 	if((entryvolt != entry || exitvolt != exit) && resetTimer)
-		shootertimer = GetClock() + 1.5;
+		shootertimer = GetClock() + 1;
 		
 	entryvolt = entry;
 	exitvolt = exit;
@@ -159,7 +159,7 @@ float Shooter::GetExitSpeed() {
 	return exitset;
 }
 bool Shooter::IsShooterReady() {
-	return shootertimer < GetClock()  && firetime + .5 < GetClock() && wheelShooterExit->GetOutputCurrent() > 3 && wheelShooterEntry->GetOutputCurrent() > 3;	
+	return shootertimer < GetClock()  && firetime + .4 < GetClock() && wheelShooterExit->GetOutputCurrent() > 3 && wheelShooterEntry->GetOutputCurrent() > 3;	
 }
 void Shooter::SetFireTimer() {
 	//shootertimer = GetClock() + .5;

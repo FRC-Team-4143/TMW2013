@@ -35,7 +35,7 @@ void DriveToDiscs::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool DriveToDiscs::IsFinished() {
-	return Robot::driveTrain->wheelSpokeCounter->Get() > CounterLimit;/*IsTimedOut() || (SmartDashboard::GetNumber("FoundDisc") > .5)*/
+	return Robot::driveTrain->wheelSpokeCounter->Get() > CounterLimit || IsTimedOut(); //|| (SmartDashboard::GetNumber("FoundDisc") > .5)*/
 }
 // Called once after isFinished returns true
 void DriveToDiscs::End() {

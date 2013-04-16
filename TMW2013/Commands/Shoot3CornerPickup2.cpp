@@ -17,15 +17,15 @@
 #include "TurnWheels.h"
 #include "TurnRobot.h"
 #include "ShooterInMiddle.h"
-#include "AutoPickup.h"
 #include "AutoShooter.h"
 #include "ResetWheelCounter.h"
 #include "DriveToPyramid.h"
-#include "ExtendClimber.h"
+#include "DriveBack.h"
+#include "FollowLine.h"
 
 
 Shoot3CornerPickup2::Shoot3CornerPickup2() {
-	AddSequential (new TurnWheels(0.0));
+/*	AddSequential (new TurnWheels(0.0));
 	AddSequential (new AutoShooter());
 	AddParallel (new ExtendClimber());
 	AddSequential (new AutoFire());
@@ -47,8 +47,10 @@ Shoot3CornerPickup2::Shoot3CornerPickup2() {
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
-	
-	
+*/
+ 	AddSequential (new DriveBack(.35, 330, 100, 2.2));
+ 	AddSequential (new FollowLine(.2, 0, 100, .75));
+ 	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());

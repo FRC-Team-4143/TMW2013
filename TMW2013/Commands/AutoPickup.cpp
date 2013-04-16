@@ -17,29 +17,21 @@ AutoPickup::AutoPickup() {
 }
 // Called just before this Command runs the first time
 void AutoPickup::Initialize() {
-	done = false;
-	start = false;
+	
 }
 // Called repeatedly when this Command is scheduled to run
 void AutoPickup::Execute() {
-	Robot::pickup->pickup->Set(.50);
 	
-	if(Robot::pickup->GetCorrectedAngle() > 100 && Robot::pickup->GetCorrectedAngle() < 500)
-			start = true;
-	
-	if(start && !done && Robot::pickup->GetCorrectedAngle() > 700 && Robot::pickup->GetCorrectedAngle() < 750)
-				done = true;
 }
 // Make this return true when this Command no longer needs to run execute()
 bool AutoPickup::IsFinished() {
-	return 	(done && Robot::pickup->GetCorrectedAngle() < 700);
+	return false;
 }
 // Called once after isFinished returns true
 void AutoPickup::End() {
-	Robot::pickup->pickup->Set(0);
+	
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void AutoPickup::Interrupted() {
-	Robot::pickup->pickup->Set(0);
 }

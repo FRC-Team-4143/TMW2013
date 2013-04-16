@@ -426,7 +426,6 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3Pickup2.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h
 
@@ -1281,8 +1280,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
 

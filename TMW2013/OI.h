@@ -16,7 +16,7 @@ private:
 	Joystick* driverJoystick;
 	JoystickButton* smartDashboardButton;
 	JoystickButton* toggleFront;
-	JoystickButton* pyramidAimButton;
+	JoystickButton* pivotDriveButton;
 	JoystickButton* fireButton;
 	JoystickButton* aimDrive;
 	JoystickButton* trigger;
@@ -27,13 +27,8 @@ private:
 	JoystickButton* backshooting;
 	JoystickButton* climbingShooter;
 	JoystickButton* dropShooter;
-	JoystickButton* deployHooks;
-	JoystickButton* climb;
 	JoystickButton* retractHooks;
-	JoystickButton* pickupDisc;
 	JoystickButton* gpadfire;
-	JoystickButton* forwardPickup;
-	JoystickButton* reversePickup;
 public:
 	OI();
  

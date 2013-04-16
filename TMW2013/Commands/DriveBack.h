@@ -9,20 +9,36 @@
 // it from being updated in th future.
 
 
+#ifndef DRIVE_BACK_H
+#define DRIVE_BACK_H
 
-#ifndef TENPTCLIMB_H
-#define TENPTCLIMB_H
 
-#include "Commands/CommandGroup.h"
+#include "Commands/Subsystem.h"
+#include "../Robot.h"
+#include "../DriveToLineTask.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class TenPtClimb: public CommandGroup {
-public:	
-	TenPtClimb();
+class DriveBack: public Command {
+public:
+	DriveBack();
+	DriveBack(float speed, float driveangle, float twistangle, float timeout);
+	virtual void Initialize();
+	virtual void Execute();
+	virtual bool IsFinished();
+	virtual void End();
+	virtual void Interrupted();
+	
+private:
+	float X;
+	float Y;
+	float TwistAngle;
+	float Twist;
+	float Timeout;
+	
 };
 
 #endif

@@ -72,8 +72,12 @@ private:
 	int RLOffset;
 	int RROffset;
 	
-	//Crab Variables
+	//Crab & Pivot Variables
 	double position; //Input position for crab
+	double AP;
+	double BP;
+	double CP;
+	double DP;
 	
 	
 	//Inversion Variabls
@@ -167,8 +171,9 @@ public:
 	void InitDefaultCommand();
 	void Steer(float radian, float speed, float a);
 	void Crab(float radian, float speed);
-	void Pivot(float twistinput, float speedinput);
+	void Pivot(float ROT, float x, float y);
 	bool ZeroGyro(float InitTime);
+	void Lock();
 	
 };
 #endif

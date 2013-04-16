@@ -424,11 +424,13 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveBack.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../DriveToLineTask.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2.h:
 
@@ -1276,12 +1278,16 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveBack.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../DriveToLineTask.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h:

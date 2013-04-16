@@ -421,8 +421,7 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Commands/Shoot3andStay.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupDisc.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
 
@@ -1267,5 +1266,3 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupDisc.h:

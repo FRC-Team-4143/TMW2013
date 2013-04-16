@@ -310,197 +310,79 @@ void DriveTrain::SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, floa
 		rearRightDrive->Set(FLSpeed*RRInv);
 	}
 }
-void DriveTrain::Pivot(float twistinput, float speedinput)
+void DriveTrain::Pivot(float ROT, float y, float x)
 {
 	
-	robotangle = (gyroscope->GetAngle())*2*pi/180;
-	
-	radius = sqrt(pow(Y,2)/4+pow(X,2)/4);
-	
-	FLWP = pi + atan(Y/X);
-	FRWP = pi - atan(Y/X);
-	RRWP = atan(W/X);
-	RLWP = 2*pi - atan(W/X);
-	
-	if(fabs(twistinput) + fabs(speedinput) < 1)
-		{
-		velocity = maxspeed*speedinput;
-		angularvelocity = maxspeed*twistinput/radius;
-		}
-	else
-		{
-		velocity = maxspeed*speedinput/(fabs(twistinput)+fabs(speedinput));
-		angularvelocity = maxspeed*twistinput/(radius*(fabs(twistinput)+fabs(speedinput)));
-		}
-	
-	if(FLWP + robotangle > 2*pi)
-		FLPos = FLWP + robotangle -2*pi;
-	else if(FLWP + robotangle < 0)
-			FLPos = FLWP + robotangle + 2*pi;
-		else
-			FLPos = FLWP + robotangle;
-	
-	if(FRWP + robotangle > 2*pi)
-		FRPos = FRWP + robotangle -2*pi;
-	else if(FRWP + robotangle < 0)
-			FRPos = FRWP + robotangle + 2*pi;
-		else
-			FLPos = FLWP + robotangle;
-	
-	if(RRWP + robotangle > 2*pi)
-		RRPos = RRWP + robotangle -2*pi;
-	else if(RRWP + robotangle < 0)
-			RRPos = RRWP + robotangle + 2*pi;
-		else
-			RRPos = RRWP + robotangle;
-	
-	if(RLWP + robotangle > 2*pi)
-		RLPos = RLWP + robotangle -2*pi;
-	else if(RLWP + robotangle < 0)
-			RLPos = RLWP + robotangle + 2*pi;
-		else
-			RLPos = RLWP + robotangle;
-			
-	FLXVel = velocity-radius*angularvelocity*sin(FLPos);		
-	FRXVel = velocity-radius*angularvelocity*sin(FRPos);
-	RRXVel = velocity-radius*angularvelocity*sin(RRPos);
-	RLXVel = velocity-radius*angularvelocity*sin(RLPos);
+	robotangle = (gyroscope->GetAngle())*pi/180;
 		
-	FLYVel = radius*angularvelocity*cos(robotangle+FLWP);
-	FRYVel = radius*angularvelocity*cos(robotangle+FRWP);
-	RRYVel = radius*angularvelocity*cos(robotangle+RRWP);
-	RLYVel = radius*angularvelocity*cos(robotangle+RLWP);
+	float FWD = y*cos(robotangle) - x*sin(robotangle);
+	float STR = -y*sin(robotangle) + x*cos(robotangle);
+		
+	radius = sqrt(pow(2*Y,2)+pow(X,2));
 	
-	FLVel = sqrt(pow(FLXVel,2)+pow(FLYVel,2));
-	FRVel = sqrt(pow(FRXVel,2)+pow(FRYVel,2));
-	RLVel = sqrt(pow(RLXVel,2)+pow(RLYVel,2));
-	RRVel = sqrt(pow(RRXVel,2)+pow(RRYVel,2));
+	AP = STR - ROT*X/radius;
+	BP = STR + ROT*X/radius;
+	CP = FWD - ROT*2*Y/radius;
+	DP = FWD + ROT*2*Y/radius;
+	
+	float FLSetPoint = 485;
+	float FRSetPoint = 485;
+	float RLSetPoint = 485;
+	float RRSetPoint = 485;
+	
+	if(DP != 0 || BP != 0)
+		FLSetPoint = (485 + 485/pi*atan2(BP,DP));
+	if(BP != 0 || CP != 0)	
+		FRSetPoint = (485 + 485/pi*atan2(BP,CP));
+	if(AP != 0 || DP != 0)
+		RLSetPoint = (485 + 485/pi*atan2(AP,DP));
+	if(AP != 0 || CP != 0)
+		RRSetPoint = (485 + 485/pi*atan2(AP,CP));
+	
+	
+	SetSteerSetpoint(FLSetPoint, FRSetPoint, RLSetPoint, RRSetPoint);
+	FL = sqrt(pow(BP,2)+pow(DP,2));
+	FR = sqrt(pow(BP,2)+pow(CP,2));
+	RL = sqrt(pow(AP,2)+pow(DP,2));
+	RR = sqrt(pow(AP,2)+pow(CP,2));
+	
+	
+	//Solve for fastest wheel speed
+	double speedarray[] = {fabs(FL), fabs(FR), fabs(RL), fabs(RR)};
+		
+	 int length = 4;
+     double maxspeed = speedarray[0];
+     for(int i = 1; i < length; i++)
+     {
+          if(speedarray[i] > maxspeed)
+                maxspeed = speedarray[i];
+     }
 		 
 	//Set ratios based on maximum wheel speed
-	FLRatio = FL/maxspeed;
-	FRRatio = FR/maxspeed;
-	RLRatio = RL/maxspeed;
-	RRRatio = RR/maxspeed;
+	
+    if(maxspeed > 1 || maxspeed < -1)
+    {
+		FLRatio = FL/maxspeed;
+		FRRatio = FR/maxspeed;
+		RLRatio = RL/maxspeed;
+		RRRatio = RR/maxspeed;
+    }
+    else
+    {
+		FLRatio = FL;
+		FRRatio = FR;
+		RLRatio = RL;
+		RRRatio = RR;
+    }
+    
 	
 	//Set drive speeds
-	SetDriveSpeed(-FLRatio, FRRatio,-RLRatio,RRRatio);
-		
-	if(FLXVel <= 0)
-		if(FLPos < pi/2)
-			deltaFL = atan(FLYVel/FLXVel) + pi;
-		else
-			deltaFL = atan(FLYVel/FLXVel) - pi;
-	else
-		deltaFL = atan(FLYVel/FLXVel);
+	SetDriveSpeed(FLRatio, -FRRatio, RLRatio, -RRRatio);
 	
-	if(FRXVel <= 0)
-		if(FRPos < pi/2)
-			deltaFR = atan(FRYVel/FRXVel) + pi;
-		else
-			deltaFR = atan(FRYVel/FRXVel) - pi;
-	else
-		deltaFR = atan(FRYVel/FRXVel);
-		
-	if(RRXVel <= 0)
-		if(RRPos < pi/2)
-			deltaRR = atan(RRYVel/RRXVel) + pi;
-		else
-			deltaRR = atan(RRYVel/RRXVel) - pi;
-	else
-		deltaRR = atan(RRYVel/RRXVel);
-	if(RLXVel <= 0)
-		if(RLPos < pi/2)
-			deltaRL = atan(RLYVel/RLXVel) + pi;
-		else
-			deltaRL = atan(RLYVel/RLXVel) - pi;
-	else
-		deltaRL = atan(RLYVel/RLXVel);
-		
-	
-	if(2*pi - robotangle + deltaFL > 2*pi)
-		thetaFL = 2*pi - robotangle + deltaFL - 2*pi;
-	else if(2*pi - robotangle + deltaFL < 0)
-			thetaFL = 2*pi - robotangle + deltaFL + 2*pi;
-		else
-			thetaFL = 2*pi - robotangle + deltaFL;
-		
-	if(2*pi - robotangle + deltaFR > 2*pi)
-		thetaFR = 2*pi - robotangle + deltaFR - 2*pi;
-	else if(2*pi - robotangle + deltaFR < 0)
-			thetaFR = 2*pi - robotangle + deltaFR + 2*pi;
-		else
-			thetaFR = 2*pi - robotangle + deltaFR;
-	if(2*pi - robotangle + deltaRR > 2*pi)
-		thetaRR = 2*pi - robotangle + deltaRR - 2*pi;
-	else if(2*pi - robotangle + deltaRR < 0)
-			thetaRR = 2*pi - robotangle + deltaRR + 2*pi;
-		else
-			thetaRR = 2*pi - robotangle + deltaRR;
-	if(2*pi - robotangle + deltaRL > 2*pi)
-		thetaRL = 2*pi - robotangle + deltaRL - 2*pi;
-	else if(2*pi - robotangle + deltaRL < 0)
-			thetaRL = 2*pi - robotangle + deltaRL + 2*pi;
-		else
-			thetaRL = 2*pi - robotangle + deltaRL;
-		
-	SetSteerSetpoint(floor(485/pi*thetaFL),floor(485/pi*thetaFR),floor(485/pi*thetaRL),floor(485/pi*thetaRR));
 }
-void DriveTrain::CurrentLimit(){
-	float currentlimit = 100;
-	float currenttimeout = 1.5;
-	float timeoutreset = 1.5;
-	if(frontLeft->IsEnabled() && frontLeftSteer->GetOutputCurrent() > currentlimit){
-		if(FLSOTimer < GetClock()){
-			FLSOTimer = GetClock()+currenttimeout;
-		}
-		else{
-			frontLeft->Disable();
-			FLSOTimer = GetClock() + timeoutreset;
-			}
-	}
-	
-	if(!frontLeft->IsEnabled() && FLSOTimer > GetClock())
-		frontLeft->Enable();
-	
-	if(frontRight->IsEnabled() && frontRightSteer->GetOutputCurrent() > currentlimit){
-		if(FRSOTimer < GetClock()){
-			FRSOTimer = GetClock()+currenttimeout;
-		}
-		else{
-			frontRight->Disable();
-			FRSOTimer = GetClock() + timeoutreset;
-			}
-	}
-	
-	if(!frontRight->IsEnabled() && FRSOTimer > GetClock())
-		frontRight->Enable();
-	
-	if(rearRight->IsEnabled() && rearRightSteer->GetOutputCurrent() > currentlimit){
-		if(RRSOTimer < GetClock()){
-			RRSOTimer = GetClock()+currenttimeout;
-		}
-		else{
-			rearRight->Disable();
-			RRSOTimer = GetClock() + timeoutreset;
-			}
-	}
-	
-	if(!rearRight->IsEnabled() && RLSOTimer > GetClock())
-		rearRight->Enable();
-	
-	if(rearLeft->IsEnabled() && rearLeftSteer->GetOutputCurrent() > currentlimit){
-		if(RLSOTimer < GetClock()){
-			RLSOTimer = GetClock()+currenttimeout;
-		}
-		else{
-			rearLeft->Disable();
-			RLSOTimer = GetClock() + timeoutreset;
-			}
-	}
-	
-	if(!rearLeft->IsEnabled() && RLSOTimer > GetClock())
-		rearLeft->Enable();
-		
+void DriveTrain::Lock()
+{
+	SetSteerSetpoint(607, 364, 607, 364);
 }
 bool DriveTrain::ZeroGyro(float InitTime)
 {

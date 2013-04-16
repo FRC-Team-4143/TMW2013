@@ -23,21 +23,19 @@ void _GLOBAL__I__ZN11DeployHooksC2Ev();
 
 void _GLOBAL__I__ZN5DriveC2Ev();
 
+void _GLOBAL__I_drivetoline();
+
 void _GLOBAL__I__ZN12DriveToDiscsC2Edddi();
 
 void _GLOBAL__I__ZN14DriveToPyramidC2Eddd();
 
-void _GLOBAL__I__ZN13ExtendClimberC2Ev();
-
 void _GLOBAL__I__ZN4FireC2Ev();
+
+void _GLOBAL__I_followline();
 
 void _GLOBAL__I__ZN8NoneAutoC2Ev();
 
-void _GLOBAL__I__ZN13OperatorClimbC2Ev();
-
 void _GLOBAL__I__ZN14OperatorPickupC2Ev();
-
-void _GLOBAL__I__ZN10PickupDiscC2Ev();
 
 void _GLOBAL__I__ZN10PivotDriveC2Ev();
 
@@ -47,10 +45,6 @@ void _GLOBAL__I__ZN9ResetGyroC2Ev();
 
 void _GLOBAL__I__ZN17ResetWheelCounterC2Ev();
 
-void _GLOBAL__I__ZN12RetractHooksC2Ev();
-
-void _GLOBAL__I__ZN21ReverseOpeartorPickupC2Ev();
-
 void _GLOBAL__I__ZN4SMDBC2Ev();
 
 void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
@@ -58,10 +52,6 @@ void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
 void _GLOBAL__I__ZN19Shoot3CornerPickup2C2Ev();
 
 void _GLOBAL__I__ZN16Shoot3FromCornerC2Ev();
-
-void _GLOBAL__I__ZN13Shoot3Pickup2C2Ev();
-
-void _GLOBAL__I__ZN13Shoot3andStayC2Ev();
 
 void _GLOBAL__I__ZN12ShooterClimbC2Ev();
 
@@ -85,13 +75,15 @@ void _GLOBAL__I__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__I__ZN11TargetDriveC2Ev();
 
-void _GLOBAL__I__ZN10TenPtClimbC2Ev();
-
 void _GLOBAL__I__ZN16ToggleRobotFrontC2Ev();
 
 void _GLOBAL__I__ZN9TurnRobotC2Eff();
 
 void _GLOBAL__I__ZN10TurnWheelsC2Ev();
+
+void _GLOBAL__I__ZN15DriveToLineTaskC2Ev();
+
+void _GLOBAL__I__ZN14FollowLineTaskC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
 
@@ -174,26 +166,21 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN20DecreaseShooterAngleC2Ev,
     _GLOBAL__I__ZN11DeployHooksC2Ev,
     _GLOBAL__I__ZN5DriveC2Ev,
+    _GLOBAL__I_drivetoline,
     _GLOBAL__I__ZN12DriveToDiscsC2Edddi,
     _GLOBAL__I__ZN14DriveToPyramidC2Eddd,
-    _GLOBAL__I__ZN13ExtendClimberC2Ev,
     _GLOBAL__I__ZN4FireC2Ev,
+    _GLOBAL__I_followline,
     _GLOBAL__I__ZN8NoneAutoC2Ev,
-    _GLOBAL__I__ZN13OperatorClimbC2Ev,
     _GLOBAL__I__ZN14OperatorPickupC2Ev,
-    _GLOBAL__I__ZN10PickupDiscC2Ev,
     _GLOBAL__I__ZN10PivotDriveC2Ev,
     _GLOBAL__I__ZN10PyramidAimC2Ev,
     _GLOBAL__I__ZN9ResetGyroC2Ev,
     _GLOBAL__I__ZN17ResetWheelCounterC2Ev,
-    _GLOBAL__I__ZN12RetractHooksC2Ev,
-    _GLOBAL__I__ZN21ReverseOpeartorPickupC2Ev,
     _GLOBAL__I__ZN4SMDBC2Ev,
     _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__I__ZN19Shoot3CornerPickup2C2Ev,
     _GLOBAL__I__ZN16Shoot3FromCornerC2Ev,
-    _GLOBAL__I__ZN13Shoot3Pickup2C2Ev,
-    _GLOBAL__I__ZN13Shoot3andStayC2Ev,
     _GLOBAL__I__ZN12ShooterClimbC2Ev,
     _GLOBAL__I__ZN11ShooterDropC2Ev,
     _GLOBAL__I__ZN13ShooterInBackC2Ev,
@@ -205,10 +192,11 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN11ShooterStopC2Ev,
     _GLOBAL__I__ZN10SteerDriveC2Ev,
     _GLOBAL__I__ZN11TargetDriveC2Ev,
-    _GLOBAL__I__ZN10TenPtClimbC2Ev,
     _GLOBAL__I__ZN16ToggleRobotFrontC2Ev,
     _GLOBAL__I__ZN9TurnRobotC2Eff,
     _GLOBAL__I__ZN10TurnWheelsC2Ev,
+    _GLOBAL__I__ZN15DriveToLineTaskC2Ev,
+    _GLOBAL__I__ZN14FollowLineTaskC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
     _GLOBAL__I__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__I__ZN5Robot10driveTrainE,
@@ -263,21 +251,19 @@ void _GLOBAL__D__ZN11DeployHooksC2Ev();
 
 void _GLOBAL__D__ZN5DriveC2Ev();
 
+void _GLOBAL__D_drivetoline();
+
 void _GLOBAL__D__ZN12DriveToDiscsC2Edddi();
 
 void _GLOBAL__D__ZN14DriveToPyramidC2Eddd();
 
-void _GLOBAL__D__ZN13ExtendClimberC2Ev();
-
 void _GLOBAL__D__ZN4FireC2Ev();
+
+void _GLOBAL__D_followline();
 
 void _GLOBAL__D__ZN8NoneAutoC2Ev();
 
-void _GLOBAL__D__ZN13OperatorClimbC2Ev();
-
 void _GLOBAL__D__ZN14OperatorPickupC2Ev();
-
-void _GLOBAL__D__ZN10PickupDiscC2Ev();
 
 void _GLOBAL__D__ZN10PivotDriveC2Ev();
 
@@ -287,10 +273,6 @@ void _GLOBAL__D__ZN9ResetGyroC2Ev();
 
 void _GLOBAL__D__ZN17ResetWheelCounterC2Ev();
 
-void _GLOBAL__D__ZN12RetractHooksC2Ev();
-
-void _GLOBAL__D__ZN21ReverseOpeartorPickupC2Ev();
-
 void _GLOBAL__D__ZN4SMDBC2Ev();
 
 void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
@@ -298,10 +280,6 @@ void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
 void _GLOBAL__D__ZN19Shoot3CornerPickup2C2Ev();
 
 void _GLOBAL__D__ZN16Shoot3FromCornerC2Ev();
-
-void _GLOBAL__D__ZN13Shoot3Pickup2C2Ev();
-
-void _GLOBAL__D__ZN13Shoot3andStayC2Ev();
 
 void _GLOBAL__D__ZN12ShooterClimbC2Ev();
 
@@ -325,13 +303,15 @@ void _GLOBAL__D__ZN10SteerDriveC2Ev();
 
 void _GLOBAL__D__ZN11TargetDriveC2Ev();
 
-void _GLOBAL__D__ZN10TenPtClimbC2Ev();
-
 void _GLOBAL__D__ZN16ToggleRobotFrontC2Ev();
 
 void _GLOBAL__D__ZN9TurnRobotC2Eff();
 
 void _GLOBAL__D__ZN10TurnWheelsC2Ev();
+
+void _GLOBAL__D__ZN15DriveToLineTaskC2Ev();
+
+void _GLOBAL__D__ZN14FollowLineTaskC2Ev();
 
 void _GLOBAL__D__ZN2OIC2Ev();
 
@@ -404,26 +384,21 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN20DecreaseShooterAngleC2Ev,
     _GLOBAL__D__ZN11DeployHooksC2Ev,
     _GLOBAL__D__ZN5DriveC2Ev,
+    _GLOBAL__D_drivetoline,
     _GLOBAL__D__ZN12DriveToDiscsC2Edddi,
     _GLOBAL__D__ZN14DriveToPyramidC2Eddd,
-    _GLOBAL__D__ZN13ExtendClimberC2Ev,
     _GLOBAL__D__ZN4FireC2Ev,
+    _GLOBAL__D_followline,
     _GLOBAL__D__ZN8NoneAutoC2Ev,
-    _GLOBAL__D__ZN13OperatorClimbC2Ev,
     _GLOBAL__D__ZN14OperatorPickupC2Ev,
-    _GLOBAL__D__ZN10PickupDiscC2Ev,
     _GLOBAL__D__ZN10PivotDriveC2Ev,
     _GLOBAL__D__ZN10PyramidAimC2Ev,
     _GLOBAL__D__ZN9ResetGyroC2Ev,
     _GLOBAL__D__ZN17ResetWheelCounterC2Ev,
-    _GLOBAL__D__ZN12RetractHooksC2Ev,
-    _GLOBAL__D__ZN21ReverseOpeartorPickupC2Ev,
     _GLOBAL__D__ZN4SMDBC2Ev,
     _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
     _GLOBAL__D__ZN19Shoot3CornerPickup2C2Ev,
     _GLOBAL__D__ZN16Shoot3FromCornerC2Ev,
-    _GLOBAL__D__ZN13Shoot3Pickup2C2Ev,
-    _GLOBAL__D__ZN13Shoot3andStayC2Ev,
     _GLOBAL__D__ZN12ShooterClimbC2Ev,
     _GLOBAL__D__ZN11ShooterDropC2Ev,
     _GLOBAL__D__ZN13ShooterInBackC2Ev,
@@ -435,10 +410,11 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN11ShooterStopC2Ev,
     _GLOBAL__D__ZN10SteerDriveC2Ev,
     _GLOBAL__D__ZN11TargetDriveC2Ev,
-    _GLOBAL__D__ZN10TenPtClimbC2Ev,
     _GLOBAL__D__ZN16ToggleRobotFrontC2Ev,
     _GLOBAL__D__ZN9TurnRobotC2Eff,
     _GLOBAL__D__ZN10TurnWheelsC2Ev,
+    _GLOBAL__D__ZN15DriveToLineTaskC2Ev,
+    _GLOBAL__D__ZN14FollowLineTaskC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
     _GLOBAL__D__ZN13RAWCConstants17singletonInstanceE,
     _GLOBAL__D__ZN5Robot10driveTrainE,

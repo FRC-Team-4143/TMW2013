@@ -21,12 +21,11 @@ void ShooterClimb::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterClimb::Execute() {
-	Robot::shooter->SetAngle(280);
-	Robot::shooter->SetSpeeds(0, 0, true);
+	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterClimb::IsFinished() {
-	return true;
+	return false;
 }
 // Called once after isFinished returns true
 void ShooterClimb::End() {

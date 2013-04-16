@@ -9,20 +9,37 @@
 // it from being updated in th future.
 
 
+#ifndef FOLLOWLINE_H
+#define FOLLOWLINE_H
 
-#ifndef SHOOT3ANDSTAY_H
-#define SHOOT3ANDSTAY_H
 
-#include "Commands/CommandGroup.h"
+#include "Commands/Subsystem.h"
+#include "../Robot.h"
+#include "../FollowLineTask.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class Shoot3andStay: public CommandGroup {
-public:	
-	Shoot3andStay();
+class FollowLine: public Command {
+public:
+	FollowLine();
+	FollowLine(float speed, float driveangle, float twistangle, float timeout);
+	virtual void Initialize();
+	virtual void Execute();
+	virtual bool IsFinished();
+	virtual void End();
+	virtual void Interrupted();
+
+private:
+	float X;
+	float Y;
+	float TwistAngle;
+	float Twist;
+	float Timeout;
+
+	
 };
 
 #endif

@@ -13,7 +13,6 @@
 #include "Shoot3FromCorner.h"
 #include "AutoShooter.h"
 #include "AutoFire.h"
-#include "ExtendClimber.h"
 #include "TurnWheels.h"
 #include "Drive.h"
 
@@ -22,7 +21,6 @@ Shoot3FromCorner::Shoot3FromCorner() {
 	
 	AddSequential (new TurnWheels(3.14159/2));
 	AddSequential (new AutoShooter());
-	//AddParallel (new ExtendClimber());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());

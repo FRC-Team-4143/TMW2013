@@ -424,44 +424,36 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoPickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CommandGroup1.h \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DecreaseShooterAngle.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveBack.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../DriveToLineTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorPickup.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupDisc.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetGyro.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ReverseOpeartorPickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SMDB.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h \
+  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterClimb.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterDrop.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterIncreaseAngle.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterPyramidGoal.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TenPtClimb.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ToggleRobotFront.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h
@@ -1314,33 +1306,27 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutonomousCommand.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CommandGroup1.h:
-
-C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/CrabDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DecreaseShooterAngle.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DeployHooks.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveBack.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../DriveToLineTask.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToPyramid.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ExtendClimber.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Fire.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorClimb.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/OperatorPickup.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PickupDisc.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
 
@@ -1350,10 +1336,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetGyro.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RetractHooks.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ReverseOpeartorPickup.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SMDB.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h:
@@ -1362,9 +1344,7 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3Pickup2.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3andStay.h:
+C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterClimb.h:
 
@@ -1378,8 +1358,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterIncreaseAngle.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterPyramidGoal.h:
-
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterRun.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h:
@@ -1387,8 +1365,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterStop.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SteerDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TargetDrive.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TenPtClimb.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ToggleRobotFront.h:
 
