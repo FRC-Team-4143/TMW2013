@@ -399,9 +399,10 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/AutonomousCommand.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Blocker.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h \
   C:/WindRiver/vxworks-6.3/target/h/Math.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/../RAWCConstants.h \
@@ -430,7 +431,9 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveBack.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../DriveToLineTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoStop.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter2.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2.h:
 
@@ -1228,11 +1231,13 @@ C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Commands/../Robot.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Blocker.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
 C:/WindRiver/workspace/WPILib/WPILib.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/Climber.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Subsystems/DriveTrain.h:
 
@@ -1291,3 +1296,7 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../DriveToLineTask.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoStop.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter2.h:

@@ -561,7 +561,7 @@ Children:
   - Name: Pickup
     Base: Subsystem
     Children:
-    - Name: Pickup
+    - Name: BeaterBar
       Base: CAN Jaguar
       Children: []
       Properties:
@@ -571,6 +571,34 @@ Children:
           name: CAN ID
           validators: *id006
           value: '15'
+    - Name: PickupLift
+      Base: Double Solenoid
+      Children: []
+      Properties:
+        Forward Channel (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2', '3', '4', '5', '6', '7', '8']
+          default: '1'
+          name: Forward Channel (Solenoid)
+          validators: [Solenoid]
+          value: '2'
+        Forward Module (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2']
+          default: '1'
+          name: Forward Module (Solenoid)
+          validators: [Solenoid]
+          value: '1'
+        Reverse Module (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2']
+          default: '1'
+          name: Reverse Module (Solenoid)
+          validators: [Solenoid]
+          value: '1'
+        Reverse Channel (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2', '3', '4', '5', '6', '7', '8']
+          default: '1'
+          name: Reverse Channel (Solenoid)
+          validators: [Solenoid]
+          value: '3'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Default Command, type: Command, validators: null, value: None}
@@ -606,6 +634,38 @@ Children:
           name: Pressure Switch Channel (Digital)
           validators: [DigitalChannel]
           value: '1'
+    - Name: Climb
+      Base: Solenoid
+      Children: []
+      Properties:
+        Output Module (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2']
+          default: '1'
+          name: Output Module (Solenoid)
+          validators: [Solenoid]
+          value: '1'
+        Output Channel (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2', '3', '4', '5', '6', '7', '8']
+          default: '1'
+          name: Output Channel (Solenoid)
+          validators: [Solenoid]
+          value: '1'
+    Properties:
+      Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Default Command, type: Command, validators: null, value: None}
+  - Name: Blocker
+    Base: Subsystem
+    Children:
+    - Name: BlockerWinch
+      Base: CAN Jaguar
+      Children: []
+      Properties:
+        CAN ID: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id005
+          default: '2'
+          name: CAN ID
+          validators: *id006
+          value: '13'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Default Command, type: Command, validators: null, value: None}
@@ -1142,6 +1202,22 @@ Children:
     Properties:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: AutoStop
+    Base: Command
+    Children: []
+    Properties:
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: AutoShooter2
+    Base: Command
+    Children: []
+    Properties:
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Shooter}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
   Properties: {}

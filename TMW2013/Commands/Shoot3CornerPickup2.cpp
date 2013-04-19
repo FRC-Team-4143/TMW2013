@@ -22,34 +22,31 @@
 #include "DriveToPyramid.h"
 #include "DriveBack.h"
 #include "FollowLine.h"
+#include "AutoStop.h"
+#include "AutoShooter2.h"
 
 
 Shoot3CornerPickup2::Shoot3CornerPickup2() {
-/*	AddSequential (new TurnWheels(0.0));
 	AddSequential (new AutoShooter());
-	AddParallel (new ExtendClimber());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
-	AddSequential (new TurnRobot(50, 2));
-	AddSequential (new TurnWheels(3.14159/2));
-	AddSequential (new ResetWheelCounter());
-	AddSequential (new Drive(3.14159/2, -.5, .3, true));
-	AddSequential (new DriveToDiscs(3.14159/2, -.40, 2, 25));
 
-	AddSequential (new AutoPickup());
-	AddSequential (new Drive(3.14159/2, .6, .3, true));
-	AddSequential (new DriveToPyramid(3.14159/2, .40, 2.4));
-	AddSequential (new Drive (3.14159/2, -.4, .2, false));
-	AddSequential (new TurnWheels(0));
-	AddSequential (new TurnRobot(-5, 10));
-	AddSequential (new AutoFire());
-	AddSequential (new AutoFire());
-	AddSequential (new AutoFire());
-	AddSequential (new AutoFire());
+ /*	AddSequential (new DriveBack(.45, 20, 112, 5));
+ 	AddSequential (new AutoStop(.5));
+ 	AddSequential (new FollowLine(.3, 0, 112, 2));
+ 	AddSequential (new Drive(.4, 120, 20, 1)); // Left Side Center Line 2 pt
 */
- 	AddSequential (new DriveBack(.35, 330, 100, 2.2));
- 	AddSequential (new FollowLine(.2, 0, 100, .75));
+ 	AddSequential (new DriveBack(.40, -20, -112, 5));
+	AddSequential (new AutoStop(.5));
+	AddSequential (new FollowLine(.3, 0, -112, 2));
+ 	AddSequential (new Drive(.4, -130, -20, .7)); // Left Side Center Line 2 pt
+ 	
+ 	AddSequential (new AutoShooter2());
+ 	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
  	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());

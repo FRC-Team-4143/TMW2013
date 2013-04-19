@@ -20,19 +20,18 @@ void FollowLineTask::SetDriveVariables(float x, float y, float twistangle)
 	X=x;
 	TwistAngle=twistangle;
 	Twist=0;
-	
 }
 
 void FollowLineTask::Run()
 {
 	if(!Robot::driveTrain->lineSensorL->Get())
-		X = .1;
+		X = -.05;
 	else if(!Robot::driveTrain->lineSensorR->Get())
-		X = -.1;
+		X = .05;
 	else
 		X=0;
 	
-	Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/90;
+	Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/150;
 	if(Twist>.2)
 		Twist=.2;
 	if(Twist<-.2)

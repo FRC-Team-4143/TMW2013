@@ -24,19 +24,20 @@
 class Drive: public Command {
 public:
 	Drive();
-	Drive(double direction, double velocity, double timeout, bool usegyro);
+	Drive(float speed, float driveangle, float twistangle, float timeout);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	
-private:
-	double radian;
-	double speed;
-	double GyroRad;
-	bool useGyro;
-	float gyroAngle;
+
+private:	
+	float X;
+	float Y;
+	float TwistAngle;
+	float Twist;
+	float Timeout;
+	int ontarget;
 };
 
 #endif

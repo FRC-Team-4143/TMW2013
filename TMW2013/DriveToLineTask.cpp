@@ -18,26 +18,38 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle)
 {
 	X=x;
 	Y=y;
+	X1=x*.5;
+	Y1=y*.5;
 	TwistAngle=twistangle;
+	WaitTimer = GetClock();
 }
 
 void DriveToLineTask::Run()
 {
-	if(Robot::driveTrain->lineSensorL->Get() == 1)
+	if(WaitTimer + 1 < GetClock())
 	{
-		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/150;
-		if(Twist>.2)
-			Twist=.2;
-		if(Twist<-.2)
-			Twist=-.2;
-		Robot::driveTrain->Pivot(Twist, Y, X, true);
+		X = X1;
+		Y = Y1;
+	}
+	
+	if(!Robot::driveTrain->lineSensorR->Get() && WaitTimer + 2 < GetClock())
+	{
+		Robot::driveTrain->SideLock();
+		Robot::driveTrain->SetDriveBackFlag(true);		
 	}
 	else
-		Robot::driveTrain->Pivot(0, 0, 0, true);
+	{
+		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/150;
+		if(Twist>.15)
+			Twist=.15;
+		if(Twist<-.15)
+			Twist=-.15;
+		Robot::driveTrain->Pivot(Twist, Y, X, true);
+	}
 
-	
+	/*
 	SmartDashboard::PutNumber("X", X);
 	SmartDashboard::PutNumber("Y", Y);
 	SmartDashboard::PutNumber("TwistAngle", TwistAngle);
-	SmartDashboard::PutNumber("Twist", Twist);
+	SmartDashboard::PutNumber("Twist", Twist);*/
 }

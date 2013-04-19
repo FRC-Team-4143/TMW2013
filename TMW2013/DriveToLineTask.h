@@ -18,8 +18,11 @@ public:
 private:
 	float X;
 	float Y;
+	float X1;
+	float Y1;
 	float TwistAngle;
 	float Twist;
+	float WaitTimer;
 };
 
 #endif

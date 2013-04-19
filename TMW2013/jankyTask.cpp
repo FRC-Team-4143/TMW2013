@@ -40,7 +40,9 @@ void JankyTask::JankyPrivateStarterTask(JankyTask* task) {
 }
 
 void JankyTask::Start() {
+ // running_ = true;
   enabled_ = true;
+ // isDead_ = false;
 }
 
 void JankyTask::Pause() {

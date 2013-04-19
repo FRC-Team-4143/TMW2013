@@ -28,7 +28,9 @@
 	<th class="pound">#</th>
 	<th>Sensor</th></tr>
 	            	    <tr><td>1</td><td>Climber Comp Pressure Switch </td></tr>
-	                                                	    <tr><td>5</td><td>Shooter TriggerStop Input </td></tr>
+	            	    <tr><td>2</td><td>DriveTrain LineSensorL Input </td></tr>
+	            	    <tr><td>3</td><td>DriveTrain LineSensorR Input </td></tr>
+	                        	    <tr><td>5</td><td>Shooter TriggerStop Input </td></tr>
 	                                                                                                                                                                                         	</table>
                 
                     <h2>PWMs on Digital Sidecar 1</h2>
@@ -53,7 +55,7 @@
 	            	    <tr><td>10</td><td>Shooter WheelShooterExit</td></tr>
 	            	    <tr><td>11</td><td>Shooter WheelShooterEntry</td></tr>
 	            	    <tr><td>12</td><td>Shooter ShooterAngleSteer</td></tr>
-	                                    	    <tr><td>15</td><td>Pickup Pickup</td></tr>
+	                                    	    <tr><td>15</td><td>Pickup BeaterBar</td></tr>
 	                                                                 	</table>
         
                     <h2>Relays on Digital Sidecar 1</h2>
@@ -75,6 +77,13 @@
 	                        	    <tr><td>7</td><td>Shooter ShooterAnglePos Input </td></tr>
 	                                                                                                                                                                 	</table>
                     
-                            
+                    <h2>Solenoid Module 1</h2>
+	<table><tr>
+	<th class="pound">#</th>
+	<th>Solenoid</th></tr>
+	            	    <tr><td>1</td><td>Climber Climb Output </td></tr>
+	            	    <tr><td>2</td><td>Pickup PickupLift Output </td></tr>
+	                                                                                                                                                                                                                             	</table>
+                    
   </body>
 </html>

@@ -30,6 +30,8 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("StickVelocity", (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2);
 	SmartDashboard::PutNumber("GyroAngle", Robot::driveTrain->gyroscope->GetAngle());
 	SmartDashboard::PutNumber("WheelSpokeCounter", Robot::driveTrain->wheelSpokeCounter->Get());
+	SmartDashboard::PutBoolean("LineSensorL", Robot::driveTrain->lineSensorL->Get());
+	SmartDashboard::PutBoolean("LineSensorR", Robot::driveTrain->lineSensorR->Get());
 	
 	
 	SmartDashboard::PutNumber("FLError", Robot::driveTrain->frontLeft->GetError());

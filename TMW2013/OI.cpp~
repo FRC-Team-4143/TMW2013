@@ -13,6 +13,8 @@
 #include "Commands/AutoFire.h"
 #include "Commands/AutoPickup.h"
 #include "Commands/AutoShooter.h"
+#include "Commands/AutoShooter2.h"
+#include "Commands/AutoStop.h"
 #include "Commands/AutonomousCommand.h"
 #include "Commands/CrabDrive.h"
 #include "Commands/DecreaseShooterAngle.h"

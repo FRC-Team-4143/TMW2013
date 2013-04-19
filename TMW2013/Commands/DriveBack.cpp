@@ -30,18 +30,25 @@ void DriveBack::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void DriveBack::Execute() {
+	if(IsTimedOut())
+	{
+		Robot::driveTrain->Pivot(0,0,0,false);
+		drivetoline.Terminate();
+	}
 }
 // Make this return true when this Command no longer needs to run execute()
 bool DriveBack::IsFinished() {
-	return IsTimedOut();  // || Robot::driveTrain->frontLeftDrive->Get()==0;
+	return  Robot::driveTrain->GetDriveBackFlag();
 }
 // Called once after isFinished returns true
 void DriveBack::End() {
 	drivetoline.Pause();
+	Robot::driveTrain->SetDriveBackFlag(false);
 	
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void DriveBack::Interrupted() {
 	drivetoline.Pause();
+	Robot::driveTrain->SetDriveBackFlag(false);
 }

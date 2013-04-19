@@ -42,6 +42,7 @@ Subsystem("DriveTrain")
 	FRInv = 1;
 	RRInv = 1;
 	RLInv = 1;
+	DriveBackFlag = false;
 }
     
 void DriveTrain::InitDefaultCommand() {
@@ -321,7 +322,7 @@ void DriveTrain::Pivot(float ROT, float y, float x, bool UseGyro)
 	float STR = x;
 	if(UseGyro)
 	{
-		FWD = y*cos(robotangle) - x*sin(robotangle);
+		FWD = y*cos(robotangle) + x*sin(robotangle);
 		STR = -y*sin(robotangle) + x*cos(robotangle);
 	}		
 		
@@ -390,6 +391,12 @@ void DriveTrain::Pivot(float ROT, float y, float x, bool UseGyro)
 void DriveTrain::Lock()
 {
 	SetSteerSetpoint(607, 364, 607, 364);
+	SetDriveSpeed(0,0,0,0);
+}
+void DriveTrain::SideLock()
+{
+	SetSteerSetpoint(364, 607, 122, 849);
+	SetDriveSpeed(0,0,0,0);
 }
 bool DriveTrain::ZeroGyro(float InitTime)
 {
@@ -411,4 +418,10 @@ bool DriveTrain::ZeroGyro(float InitTime)
 	}
 	
 	return GetClock() > GyroZeroTime + InitTime + 6;
+}
+bool DriveTrain::GetDriveBackFlag() {
+	return DriveBackFlag;
+}
+void DriveTrain::SetDriveBackFlag(bool flag) {
+	DriveBackFlag = flag;
 }

@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef OPERATORPICKUP_H
-#define OPERATORPICKUP_H
+#ifndef AUTOSHOOTER2_H
+#define AUTOSHOOTER2_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class OperatorPickup: public Command {
+class AutoShooter2: public Command {
 public:
-	OperatorPickup();
+	AutoShooter2();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
