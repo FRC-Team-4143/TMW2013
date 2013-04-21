@@ -23,12 +23,15 @@
  */
 class AutoShooter: public Command {
 public:
-	AutoShooter();
+	AutoShooter(int angle = 399);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
+	
+private:
+	int Angle;
 };
 
 #endif

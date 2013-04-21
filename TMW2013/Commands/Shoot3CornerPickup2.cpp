@@ -23,26 +23,32 @@
 #include "DriveBack.h"
 #include "FollowLine.h"
 #include "AutoStop.h"
-#include "AutoShooter2.h"
+#include "DropPickup.h"
+#include "RunPickup.h"
 
 
-Shoot3CornerPickup2::Shoot3CornerPickup2() {
+Shoot3CornerPickup2::Shoot3CornerPickup2(bool startLeftSidePyramid) {
+	
+	int num = 1;
+	if (startLeftSidePyramid)
+	{
+		num = -num;
+	}
+	
+	AddSequential (new DropPickup());
 	AddSequential (new AutoShooter());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 
- /*	AddSequential (new DriveBack(.45, 20, 112, 5));
- 	AddSequential (new AutoStop(.5));
- 	AddSequential (new FollowLine(.3, 0, 112, 2));
- 	AddSequential (new Drive(.4, 120, 20, 1)); // Left Side Center Line 2 pt
-*/
- 	AddSequential (new DriveBack(.40, -20, -112, 5));
+ 	AddSequential (new RunPickup());
+	AddSequential (new DriveBack(.5, 20*num, 112*num, 5, startLeftSidePyramid));
 	AddSequential (new AutoStop(.5));
-	AddSequential (new FollowLine(.3, 0, -112, 2));
- 	AddSequential (new Drive(.4, -130, -20, .7)); // Left Side Center Line 2 pt
+	AddSequential (new FollowLine(.35, 0, 112*num, 2.3));
+ 	AddSequential (new Drive(.45, 130*num, 17*num, 1.0));
+ 	AddSequential (new AutoShooter(420));
+ 	AddSequential (new AutoStop(.5));
  	
- 	AddSequential (new AutoShooter2());
  	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());

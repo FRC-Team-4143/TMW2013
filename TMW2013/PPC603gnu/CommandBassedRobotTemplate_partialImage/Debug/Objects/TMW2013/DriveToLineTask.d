@@ -412,9 +412,6 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SMDB.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/TriggerMonitor.h
@@ -1240,12 +1237,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/OI.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/RAWCConstants.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInFront.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
 

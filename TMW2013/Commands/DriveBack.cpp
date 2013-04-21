@@ -9,7 +9,7 @@
 // it from being updated in th future.
 #include "DriveBack.h"
 DriveToLineTask drivetoline;
-DriveBack::DriveBack(float speed, float driveangle, float twistangle, float timeout)
+DriveBack::DriveBack(float speed, float driveangle, float twistangle, float timeout, bool startLeftSide)
 {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
@@ -20,12 +20,13 @@ DriveBack::DriveBack(float speed, float driveangle, float twistangle, float time
 	Y = speed*cos(driveangle*3.14159/180);
 	TwistAngle = twistangle;
 	Timeout = timeout;
+	StartLeftSide = startLeftSide;
 }
 // Called just before this Command runs the first time
 void DriveBack::Initialize() {
 	Robot::driveTrain->gyroscope->Reset();
 	SetTimeout(Timeout);
-	drivetoline.SetDriveVariables(X,Y,TwistAngle);
+	drivetoline.SetDriveVariables(X,Y,TwistAngle, StartLeftSide);
 	drivetoline.Start();
 }
 // Called repeatedly when this Command is scheduled to run

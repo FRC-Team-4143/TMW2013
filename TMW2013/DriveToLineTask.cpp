@@ -14,7 +14,7 @@ DriveToLineTask::~DriveToLineTask()
 
 }
 
-void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle)
+void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle, bool startLeftSide)
 {
 	X=x;
 	Y=y;
@@ -22,6 +22,7 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle)
 	Y1=y*.5;
 	TwistAngle=twistangle;
 	WaitTimer = GetClock();
+	StartLeftSide = startLeftSide;
 }
 
 void DriveToLineTask::Run()
@@ -31,8 +32,14 @@ void DriveToLineTask::Run()
 		X = X1;
 		Y = Y1;
 	}
+	unsigned int sensorvalue = !Robot::driveTrain->lineSensorR->Get();
 	
-	if(!Robot::driveTrain->lineSensorR->Get() && WaitTimer + 2 < GetClock())
+	if(!StartLeftSide)
+		sensorvalue = !Robot::driveTrain->lineSensorL->Get();
+	
+	SmartDashboard::PutNumber("sensorvalue", sensorvalue);
+	
+	if(sensorvalue && WaitTimer + 2.5 < GetClock())
 	{
 		Robot::driveTrain->SideLock();
 		Robot::driveTrain->SetDriveBackFlag(true);		

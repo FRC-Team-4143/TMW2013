@@ -55,7 +55,8 @@
 	            	    <tr><td>10</td><td>Shooter WheelShooterExit</td></tr>
 	            	    <tr><td>11</td><td>Shooter WheelShooterEntry</td></tr>
 	            	    <tr><td>12</td><td>Shooter ShooterAngleSteer</td></tr>
-	                                    	    <tr><td>15</td><td>Pickup BeaterBar</td></tr>
+	            	    <tr><td>13</td><td>Blocker BlockerWinch</td></tr>
+	                        	    <tr><td>15</td><td>Pickup BeaterBar</td></tr>
 	                                                                 	</table>
         
                     <h2>Relays on Digital Sidecar 1</h2>

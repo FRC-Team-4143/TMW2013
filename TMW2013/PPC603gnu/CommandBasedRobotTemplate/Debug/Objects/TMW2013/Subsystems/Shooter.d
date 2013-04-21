@@ -415,9 +415,6 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/Subsystems/Shooter.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RAWCConstants.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInFront.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInMiddle.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInBack.h \
   C:/WindRiver/workspace/WPILib/Gamepad.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/SMDB.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../TriggerMonitor.h \
@@ -1254,12 +1251,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../OI.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../RAWCConstants.h:
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/iostream:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInFront.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInMiddle.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Subsystems/../Commands/../Commands/ShooterInBack.h:
 
 C:/WindRiver/workspace/WPILib/Gamepad.h:
 

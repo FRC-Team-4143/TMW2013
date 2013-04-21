@@ -33,7 +33,6 @@ void SMDB::Execute() {
 	SmartDashboard::PutBoolean("LineSensorL", Robot::driveTrain->lineSensorL->Get());
 	SmartDashboard::PutBoolean("LineSensorR", Robot::driveTrain->lineSensorR->Get());
 	
-	
 	SmartDashboard::PutNumber("FLError", Robot::driveTrain->frontLeft->GetError());
 	SmartDashboard::PutNumber("FRError", Robot::driveTrain->frontRight->GetError());
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());

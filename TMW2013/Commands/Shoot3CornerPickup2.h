@@ -22,7 +22,7 @@
  */
 class Shoot3CornerPickup2: public CommandGroup {
 public:	
-	Shoot3CornerPickup2();
+	Shoot3CornerPickup2(bool startLeftSidePyramid);
 };
 
 #endif

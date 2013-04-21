@@ -24,9 +24,6 @@
 #include "OI.h"
 #include "RAWCConstants.h"
 #include <iostream>
-#include "Commands/ShooterInFront.h"
-#include "Commands/ShooterInMiddle.h"
-#include "Commands/ShooterInBack.h"
 #include "Gamepad.h"
 #include "Commands/SMDB.h"
 #include "TriggerMonitor.h"

@@ -38,10 +38,10 @@ void Drive::Execute() {
 	else
 	{
 		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/40;
-		if(Twist>.4)
-			Twist=.4;
-		if(Twist<-.4)
-			Twist=-.4;
+		if(Twist>.3)
+			Twist=.3;
+		if(Twist<-.3)
+			Twist=-.3;
 		Robot::driveTrain->Pivot(Twist, 0, 0, true);
 		
 		if(fabs(TwistAngle - Robot::driveTrain->gyroscope->GetAngle()) < 3)

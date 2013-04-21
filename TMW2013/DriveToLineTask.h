@@ -13,7 +13,7 @@ class DriveToLineTask : public JankyTask	{
 public:
 	DriveToLineTask();
 	virtual ~DriveToLineTask(void);
-	void SetDriveVariables(float x, float y, float twistangle);
+	void SetDriveVariables(float x, float y, float twistangle, bool startLeftSide);
 	virtual void Run();
 private:
 	float X;
@@ -23,6 +23,7 @@ private:
 	float TwistAngle;
 	float Twist;
 	float WaitTimer;
+	bool StartLeftSide;
 };
 
 #endif

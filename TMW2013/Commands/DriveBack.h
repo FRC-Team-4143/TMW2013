@@ -25,7 +25,7 @@
 class DriveBack: public Command {
 public:
 	DriveBack();
-	DriveBack(float speed, float driveangle, float twistangle, float timeout);
+	DriveBack(float speed, float driveangle, float twistangle, float timeout, bool startLeftSide);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -38,6 +38,7 @@ private:
 	float TwistAngle;
 	float Twist;
 	float Timeout;
+	bool StartLeftSide;
 	
 };
 

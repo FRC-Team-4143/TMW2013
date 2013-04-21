@@ -9,26 +9,20 @@
 // it from being updated in th future.
 
 
-#ifndef AUTOSHOOTER2_H
-#define AUTOSHOOTER2_H
 
+#ifndef SHOOT3CENTERPICKUP4_H
+#define SHOOT3CENTERPICKUP4_H
 
-#include "Commands/Subsystem.h"
-#include "../Robot.h"
+#include "Commands/CommandGroup.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class AutoShooter2: public Command {
-public:
-	AutoShooter2();
-	virtual void Initialize();
-	virtual void Execute();
-	virtual bool IsFinished();
-	virtual void End();
-	virtual void Interrupted();
+class Shoot3CenterPickup4: public CommandGroup {
+public:	
+	Shoot3CenterPickup4();
 };
 
 #endif
