@@ -9,26 +9,20 @@
 // it from being updated in th future.
 
 
-#ifndef DEPLOYHOOKS_H
-#define DEPLOYHOOKS_H
 
+#ifndef SHOOT3CORNERPICKUP2PT_H
+#define SHOOT3CORNERPICKUP2PT_H
 
-#include "Commands/Subsystem.h"
-#include "../Robot.h"
+#include "Commands/CommandGroup.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class DeployHooks: public Command {
-public:
-	DeployHooks();
-	virtual void Initialize();
-	virtual void Execute();
-	virtual bool IsFinished();
-	virtual void End();
-	virtual void Interrupted();
+class Shoot3CornerPickup2pt: public CommandGroup {
+public:	
+	Shoot3CornerPickup2pt(bool startLeftSidePyramid);
 };
 
 #endif

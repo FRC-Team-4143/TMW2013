@@ -68,7 +68,7 @@ void Shooter::RunAtOutput() {
 */	
 	if(!shooterRamp) {
 		
-		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 25) {
+		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 15) {
 			firetime = GetClock();
 			shooterRamp = true;
 		}

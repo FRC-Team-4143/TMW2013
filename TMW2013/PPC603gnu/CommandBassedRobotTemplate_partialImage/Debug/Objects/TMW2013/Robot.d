@@ -416,8 +416,8 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Robot.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.h
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2pt.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.h
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Robot.h:
 
@@ -1251,6 +1251,6 @@ C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2pt.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.h:

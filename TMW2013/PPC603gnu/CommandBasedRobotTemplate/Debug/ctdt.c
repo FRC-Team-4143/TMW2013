@@ -21,9 +21,7 @@ void _GLOBAL__I__ZN9CrabDriveC2Ev();
 
 void _GLOBAL__I__ZN20DecreaseShooterAngleC2Ev();
 
-void _GLOBAL__I__ZN11DeployHooksC2Ev();
-
-void _GLOBAL__I__ZN5DriveC2Effff();
+void _GLOBAL__I__ZN5DriveC2Efffi();
 
 void _GLOBAL__I_drivetoline();
 
@@ -53,9 +51,13 @@ void _GLOBAL__I__ZN4SMDBC2Ev();
 
 void _GLOBAL__I__ZN15SetWheelOffsetsC2Ev();
 
-void _GLOBAL__I__ZN19Shoot3CenterPickup4C2Ev();
+void _GLOBAL__I__ZN19Shoot3CenterPickup4C2Eb();
 
 void _GLOBAL__I__ZN19Shoot3CornerPickup2C2Eb();
+
+void _GLOBAL__I__ZN21Shoot3CornerPickup2ptC2Eb();
+
+void _GLOBAL__I__ZN21Shoot3CornerPickup3ptC2Eb();
 
 void _GLOBAL__I__ZN16Shoot3FromCornerC2Ev();
 
@@ -173,8 +175,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN9CrabDriveC2Ev,
     _GLOBAL__I__ZN20DecreaseShooterAngleC2Ev,
-    _GLOBAL__I__ZN11DeployHooksC2Ev,
-    _GLOBAL__I__ZN5DriveC2Effff,
+    _GLOBAL__I__ZN5DriveC2Efffi,
     _GLOBAL__I_drivetoline,
     _GLOBAL__I__ZN12DriveToDiscsC2Edddi,
     _GLOBAL__I__ZN14DriveToPyramidC2Eddd,
@@ -189,8 +190,10 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN9RunPickupC2Ev,
     _GLOBAL__I__ZN4SMDBC2Ev,
     _GLOBAL__I__ZN15SetWheelOffsetsC2Ev,
-    _GLOBAL__I__ZN19Shoot3CenterPickup4C2Ev,
+    _GLOBAL__I__ZN19Shoot3CenterPickup4C2Eb,
     _GLOBAL__I__ZN19Shoot3CornerPickup2C2Eb,
+    _GLOBAL__I__ZN21Shoot3CornerPickup2ptC2Eb,
+    _GLOBAL__I__ZN21Shoot3CornerPickup3ptC2Eb,
     _GLOBAL__I__ZN16Shoot3FromCornerC2Ev,
     _GLOBAL__I__ZN12ShooterClimbC2Ev,
     _GLOBAL__I__ZN11ShooterDropC2Ev,
@@ -261,9 +264,7 @@ void _GLOBAL__D__ZN9CrabDriveC2Ev();
 
 void _GLOBAL__D__ZN20DecreaseShooterAngleC2Ev();
 
-void _GLOBAL__D__ZN11DeployHooksC2Ev();
-
-void _GLOBAL__D__ZN5DriveC2Effff();
+void _GLOBAL__D__ZN5DriveC2Efffi();
 
 void _GLOBAL__D_drivetoline();
 
@@ -293,9 +294,13 @@ void _GLOBAL__D__ZN4SMDBC2Ev();
 
 void _GLOBAL__D__ZN15SetWheelOffsetsC2Ev();
 
-void _GLOBAL__D__ZN19Shoot3CenterPickup4C2Ev();
+void _GLOBAL__D__ZN19Shoot3CenterPickup4C2Eb();
 
 void _GLOBAL__D__ZN19Shoot3CornerPickup2C2Eb();
+
+void _GLOBAL__D__ZN21Shoot3CornerPickup2ptC2Eb();
+
+void _GLOBAL__D__ZN21Shoot3CornerPickup3ptC2Eb();
 
 void _GLOBAL__D__ZN16Shoot3FromCornerC2Ev();
 
@@ -403,8 +408,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN9CrabDriveC2Ev,
     _GLOBAL__D__ZN20DecreaseShooterAngleC2Ev,
-    _GLOBAL__D__ZN11DeployHooksC2Ev,
-    _GLOBAL__D__ZN5DriveC2Effff,
+    _GLOBAL__D__ZN5DriveC2Efffi,
     _GLOBAL__D_drivetoline,
     _GLOBAL__D__ZN12DriveToDiscsC2Edddi,
     _GLOBAL__D__ZN14DriveToPyramidC2Eddd,
@@ -419,8 +423,10 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN9RunPickupC2Ev,
     _GLOBAL__D__ZN4SMDBC2Ev,
     _GLOBAL__D__ZN15SetWheelOffsetsC2Ev,
-    _GLOBAL__D__ZN19Shoot3CenterPickup4C2Ev,
+    _GLOBAL__D__ZN19Shoot3CenterPickup4C2Eb,
     _GLOBAL__D__ZN19Shoot3CornerPickup2C2Eb,
+    _GLOBAL__D__ZN21Shoot3CornerPickup2ptC2Eb,
+    _GLOBAL__D__ZN21Shoot3CornerPickup3ptC2Eb,
     _GLOBAL__D__ZN16Shoot3FromCornerC2Ev,
     _GLOBAL__D__ZN12ShooterClimbC2Ev,
     _GLOBAL__D__ZN11ShooterDropC2Ev,

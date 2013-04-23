@@ -53,6 +53,9 @@ void SMDB::Execute() {
 	SmartDashboard::PutBoolean("FireFlag", Robot::shooter->GetFireFlag());
 	SmartDashboard::PutNumber("ShooterCounter", Robot::shooter->GetShooterCounter());
 	
+	SmartDashboard::PutNumber("BlockerCurrent", Robot::blocker->blockerWinch->GetOutputCurrent());
+	SmartDashboard::PutNumber("BlockerVoltage", Robot::blocker->blockerWinch->GetOutputVoltage());
+	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SMDB::IsFinished() {

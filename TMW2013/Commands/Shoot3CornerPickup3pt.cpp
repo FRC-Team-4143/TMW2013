@@ -10,7 +10,9 @@
 
 
 
-#include "Shoot3CornerPickup2.h"
+#include "Shoot3CornerPickup3pt.h"
+#include "Drive.h"
+#include "TurnRobot.h"
 #include "AutoFire.h"
 #include "Drive.h"
 #include "DriveToDiscs.h"
@@ -27,8 +29,7 @@
 #include "RunPickup.h"
 
 
-Shoot3CornerPickup2::Shoot3CornerPickup2(bool startLeftSidePyramid) {
-	
+Shoot3CornerPickup3pt::Shoot3CornerPickup3pt(bool startLeftSidePyramid) {
 	int num = 1;
 	if (startLeftSidePyramid)
 	{
@@ -44,16 +45,16 @@ Shoot3CornerPickup2::Shoot3CornerPickup2(bool startLeftSidePyramid) {
  	AddSequential (new RunPickup());
 	AddSequential (new DriveBack(.5, 10*num, 112*num, 5, startLeftSidePyramid));
 	AddSequential (new AutoStop(.5));
-	AddSequential (new FollowLine(.35, 0, 112*num, 10, 75));
- 	AddSequential (new Drive(.45, 130*num, 17*num, 0));
- 	AddSequential (new AutoShooter(450));
- 	AddSequential (new AutoStop(.5));
- 	
- 	AddSequential (new AutoFire());
+	AddSequential (new FollowLine(.35, 0, 112*num, 4, 32));
+	AddSequential (new Drive(.45, 205*num, 15*num, 42));
+//	AddSequential (new AutoShooter(420));
+	AddSequential (new AutoStop(.5));
+	
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
- 	
+	AddSequential (new AutoFire());
+
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());

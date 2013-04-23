@@ -25,7 +25,7 @@
 class FollowLine: public Command {
 public:
 	FollowLine();
-	FollowLine(float speed, float driveangle, float twistangle, float timeout);
+	FollowLine(float speed, float driveangle, float twistangle, float timeout, int wheelCount);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -38,7 +38,7 @@ private:
 	float TwistAngle;
 	float Twist;
 	float Timeout;
-
+	int WheelCount;
 	
 };
 

@@ -76,10 +76,11 @@ void Robot::RobotInit() {
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddObject("None", new NoneAuto());
-	autoChooser->AddDefault("Shoot3FromCorner", new Shoot3FromCorner());
-	autoChooser->AddObject("Shoot3CornerPickup2", new Shoot3CornerPickup2(true));
-	autoChooser->AddObject("Shoot3RightCornerPickup2", new Shoot3CornerPickup2(false));
-	autoChooser->AddObject("Shoot3CenterPickup4", new Shoot3CenterPickup4);
+	autoChooser->AddObject("Shoot3FromCorner", new Shoot3FromCorner());
+	autoChooser->AddObject("Left:  Shoot 3 & Pickup - 2pt", new Shoot3CornerPickup2(true));
+	autoChooser->AddObject("Right:  Shoot3 & Pickup - 2pt", new Shoot3CornerPickup2(false));
+	autoChooser->AddDefault("Left:  Shoot 3 & Pickup - 3pt", new Shoot3CenterPickup4(true));
+	autoChooser->AddObject("Right:  Shoot 3 & Pickup - 3pt", new Shoot3CenterPickup4(false));
 	
 	SmartDashboard::PutData("Autonomous Chooser", autoChooser);
 		
@@ -102,6 +103,7 @@ void Robot::AutonomousInit() {
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 	triggerMonitor.Start();
+	Robot::driveTrain->casterPiston->Set(true);
 }
 	
 void Robot::AutonomousPeriodic() {
@@ -116,6 +118,7 @@ void Robot::TeleopInit() {
 	// this line or comment it out.
 	autonomousCommand->Cancel();
 	triggerMonitor.Start();
+	Robot::driveTrain->casterPiston->Set(false);
 }
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
@@ -140,8 +143,11 @@ void Robot::TeleopPeriodic() {
 	if (Robot::oi->getGamePad()->GetRawButton(6))
 		Robot::pickup->pickupLift->Set(DoubleSolenoid::kForward);
 	
-	if (Robot::oi->getGamePad()->GetRawButton(8))
+	if (Robot::oi->getGamePad()->GetRawButton(8)) {
 		Robot::pickup->pickupLift->Set(DoubleSolenoid::kReverse);
+		Robot::shooter->SetAngle(456);
+		Robot::shooter->SetSpeeds(0, 0, true);
+	}
 	
 	Robot::pickup->beaterBar->Set(Robot::oi->getGamePad()->GetLeftY());
 	

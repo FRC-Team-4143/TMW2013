@@ -27,7 +27,7 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle, bool
 
 void DriveToLineTask::Run()
 {
-	if(WaitTimer + 1 < GetClock())
+	if(Robot::driveTrain->wheelSpokeCounter->Get() > 25)
 	{
 		X = X1;
 		Y = Y1;
@@ -37,9 +37,7 @@ void DriveToLineTask::Run()
 	if(!StartLeftSide)
 		sensorvalue = !Robot::driveTrain->lineSensorL->Get();
 	
-	SmartDashboard::PutNumber("sensorvalue", sensorvalue);
-	
-	if(sensorvalue && WaitTimer + 2.5 < GetClock())
+	if(sensorvalue && Robot::driveTrain->wheelSpokeCounter->Get() > 50)
 	{
 		Robot::driveTrain->SideLock();
 		Robot::driveTrain->SetDriveBackFlag(true);		

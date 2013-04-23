@@ -68,7 +68,7 @@ void Shooter::RunAtOutput() {
 */	
 	if(!shooterRamp) {
 		
-		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 25) {
+		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 15) {
 			firetime = GetClock();
 			shooterRamp = true;
 		}
@@ -159,7 +159,7 @@ float Shooter::GetExitSpeed() {
 	return exitset;
 }
 bool Shooter::IsShooterReady() {
-	return shootertimer < GetClock()  && firetime + .4 < GetClock() && wheelShooterExit->GetOutputCurrent() > 3 && wheelShooterEntry->GetOutputCurrent() > 3;	
+	return shootertimer < GetClock()  && firetime + .4 < GetClock() && wheelShooterEntry->GetOutputCurrent() > 3;	
 }
 void Shooter::SetFireTimer() {
 	//shootertimer = GetClock() + .5;

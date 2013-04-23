@@ -1,7 +1,7 @@
  \
- CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/Shoot3CenterPickup4.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.h \
+ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/Shoot3CornerPickup2pt.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2pt.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2pt.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
   C:/WindRiver/workspace/WPILib/ErrorBase.h \
@@ -117,7 +117,7 @@
   C:/WindRiver/workspace/WPILib/Commands/CommandGroupEntry.h \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/list \
   c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h \
   C:/WindRiver/workspace/WPILib/Commands/Subsystem.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
   C:/WindRiver/workspace/WPILib/WPILib.h \
@@ -417,10 +417,10 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../TriggerMonitor.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoShooter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
@@ -433,7 +433,7 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DropPickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RunPickup.h
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2pt.h:
 
 C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
 
@@ -665,7 +665,7 @@ c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/
 
 c:/windriver/gnu/3.4.4-vxworks-6.3/x86-win32/lib/gcc/../../../x86-win32/include/c++/3.4.4/vector:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h:
 
 C:/WindRiver/workspace/WPILib/Commands/Subsystem.h:
 
@@ -1265,13 +1265,13 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../jankyTask.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../Robot.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/AutoFire.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Drive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DriveToDiscs.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnWheels.h:
+
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/TurnRobot.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterInMiddle.h:
 

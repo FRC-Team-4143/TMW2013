@@ -9,36 +9,20 @@
 // it from being updated in th future.
 
 
-#ifndef DRIVE_H
-#define DRIVE_H
 
+#ifndef SHOOT3CORNERPICKUP3PT_H
+#define SHOOT3CORNERPICKUP3PT_H
 
-#include "Commands/Subsystem.h"
-#include "../Robot.h"
+#include "Commands/CommandGroup.h"
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class Drive: public Command {
-public:
-	Drive();
-	Drive(float speed, float driveangle, float twistangle, int wheelCount);
-	virtual void Initialize();
-	virtual void Execute();
-	virtual bool IsFinished();
-	virtual void End();
-	virtual void Interrupted();
-
-private:	
-	float X;
-	float Y;
-	float TwistAngle;
-	float Twist;
-	float Timeout;
-	int ontarget;
-	int WheelCount;
+class Shoot3CornerPickup3pt: public CommandGroup {
+public:	
+	Shoot3CornerPickup3pt(bool startLeftSidePyramid);
 };
 
 #endif

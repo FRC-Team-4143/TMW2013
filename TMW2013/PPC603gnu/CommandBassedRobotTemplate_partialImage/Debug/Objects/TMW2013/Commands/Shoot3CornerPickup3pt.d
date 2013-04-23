@@ -1,7 +1,7 @@
  \
- CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/Shoot3CenterPickup4.o:  \
- C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.cpp \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.h \
+ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/Commands/Shoot3CornerPickup3pt.o:  \
+ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.cpp \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.h \
   C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/WPILib/Commands/Command.h \
   C:/WindRiver/workspace/WPILib/ErrorBase.h \
@@ -433,7 +433,7 @@
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/DropPickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RunPickup.h
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CenterPickup4.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.h:
 
 C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
 

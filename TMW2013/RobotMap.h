@@ -38,6 +38,7 @@ public:
 	static Gyro* driveTrainGyroscope;
 	static DigitalInput* driveTrainLineSensorL;
 	static DigitalInput* driveTrainLineSensorR;
+	static Solenoid* driveTrainCasterPiston;
 	static CANJaguar* shooterWheelShooterEntry;
 	static CANJaguar* shooterWheelShooterExit;
 	static AnalogChannel* shooterShooterAnglePos;
