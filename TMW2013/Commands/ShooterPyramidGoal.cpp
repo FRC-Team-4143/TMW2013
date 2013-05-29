@@ -22,7 +22,7 @@ void ShooterPyramidGoal::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void ShooterPyramidGoal::Execute() {
 	Robot::shooter->SetAngle(265);
-	Robot::shooter->SetSpeeds(-3, 2.5, true);
+	Robot::shooter->SetSpeeds(-3, -3, 2.5, true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterPyramidGoal::IsFinished() {

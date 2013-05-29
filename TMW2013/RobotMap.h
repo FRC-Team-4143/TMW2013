@@ -39,7 +39,9 @@ public:
 	static DigitalInput* driveTrainLineSensorL;
 	static DigitalInput* driveTrainLineSensorR;
 	static Solenoid* driveTrainCasterPiston;
+	static AnalogChannel* driveTrainUltraSonic;
 	static CANJaguar* shooterWheelShooterEntry;
+	static CANJaguar* shooterWheelShooterMiddle;
 	static CANJaguar* shooterWheelShooterExit;
 	static AnalogChannel* shooterShooterAnglePos;
 	static CANJaguar* shooterShooterAngleSteer;

@@ -23,7 +23,7 @@ void AutoShooter::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void AutoShooter::Execute() {
 	Robot::shooter->SetAngle(Angle);
-	Robot::shooter->SetSpeeds(-7.5, 9, true);
+	Robot::shooter->SetSpeeds(-7.5, -7.5, 9.2, true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool AutoShooter::IsFinished() {

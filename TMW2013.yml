@@ -438,6 +438,22 @@ Children:
           name: Output Channel (Solenoid)
           validators: &id021 [Solenoid]
           value: '4'
+    - Name: UltraSonic
+      Base: Analog Input
+      Children: []
+      Properties:
+        Input Module (Analog): !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id001
+          default: '1'
+          name: Input Module (Analog)
+          validators: *id002
+          value: '1'
+        Input Channel (Analog): !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id003
+          default: '1'
+          name: Input Channel (Analog)
+          validators: *id004
+          value: '6'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Default Command, type: Command, validators: null, value: SteerDrive}
@@ -445,6 +461,16 @@ Children:
     Base: Subsystem
     Children:
     - Name: WheelShooterEntry
+      Base: CAN Jaguar
+      Children: []
+      Properties:
+        CAN ID: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id005
+          default: '2'
+          name: CAN ID
+          validators: *id006
+          value: '10'
+    - Name: WheelShooterMiddle
       Base: CAN Jaguar
       Children: []
       Properties:
@@ -463,7 +489,7 @@ Children:
           default: '2'
           name: CAN ID
           validators: *id006
-          value: '10'
+          value: '14'
     - Name: ShooterAngle
       Base: PID Controller
       Children:

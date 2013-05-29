@@ -28,6 +28,7 @@ void DriveBack::Initialize() {
 	SetTimeout(Timeout);
 	drivetoline.SetDriveVariables(X,Y,TwistAngle, StartLeftSide);
 	drivetoline.Start();
+	Robot::driveTrain->wheelSpokeCounter->Reset();
 }
 // Called repeatedly when this Command is scheduled to run
 void DriveBack::Execute() {

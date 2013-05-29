@@ -27,7 +27,7 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle, bool
 
 void DriveToLineTask::Run()
 {
-	if(Robot::driveTrain->wheelSpokeCounter->Get() > 25)
+	if(WaitTimer + 1.5 < GetClock())
 	{
 		X = X1;
 		Y = Y1;
@@ -37,7 +37,7 @@ void DriveToLineTask::Run()
 	if(!StartLeftSide)
 		sensorvalue = !Robot::driveTrain->lineSensorL->Get();
 	
-	if(sensorvalue && Robot::driveTrain->wheelSpokeCounter->Get() > 50)
+	if((sensorvalue && WaitTimer + 1.5 < GetClock()) || WaitTimer + 4 < GetClock())
 	{
 		Robot::driveTrain->SideLock();
 		Robot::driveTrain->SetDriveBackFlag(true);		

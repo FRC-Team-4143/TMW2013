@@ -25,6 +25,9 @@ Shoot3FromCorner::Shoot3FromCorner() {
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
+	
+	
+	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());

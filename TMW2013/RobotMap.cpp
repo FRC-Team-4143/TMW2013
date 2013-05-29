@@ -30,7 +30,9 @@ Gyro* RobotMap::driveTrainGyroscope = NULL;
 DigitalInput* RobotMap::driveTrainLineSensorL = NULL;
 DigitalInput* RobotMap::driveTrainLineSensorR = NULL;
 Solenoid* RobotMap::driveTrainCasterPiston = NULL;
+AnalogChannel* RobotMap::driveTrainUltraSonic = NULL;
 CANJaguar* RobotMap::shooterWheelShooterEntry = NULL;
+CANJaguar* RobotMap::shooterWheelShooterMiddle = NULL;
 CANJaguar* RobotMap::shooterWheelShooterExit = NULL;
 AnalogChannel* RobotMap::shooterShooterAnglePos = NULL;
 CANJaguar* RobotMap::shooterShooterAngleSteer = NULL;
@@ -115,10 +117,16 @@ void RobotMap::init() {
 	driveTrainCasterPiston = new Solenoid(1, 4);
 	lw->AddActuator("DriveTrain", "CasterPiston", driveTrainCasterPiston);
 	
-	shooterWheelShooterEntry = new CANJaguar(11);
+	driveTrainUltraSonic = new AnalogChannel(1, 6);
+	lw->AddSensor("DriveTrain", "UltraSonic", driveTrainUltraSonic);
+	
+	shooterWheelShooterEntry = new CANJaguar(10);
 	
 	
-	shooterWheelShooterExit = new CANJaguar(10);
+	shooterWheelShooterMiddle = new CANJaguar(11);
+	
+	
+	shooterWheelShooterExit = new CANJaguar(14);
 	
 	
 	shooterShooterAnglePos = new AnalogChannel(1, 7);

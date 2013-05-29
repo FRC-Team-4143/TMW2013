@@ -27,8 +27,9 @@ void Fire::Initialize() {
 	fired = false;
 	entrySpeed = Robot::shooter->GetEntrySpeed();
 	exitSpeed = Robot::shooter->GetExitSpeed();
+	middleSpeed = Robot::shooter->GetMiddleSpeed();
 	notready = false;
-	if(exitSpeed <= 0 || entrySpeed >=0)
+	if(exitSpeed >= 0 || entrySpeed >=0 || middleSpeed >=0)
 		notready = true;
 //	Robot::shooter->SetFireFlag(false);
 }

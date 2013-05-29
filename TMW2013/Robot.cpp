@@ -44,7 +44,7 @@ void Robot::RobotInit() {
 	
 	Prefs = Preferences::GetInstance();
 	File = RAWCConstants::getInstance();
-	Robot::driveTrain->SetWheelbase(8, 22, 8);
+	Robot::driveTrain->SetWheelbase(9.5, 22, 9.5);
 	Robot::driveTrain->SetMaxSpeed(100);
 	
 	FLOffset = (int)File->getValueForKey("FLOff");
@@ -69,10 +69,12 @@ void Robot::RobotInit() {
 		Prefs->PutFloat("SteerScaling",1.5);
 	if(!Prefs->ContainsKey("EntrySpeed"))
 		Prefs->PutFloat("EntrySpeed",-7.5);
+	if(!Prefs->ContainsKey("MiddleSpeed"))
+		Prefs->PutFloat("MiddleSpeed",-7.5);
 	if(!Prefs->ContainsKey("ExitSpeed"))
-		Prefs->PutFloat("ExitSpeed",9);
+		Prefs->PutFloat("ExitSpeed",-9);
 	if(!Prefs->ContainsKey("ShooterAngleSetpoint"))
-		Prefs->PutInt("ShooterAngleSetpoint",395);
+		Prefs->PutInt("ShooterAngleSetpoint",573);
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddObject("1. None", new NoneAuto());
@@ -81,7 +83,6 @@ void Robot::RobotInit() {
 	autoChooser->AddObject("4. Right: Shoot 3 Pickup 2pt", new Shoot3CornerPickup2pt(false));
 	autoChooser->AddDefault("5. Left: Shoot 3 Pickup 3pt", new Shoot3CornerPickup3pt(true));
 	autoChooser->AddObject("6. Right: Shoot 3 Pickup 3pt", new Shoot3CornerPickup3pt(false));
-
 	SmartDashboard::PutData("AutonomousChooser", autoChooser);
 		
 	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
@@ -140,21 +141,29 @@ void Robot::TeleopPeriodic() {
 	else
 		Robot::climber->climb->Set(false);
 	
-	if (Robot::oi->getGamePad()->GetRawButton(6))
+	if (Robot::oi->getGamePad()->GetRawButton(8))
 		Robot::pickup->pickupLift->Set(DoubleSolenoid::kForward);
 	
-	if (Robot::oi->getGamePad()->GetRawButton(8)) {
+	if (Robot::oi->getGamePad()->GetRawButton(6)) {
 		Robot::pickup->pickupLift->Set(DoubleSolenoid::kReverse);
 		Robot::shooter->SetAngle(456);
-		Robot::shooter->SetSpeeds(0, 0, true);
+		Robot::shooter->SetSpeeds(0, 0, 0, true);
 	}
 	
-	Robot::pickup->beaterBar->Set(Robot::oi->getGamePad()->GetLeftY());
+	if (Robot::oi->getGamePad()->GetRawButton(9)) {
+		Robot::driveTrain->casterPiston->Set(true);
+	}
+	
+	if (Robot::oi->getGamePad()->GetRawButton(10)) {
+		Robot::driveTrain->casterPiston->Set(false);
+	}
+	
+	Robot::pickup->beaterBar->Set(-Robot::oi->getGamePad()->GetLeftY());
 	
 	if(Robot::oi->getGamePad()->GetRightY()>.8)
-		Robot::blocker->blockerWinch->Set(Robot::oi->getGamePad()->GetRightY());
+		Robot::blocker->blockerWinch->Set(-Robot::oi->getGamePad()->GetRightY());
 	else if(Robot::oi->getGamePad()->GetRightY()<-.8)
-		Robot::blocker->blockerWinch->Set(Robot::oi->getGamePad()->GetRightY());
+		Robot::blocker->blockerWinch->Set(-Robot::oi->getGamePad()->GetRightY());
 	else
 		Robot::blocker->blockerWinch->Set(0);
 }

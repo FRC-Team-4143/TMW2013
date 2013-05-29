@@ -83,8 +83,9 @@
 	<th class="pound">#</th>
 	<th>Solenoid</th></tr>
 	            	    <tr><td>1</td><td>Climber Climb Output </td></tr>
-	            	    <tr><td>2</td><td>Pickup PickupLift Output </td></tr>
-	                                                                                                                                                                                                                             	</table>
+	            	    <tr><td>2</td><td>Pickup PickupLift Forward </td></tr>
+	            	    <tr><td>3</td><td>Pickup PickupLift Reverse </td></tr>
+	                                                                                                                                                                                                                 	</table>
                     
   </body>
 </html>

@@ -39,7 +39,7 @@ void Drive::Execute() {
 	}
 	else
 	{
-		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/40;
+		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/25;
 		if(Twist>.4)
 			Twist=.4;
 		if(Twist<-.4)

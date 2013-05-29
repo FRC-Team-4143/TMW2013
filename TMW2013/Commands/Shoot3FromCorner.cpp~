@@ -19,13 +19,15 @@
 
 Shoot3FromCorner::Shoot3FromCorner() {
 	
-	AddSequential (new TurnWheels(3.14159/2));
 	AddSequential (new AutoShooter());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
-	AddSequential (new Drive(3.14159/2, -.5, 2, true));
-	AddSequential (new Drive (3.14159/2, .3, .2, false));
+	AddSequential (new AutoFire());
+	AddSequential (new AutoFire());
+	
+	
+	
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());
