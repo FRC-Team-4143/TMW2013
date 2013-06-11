@@ -74,7 +74,7 @@ void Shooter::RunAtOutput() {
 */	
 	if(!shooterRamp) {
 		
-		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 150) {
+		if(wheelShooterEntry->GetOutputCurrent() - EntryPrevCurrent > 12) {
 			firetime = GetClock();
 			shooterRamp = true;
 		}
@@ -91,10 +91,10 @@ void Shooter::RunAtOutput() {
 	}
 		
 	if(firetime + .25 > GetClock()) {
-		wheelShooterEntry->Set(.7);
-		entryset = .7;
-		wheelShooterMiddle->Set(.7);
-		middleset = .7;
+//		wheelShooterEntry->Set(.7);
+//		entryset = .7;
+//		wheelShooterMiddle->Set(.7);
+//		middleset = .7;
 		wheelShooterExit->Set(-1);
 		exitset = -1;
 		}
@@ -191,7 +191,7 @@ float Shooter::GetMiddleSpeed() {
 }
 
 bool Shooter::IsShooterReady() {
-	return shootertimer < GetClock()  && firetime + .4 < GetClock() && wheelShooterEntry->GetOutputCurrent() > 1;	
+	return shootertimer < GetClock()  && firetime + 0 < GetClock() && wheelShooterEntry->GetOutputCurrent() > 1;	
 }
 void Shooter::SetFireTimer() {
 	//shootertimer = GetClock() + .5;

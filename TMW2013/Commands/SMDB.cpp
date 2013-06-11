@@ -25,6 +25,11 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("FrontRightPos",Robot::driveTrain->frontRightPos->GetAverageValue());
 	SmartDashboard::PutNumber("RearLeftPos",Robot::driveTrain->rearLeftPos->GetAverageValue());
 	SmartDashboard::PutNumber("RearRightPos",Robot::driveTrain->rearRightPos->GetAverageValue());
+	SmartDashboard::PutNumber("FrontLeftVol",Robot::driveTrain->frontLeftPos->GetAverageVoltage());
+	SmartDashboard::PutNumber("FrontRightVol",Robot::driveTrain->frontRightPos->GetAverageVoltage());
+	SmartDashboard::PutNumber("RearLeftVol",Robot::driveTrain->rearLeftPos->GetAverageVoltage());
+	SmartDashboard::PutNumber("RearRightVol",Robot::driveTrain->rearRightPos->GetAverageVoltage());
+		
 	SmartDashboard::PutNumber("SW",Robot::oi->getSteeringWheel());
 	SmartDashboard::PutNumber("StickDirection",Robot::oi->getDriverJoystick()->GetDirectionRadians());
 	SmartDashboard::PutNumber("StickVelocity", (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2);

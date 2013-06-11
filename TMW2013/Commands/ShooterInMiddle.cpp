@@ -21,8 +21,8 @@ void ShooterInMiddle::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterInMiddle::Execute() {
-	Robot::shooter->SetAngle(393);
-	Robot::shooter->SetSpeeds(-7.5, -7.5, 9.2, true);
+	Robot::shooter->SetAngle(530);
+	Robot::shooter->SetSpeeds(-6.5, -8.5, -8, true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterInMiddle::IsFinished() {

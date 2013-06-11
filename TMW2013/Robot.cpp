@@ -66,15 +66,15 @@ void Robot::RobotInit() {
 	Robot::shooter->shooterAngle->Enable();
 	
 	if(!Prefs->ContainsKey("SteerScaling"))
-		Prefs->PutFloat("SteerScaling",1.5);
+		Prefs->PutFloat("SteerScaling",1.25);
 	if(!Prefs->ContainsKey("EntrySpeed"))
-		Prefs->PutFloat("EntrySpeed",-7.5);
+		Prefs->PutFloat("EntrySpeed",-6.5);
 	if(!Prefs->ContainsKey("MiddleSpeed"))
-		Prefs->PutFloat("MiddleSpeed",-7.5);
+		Prefs->PutFloat("MiddleSpeed",-8.5);
 	if(!Prefs->ContainsKey("ExitSpeed"))
-		Prefs->PutFloat("ExitSpeed",-9);
+		Prefs->PutFloat("ExitSpeed",-8);
 	if(!Prefs->ContainsKey("ShooterAngleSetpoint"))
-		Prefs->PutInt("ShooterAngleSetpoint",573);
+		Prefs->PutInt("ShooterAngleSetpoint",595);
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddObject("1. None", new NoneAuto());
@@ -146,7 +146,7 @@ void Robot::TeleopPeriodic() {
 	
 	if (Robot::oi->getGamePad()->GetRawButton(6)) {
 		Robot::pickup->pickupLift->Set(DoubleSolenoid::kReverse);
-		Robot::shooter->SetAngle(456);
+		Robot::shooter->SetAngle(595);
 		Robot::shooter->SetSpeeds(0, 0, 0, true);
 	}
 	
