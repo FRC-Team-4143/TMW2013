@@ -37,7 +37,7 @@ void Fire::Initialize() {
 void Fire::Execute() {
 	if(!notready && Robot::shooter->IsShooterReady()) {
 		if(!fired){
-			Robot::shooter->trigger->Set(1);
+			Robot::shooter->trigger->Set(Relay::kForward);
 			fired = true;
 			Robot::shooter->SetFireTimer();
 		}

@@ -21,7 +21,7 @@ void ShooterInBack::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void ShooterInBack::Execute() {
-	Robot::shooter->SetAngle(575);
+	Robot::shooter->SetAngle(527);
 	Robot::shooter->SetSpeeds(-6.5, -8.5, -8, true);
 	
 }

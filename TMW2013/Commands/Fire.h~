@@ -36,6 +36,7 @@ private:
 	//float fireClock;
 	float entrySpeed;
 	float exitSpeed;
+	float middleSpeed;
 	bool fired;
 //	float delay;
 };

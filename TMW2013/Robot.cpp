@@ -47,10 +47,10 @@ void Robot::RobotInit() {
 	Robot::driveTrain->SetWheelbase(9.5, 22, 9.5);
 	Robot::driveTrain->SetMaxSpeed(100);
 	
-	FLOffset = (int)File->getValueForKey("FLOff");
-	FROffset = (int)File->getValueForKey("FROff");
-	RLOffset = (int)File->getValueForKey("RLOff");
-	RROffset = (int)File->getValueForKey("RROff");
+	FLOffset = File->getValueForKey("FLOff");
+	FROffset = File->getValueForKey("FROff");
+	RLOffset = File->getValueForKey("RLOff");
+	RROffset = File->getValueForKey("RROff");
 	
 	Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
 	
@@ -92,7 +92,7 @@ void Robot::RobotInit() {
 	
 	Robot::climber->comp->Start();
 	
-	Robot::shooter->trigger->Set(0);
+	Robot::shooter->trigger->Set(Relay::kOff);
 }
 	
 void Robot::DisabledPeriodic(){

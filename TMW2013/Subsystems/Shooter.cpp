@@ -164,7 +164,7 @@ void Shooter::RunAtOutput() {
 void Shooter::SetAngle(int angle) {
 	if(prevAngle != angle) {
 		shooterAngle->Enable();
-		shooterAngle->SetSetpoint(angle - angleOffset);
+		shooterAngle->SetSetpoint((float)angle/195.0);
 		shutoffTimer = GetClock() + 5;
 		prevAngle = angle;
 	}
@@ -189,7 +189,6 @@ float Shooter::GetExitSpeed() {
 float Shooter::GetMiddleSpeed() {
 	return  middleset;
 }
-
 bool Shooter::IsShooterReady() {
 	return shootertimer < GetClock()  && firetime + 0 < GetClock() && wheelShooterEntry->GetOutputCurrent() > 1;	
 }

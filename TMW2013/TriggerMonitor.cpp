@@ -29,14 +29,14 @@ void TriggerMonitor::Run()
 	{
 		if ((!Robot::shooter->triggerStop->Get() && Robot::shooter->GetFireTimer() + .15 < GetClock()))
 		{
-			if (Robot::shooter->trigger->Get() > 0)
+			if (Robot::shooter->trigger->Get() == Relay::kForward)
 			{
-				Robot::shooter->trigger->Set(-.4);
+				Robot::shooter->trigger->Set(Relay::kReverse);
 				done = true;
 			}
 		}
 	
-		if(Robot::shooter->trigger->Get() < 0)
+		if(Robot::shooter->trigger->Get() == Relay::kReverse)
 		{
 			donecount++;
 		}
@@ -47,24 +47,24 @@ void TriggerMonitor::Run()
 		
 		if (donecount > 10)
 		{
-			Robot::shooter->trigger->Set(0);
+			Robot::shooter->trigger->Set(Relay::kOff);
 		}
 		
 		if (!done)
 		{
 			if (Robot::shooter->GetFireTimer() + 1 > GetClock())
-				Robot::shooter->trigger->Set(1);
-			if (Robot::shooter->GetFireTimer() + 1 <= GetClock() && Robot::shooter->GetFireTimer() + 1.5 > GetClock())
-				Robot::shooter->trigger->Set(0.01);
-			if (Robot::shooter->GetFireTimer() + 1.5 <= GetClock() && Robot::shooter->GetFireTimer() + 2.5 > GetClock())
-				Robot::shooter->trigger->Set(1);
-			if (Robot::shooter->GetFireTimer() + 2.5 <= GetClock() && Robot::shooter->GetFireTimer() + 3 > GetClock())
-				Robot::shooter->trigger->Set(0.01);
-			if (Robot::shooter->GetFireTimer() + 3 <= GetClock() && Robot::shooter->GetFireTimer() + 3.5 > GetClock())
-				Robot::shooter->trigger->Set(1);
+				Robot::shooter->trigger->Set(Relay::kForward);
+			if (Robot::shooter->GetFireTimer() + 1 <= GetClock() && Robot::shooter->GetFireTimer() + 1.1 > GetClock())
+				Robot::shooter->trigger->Set(Relay::kReverse);
+			if (Robot::shooter->GetFireTimer() + 1.1 <= GetClock() && Robot::shooter->GetFireTimer() + 2.1 > GetClock())
+				Robot::shooter->trigger->Set(Relay::kForward);
+			if (Robot::shooter->GetFireTimer() + 2.1 <= GetClock() && Robot::shooter->GetFireTimer() + 2.2 > GetClock())
+				Robot::shooter->trigger->Set(Relay::kReverse);
+			if (Robot::shooter->GetFireTimer() + 2.2 <= GetClock() && Robot::shooter->GetFireTimer() + 3.5 > GetClock())
+				Robot::shooter->trigger->Set(Relay::kForward);
 		}
 	}
 	else {
-		Robot::shooter->trigger->Set(0);
+		Robot::shooter->trigger->Set(Relay::kOff);
 	}
 }

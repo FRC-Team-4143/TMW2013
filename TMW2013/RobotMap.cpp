@@ -38,7 +38,7 @@ AnalogChannel* RobotMap::shooterShooterAnglePos = NULL;
 CANJaguar* RobotMap::shooterShooterAngleSteer = NULL;
 PIDController* RobotMap::shooterShooterAngle = NULL;
 DigitalInput* RobotMap::shooterTriggerStop = NULL;
-SpeedController* RobotMap::shooterTrigger = NULL;
+Relay* RobotMap::shooterTrigger = NULL;
 CANJaguar* RobotMap::pickupBeaterBar = NULL;
 DoubleSolenoid* RobotMap::pickupPickupLift = NULL;
 Compressor* RobotMap::climberComp = NULL;
@@ -55,10 +55,10 @@ void RobotMap::init() {
 	driveTrainFrontRightSteer = new CANJaguar(7);
 	
 	
-	driveTrainFrontRight = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontRightPos, driveTrainFrontRightSteer, 0.02);
+	driveTrainFrontRight = new PIDController(1.0, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontRightPos, driveTrainFrontRightSteer, 0.02);
 	lw->AddActuator("DriveTrain", "FrontRight", driveTrainFrontRight);
-	driveTrainFrontRight->SetContinuous(true); driveTrainFrontRight->SetAbsoluteTolerance(20.0); 
-        driveTrainFrontRight->SetInputRange(0.0, 1023.0);
+	driveTrainFrontRight->SetContinuous(true); driveTrainFrontRight->SetAbsoluteTolerance(0.2); 
+        driveTrainFrontRight->SetInputRange(0.0, 5.0);
         driveTrainFrontRight->SetOutputRange(-0.75, 0.75);
 	driveTrainFrontLeftPos = new AnalogChannel(1, 2);
 	lw->AddSensor("DriveTrain", "FrontLeftPos", driveTrainFrontLeftPos);
@@ -66,10 +66,10 @@ void RobotMap::init() {
 	driveTrainFrontLeftSteer = new CANJaguar(6);
 	
 	
-	driveTrainFrontLeft = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontLeftPos, driveTrainFrontLeftSteer, 0.02);
+	driveTrainFrontLeft = new PIDController(1.0, 0.0, 0.0,/* F: 0.0, */ driveTrainFrontLeftPos, driveTrainFrontLeftSteer, 0.02);
 	lw->AddActuator("DriveTrain", "FrontLeft", driveTrainFrontLeft);
-	driveTrainFrontLeft->SetContinuous(true); driveTrainFrontLeft->SetAbsoluteTolerance(20.0); 
-        driveTrainFrontLeft->SetInputRange(0.0, 1023.0);
+	driveTrainFrontLeft->SetContinuous(true); driveTrainFrontLeft->SetAbsoluteTolerance(0.2); 
+        driveTrainFrontLeft->SetInputRange(0.0, 5.0);
         driveTrainFrontLeft->SetOutputRange(-0.75, 0.75);
 	driveTrainRearRightPos = new AnalogChannel(1, 5);
 	lw->AddSensor("DriveTrain", "RearRightPos", driveTrainRearRightPos);
@@ -77,10 +77,10 @@ void RobotMap::init() {
 	driveTrainRearRightSteer = new CANJaguar(9);
 	
 	
-	driveTrainRearRight = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainRearRightPos, driveTrainRearRightSteer, 0.02);
+	driveTrainRearRight = new PIDController(1.0, 0.0, 0.0,/* F: 0.0, */ driveTrainRearRightPos, driveTrainRearRightSteer, 0.02);
 	lw->AddActuator("DriveTrain", "RearRight", driveTrainRearRight);
-	driveTrainRearRight->SetContinuous(true); driveTrainRearRight->SetAbsoluteTolerance(20.0); 
-        driveTrainRearRight->SetInputRange(0.0, 1023.0);
+	driveTrainRearRight->SetContinuous(true); driveTrainRearRight->SetAbsoluteTolerance(0.2); 
+        driveTrainRearRight->SetInputRange(0.0, 5.0);
         driveTrainRearRight->SetOutputRange(-0.75, 0.75);
 	driveTrainRearLeftPos = new AnalogChannel(1, 4);
 	lw->AddSensor("DriveTrain", "RearLeftPos", driveTrainRearLeftPos);
@@ -88,10 +88,10 @@ void RobotMap::init() {
 	driveTrainRearLeftSteer = new CANJaguar(8);
 	
 	
-	driveTrainRearLeft = new PIDController(0.01, 0.0, 0.0,/* F: 0.0, */ driveTrainRearLeftPos, driveTrainRearLeftSteer, 0.02);
+	driveTrainRearLeft = new PIDController(1.0, 0.0, 0.0,/* F: 0.0, */ driveTrainRearLeftPos, driveTrainRearLeftSteer, 0.02);
 	lw->AddActuator("DriveTrain", "RearLeft", driveTrainRearLeft);
-	driveTrainRearLeft->SetContinuous(true); driveTrainRearLeft->SetAbsoluteTolerance(20.0); 
-        driveTrainRearLeft->SetInputRange(0.0, 1023.0);
+	driveTrainRearLeft->SetContinuous(true); driveTrainRearLeft->SetAbsoluteTolerance(0.2); 
+        driveTrainRearLeft->SetInputRange(0.0, 5.0);
         driveTrainRearLeft->SetOutputRange(-0.75, 0.75);
 	driveTrainFrontLeftDrive = new Victor(1, 1);
 	lw->AddActuator("DriveTrain", "FrontLeftDrive", (Victor*) driveTrainFrontLeftDrive);
@@ -135,16 +135,16 @@ void RobotMap::init() {
 	shooterShooterAngleSteer = new CANJaguar(12);
 	
 	
-	shooterShooterAngle = new PIDController(0.1, 0.0, 0.0,/* F: 0.0, */ shooterShooterAnglePos, shooterShooterAngleSteer, 0.02);
+	shooterShooterAngle = new PIDController(10.0, 0.0, 0.0,/* F: 0.0, */ shooterShooterAnglePos, shooterShooterAngleSteer, 0.02);
 	lw->AddActuator("Shooter", "ShooterAngle", shooterShooterAngle);
-	shooterShooterAngle->SetContinuous(true); shooterShooterAngle->SetAbsoluteTolerance(2.0); 
-        shooterShooterAngle->SetInputRange(0.0, 1023.0);
+	shooterShooterAngle->SetContinuous(true); shooterShooterAngle->SetAbsoluteTolerance(0.1); 
+        shooterShooterAngle->SetInputRange(0.0, 5.0);
         shooterShooterAngle->SetOutputRange(-1.0, 1.0);
 	shooterTriggerStop = new DigitalInput(1, 5);
 	lw->AddSensor("Shooter", "TriggerStop", shooterTriggerStop);
 	
-	shooterTrigger = new Victor(1, 7);
-	lw->AddActuator("Shooter", "Trigger", (Victor*) shooterTrigger);
+	shooterTrigger = new Relay(1, 2);
+	lw->AddActuator("Shooter", "Trigger", shooterTrigger);
 	
 	pickupBeaterBar = new CANJaguar(15);
 	

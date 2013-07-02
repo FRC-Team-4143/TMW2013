@@ -23,7 +23,7 @@ void CrabDrive::Initialize() {
 void CrabDrive::Execute() {
 	radian = (Robot::oi->getDriverJoystick()->GetDirectionRadians());
 	speed = (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2;
-	if(speed < .1 && speed > -.1)
+	if(speed < .05 && speed > -.05)
 		Robot::driveTrain->Crab(0 , 0);
 	else
 		Robot::driveTrain->Crab(radian , speed);

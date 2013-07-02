@@ -19,10 +19,10 @@ SetWheelOffsets::SetWheelOffsets() {
 void SetWheelOffsets::Initialize() {
 	File = RAWCConstants::getInstance();
 	if(DriverStation::GetInstance()->IsDisabled()){
-		FLOffset = Robot::driveTrain->frontLeftPos->GetAverageValue()-485;
-		FROffset = Robot::driveTrain->frontRightPos->GetAverageValue()-485;
-		RLOffset = Robot::driveTrain->rearLeftPos->GetAverageValue()-485;
-		RROffset = Robot::driveTrain->rearRightPos->GetAverageValue()-485;
+		FLOffset = Robot::driveTrain->frontLeftPos->GetAverageVoltage()-2.5;
+		FROffset = Robot::driveTrain->frontRightPos->GetAverageVoltage()-2.5;
+		RLOffset = Robot::driveTrain->rearLeftPos->GetAverageVoltage()-2.5;
+		RROffset = Robot::driveTrain->rearRightPos->GetAverageVoltage()-2.5;
 				
 		File->insertKeyAndValue("FLOff", FLOffset);
 		File->insertKeyAndValue("FROff", FROffset);

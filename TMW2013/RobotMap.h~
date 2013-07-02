@@ -41,13 +41,13 @@ public:
 	static Solenoid* driveTrainCasterPiston;
 	static AnalogChannel* driveTrainUltraSonic;
 	static CANJaguar* shooterWheelShooterEntry;
-	static CANJaguar* shooterShooterMiddle;
+	static CANJaguar* shooterWheelShooterMiddle;
 	static CANJaguar* shooterWheelShooterExit;
 	static AnalogChannel* shooterShooterAnglePos;
 	static CANJaguar* shooterShooterAngleSteer;
 	static PIDController* shooterShooterAngle;
 	static DigitalInput* shooterTriggerStop;
-	static SpeedController* shooterTrigger;
+	static Relay* shooterTrigger;
 	static CANJaguar* pickupBeaterBar;
 	static DoubleSolenoid* pickupPickupLift;
 	static Compressor* climberComp;
