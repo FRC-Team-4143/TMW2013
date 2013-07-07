@@ -49,7 +49,7 @@ void DriveToLineTask::Run()
 			Twist=.15;
 		if(Twist<-.15)
 			Twist=-.15;
-		Robot::driveTrain->Pivot(Twist, Y, X, true);
+		Robot::driveTrain->Crab(Twist, Y, X, true);
 	}
 
 	/*

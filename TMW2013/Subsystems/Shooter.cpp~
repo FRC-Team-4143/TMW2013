@@ -164,7 +164,7 @@ void Shooter::RunAtOutput() {
 void Shooter::SetAngle(int angle) {
 	if(prevAngle != angle) {
 		shooterAngle->Enable();
-		shooterAngle->SetSetpoint(angle/195);
+		shooterAngle->SetSetpoint((float)angle/195.0);
 		shutoffTimer = GetClock() + 5;
 		prevAngle = angle;
 	}

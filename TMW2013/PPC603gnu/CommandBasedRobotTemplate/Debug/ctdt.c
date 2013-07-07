@@ -37,8 +37,6 @@ void _GLOBAL__I_followline();
 
 void _GLOBAL__I__ZN8NoneAutoC2Ev();
 
-void _GLOBAL__I__ZN10PivotDriveC2Ev();
-
 void _GLOBAL__I__ZN10PyramidAimC2Ev();
 
 void _GLOBAL__I__ZN9ResetGyroC2Ev();
@@ -183,7 +181,6 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN4FireC2Ev,
     _GLOBAL__I_followline,
     _GLOBAL__I__ZN8NoneAutoC2Ev,
-    _GLOBAL__I__ZN10PivotDriveC2Ev,
     _GLOBAL__I__ZN10PyramidAimC2Ev,
     _GLOBAL__I__ZN9ResetGyroC2Ev,
     _GLOBAL__I__ZN17ResetWheelCounterC2Ev,
@@ -279,8 +276,6 @@ void _GLOBAL__D__ZN4FireC2Ev();
 void _GLOBAL__D_followline();
 
 void _GLOBAL__D__ZN8NoneAutoC2Ev();
-
-void _GLOBAL__D__ZN10PivotDriveC2Ev();
 
 void _GLOBAL__D__ZN10PyramidAimC2Ev();
 
@@ -416,7 +411,6 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN4FireC2Ev,
     _GLOBAL__D_followline,
     _GLOBAL__D__ZN8NoneAutoC2Ev,
-    _GLOBAL__D__ZN10PivotDriveC2Ev,
     _GLOBAL__D__ZN10PyramidAimC2Ev,
     _GLOBAL__D__ZN9ResetGyroC2Ev,
     _GLOBAL__D__ZN17ResetWheelCounterC2Ev,

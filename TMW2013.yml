@@ -731,7 +731,7 @@ Children:
           name: Command
           type: Command
           validators: &id022 [TypeDropdownSelected]
-          value: PivotDrive
+          value: CrabDrive
         Button: !!robotbuilder.data.properties.ChoicesProperty
           choices: &id023 ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
             '12']
@@ -795,30 +795,6 @@ Children:
           name: When to Run
           validators: null
           value: whenPressed
-    - Name: PivotDriveButton
-      Base: Joystick Button
-      Children: []
-      Properties:
-        Command: !!robotbuilder.data.properties.TypeSelectionProperty
-          default: None
-          name: Command
-          type: Command
-          validators: *id022
-          value: PivotDrive
-        Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id023
-          default: '1'
-          name: Button
-          validators: null
-          value: '5'
-        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
-          name: Joystick, validators: null, value: DriverJoystick}
-        When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id024
-          default: whileHeld
-          name: When to Run
-          validators: null
-          value: whileHeld
     - Name: ToggleFront
       Base: Joystick Button
       Children: []
@@ -1011,14 +987,6 @@ Children:
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
   - Name: PyramidAim
-    Base: Command
-    Children: []
-    Properties:
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: false}
-  - Name: PivotDrive
     Base: Command
     Children: []
     Properties:

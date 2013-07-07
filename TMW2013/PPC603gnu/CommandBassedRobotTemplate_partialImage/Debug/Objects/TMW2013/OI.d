@@ -435,7 +435,6 @@ CommandBassedRobotTemplate_partialImage/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetGyro.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
@@ -1330,8 +1329,6 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/FollowLine.h:
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h:
-
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PivotDrive.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h:
 

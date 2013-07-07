@@ -28,7 +28,7 @@ void TurnRobot::Execute() {
 		Twist=.4;
 	if(Twist<-.4)
 		Twist=-.4;
-	Robot::driveTrain->Pivot(Twist, 0, 0, true);
+	Robot::driveTrain->Crab(Twist, 0, 0, true);
 	
 	if(fabs(Angle - Robot::driveTrain->gyroscope->GetAngle()) < 3)
 		ontarget ++;

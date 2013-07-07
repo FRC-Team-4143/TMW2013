@@ -18,15 +18,11 @@ CrabDrive::CrabDrive() {
 }
 // Called just before this Command runs the first time
 void CrabDrive::Initialize() {
+	Robot::driveTrain->gyroscope->Reset();
 }
 // Called repeatedly when this Command is scheduled to run
 void CrabDrive::Execute() {
-	radian = (Robot::oi->getDriverJoystick()->GetDirectionRadians());
-	speed = (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2;
-	if(speed < .05 && speed > -.05)
-		Robot::driveTrain->Crab(0 , 0);
-	else
-		Robot::driveTrain->Crab(radian , speed);
+	Robot::driveTrain->Crab(Robot::oi->GetSWUnit()/2, -Robot::oi->GetJoystickY(), Robot::oi->GetJoystickX(), true);
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CrabDrive::IsFinished() {

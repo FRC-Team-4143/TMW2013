@@ -78,13 +78,86 @@ void DriveTrain::SetOffsets(double FLOff, double FROff, double RLOff, double RRO
 void DriveTrain::ToggleFrontBack(){
 	driveFront = !driveFront;
 }
-void DriveTrain::Crab(float radian, float speed) {
+void DriveTrain::Crab(float twist, float y, float x, bool UseGyro) {
 	
-		position = 2.5 + 2.5/pi*radian; //converts radians to counts for encoders
+	robotangle = (gyroscope->GetAngle())*pi/180;
+	
+	float FWD = y;
+	float STR = x;
+	if(UseGyro)
+	{
+		FWD = y*cos(robotangle) + x*sin(robotangle);
+		STR = -y*sin(robotangle) + x*cos(robotangle);
+	}		
+		
+	radius = sqrt(pow(2*Y,2)+pow(X,2));
+	
+	AP = STR - twist*X/radius;
+	BP = STR + twist*X/radius;
+	CP = FWD - twist*2*Y/radius;
+	DP = FWD + twist*2*Y/radius;
+	
+	float FLSetPoint = 2.5;
+	float FRSetPoint = 2.5;
+	float RLSetPoint = 2.5;
+	float RRSetPoint = 2.5;
+	
+	if(DP != 0 || BP != 0)
+		FLSetPoint = (2.5 + 2.5/pi*atan2(BP,DP));
+	if(BP != 0 || CP != 0)	
+		FRSetPoint = (2.5 + 2.5/pi*atan2(BP,CP));
+	if(AP != 0 || DP != 0)
+		RLSetPoint = (2.5 + 2.5/pi*atan2(AP,DP));
+	if(AP != 0 || CP != 0)
+		RRSetPoint = (2.5 + 2.5/pi*atan2(AP,CP));
+	
+	
+	SetSteerSetpoint(FLSetPoint, FRSetPoint, RLSetPoint, RRSetPoint);
+	FL = sqrt(pow(BP,2)+pow(DP,2));
+	FR = sqrt(pow(BP,2)+pow(CP,2));
+	RL = sqrt(pow(AP,2)+pow(DP,2));
+	RR = sqrt(pow(AP,2)+pow(CP,2));
+	
+	
+	//Solve for fastest wheel speed
+	double speedarray[] = {fabs(FL), fabs(FR), fabs(RL), fabs(RR)};
+		
+	 int length = 4;
+     double maxspeed = speedarray[0];
+     for(int i = 1; i < length; i++)
+     {
+          if(speedarray[i] > maxspeed)
+                maxspeed = speedarray[i];
+     }
+		 
+	//Set ratios based on maximum wheel speed
+	
+    if(maxspeed > 1 || maxspeed < -1)
+    {
+		FLRatio = FL/maxspeed;
+		FRRatio = FR/maxspeed;
+		RLRatio = RL/maxspeed;
+		RRRatio = RR/maxspeed;
+    }
+    else
+    {
+		FLRatio = FL;
+		FRRatio = FR;
+		RLRatio = RL;
+		RRRatio = RR;
+    }
+    
+	
+	//Set drive speeds
+	SetDriveSpeed(FLRatio, -FRRatio, RLRatio, -RRRatio);
+	
+//Old version of Crab not using gyro...
+/*		position = 2.5 + 2.5/pi*radian; //converts radians to counts for encoders
 			
 	
 		SetSteerSetpoint(position, position, position, position);
-		SetDriveSpeed(speed, -speed, speed, -speed);
+				SetDriveSpeed(speed, -speed, speed, -speed);
+*/
 }
 void DriveTrain::Steer(float radian, float speed, float a) {
 	
@@ -315,81 +388,6 @@ void DriveTrain::SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, floa
 		rearLeftDrive->Set(FRSpeed*RLInv);
 		rearRightDrive->Set(FLSpeed*RRInv);
 	}
-}
-void DriveTrain::Pivot(float ROT, float y, float x, bool UseGyro)
-{
-	
-	robotangle = (gyroscope->GetAngle())*pi/180;
-	
-	float FWD = y;
-	float STR = x;
-	if(UseGyro)
-	{
-		FWD = y*cos(robotangle) + x*sin(robotangle);
-		STR = -y*sin(robotangle) + x*cos(robotangle);
-	}		
-		
-	radius = sqrt(pow(2*Y,2)+pow(X,2));
-	
-	AP = STR - ROT*X/radius;
-	BP = STR + ROT*X/radius;
-	CP = FWD - ROT*2*Y/radius;
-	DP = FWD + ROT*2*Y/radius;
-	
-	float FLSetPoint = 2.5;
-	float FRSetPoint = 2.5;
-	float RLSetPoint = 2.5;
-	float RRSetPoint = 2.5;
-	
-	if(DP != 0 || BP != 0)
-		FLSetPoint = (2.5 + 2.5/pi*atan2(BP,DP));
-	if(BP != 0 || CP != 0)	
-		FRSetPoint = (2.5 + 2.5/pi*atan2(BP,CP));
-	if(AP != 0 || DP != 0)
-		RLSetPoint = (2.5 + 2.5/pi*atan2(AP,DP));
-	if(AP != 0 || CP != 0)
-		RRSetPoint = (2.5 + 2.5/pi*atan2(AP,CP));
-	
-	
-	SetSteerSetpoint(FLSetPoint, FRSetPoint, RLSetPoint, RRSetPoint);
-	FL = sqrt(pow(BP,2)+pow(DP,2));
-	FR = sqrt(pow(BP,2)+pow(CP,2));
-	RL = sqrt(pow(AP,2)+pow(DP,2));
-	RR = sqrt(pow(AP,2)+pow(CP,2));
-	
-	
-	//Solve for fastest wheel speed
-	double speedarray[] = {fabs(FL), fabs(FR), fabs(RL), fabs(RR)};
-		
-	 int length = 4;
-     double maxspeed = speedarray[0];
-     for(int i = 1; i < length; i++)
-     {
-          if(speedarray[i] > maxspeed)
-                maxspeed = speedarray[i];
-     }
-		 
-	//Set ratios based on maximum wheel speed
-	
-    if(maxspeed > 1 || maxspeed < -1)
-    {
-		FLRatio = FL/maxspeed;
-		FRRatio = FR/maxspeed;
-		RLRatio = RL/maxspeed;
-		RRRatio = RR/maxspeed;
-    }
-    else
-    {
-		FLRatio = FL;
-		FRRatio = FR;
-		RLRatio = RL;
-		RRRatio = RR;
-    }
-    
-	
-	//Set drive speeds
-	SetDriveSpeed(FLRatio, -FRRatio, RLRatio, -RRRatio);
-	
 }
 void DriveTrain::Lock()
 {

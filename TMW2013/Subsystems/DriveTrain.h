@@ -176,8 +176,7 @@ public:
 	void ToggleFrontBack();
 	void InitDefaultCommand();
 	void Steer(float radian, float speed, float a);
-	void Crab(float radian, float speed);
-	void Pivot(float ROT, float x, float y, bool UseGyro);
+	void Crab(float twist, float y, float x, bool UseGyro);
 	bool ZeroGyro(float InitTime);
 	void Lock();
 	void SideLock();

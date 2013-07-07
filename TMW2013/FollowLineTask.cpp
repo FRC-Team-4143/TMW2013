@@ -38,7 +38,7 @@ void FollowLineTask::Run()
 		Twist=-.2;
 
 	if(Robot::driveTrain->ultraSonic->GetAverageValue() > 45)	
-		Robot::driveTrain->Pivot(Twist, Y, X, false);
+		Robot::driveTrain->Crab(Twist, Y, X, false);
 	else
-		Robot::driveTrain->Pivot(Twist, -2*Y, -2*X, false);
+		Robot::driveTrain->Crab(Twist, -2*Y, -2*X, false);
 	}
