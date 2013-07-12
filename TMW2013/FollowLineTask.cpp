@@ -37,8 +37,13 @@ void FollowLineTask::Run()
 	if(Twist<-.2)
 		Twist=-.2;
 
-	if(Robot::driveTrain->ultraSonic->GetAverageValue() > 45)	
+
+	Robot::driveTrain->Crab(Twist, Y, X, false);
+	
+//Code for using ultrasonic sensor during auto.  Comment out line above and uncomment if statement below.
+/*	if(Robot::driveTrain->ultraSonic->GetAverageValue() > 45)	
 		Robot::driveTrain->Crab(Twist, Y, X, false);
 	else
 		Robot::driveTrain->Crab(Twist, -2*Y, -2*X, false);
+*/		
 	}

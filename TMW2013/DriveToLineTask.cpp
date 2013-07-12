@@ -18,8 +18,8 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle, bool
 {
 	X=x;
 	Y=y;
-	X1=x*.5;
-	Y1=y*.5;
+	X1=x*.3;
+	Y1=y*.3;
 	TwistAngle=twistangle;
 	WaitTimer = GetClock();
 	StartLeftSide = startLeftSide;
@@ -27,7 +27,7 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle, bool
 
 void DriveToLineTask::Run()
 {
-	if(WaitTimer + 1.5 < GetClock())
+	if(WaitTimer + 1 < GetClock())
 	{
 		X = X1;
 		Y = Y1;
@@ -44,11 +44,11 @@ void DriveToLineTask::Run()
 	}
 	else
 	{
-		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/150;
-		if(Twist>.15)
-			Twist=.15;
-		if(Twist<-.15)
-			Twist=-.15;
+		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/300;
+		if(Twist>.8)
+			Twist=.8;
+		if(Twist<-.8)
+			Twist=-.8;
 		Robot::driveTrain->Crab(Twist, Y, X, true);
 	}
 

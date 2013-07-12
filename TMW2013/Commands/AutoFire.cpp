@@ -22,7 +22,7 @@ void AutoFire::Initialize() {
 	entrySpeed = Robot::shooter->GetEntrySpeed();
 	exitSpeed = Robot::shooter->GetExitSpeed();
 	notready = false;
-	if(exitSpeed <= 0 || entrySpeed >=0)
+	if(exitSpeed >= 0 || entrySpeed >=0)
 		notready = true;
 	prevFireTime = Robot::shooter->GetFireTime();
 }

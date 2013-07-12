@@ -79,10 +79,8 @@ void Robot::RobotInit() {
 	autoChooser = new SendableChooser();
 	autoChooser->AddObject("1. None", new NoneAuto());
 	autoChooser->AddObject("2. Shoot 3 From Corner", new Shoot3FromCorner());
-	autoChooser->AddObject("3. Left: Shoot 3 Pickup 2pt", new Shoot3CornerPickup2pt(true));
-	autoChooser->AddObject("4. Right: Shoot 3 Pickup 2pt", new Shoot3CornerPickup2pt(false));
-	autoChooser->AddDefault("5. Left: Shoot 3 Pickup 3pt", new Shoot3CornerPickup3pt(true));
-	autoChooser->AddObject("6. Right: Shoot 3 Pickup 3pt", new Shoot3CornerPickup3pt(false));
+	autoChooser->AddDefault("3. Left: Shoot 3 Pickup", new Shoot3CornerPickup3pt(true));
+	autoChooser->AddObject("4. Right: Shoot 3 Pickup", new Shoot3CornerPickup3pt(false));
 	SmartDashboard::PutData("AutonomousChooser", autoChooser);
 		
 	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
