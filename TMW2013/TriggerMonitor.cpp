@@ -18,22 +18,22 @@ TriggerMonitor::~TriggerMonitor()
 
 void TriggerMonitor::Run()
 {
-	
 	if (Robot::shooter->GetFireTimer() != lastFireTimer) {
 		done = false;
 	}
 
 	lastFireTimer = Robot::shooter->GetFireTimer();
 	
-	if (Robot::shooter->GetFireTimer() + 3.5 > GetClock())
+	if (Robot::shooter->GetFireTimer() + 3.5 > GetClock())  //timeout for fire attempt
 	{
-		if ((!Robot::shooter->triggerStop->Get() && Robot::shooter->GetFireTimer() + .15 < GetClock()))
+		if (!Robot::shooter->triggerStop->Get() && //if photo eye is made
+			Robot::shooter->GetFireTimer() + .15 < GetClock()  && //and past wait time for trigger to get off photo eye at start
+			Robot::shooter->trigger->Get() == Relay::kForward && //and running forward
+			!Robot::oi->getDriverJoystick()->GetRawButton(2)) //and fire button is not pressed
 		{
-			if (Robot::shooter->trigger->Get() == Relay::kForward)
-			{
-				Robot::shooter->trigger->Set(Relay::kReverse);
-				done = true;
-			}
+			Robot::shooter->trigger->Set(Relay::kReverse); //start running backwards
+			done = true;
+		
 		}
 	
 		if(Robot::shooter->trigger->Get() == Relay::kReverse)

@@ -2,6 +2,8 @@
 #include "jankyTask.h"
 #include "WPILib.h"
 
+using namespace std;
+
 //Constructor
 DriveToLineTask::DriveToLineTask()
 {
@@ -18,8 +20,8 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle, bool
 {
 	X=x;
 	Y=y;
-	X1=x*.3;
-	Y1=y*.3;
+	X1=x*.6;
+	Y1=y*.6;
 	TwistAngle=twistangle;
 	WaitTimer = GetClock();
 	StartLeftSide = startLeftSide;
@@ -27,17 +29,18 @@ void DriveToLineTask::SetDriveVariables(float x, float y, float twistangle, bool
 
 void DriveToLineTask::Run()
 {
-	if(WaitTimer + 1 < GetClock())
+		
+	if(WaitTimer + 1.0 < GetClock())
 	{
 		X = X1;
 		Y = Y1;
 	}
-	unsigned int sensorvalue = !Robot::driveTrain->lineSensorR->Get();
+	unsigned int sensorvalue = Robot::driveTrain->lineSensorR->Get();
 	
 	if(!StartLeftSide)
-		sensorvalue = !Robot::driveTrain->lineSensorL->Get();
+		sensorvalue = Robot::driveTrain->lineSensorL->Get();
 	
-	if((sensorvalue && WaitTimer + 1.5 < GetClock()) || WaitTimer + 4 < GetClock())
+	if((sensorvalue == 0 && WaitTimer + 1.25 < GetClock()) || WaitTimer + 15 < GetClock())
 	{
 		Robot::driveTrain->SideLock();
 		Robot::driveTrain->SetDriveBackFlag(true);		

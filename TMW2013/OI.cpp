@@ -56,7 +56,7 @@ OI::OI() {
 	smartDashboardButton = new JoystickButton(driverJoystick, 8);
 	smartDashboardButton->WhileHeld(new SMDB());
 	toggleFront = new JoystickButton(driverJoystick, 4);
-	toggleFront->WhileHeld(new ToggleRobotFront());
+	toggleFront->WhileHeld(new PyramidAim());
 	fireButton = new JoystickButton(driverJoystick, 2);
 	fireButton->WhenPressed(new Fire());
 	aimDrive = new JoystickButton(driverJoystick, 3);

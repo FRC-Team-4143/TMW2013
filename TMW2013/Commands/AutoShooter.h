@@ -23,7 +23,7 @@
  */
 class AutoShooter: public Command {
 public:
-	AutoShooter(int angle = 527);
+	AutoShooter(int angle = 524);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

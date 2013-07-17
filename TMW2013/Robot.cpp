@@ -97,12 +97,18 @@ void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
 }
 void Robot::AutonomousInit() {
+	Robot::driveTrain->rearLeft->SetOutputRange(-1, 1);
+	Robot::driveTrain->rearRight->SetOutputRange(-1, 1);
+	Robot::driveTrain->frontRight->SetOutputRange(-1, 1);
+	Robot::driveTrain->frontLeft->SetOutputRange(-1, 1);
 	Robot::driveTrain->SetDriveBackFlag(false);
 	autonomousCommand = (Command*) autoChooser->GetSelected();
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 	triggerMonitor.Start();
 	Robot::driveTrain->casterPiston->Set(true);
+	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
+	Robot::shooter->trigger->Set(Relay::kOff);
 }
 	
 void Robot::AutonomousPeriodic() {
@@ -117,7 +123,14 @@ void Robot::TeleopInit() {
 	// this line or comment it out.
 	autonomousCommand->Cancel();
 	triggerMonitor.Start();
+	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
+	Robot::shooter->trigger->Set(Relay::kOff);
 	Robot::driveTrain->casterPiston->Set(false);
+	Robot::driveTrain->rearLeft->SetOutputRange(-0.75, 0.75);
+	Robot::driveTrain->rearRight->SetOutputRange(-0.75, 0.75);
+	Robot::driveTrain->frontRight->SetOutputRange(-0.75, 0.75);
+	Robot::driveTrain->frontLeft->SetOutputRange(-0.75, 0.75);
+
 }
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)

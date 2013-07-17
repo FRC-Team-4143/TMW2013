@@ -43,10 +43,10 @@ Shoot3CornerPickup3pt::Shoot3CornerPickup3pt(bool startLeftSidePyramid) {
 	AddSequential (new AutoFire());
 
  	AddSequential (new RunPickup());
-	AddSequential (new DriveBack(.8, 20*num, 108*num, 4, startLeftSidePyramid));
+	AddSequential (new DriveBack(.5, 10*num, 105*num, 100, startLeftSidePyramid));
 	AddSequential (new AutoStop(.25));
-	AddSequential (new FollowLine(.5, 0, 108*num, 4, 32));
-	AddSequential (new Drive(.45, 205*num, 15*num, 42));
+	AddSequential (new FollowLine(.6, 0, 105*num, 4, 22));
+	AddSequential (new Drive(.45, 220*num, 12*num, 52));
 	AddSequential (new AutoShooter(527));
 	AddSequential (new AutoStop(.25));
 	
