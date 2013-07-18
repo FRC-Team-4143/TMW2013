@@ -338,7 +338,7 @@ void DriveTrain::SetSteerSetpoint(float FLSetPoint, float FRSetPoint, float RLSe
 			FLInv = -1;
 		}
 		
-		if(fabs(RLSetPoint + RLOffset - frontRightPos->GetAverageVoltage()) < 1.25 || fabs(RLSetPoint + FROffset - frontRightPos->GetAverageVoltage()) > 3.75)
+		if(fabs(RLSetPoint + FROffset - frontRightPos->GetAverageVoltage()) < 1.25 || fabs(RLSetPoint + FROffset - frontRightPos->GetAverageVoltage()) > 3.75)
 		{
 			frontRight->SetSetpoint(CorrectSteerSetpoint(RLSetPoint + FROffset));
 			FRInv = 1;
@@ -389,7 +389,6 @@ void DriveTrain::SetDriveSpeed(float FLSpeed, float FRSpeed, float RLSpeed, floa
 		rearRightDrive->Set(FLSpeed*RRInv);
 	}
 }
-
 void DriveTrain::Lock()
 {
 	SetSteerSetpoint(3.0, 1.5, 3.0, 1.5);
@@ -397,7 +396,7 @@ void DriveTrain::Lock()
 }
 void DriveTrain::SideLock()
 {
-	SetSteerSetpoint(3.0, 1.5, .75, 4.5);
+	SetSteerSetpoint(2.0, 0.75, 3.25, 4.5);
 	SetDriveSpeed(0,0,0,0);
 }
 bool DriveTrain::ZeroGyro(float InitTime)

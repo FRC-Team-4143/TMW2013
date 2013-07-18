@@ -39,6 +39,8 @@ void _GLOBAL__I__ZN8NoneAutoC2Ev();
 
 void _GLOBAL__I__ZN10PyramidAimC2Ev();
 
+void _GLOBAL__I__ZN11RaisePickupC2Ev();
+
 void _GLOBAL__I__ZN9ResetGyroC2Ev();
 
 void _GLOBAL__I__ZN17ResetWheelCounterC2Ev();
@@ -56,6 +58,8 @@ void _GLOBAL__I__ZN19Shoot3CornerPickup2C2Eb();
 void _GLOBAL__I__ZN21Shoot3CornerPickup2ptC2Eb();
 
 void _GLOBAL__I__ZN21Shoot3CornerPickup3ptC2Eb();
+
+void _GLOBAL__I__ZN24Shoot3DriveBackOverDiscsC2Eb();
 
 void _GLOBAL__I__ZN16Shoot3FromCornerC2Ev();
 
@@ -182,6 +186,7 @@ void (*_ctors[])() =
     _GLOBAL__I_followline,
     _GLOBAL__I__ZN8NoneAutoC2Ev,
     _GLOBAL__I__ZN10PyramidAimC2Ev,
+    _GLOBAL__I__ZN11RaisePickupC2Ev,
     _GLOBAL__I__ZN9ResetGyroC2Ev,
     _GLOBAL__I__ZN17ResetWheelCounterC2Ev,
     _GLOBAL__I__ZN9RunPickupC2Ev,
@@ -191,6 +196,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN19Shoot3CornerPickup2C2Eb,
     _GLOBAL__I__ZN21Shoot3CornerPickup2ptC2Eb,
     _GLOBAL__I__ZN21Shoot3CornerPickup3ptC2Eb,
+    _GLOBAL__I__ZN24Shoot3DriveBackOverDiscsC2Eb,
     _GLOBAL__I__ZN16Shoot3FromCornerC2Ev,
     _GLOBAL__I__ZN12ShooterClimbC2Ev,
     _GLOBAL__I__ZN11ShooterDropC2Ev,
@@ -279,6 +285,8 @@ void _GLOBAL__D__ZN8NoneAutoC2Ev();
 
 void _GLOBAL__D__ZN10PyramidAimC2Ev();
 
+void _GLOBAL__D__ZN11RaisePickupC2Ev();
+
 void _GLOBAL__D__ZN9ResetGyroC2Ev();
 
 void _GLOBAL__D__ZN17ResetWheelCounterC2Ev();
@@ -296,6 +304,8 @@ void _GLOBAL__D__ZN19Shoot3CornerPickup2C2Eb();
 void _GLOBAL__D__ZN21Shoot3CornerPickup2ptC2Eb();
 
 void _GLOBAL__D__ZN21Shoot3CornerPickup3ptC2Eb();
+
+void _GLOBAL__D__ZN24Shoot3DriveBackOverDiscsC2Eb();
 
 void _GLOBAL__D__ZN16Shoot3FromCornerC2Ev();
 
@@ -412,6 +422,7 @@ void (*_dtors[])() =
     _GLOBAL__D_followline,
     _GLOBAL__D__ZN8NoneAutoC2Ev,
     _GLOBAL__D__ZN10PyramidAimC2Ev,
+    _GLOBAL__D__ZN11RaisePickupC2Ev,
     _GLOBAL__D__ZN9ResetGyroC2Ev,
     _GLOBAL__D__ZN17ResetWheelCounterC2Ev,
     _GLOBAL__D__ZN9RunPickupC2Ev,
@@ -421,6 +432,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN19Shoot3CornerPickup2C2Eb,
     _GLOBAL__D__ZN21Shoot3CornerPickup2ptC2Eb,
     _GLOBAL__D__ZN21Shoot3CornerPickup3ptC2Eb,
+    _GLOBAL__D__ZN24Shoot3DriveBackOverDiscsC2Eb,
     _GLOBAL__D__ZN16Shoot3FromCornerC2Ev,
     _GLOBAL__D__ZN12ShooterClimbC2Ev,
     _GLOBAL__D__ZN11ShooterDropC2Ev,

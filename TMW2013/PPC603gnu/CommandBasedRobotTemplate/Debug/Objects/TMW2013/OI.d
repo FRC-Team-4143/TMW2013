@@ -436,15 +436,16 @@ CommandBasedRobotTemplate/Debug/Objects/TMW2013/OI.o:  \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../FollowLineTask.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RaisePickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetGyro.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RunPickup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SMDB.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h \
-  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2pt.h \
-  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.h \
+  C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h \
+  C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3DriveBackOverDiscs.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterClimb.h \
   C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ShooterDrop.h \
@@ -1332,6 +1333,8 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/NoneAuto.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/PyramidAim.h:
 
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/RaisePickup.h:
+
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetGyro.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/ResetWheelCounter.h:
@@ -1344,11 +1347,11 @@ C:/WindRiver/workspace/TMW2013/TMW2013/Commands/SetWheelOffsets.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/../RAWCConstants.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup2pt.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.h:
 
 C:/WindRiver/workspace/WPILib/Commands/CommandGroup.h:
 
-C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3CornerPickup3pt.h:
+C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3DriveBackOverDiscs.h:
 
 C:/WindRiver/workspace/TMW2013/TMW2013/Commands/Shoot3FromCorner.h:
 

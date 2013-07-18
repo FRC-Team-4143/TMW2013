@@ -10,24 +10,17 @@
 
 
 
-#include "Shoot3CornerPickup3pt.h"
+#include "Shoot3DriveBackOverDiscs.h"
 #include "AutoFire.h"
-#include "Drive.h"
-#include "DriveToDiscs.h"
-#include "TurnWheels.h"
-#include "TurnRobot.h"
-#include "ShooterInMiddle.h"
 #include "AutoShooter.h"
-#include "ResetWheelCounter.h"
-#include "DriveToPyramid.h"
-#include "DriveBack.h"
-#include "FollowLine.h"
 #include "AutoStop.h"
 #include "DropPickup.h"
-#include "RunPickup.h"
+#include "RaisePickup.h"
+#include "DriveBack.h"
 
 
-Shoot3CornerPickup3pt::Shoot3CornerPickup3pt(bool startLeftSidePyramid) {
+Shoot3DriveBackOverDiscs::Shoot3DriveBackOverDiscs(bool startLeftSidePyramid) {
+	
 	int num = 1;
 	if (startLeftSidePyramid)
 	{
@@ -40,20 +33,10 @@ Shoot3CornerPickup3pt::Shoot3CornerPickup3pt(bool startLeftSidePyramid) {
 	AddSequential (new AutoFire());
 	AddSequential (new AutoFire());
 
- 	AddSequential (new RunPickup());
-	AddSequential (new DriveBack(.5, 10*num, 105*num, 100, startLeftSidePyramid));
-	AddSequential (new AutoStop(.25));
-	AddSequential (new FollowLine(.6, 0, 105*num, 4, 22));
-	AddSequential (new Drive(.45, 220*num, 15*num, 52));
-	AddSequential (new AutoShooter(527));
+	AddSequential (new RaisePickup());
+	AddSequential (new DriveBack(.7, 50*num, 20*num, 100, startLeftSidePyramid));
 	AddSequential (new AutoStop(.25));
 	
-	AddSequential (new AutoFire());
-	AddSequential (new AutoFire());
-	//AddSequential (new AutoShooter(419));
-	AddSequential (new AutoFire());
-	AddSequential (new AutoFire());
-
 	// Add Commands here:
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());

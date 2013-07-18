@@ -34,7 +34,7 @@ void DriveBack::Initialize() {
 void DriveBack::Execute() {
 	if(IsTimedOut())
 	{
-		Robot::driveTrain->Pivot(0,0,0,false);
+		Robot::driveTrain->Crab(0,0,0,false);
 		drivetoline.Terminate();
 	}
 }

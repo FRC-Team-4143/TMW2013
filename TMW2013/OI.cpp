@@ -26,13 +26,14 @@
 #include "Commands/FollowLine.h"
 #include "Commands/NoneAuto.h"
 #include "Commands/PyramidAim.h"
+#include "Commands/RaisePickup.h"
 #include "Commands/ResetGyro.h"
 #include "Commands/ResetWheelCounter.h"
 #include "Commands/RunPickup.h"
 #include "Commands/SMDB.h"
 #include "Commands/SetWheelOffsets.h"
-#include "Commands/Shoot3CornerPickup2pt.h"
 #include "Commands/Shoot3CornerPickup3pt.h"
+#include "Commands/Shoot3DriveBackOverDiscs.h"
 #include "Commands/Shoot3FromCorner.h"
 #include "Commands/ShooterClimb.h"
 #include "Commands/ShooterDrop.h"
@@ -56,7 +57,7 @@ OI::OI() {
 	smartDashboardButton = new JoystickButton(driverJoystick, 8);
 	smartDashboardButton->WhileHeld(new SMDB());
 	toggleFront = new JoystickButton(driverJoystick, 4);
-	toggleFront->WhileHeld(new PyramidAim());
+	toggleFront->WhileHeld(new ToggleRobotFront());
 	fireButton = new JoystickButton(driverJoystick, 2);
 	fireButton->WhenPressed(new Fire());
 	aimDrive = new JoystickButton(driverJoystick, 3);

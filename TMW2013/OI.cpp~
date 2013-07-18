@@ -25,7 +25,6 @@
 #include "Commands/Fire.h"
 #include "Commands/FollowLine.h"
 #include "Commands/NoneAuto.h"
-#include "Commands/PivotDrive.h"
 #include "Commands/PyramidAim.h"
 #include "Commands/ResetGyro.h"
 #include "Commands/ResetWheelCounter.h"
@@ -34,6 +33,7 @@
 #include "Commands/SetWheelOffsets.h"
 #include "Commands/Shoot3CornerPickup2pt.h"
 #include "Commands/Shoot3CornerPickup3pt.h"
+#include "Commands/Shoot3DriveBackOverDiscs.h"
 #include "Commands/Shoot3FromCorner.h"
 #include "Commands/ShooterClimb.h"
 #include "Commands/ShooterDrop.h"
@@ -58,14 +58,12 @@ OI::OI() {
 	smartDashboardButton->WhileHeld(new SMDB());
 	toggleFront = new JoystickButton(driverJoystick, 4);
 	toggleFront->WhileHeld(new ToggleRobotFront());
-	pivotDriveButton = new JoystickButton(driverJoystick, 5);
-	pivotDriveButton->WhileHeld(new PivotDrive());
 	fireButton = new JoystickButton(driverJoystick, 2);
 	fireButton->WhenPressed(new Fire());
 	aimDrive = new JoystickButton(driverJoystick, 3);
 	aimDrive->WhileHeld(new TargetDrive());
 	trigger = new JoystickButton(driverJoystick, 1);
-	trigger->WhileHeld(new PivotDrive());
+	trigger->WhileHeld(new CrabDrive());
      
         // SmartDashboard Buttons
 	SmartDashboard::PutData("ShooterRun", new ShooterRun());

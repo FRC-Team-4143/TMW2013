@@ -79,10 +79,10 @@ void Robot::RobotInit() {
 	autoChooser = new SendableChooser();
 	autoChooser->AddObject("1. None", new NoneAuto());
 	autoChooser->AddObject("2. Shoot 3 From Corner", new Shoot3FromCorner());
-	autoChooser->AddObject("3. Left: Shoot 3 Pickup 2pt", new Shoot3CornerPickup2pt(true));
-	autoChooser->AddObject("4. Right: Shoot 3 Pickup 2pt", new Shoot3CornerPickup2pt(false));
-	autoChooser->AddDefault("5. Left: Shoot 3 Pickup 3pt", new Shoot3CornerPickup3pt(true));
-	autoChooser->AddObject("6. Right: Shoot 3 Pickup 3pt", new Shoot3CornerPickup3pt(false));
+	autoChooser->AddDefault("3. Left: Shoot 3 Pickup", new Shoot3CornerPickup3pt(true));
+	autoChooser->AddObject("4. Right: Shoot 3 Pickup", new Shoot3CornerPickup3pt(false));
+	autoChooser->AddObject("5. Left: Shoot 3 Block", new Shoot3DriveBackOverDiscs(true));
+	autoChooser->AddObject("6. Right: Shoot 3 Block", new Shoot3DriveBackOverDiscs(false));
 	SmartDashboard::PutData("AutonomousChooser", autoChooser);
 		
 	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
@@ -99,12 +99,18 @@ void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
 }
 void Robot::AutonomousInit() {
+	Robot::driveTrain->rearLeft->SetOutputRange(-1, 1);
+	Robot::driveTrain->rearRight->SetOutputRange(-1, 1);
+	Robot::driveTrain->frontRight->SetOutputRange(-1, 1);
+	Robot::driveTrain->frontLeft->SetOutputRange(-1, 1);
 	Robot::driveTrain->SetDriveBackFlag(false);
 	autonomousCommand = (Command*) autoChooser->GetSelected();
 	if (autonomousCommand != NULL)
 		autonomousCommand->Start();
 	triggerMonitor.Start();
 	Robot::driveTrain->casterPiston->Set(true);
+	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
+	Robot::shooter->trigger->Set(Relay::kOff);
 }
 	
 void Robot::AutonomousPeriodic() {
@@ -119,7 +125,13 @@ void Robot::TeleopInit() {
 	// this line or comment it out.
 	autonomousCommand->Cancel();
 	triggerMonitor.Start();
+	Robot::shooter->shooterAngle->SetSetpoint(Robot::shooter->GetCorrectedAngle());
+	Robot::shooter->trigger->Set(Relay::kOff);
 	Robot::driveTrain->casterPiston->Set(false);
+	Robot::driveTrain->rearLeft->SetOutputRange(-0.75, 0.75);
+	Robot::driveTrain->rearRight->SetOutputRange(-0.75, 0.75);
+	Robot::driveTrain->frontRight->SetOutputRange(-0.75, 0.75);
+	Robot::driveTrain->frontLeft->SetOutputRange(-0.75, 0.75);
 }
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)

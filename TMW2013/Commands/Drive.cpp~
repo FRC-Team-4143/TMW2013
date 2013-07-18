@@ -35,7 +35,7 @@ void Drive::Execute() {
 			Twist=.2;
 		if(Twist<-.2)
 			Twist=-.2;
-		Robot::driveTrain->Pivot(Twist, Y, X, true);
+		Robot::driveTrain->Crab(Twist, Y, X, true);
 	}
 	else
 	{
@@ -44,7 +44,7 @@ void Drive::Execute() {
 			Twist=.4;
 		if(Twist<-.4)
 			Twist=-.4;
-		Robot::driveTrain->Pivot(Twist, 0, 0, true);
+		Robot::driveTrain->Crab(Twist, 0, 0, true);
 		
 		if(fabs(TwistAngle - Robot::driveTrain->gyroscope->GetAngle()) < 2)
 			ontarget ++;

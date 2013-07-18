@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef AUTOSHOOTER_H
-#define AUTOSHOOTER_H
+#ifndef RAISEPICKUP_H
+#define RAISEPICKUP_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,17 +21,14 @@
  *
  * @author ExampleAuthor
  */
-class AutoShooter: public Command {
+class RaisePickup: public Command {
 public:
-	AutoShooter(int angle = 558);
+	RaisePickup();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-	
-private:
-	int Angle;
 };
 
 #endif

@@ -21,7 +21,7 @@ void RunPickup::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void RunPickup::Execute() {
-	Robot::pickup->beaterBar->Set(1);
+	Robot::pickup->beaterBar->Set(-1);
 	
 }
 // Make this return true when this Command no longer needs to run execute()

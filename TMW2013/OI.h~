@@ -16,7 +16,6 @@ private:
 	Joystick* driverJoystick;
 	JoystickButton* smartDashboardButton;
 	JoystickButton* toggleFront;
-	JoystickButton* pivotDriveButton;
 	JoystickButton* fireButton;
 	JoystickButton* aimDrive;
 	JoystickButton* trigger;

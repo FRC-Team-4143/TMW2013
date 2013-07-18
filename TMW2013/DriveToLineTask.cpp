@@ -40,7 +40,7 @@ void DriveToLineTask::Run()
 	if(!StartLeftSide)
 		sensorvalue = Robot::driveTrain->lineSensorL->Get();
 	
-	if((sensorvalue == 0 && WaitTimer + 1.25 < GetClock()) || WaitTimer + 15 < GetClock())
+	if((sensorvalue == 0 && WaitTimer + 1.25 < GetClock()) || WaitTimer + 5 < GetClock())
 	{
 		Robot::driveTrain->SideLock();
 		Robot::driveTrain->SetDriveBackFlag(true);		
