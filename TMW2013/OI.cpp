@@ -77,19 +77,19 @@ OI::OI() {
 	
 	gamePad = new GamePad(2);
 	
-	frontshooting = new JoystickButton(gamePad, 4);
+	frontshooting = new JoystickButton((GenericHID*)gamePad, 4);
 	frontshooting->WhenPressed(new ShooterInFront());
 	
-	middleshooting = new JoystickButton(gamePad, 3);
+	middleshooting = new JoystickButton((GenericHID*)gamePad, 3);
 	middleshooting->WhenPressed(new ShooterInMiddle());
 	
-	backshooting = new JoystickButton(gamePad, 2);
+	backshooting = new JoystickButton((GenericHID*)gamePad, 2);
 	backshooting->WhenPressed(new ShooterInBack());
 			
-	dropShooter = new JoystickButton(gamePad, 1);
+	dropShooter = new JoystickButton((GenericHID*)gamePad, 1);
 	dropShooter->WhenPressed(new ShooterDrop());
 	
-	gpadfire = new JoystickButton(gamePad, 7);
+	gpadfire = new JoystickButton((GenericHID*)gamePad, 7);
 	gpadfire->WhenPressed(new Fire());
 	
 	

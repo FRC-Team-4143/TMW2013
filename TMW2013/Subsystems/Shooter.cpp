@@ -8,7 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "Shooter.h"
-#include "../Robotmap.h"
+#include "../RobotMap.h"
 #include "math.h"
 #include "../Commands/ShooterStop.h"
 #include "../Commands/ShooterRun.h"

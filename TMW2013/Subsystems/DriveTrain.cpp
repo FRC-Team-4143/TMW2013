@@ -8,7 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 #include "DriveTrain.h"
-#include "../Robotmap.h"
+#include "../RobotMap.h"
 #include "../Commands/CrabDrive.h"
 #include "../Commands/SteerDrive.h"
 DriveTrain::DriveTrain(): 
@@ -401,7 +401,7 @@ void DriveTrain::SideLock()
 }
 bool DriveTrain::ZeroGyro(float InitTime)
 {
-	bool Done = false;
+	//bool Done = false;
 	
 	if(GyroZeroFlag == false)
 	{
@@ -412,9 +412,9 @@ bool DriveTrain::ZeroGyro(float InitTime)
 	{
 		if(GetClock() > GyroZeroTime + InitTime)
 		{
-			gyroscope->InitGyro();
+			gyroscope->Reset();
 			GyroZeroFlag = false;
-			Done = true;
+			//Done = true;
 		}
 	}
 	
