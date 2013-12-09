@@ -23,11 +23,12 @@ Drive::Drive(float speed, float driveangle, float twistangle, int wheelCount) {
 // Called just before this Command runs the first time
 void Drive::Initialize() {
 	ontarget = 0;
-	Robot::driveTrain->wheelSpokeCounter->Reset();
+	//Robot::driveTrain->wheelSpokeCounter->Reset();
 }
 // Called repeatedly when this Command is scheduled to run
 void Drive::Execute() {
 	
+  /*
 	if(Robot::driveTrain->wheelSpokeCounter->Get() < WheelCount)
 	{
 		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/150;
@@ -39,6 +40,7 @@ void Drive::Execute() {
 	}
 	else
 	{
+  */
 		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/25;
 		if(Twist>.4)
 			Twist=.4;
@@ -50,11 +52,11 @@ void Drive::Execute() {
 			ontarget ++;
 		else
 			ontarget = 0;
-	}
+	//}
 }
 // Make this return true when this Command no longer needs to run execute()
 bool Drive::IsFinished() {
-	return ontarget > 5 && Robot::driveTrain->wheelSpokeCounter->Get() > WheelCount;
+	return ontarget > 5 ;//&& Robot::driveTrain->wheelSpokeCounter->Get() > WheelCount;
 }
 // Called once after isFinished returns true
 void Drive::End() {

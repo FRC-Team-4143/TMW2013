@@ -26,41 +26,13 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("RearLeftVol",Robot::driveTrain->rearLeftPos->GetAverageVoltage());
 	SmartDashboard::PutNumber("RearRightVol",Robot::driveTrain->rearRightPos->GetAverageVoltage());
 		
-	SmartDashboard::PutNumber("SW",Robot::oi->getSteeringWheel());
 	SmartDashboard::PutNumber("StickDirection",Robot::oi->getDriverJoystick()->GetDirectionRadians());
 	SmartDashboard::PutNumber("StickVelocity", (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2);
 	SmartDashboard::PutNumber("GyroAngle", Robot::driveTrain->gyroscope->GetAngle());
-	SmartDashboard::PutNumber("WheelSpokeCounter", Robot::driveTrain->wheelSpokeCounter->Get());
-	SmartDashboard::PutBoolean("LineSensorL", Robot::driveTrain->lineSensorL->Get());
-	SmartDashboard::PutBoolean("LineSensorR", Robot::driveTrain->lineSensorR->Get());
-	SmartDashboard::PutNumber("UltraSonic", Robot::driveTrain->ultraSonic->GetAverageValue());
-	
 	SmartDashboard::PutNumber("FLError", Robot::driveTrain->frontLeft->GetError());
 	SmartDashboard::PutNumber("FRError", Robot::driveTrain->frontRight->GetError());
 	SmartDashboard::PutNumber("RLError", Robot::driveTrain->rearLeft->GetError());
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
-				
-	SmartDashboard::PutNumber("ShooterAngleError",Robot::shooter->shooterAngle->GetError());
-	SmartDashboard::PutNumber("ShooterAngleVolts",Robot::shooter->shooterAngleSteer->GetOutputVoltage());
-	SmartDashboard::PutNumber("ShooterAngleSetpoint",Robot::shooter->shooterAngle->GetSetpoint());
-	SmartDashboard::PutNumber("ShooterAngleInput",Robot::shooter->shooterAnglePos->GetAverageValue());
-	SmartDashboard::PutNumber("EntryVoltage", Robot::shooter->wheelShooterEntry->GetOutputVoltage());
-	SmartDashboard::PutNumber("ExitVoltage", Robot::shooter->wheelShooterExit->GetOutputVoltage());
-	SmartDashboard::PutNumber("MiddleVoltage", Robot::shooter->wheelShooterMiddle->GetOutputVoltage());
-	SmartDashboard::PutNumber("EntryCurrent", Robot::shooter->wheelShooterEntry->GetOutputCurrent());
-	SmartDashboard::PutNumber("ExitCurrent", Robot::shooter->wheelShooterExit->GetOutputCurrent());
-	SmartDashboard::PutNumber("MiddleCurrent", Robot::shooter->wheelShooterMiddle->GetOutputCurrent());
-	SmartDashboard::PutNumber("EntrySet", Robot::shooter->GetEntrySpeed());
-	SmartDashboard::PutNumber("ExitSet", Robot::shooter->GetExitSpeed());
-	SmartDashboard::PutNumber("MiddleSet", Robot::shooter->GetMiddleSpeed());
-	SmartDashboard::PutBoolean("TriggerStop",Robot::shooter->triggerStop->Get());
-	SmartDashboard::PutBoolean("TriggerStopFlag", Robot::shooter->GetTriggerStopFlag());
-	SmartDashboard::PutBoolean("FireFlag", Robot::shooter->GetFireFlag());
-	SmartDashboard::PutNumber("ShooterCounter", Robot::shooter->GetShooterCounter());
-	
-	SmartDashboard::PutNumber("BlockerCurrent", Robot::blocker->blockerWinch->GetOutputCurrent());
-	SmartDashboard::PutNumber("BlockerVoltage", Robot::blocker->blockerWinch->GetOutputVoltage());
-	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SMDB::IsFinished() {

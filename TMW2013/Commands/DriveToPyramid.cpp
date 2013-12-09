@@ -21,7 +21,7 @@ DriveToPyramid::DriveToPyramid(double direction, double velocity, double timeout
 }
 // Called just before this Command runs the first time
 void DriveToPyramid::Initialize() {
-	CounterLimit = Robot::driveTrain->wheelSpokeCounter->Get();
+	//CounterLimit = Robot::driveTrain->wheelSpokeCounter->Get();
 	gyroAngle = Robot::driveTrain->gyroscope->GetAngle();
 }
 // Called repeatedly when this Command is scheduled to run
@@ -34,7 +34,7 @@ void DriveToPyramid::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool DriveToPyramid::IsFinished() {
-	return Robot::driveTrain->wheelSpokeCounter->Get() > (CounterLimit * 2) || IsTimedOut();
+	return IsTimedOut();
 }
 // Called once after isFinished returns true
 void DriveToPyramid::End() {
