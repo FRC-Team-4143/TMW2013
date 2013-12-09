@@ -110,8 +110,8 @@ float OI::GetJoystickY() {
 		return driverJoystick->GetRawAxis(2);
 }
 float OI::GetJoystickZ() {
-	if(fabs(driverJoystick->GetRawAxis(3)) < .1)
+	if(fabs(driverJoystick->GetRawAxis(4)) < .1)
 		return 0;
 	else
-		return driverJoystick->GetRawAxis(3);
+		return driverJoystick->GetRawAxis(4);
 }

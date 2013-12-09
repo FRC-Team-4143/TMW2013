@@ -32,7 +32,7 @@ void Robot::RobotInit() {
 	
 	Prefs = Preferences::GetInstance();
 	File = RAWCConstants::getInstance();
-	Robot::driveTrain->SetWheelbase(9.5, 22, 9.5);
+	Robot::driveTrain->SetWheelbase(11, 22, 11);
 	Robot::driveTrain->SetMaxSpeed(100);
 	
 	FLOffset = File->getValueForKey("FLOff");
