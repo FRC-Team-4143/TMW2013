@@ -34,11 +34,15 @@ void Robot::RobotInit() {
 	File = RAWCConstants::getInstance();
 	Robot::driveTrain->SetWheelbase(11, 22, 11);
 	Robot::driveTrain->SetMaxSpeed(100);
+
+  printf("getting offsets\r\n");
 	
 	FLOffset = File->getValueForKey("FLOff");
 	FROffset = File->getValueForKey("FROff");
 	RLOffset = File->getValueForKey("RLOff");
 	RROffset = File->getValueForKey("RROff");
+
+  printf("done getting offsets\r\n");
 	
 	Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
 	

@@ -128,10 +128,10 @@ void RAWCConstants::restoreDataFromFile(string fileName)
 	string valueString;
 	
 	ifstream infile ( RAWC_CONSTANTS_DEFAULT_FILE );
-	//printf("In restore\r\n ");
+	printf("In restore\r\n ");
 	if (infile.is_open())
 	{	
-		//printf("File is open\r\n");
+		printf("File is open\r\n");
 		while (! infile.eof() )
 		{
 			//Get the key name
@@ -146,12 +146,12 @@ void RAWCConstants::restoreDataFromFile(string fileName)
 			// Convert value string to a number
 			RAWCConstant value;
 			if(from_string<RAWCConstant>(value, valueString, std::dec)){
-				//printf("Got a value %f for key %s\r\n", value, key.c_str());
+				printf("Got a value %f for key %s\r\n", value, key.c_str());
 				data[key] = value;
 			}
 			else
 			{
-				//printf( "from_string failed\r\n");
+				printf( "from_string failed\r\n");
 			}
 	    }
 		infile.close();

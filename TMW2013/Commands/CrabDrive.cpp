@@ -18,7 +18,7 @@ CrabDrive::CrabDrive() {
 }
 // Called just before this Command runs the first time
 void CrabDrive::Initialize() {
-	Robot::driveTrain->gyroscope->Reset();
+	//Robot::driveTrain->gyroscope->Reset();
 }
 // Called repeatedly when this Command is scheduled to run
 void CrabDrive::Execute() {
