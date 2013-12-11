@@ -84,12 +84,15 @@ void DriveTrain::Crab(float twist, float y, float x, bool UseGyro) {
 		STR = -y*sin(robotangle) + x*cos(robotangle);
 	}		
 		
-	radius = sqrt(pow(2*Y,2)+pow(X,2));
+//	radius = sqrt(pow(2*Y,2)+pow(X,2));
+	radius = sqrt(pow(Y,2)+pow(X,2));
 	
 	AP = STR - twist*X/radius;
 	BP = STR + twist*X/radius;
-	CP = FWD - twist*2*Y/radius;
-	DP = FWD + twist*2*Y/radius;
+//	CP = FWD - twist*2*Y/radius;
+//	DP = FWD + twist*2*Y/radius;
+	CP = FWD - twist*Y/radius;
+	DP = FWD + twist*Y/radius;
 	
 	float FLSetPoint = 2.5;
 	float FRSetPoint = 2.5;
@@ -254,11 +257,11 @@ double DriveTrain::CorrectSteerSetpoint(double setpoint) {
 	
 if (setpoint < 0)
 {
-	return setpoint + 5;
+	return (setpoint + 5) *200;
 }
 else if (setpoint > 5)
 {
-	return setpoint - 5;
+	return (setpoint - 5)*200;
 }
 else if (setpoint == 5)
 {
@@ -266,7 +269,7 @@ else if (setpoint == 5)
 }
 else
 {
-	return setpoint;
+	return setpoint*200;
 }
 }
 void DriveTrain::SetSteerSetpoint(float FLSetPoint, float FRSetPoint, float RLSetPoint, float RRSetPoint)

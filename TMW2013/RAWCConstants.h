@@ -29,7 +29,7 @@ class RAWCConstants
 {
 	// A RAWCConstant is contained in RAWCConstants
 	typedef double RAWCConstant;
-	static const RAWCConstant RAWC_CONSTANTS_DEFAULT_RET_VAL = 0.0;
+	static constexpr RAWCConstant RAWC_CONSTANTS_DEFAULT_RET_VAL = 0.0;
 	
 private:
 	map<string, RAWCConstant> data;

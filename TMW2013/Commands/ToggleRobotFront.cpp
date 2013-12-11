@@ -26,10 +26,10 @@ bool ToggleRobotFront::IsFinished() {
 }
 // Called once after isFinished returns true
 void ToggleRobotFront::End() {
-	Robot::driveTrain->ToggleFrontBack();
+	//Robot::driveTrain->ToggleFrontBack();
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ToggleRobotFront::Interrupted() {
-	Robot::driveTrain->ToggleFrontBack();
+	//Robot::driveTrain->ToggleFrontBack();
 }

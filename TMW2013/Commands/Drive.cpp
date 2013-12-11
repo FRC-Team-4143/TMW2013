@@ -41,16 +41,16 @@ void Drive::Execute() {
 	else
 	{
   */
-		Twist = (TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/25;
+		Twist = 0; //(TwistAngle - Robot::driveTrain->gyroscope->GetAngle())/25;
 		if(Twist>.4)
 			Twist=.4;
 		if(Twist<-.4)
 			Twist=-.4;
 		Robot::driveTrain->Crab(Twist, 0, 0, true);
 		
-		if(fabs(TwistAngle - Robot::driveTrain->gyroscope->GetAngle()) < 2)
-			ontarget ++;
-		else
+		//if(fabs(TwistAngle - Robot::driveTrain->gyroscope->GetAngle()) < 2)
+		//	ontarget ++;
+		//else
 			ontarget = 0;
 	//}
 }

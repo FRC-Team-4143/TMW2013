@@ -23,16 +23,16 @@ void TurnRobot::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void TurnRobot::Execute() {
-	Twist = (Angle - Robot::driveTrain->gyroscope->GetAngle())/40;
+	Twist = 0 ;// (Angle - Robot::driveTrain->gyroscope->GetAngle())/40;
 	if(Twist>.4)
 		Twist=.4;
 	if(Twist<-.4)
 		Twist=-.4;
 	Robot::driveTrain->Crab(Twist, 0, 0, true);
 	
-	if(fabs(Angle - Robot::driveTrain->gyroscope->GetAngle()) < 3)
-		ontarget ++;
-	else
+	//if(fabs(Angle - Robot::driveTrain->gyroscope->GetAngle()) < 3)
+	//	ontarget ++;
+	//else
 		ontarget = 0;
 }
 // Make this return true when this Command no longer needs to run execute()
