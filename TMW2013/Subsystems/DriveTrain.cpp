@@ -257,11 +257,11 @@ double DriveTrain::CorrectSteerSetpoint(double setpoint) {
 	
 if (setpoint < 0)
 {
-	return (setpoint + 5) *200;
+	return (setpoint + 5) ;
 }
 else if (setpoint > 5)
 {
-	return (setpoint - 5)*200;
+	return (setpoint - 5);
 }
 else if (setpoint == 5)
 {
@@ -269,7 +269,7 @@ else if (setpoint == 5)
 }
 else
 {
-	return setpoint*200;
+	return setpoint;
 }
 }
 void DriveTrain::SetSteerSetpoint(float FLSetPoint, float FRSetPoint, float RLSetPoint, float RRSetPoint)
