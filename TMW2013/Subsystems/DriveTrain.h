@@ -12,6 +12,7 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "../AnalogChannelVolt.h"
+#include "../POSController.h"
 #include "math.h"
 #include "../RAWCConstants.h"
 /**
@@ -174,6 +175,7 @@ public:
 	void Steer(float radian, float speed, float a);
 	void Crab(float twist, float y, float x, bool UseGyro);
 	bool ZeroGyro(float InitTime);
+	bool ResetTurns();
 	void Lock();
 	void SideLock();
 	bool GetDriveBackFlag();

@@ -58,7 +58,7 @@ void DriveTrain::SetWheelbase(float w, float x, float y) {
 	Y=y;
 }
 void DriveTrain::SetMaxSpeed(float MaxSpeed) {
-	MaxSpeed = maxspeed;
+  maxspeed = MaxSpeed;
 }
 void DriveTrain::SetGyroReference(){
 	//gyroreference = gyroscope->GetAngle();
@@ -75,6 +75,12 @@ void DriveTrain::ToggleFrontBack(){
 void DriveTrain::Crab(float twist, float y, float x, bool UseGyro) {
 	
 	//robotangle = (gyroscope->GetAngle())*pi/180;
+
+  // stop PID loop if wires wrap.
+  if(abs(frontRightPos->getturns()) > 5) frontRight->Disable();
+  if(abs(rearRightPos->getturns()) > 5) rearRight->Disable();
+  if(abs(frontLeftPos->getturns()) > 5) frontLeft->Disable();
+  if(abs(rearLeftPos->getturns()) > 5) rearLeft->Disable();
 	
 	float FWD = y;
 	float STR = x;
@@ -98,6 +104,7 @@ void DriveTrain::Crab(float twist, float y, float x, bool UseGyro) {
 	float FRSetPoint = 2.5;
 	float RLSetPoint = 2.5;
 	float RRSetPoint = 2.5;
+	
 	
 	if(DP != 0 || BP != 0)
 		FLSetPoint = (2.5 + 2.5/pi*atan2(BP,DP));
@@ -416,6 +423,14 @@ bool DriveTrain::ZeroGyro(float InitTime)
 	}
 	
 	return GetClock() > GyroZeroTime + InitTime + 6;
+}
+bool DriveTrain::ResetTurns()
+{
+	frontRightPos->ResetTurns();;
+	frontLeftPos->ResetTurns();;
+	rearRightPos->ResetTurns();;
+	rearLeftPos->ResetTurns();;
+  return true;
 }
 bool DriveTrain::GetDriveBackFlag() {
 	return DriveBackFlag;

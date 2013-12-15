@@ -21,10 +21,18 @@ void SMDB::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void SMDB::Execute() {
-	SmartDashboard::PutNumber("FrontLeftVolt",Robot::driveTrain->frontLeftPos->GetAverageVoltage());
-	SmartDashboard::PutNumber("FrontRightVolt",Robot::driveTrain->frontRightPos->GetAverageVoltage());
-	SmartDashboard::PutNumber("RearLeftVolt",Robot::driveTrain->rearLeftPos->GetAverageVoltage());
-	SmartDashboard::PutNumber("RearRightVolt",Robot::driveTrain->rearRightPos->GetAverageVoltage());
+	SmartDashboard::PutNumber("FrontLeftVolt",Robot::driveTrain->frontLeftPos->GetVoltage());
+	SmartDashboard::PutNumber("FrontRightVolt",Robot::driveTrain->frontRightPos->GetVoltage());
+	SmartDashboard::PutNumber("RearLeftVolt",Robot::driveTrain->rearLeftPos->GetVoltage());
+	SmartDashboard::PutNumber("RearRightVolt",Robot::driveTrain->rearRightPos->GetVoltage());
+	SmartDashboard::PutNumber("FrontLeftrate",Robot::driveTrain->frontLeftPos->getrate());
+	SmartDashboard::PutNumber("FrontRightrate",Robot::driveTrain->frontRightPos->getrate());
+	SmartDashboard::PutNumber("RearLeftrate",Robot::driveTrain->rearLeftPos->getrate());
+	SmartDashboard::PutNumber("RearRightrate",Robot::driveTrain->rearRightPos->getrate());
+	SmartDashboard::PutNumber("FrontLeftturns",Robot::driveTrain->frontLeftPos->getturns());
+	SmartDashboard::PutNumber("FrontRightturns",Robot::driveTrain->frontRightPos->getturns());
+	SmartDashboard::PutNumber("RearLeftturns",Robot::driveTrain->rearLeftPos->getturns());
+	SmartDashboard::PutNumber("RearRightturns",Robot::driveTrain->rearRightPos->getturns());
 		
 //	SmartDashboard::PutNumber("StickDirection",Robot::oi->getDriverJoystick()->GetDirectionRadians());
 //	SmartDashboard::PutNumber("StickVelocity", (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2);
