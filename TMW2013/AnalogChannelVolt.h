@@ -4,6 +4,8 @@
 
 #include <Base.h>
 #include <AnalogChannel.h>
+#include <AnalogTrigger.h>
+#include <Counter.h>
 #include <semLib.h>
 
 class Notifier;
@@ -27,6 +29,8 @@ class AnalogChannelVolt : public AnalogChannel
   float m_current;
   float m_rate;
   int m_turns;
+  AnalogTrigger *m_trig;
+  Counter *m_count;
 
   SEM_ID m_semaphore;
 

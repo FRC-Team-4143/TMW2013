@@ -17,12 +17,18 @@ AnalogChannelVolt::AnalogChannelVolt(UINT8 modulenumber, UINT32 channel)
 {
     m_semaphore = semMCreate(SEM_Q_PRIORITY);
     m_controlLoop = new Notifier(AnalogChannelVolt::CallCalculate, this);
+    m_count = new Counter();
+    m_trig = new AnalogTrigger(modulenumber, channel);
 
     m_turns = 0;
     m_current = 0;
     m_turns = 0;
     m_rate = 0;
     m_controlLoop->StartPeriodic(period);
+    m_count->SetUpSource(m_trig, AnalogTriggerOutput::kRisingPulse);
+    m_count->SetDownSource(m_trig, AnalogTriggerOutput::kFallingPulse);
+
+    m_count->Start();
 }
 
 void AnalogChannelVolt::CallCalculate(void *controller)
@@ -64,6 +70,7 @@ void AnalogChannelVolt::ResetTurns()
   CRITICAL_REGION(m_semaphore)
   {
     m_turns = 0;
+    m_count->Reset();
   }
   END_REGION;
 }
@@ -110,4 +117,6 @@ AnalogChannelVolt::~AnalogChannelVolt()
 {
   semFlush(m_semaphore);
   delete m_controlLoop;
+  delete m_trig;
+  delete m_count;
 }
