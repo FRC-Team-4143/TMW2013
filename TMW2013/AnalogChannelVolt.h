@@ -6,9 +6,6 @@
 #include <AnalogChannel.h>
 #include <AnalogTrigger.h>
 #include <Counter.h>
-#include <semLib.h>
-
-class Notifier;
 
 class AnalogChannelVolt : public AnalogChannel
 {
@@ -18,23 +15,13 @@ class AnalogChannelVolt : public AnalogChannel
   double PIDGet();
   float GetAverageVoltage();
   float GetVoltage();
-  static void CallCalculate(void *controller);
-  void Calculate();
   void ResetTurns();
-  float getrate();
-  float getturns();
+  int getturns();
 
  private:
-  float m_last;
-  float m_current;
-  float m_rate;
   int m_turns;
   AnalogTrigger *m_trig;
   Counter *m_count;
-
-  SEM_ID m_semaphore;
-
-  Notifier *m_controlLoop;
 };
 
 #endif

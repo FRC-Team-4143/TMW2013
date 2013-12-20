@@ -25,10 +25,6 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("FrontRightVolt",Robot::driveTrain->frontRightPos->GetVoltage());
 	SmartDashboard::PutNumber("RearLeftVolt",Robot::driveTrain->rearLeftPos->GetVoltage());
 	SmartDashboard::PutNumber("RearRightVolt",Robot::driveTrain->rearRightPos->GetVoltage());
-	SmartDashboard::PutNumber("FrontLeftrate",Robot::driveTrain->frontLeftPos->getrate());
-	SmartDashboard::PutNumber("FrontRightrate",Robot::driveTrain->frontRightPos->getrate());
-	SmartDashboard::PutNumber("RearLeftrate",Robot::driveTrain->rearLeftPos->getrate());
-	SmartDashboard::PutNumber("RearRightrate",Robot::driveTrain->rearRightPos->getrate());
 	SmartDashboard::PutNumber("FrontLeftturns",Robot::driveTrain->frontLeftPos->getturns());
 	SmartDashboard::PutNumber("FrontRightturns",Robot::driveTrain->frontRightPos->getturns());
 	SmartDashboard::PutNumber("RearLeftturns",Robot::driveTrain->rearLeftPos->getturns());
