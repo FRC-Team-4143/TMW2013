@@ -49,11 +49,16 @@ void Robot::RobotInit() {
 	
 	Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
 	
-	Robot::driveTrain->frontLeftPos->SetAverageBits(256);
-	Robot::driveTrain->frontRightPos->SetAverageBits(256);
-	Robot::driveTrain->rearLeftPos->SetAverageBits(256);
-	Robot::driveTrain->rearRightPos->SetAverageBits(256);
+//	Robot::driveTrain->frontLeftPos->SetAverageBits(256);
+//	Robot::driveTrain->frontRightPos->SetAverageBits(256);
+//	Robot::driveTrain->rearLeftPos->SetAverageBits(256);
+//	Robot::driveTrain->rearRightPos->SetAverageBits(256);
 		
+	Robot::driveTrain->frontLeftPos->Start();
+	Robot::driveTrain->frontRightPos->Start();
+	Robot::driveTrain->rearLeftPos->Start();
+	Robot::driveTrain->rearRightPos->Start();
+
 	Robot::driveTrain->frontLeft->Enable();
 	Robot::driveTrain->frontRight->Enable();
 	Robot::driveTrain->rearLeft->Enable();

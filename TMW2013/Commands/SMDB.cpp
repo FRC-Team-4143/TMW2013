@@ -29,6 +29,14 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("FrontRightturns",Robot::driveTrain->frontRightPos->getturns());
 	SmartDashboard::PutNumber("RearLeftturns",Robot::driveTrain->rearLeftPos->getturns());
 	SmartDashboard::PutNumber("RearRightturns",Robot::driveTrain->rearRightPos->getturns());
+	SmartDashboard::PutNumber("FrontLeftwindow",Robot::driveTrain->frontLeftPos->getInWindow());
+	SmartDashboard::PutNumber("FrontLeftwindow2",Robot::driveTrain->frontLeftPos->getInWindow2());
+	SmartDashboard::PutNumber("FrontRightwindow",Robot::driveTrain->frontRightPos->getInWindow());
+	SmartDashboard::PutNumber("FrontRightwindow2",Robot::driveTrain->frontRightPos->getInWindow2());
+	SmartDashboard::PutNumber("RearLeftwindow",Robot::driveTrain->rearLeftPos->getInWindow());
+	SmartDashboard::PutNumber("RearLeftwindow2",Robot::driveTrain->rearLeftPos->getInWindow2());
+	SmartDashboard::PutNumber("RearRightwindow",Robot::driveTrain->rearRightPos->getInWindow());
+	SmartDashboard::PutNumber("RearRightwindow2",Robot::driveTrain->rearRightPos->getInWindow2());
 		
 //	SmartDashboard::PutNumber("StickDirection",Robot::oi->getDriverJoystick()->GetDirectionRadians());
 //	SmartDashboard::PutNumber("StickVelocity", (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2);

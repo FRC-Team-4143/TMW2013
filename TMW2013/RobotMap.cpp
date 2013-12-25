@@ -45,52 +45,52 @@ void RobotMap::init() {
 	LiveWindow* lw = LiveWindow::GetInstance();
 
 	driveTrainFrontRightDrive = new Victor(1, 2);
-	lw->AddActuator("DriveTrain", "FrontRightDrive", (Victor *) driveTrainFrontRightDrive);
+	//lw->AddActuator("DriveTrain", "FrontRightDrive", (Victor *) driveTrainFrontRightDrive);
 	driveTrainFrontRightPos = new AnalogChannelVolt(1, 1);
-	lw->AddSensor("DriveTrain", "FrontRightPos", driveTrainFrontRightPos);
+	//lw->AddSensor("DriveTrain", "FrontRightPos", driveTrainFrontRightPos->m_encoder);
 	driveTrainFrontRightSteer = new Talon(1, 5);
 	driveTrainFrontRight = new PIDController(P, I, D, F,  driveTrainFrontRightPos,
                                            driveTrainFrontRightSteer, PERIOD);
-	lw->AddActuator("DriveTrain", "FrontRight", driveTrainFrontRight);
+	//lw->AddActuator("DriveTrain", "FrontRight", driveTrainFrontRight);
 	driveTrainFrontRight->SetContinuous(CONTINUOUS); 
   driveTrainFrontRight->SetAbsoluteTolerance(TOLERANCE); 
         driveTrainFrontRight->SetInputRange(POTMIN, POTMAX);
         driveTrainFrontRight->SetOutputRange(-STEERPOW, STEERPOW);
 
 	driveTrainFrontLeftDrive = new Victor(1, 1);
-	lw->AddActuator("DriveTrain", "FrontLeftDrive", (Victor *) driveTrainFrontLeftDrive);
+	//lw->AddActuator("DriveTrain", "FrontLeftDrive", (Victor *) driveTrainFrontLeftDrive);
 	driveTrainFrontLeftPos = new AnalogChannelVolt(1, 4);
-	lw->AddSensor("DriveTrain", "FrontLeftPos", driveTrainFrontLeftPos);
+	//lw->AddSensor("DriveTrain", "FrontLeftPos", driveTrainFrontLeftPos->m_encoder);
 	driveTrainFrontLeftSteer = new Victor(1, 8);
 	driveTrainFrontLeft = new PIDController(P, I, D, F,  driveTrainFrontLeftPos,
                                           driveTrainFrontLeftSteer, PERIOD);
-	lw->AddActuator("DriveTrain", "FrontLeft", driveTrainFrontLeft);
+	//lw->AddActuator("DriveTrain", "FrontLeft", driveTrainFrontLeft);
 	driveTrainFrontLeft->SetContinuous(CONTINUOUS); 
   driveTrainFrontLeft->SetAbsoluteTolerance(TOLERANCE); 
         driveTrainFrontLeft->SetInputRange(POTMIN, POTMAX);
         driveTrainFrontLeft->SetOutputRange(-STEERPOW, STEERPOW);
 
 	driveTrainRearRightDrive = new Victor(1, 3);
-	lw->AddActuator("DriveTrain", "RearRightDrive", (Victor *) driveTrainRearRightDrive);
+	//lw->AddActuator("DriveTrain", "RearRightDrive", (Victor *) driveTrainRearRightDrive);
 	driveTrainRearRightPos = new AnalogChannelVolt(1, 3);
-	lw->AddSensor("DriveTrain", "RearRightPos", driveTrainRearRightPos);
+	//lw->AddSensor("DriveTrain", "RearRightPos", driveTrainRearRightPos->m_encoder);
 	driveTrainRearRightSteer = new Jaguar(1, 7);
 	driveTrainRearRight = new PIDController(P, I, D, F,  driveTrainRearRightPos,
                                           driveTrainRearRightSteer, PERIOD);
-	lw->AddActuator("DriveTrain", "RearRight", driveTrainRearRight);
+	//lw->AddActuator("DriveTrain", "RearRight", driveTrainRearRight);
 	driveTrainRearRight->SetContinuous(CONTINUOUS); 
   driveTrainRearRight->SetAbsoluteTolerance(TOLERANCE); 
         driveTrainRearRight->SetInputRange(POTMIN, POTMAX);
         driveTrainRearRight->SetOutputRange(-STEERPOW, STEERPOW);
 
 	driveTrainRearLeftDrive = new Victor(1, 4);
-	lw->AddActuator("DriveTrain", "RearLeftDrive", (Victor *) driveTrainRearLeftDrive);
+	//lw->AddActuator("DriveTrain", "RearLeftDrive", (Victor *) driveTrainRearLeftDrive);
 	driveTrainRearLeftPos = new AnalogChannelVolt(1, 2);
-	lw->AddSensor("DriveTrain", "RearLeftPos", driveTrainRearLeftPos);
+	//lw->AddSensor("DriveTrain", "RearLeftPos", driveTrainRearLeftPos->m_encoder);
 	driveTrainRearLeftSteer = new Jaguar(1, 6);
 	driveTrainRearLeft = new PIDController(P, I, D, F,  driveTrainRearLeftPos,
                                          driveTrainRearLeftSteer, PERIOD);
-	lw->AddActuator("DriveTrain", "RearLeft", driveTrainRearLeft);
+	//lw->AddActuator("DriveTrain", "RearLeft", driveTrainRearLeft);
 	driveTrainRearLeft->SetContinuous(CONTINUOUS); 
   driveTrainRearLeft->SetAbsoluteTolerance(TOLERANCE); 
         driveTrainRearLeft->SetInputRange(POTMIN, POTMAX);
