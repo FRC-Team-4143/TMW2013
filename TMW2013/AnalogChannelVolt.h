@@ -8,7 +8,7 @@
 #include <AnalogTrigger.h>
 #include <AnalogTriggerOutput.h>
 #include <Counter.h>
-#include <Encoder.h>
+//#include <Encoder.h>
 #include <LiveWindow/LiveWindow.h>
 
 class AnalogChannelVolt : public AnalogChannel
@@ -22,16 +22,16 @@ class AnalogChannelVolt : public AnalogChannel
   void ResetTurns();
   void Start();
   int getturns();
-  bool getInWindow();
-  bool getInWindow2();
-  Encoder *m_encoder;
+  //bool getInWindow();
+  //bool getInWindow2();
 
  private:
   AnalogTrigger *m_trig;
   AnalogTrigger *m_trig2;
   AnalogTriggerOutput *m_trigo;
   AnalogTriggerOutput *m_trig2o;
-  //Counter *m_count;
+  //Encoder *m_encoder;
+  Counter *m_count;
   UINT8 m_module;
   UINT32 m_channel;
 };
