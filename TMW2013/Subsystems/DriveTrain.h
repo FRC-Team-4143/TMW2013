@@ -171,9 +171,11 @@ public:
 	void SetGyroReference();
 	void SetOffsets(double FLOff, double FROff, double RLOff, double RROff);
 	void ToggleFrontBack();
+	void angleup();
+	void angledown();
 	void InitDefaultCommand();
 	void Steer(float radian, float speed, float a);
-	void Crab(float twist, float y, float x, bool UseGyro);
+	void Crab(float twist, float y, float x, float brake);
 	bool ZeroGyro(float InitTime);
 	bool ResetTurns();
 	void Lock();

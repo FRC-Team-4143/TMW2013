@@ -40,6 +40,7 @@ Subsystem("DriveTrain")
 	RRInv = 1;
 	RLInv = 1;
 	DriveBackFlag = false;
+        robotangle = 0;
 }
     
 void DriveTrain::InitDefaultCommand() {
@@ -72,23 +73,36 @@ void DriveTrain::SetOffsets(double FLOff, double FROff, double RLOff, double RRO
 void DriveTrain::ToggleFrontBack(){
 	driveFront = !driveFront;
 }
-void DriveTrain::Crab(float twist, float y, float x, bool UseGyro) {
+
+void DriveTrain::angleup(){
+	robotangle += .01;
+	if(robotangle > 360) robotangle = 0;
+}
+
+void DriveTrain::angledown(){
+	robotangle -= .01;
+	if(robotangle < -360) robotangle = 0;
+}
+
+void DriveTrain::Crab(float twist, float y, float x, float brake) {
 	
-	//robotangle = (gyroscope->GetAngle())*pi/180;
+  //robotangle = (gyroscope->GetAngle())*pi/180;
 
   // stop PID loop if wires wrap.
   if(abs(frontRightPos->getturns()) > 5) frontRight->Disable();
   if(abs(rearRightPos->getturns()) > 5) rearRight->Disable();
   if(abs(frontLeftPos->getturns()) > 5) frontLeft->Disable();
   if(abs(rearLeftPos->getturns()) > 5) rearLeft->Disable();
+
+	if(y == 0 && x == 0) y = .05;
 	
 	float FWD = y;
 	float STR = x;
-	if(UseGyro)
-	{
-		FWD = y*cos(robotangle) + x*sin(robotangle);
-		STR = -y*sin(robotangle) + x*cos(robotangle);
-	}		
+
+	FWD = y*cos(robotangle) + x*sin(robotangle);
+	STR = -y*sin(robotangle) + x*cos(robotangle);
+
+	
 		
 //	radius = sqrt(pow(2*Y,2)+pow(X,2));
 	radius = sqrt(pow(Y,2)+pow(X,2));
@@ -117,6 +131,8 @@ void DriveTrain::Crab(float twist, float y, float x, bool UseGyro) {
 	
 	
 	SetSteerSetpoint(FLSetPoint, FRSetPoint, RLSetPoint, RRSetPoint);
+
+
 	FL = sqrt(pow(BP,2)+pow(DP,2));
 	FR = sqrt(pow(BP,2)+pow(CP,2));
 	RL = sqrt(pow(AP,2)+pow(DP,2));
@@ -150,6 +166,13 @@ void DriveTrain::Crab(float twist, float y, float x, bool UseGyro) {
 		RLRatio = RL;
 		RRRatio = RR;
     }
+    if(brake < -.5 || y == 0.05)
+	{
+		FLRatio = 0;
+		FRRatio = 0;
+		RLRatio = 0;
+		RRRatio = 0;
+	}
     
 	
 	//Set drive speeds
@@ -426,6 +449,10 @@ bool DriveTrain::ZeroGyro(float InitTime)
 }
 bool DriveTrain::ResetTurns()
 {
+  frontRight->Enable();
+  rearRight->Enable();
+  frontLeft->Enable();
+  rearLeft->Enable();
 	frontRightPos->ResetTurns();;
 	frontLeftPos->ResetTurns();;
 	rearRightPos->ResetTurns();;
