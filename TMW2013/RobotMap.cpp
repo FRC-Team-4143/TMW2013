@@ -26,6 +26,8 @@ SpeedController* RobotMap::driveTrainFrontLeftDrive = NULL;
 SpeedController* RobotMap::driveTrainFrontRightDrive = NULL;
 SpeedController* RobotMap::driveTrainRearLeftDrive = NULL;
 SpeedController* RobotMap::driveTrainRearRightDrive = NULL;
+DigitalModule* RobotMap::i2cmodule = NULL;
+I2C* RobotMap::m_i2c = NULL;
 
 #define CONTINUOUS true
 #define P 1.0
@@ -95,6 +97,8 @@ void RobotMap::init() {
   driveTrainRearLeft->SetAbsoluteTolerance(TOLERANCE); 
         driveTrainRearLeft->SetInputRange(POTMIN, POTMAX);
         driveTrainRearLeft->SetOutputRange(-STEERPOW, STEERPOW);
+
+	m_i2c = DigitalModule::GetInstance(1)->GetI2C(0x04 << 1);
 
 	//driveTrainGyroscope = new Gyro(1, 5);
 	//lw->AddSensor("DriveTrain", "Gyroscope", driveTrainGyroscope);

@@ -71,6 +71,16 @@ void Robot::RobotInit() {
 	autoChooser->AddObject("1. None", new NoneAuto());
 	autoChooser->AddObject("2. None1", new NoneAuto());
 	SmartDashboard::PutData("AutonomousChooser", autoChooser);
+
+  	printf("writeing i2c\r\n");
+	RobotMap::m_i2c->SetCompatibilityMode(true);
+	RobotMap::m_i2c->Write('a', 'a');
+	RobotMap::m_i2c->Write('a', 'b');
+	RobotMap::m_i2c->Write('a', 'c');
+	RobotMap::m_i2c->Write('b', 'A');
+	RobotMap::m_i2c->Write('b', 'B');
+	RobotMap::m_i2c->Write('b', 'C');
+  	printf("done i2c\r\n");
 		
 }
 	
