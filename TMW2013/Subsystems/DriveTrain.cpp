@@ -75,24 +75,60 @@ void DriveTrain::ToggleFrontBack(){
 }
 
 void DriveTrain::angleup(){
-	robotangle += .01;
+	robotangle += .1;
 	if(robotangle > 360) robotangle = 0;
 }
 
 void DriveTrain::angledown(){
-	robotangle -= .01;
+	robotangle -= .1;
 	if(robotangle < -360) robotangle = 0;
 }
 
+bool DriveTrain::unwindwheel(AnalogChannelVolt * wheel, PIDController * pid){
+	float temp;
+	float turns = wheel->getturns();
+	if(turns > 1) {
+		temp = wheel->GetAverageVoltage() - 1.0;
+		if(temp < 0.0) temp = 5.0 + temp;
+		pid->SetSetpoint(temp);
+		return true;
+	} else
+	if(turns < 1) {
+		temp = wheel->GetAverageVoltage() + 1.0;
+		if(temp > 5.0) temp = temp - 5.0;
+		pid->SetSetpoint(temp);
+		return true;
+	} else return false;
+}
+
+bool DriveTrain::unwind(){
+	bool retval = 0;
+	unwinding = 1;
+	retval |= unwindwheel(frontLeftPos, frontLeft);
+	retval |= unwindwheel(frontRightPos, frontRight);
+	retval |= unwindwheel(rearLeftPos, rearLeft);
+	retval |= unwindwheel(rearRightPos, rearRight);
+	if(!retval) unwinding = 0;
+ 	return retval;
+}
+
+void DriveTrain::doneunwind(){
+	unwinding = 0;
+}
+
 void DriveTrain::Crab(float twist, float y, float x, float brake) {
-	
   //robotangle = (gyroscope->GetAngle())*pi/180;
 
   // stop PID loop if wires wrap.
-  if(abs(frontRightPos->getturns()) > 5) frontRight->Disable();
-  if(abs(rearRightPos->getturns()) > 5) rearRight->Disable();
-  if(abs(frontLeftPos->getturns()) > 5) frontLeft->Disable();
-  if(abs(rearLeftPos->getturns()) > 5) rearLeft->Disable();
+  if(unwinding ||
+  	abs(frontRightPos->getturns()) > 5 ||
+  	abs(rearRightPos->getturns()) > 5 ||
+  	abs(frontLeftPos->getturns()) > 5 ||
+  	abs(rearLeftPos->getturns()) > 5) 
+  {
+	SetDriveSpeed(0,0,0,0);
+	return;
+  }
 
 	if(y == 0 && x == 0) y = .05;
 	
@@ -457,6 +493,7 @@ bool DriveTrain::ResetTurns()
 	frontLeftPos->ResetTurns();;
 	rearRightPos->ResetTurns();;
 	rearLeftPos->ResetTurns();;
+        robotangle = 0;
   return true;
 }
 bool DriveTrain::GetDriveBackFlag() {

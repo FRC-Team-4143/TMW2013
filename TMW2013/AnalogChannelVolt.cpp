@@ -21,8 +21,8 @@ AnalogChannelVolt::AnalogChannelVolt(UINT8 modulenumber, UINT32 channel)
 
     m_count = new Counter();
     m_count->SetUpDownCounterMode();
-    m_count->SetUpSource(m_trig, AnalogTriggerOutput::kRisingPulse);
-    m_count->SetDownSource(m_trig, AnalogTriggerOutput::kFallingPulse);
+    m_count->SetUpSource(m_trig, AnalogTriggerOutput::kFallingPulse);
+    m_count->SetDownSource(m_trig, AnalogTriggerOutput::kRisingPulse);
     //m_count->SetUpSourceEdge(true,false);
     //m_count->SetDownSourceEdge(true,false);
 

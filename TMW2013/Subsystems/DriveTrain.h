@@ -32,6 +32,8 @@ private:
 	bool GyroZeroFlag;
 	float GyroZeroTime;
 	
+
+	bool unwinding = 0;
 	
 	
 	//Steering Functions
@@ -182,5 +184,8 @@ public:
 	void SideLock();
 	bool GetDriveBackFlag();
 	void SetDriveBackFlag(bool flag);
+	bool unwind();
+	void doneunwind();
+	bool unwindwheel(AnalogChannelVolt*, PIDController*);
 };
 #endif
