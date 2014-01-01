@@ -72,16 +72,23 @@ void DriveTrain::SetOffsets(double FLOff, double FROff, double RLOff, double RRO
 }
 void DriveTrain::ToggleFrontBack(){
 	driveFront = !driveFront;
+	outputLED();
+}
+
+void DriveTrain::outputLED(){
+	RobotMap::m_i2c->Write(0x0, 40*driveFront);
 }
 
 void DriveTrain::angleup(){
 	robotangle += .1;
 	if(robotangle > 360) robotangle = 0;
+	outputLED();
 }
 
 void DriveTrain::angledown(){
 	robotangle -= .1;
-	if(robotangle < -360) robotangle = 0;
+	if(robotangle < 0) robotangle = 360;
+	outputLED();
 }
 
 bool DriveTrain::unwindwheel(AnalogChannelVolt * wheel, PIDController * pid){
@@ -130,7 +137,7 @@ void DriveTrain::Crab(float twist, float y, float x, float brake) {
 	return;
   }
 
-	if(y == 0 && x == 0) x = .05; // default wheel position
+	if(y == 0 && x == 0 && twist == 0) y = .05; // default wheel position
 	
 	float FWD = y;
 	float STR = x;
@@ -202,7 +209,7 @@ void DriveTrain::Crab(float twist, float y, float x, float brake) {
 		RLRatio = RL;
 		RRRatio = RR;
     }
-    if(brake < -.5 || y == 0.05 || x == 0.05)
+    if(brake < -.5 || y == 0.05 || x == 0.05 || twist == 0.05)
 	{
 		FLRatio = 0;
 		FRRatio = 0;

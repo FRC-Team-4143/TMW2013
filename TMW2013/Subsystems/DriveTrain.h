@@ -173,6 +173,7 @@ public:
 	void SetGyroReference();
 	void SetOffsets(double FLOff, double FROff, double RLOff, double RROff);
 	void ToggleFrontBack();
+	void outputLED();
 	void angleup();
 	void angledown();
 	void InitDefaultCommand();

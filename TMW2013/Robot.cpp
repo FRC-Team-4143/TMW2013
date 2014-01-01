@@ -71,17 +71,10 @@ void Robot::RobotInit() {
 	autoChooser->AddObject("1. None", new NoneAuto());
 	autoChooser->AddObject("2. None1", new NoneAuto());
 	SmartDashboard::PutData("AutonomousChooser", autoChooser);
+}
 
-  	printf("writeing i2c\r\n");
-	RobotMap::m_i2c->SetCompatibilityMode(true);
-	RobotMap::m_i2c->Write('a', 'a');
-	RobotMap::m_i2c->Write('a', 'b');
-	RobotMap::m_i2c->Write('a', 'c');
-	RobotMap::m_i2c->Write('b', 'A');
-	RobotMap::m_i2c->Write('b', 'B');
-	RobotMap::m_i2c->Write('b', 'C');
-  	printf("done i2c\r\n");
-		
+void Robot::DisabledInit(){
+        RobotMap::m_i2c->Write(1, 0);
 }
 	
 void Robot::DisabledPeriodic(){
@@ -112,6 +105,7 @@ void Robot::TeleopInit() {
 	//Robot::driveTrain->rearRight->SetOutputRange(-STEERPOW, STEERPOW);
 	//Robot::driveTrain->frontRight->SetOutputRange(-STEERPOW, STEERPOW);
 	//Robot::driveTrain->frontLeft->SetOutputRange(-STEERPOW, STEERPOW);
+	Robot::driveTrain->outputLED();
 }
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
