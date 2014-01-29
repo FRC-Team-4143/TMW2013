@@ -100,7 +100,7 @@ bool DriveTrain::unwindwheel(AnalogChannelVolt * wheel, PIDController * pid){
 		pid->SetSetpoint(temp);
 		return true;
 	} else
-	if(turns < 1) {
+	if(turns < -1) {
 		temp = wheel->GetAverageVoltage() + 1.0;
 		if(temp > 5.0) temp = temp - 5.0;
 		pid->SetSetpoint(temp);
