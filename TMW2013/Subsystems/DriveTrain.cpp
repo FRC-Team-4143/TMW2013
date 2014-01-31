@@ -80,27 +80,27 @@ void DriveTrain::outputLED(){
 }
 
 void DriveTrain::angleup(){
-	robotangle += .1;
-	if(robotangle > 360) robotangle = 0;
-	outputLED();
+	//robotangle += .1;
+	//if(robotangle > 360) robotangle = 0;
+	//outputLED();
 }
 
 void DriveTrain::angledown(){
-	robotangle -= .1;
-	if(robotangle < 0) robotangle = 360;
-	outputLED();
+	//robotangle -= .1;
+	//if(robotangle < 0) robotangle = 360;
+	//outputLED();
 }
 
 bool DriveTrain::unwindwheel(AnalogChannelVolt * wheel, PIDController * pid){
 	float temp;
 	float turns = wheel->getturns();
-	if(turns > 1) {
+	if(turns >= 1) {
 		temp = wheel->GetAverageVoltage() - 1.0;
 		if(temp < 0.0) temp = 5.0 + temp;
 		pid->SetSetpoint(temp);
 		return true;
 	} else
-	if(turns < -1) {
+	if(turns <= -1) {
 		temp = wheel->GetAverageVoltage() + 1.0;
 		if(temp > 5.0) temp = temp - 5.0;
 		pid->SetSetpoint(temp);
@@ -111,6 +111,7 @@ bool DriveTrain::unwindwheel(AnalogChannelVolt * wheel, PIDController * pid){
 bool DriveTrain::unwind(){
 	bool retval = 0;
 	unwinding = 1;
+        robotangle = 0;
 	retval |= unwindwheel(frontLeftPos, frontLeft);
 	retval |= unwindwheel(frontRightPos, frontRight);
 	retval |= unwindwheel(rearLeftPos, rearLeft);

@@ -30,4 +30,5 @@ void ToggleLock::End() {
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ToggleLock::Interrupted() {
+	Robot::driveTrain->doneunwind();
 }

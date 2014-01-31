@@ -36,7 +36,8 @@ I2C* RobotMap::m_i2c = NULL;
 #define F 0.0
 #define POTMIN 0.0
 #define POTMAX 5.0
-#define STEERPOW .75
+//#define STEERPOW .75
+#define STEERPOW  1.0
 #define TOLERANCE 0.2
 #define PERIOD .02
 
@@ -89,7 +90,7 @@ void RobotMap::init() {
 	//lw->AddActuator("DriveTrain", "RearLeftDrive", (Victor *) driveTrainRearLeftDrive);
 	driveTrainRearLeftPos = new AnalogChannelVolt(1, 2);
 	//lw->AddSensor("DriveTrain", "RearLeftPos", driveTrainRearLeftPos->m_encoder);
-	driveTrainRearLeftSteer = new Jaguar(1, 6);
+	driveTrainRearLeftSteer = new Victor(1, 6);
 	driveTrainRearLeft = new PIDController(P, I, D, F,  driveTrainRearLeftPos,
                                          driveTrainRearLeftSteer, PERIOD);
 	//lw->AddActuator("DriveTrain", "RearLeft", driveTrainRearLeft);
