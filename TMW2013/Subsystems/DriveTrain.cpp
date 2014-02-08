@@ -138,7 +138,7 @@ void DriveTrain::Crab(float twist, float y, float x, float brake) {
 	return;
   }
 
-	if(y == 0 && x == 0 && twist == 0) y = .05; // default wheel position
+	if(y == 0.0 && x == 0.0 && twist == 0.0) y = .05; // default wheel position
 	
 	float FWD = y;
 	float STR = x;
@@ -212,10 +212,10 @@ void DriveTrain::Crab(float twist, float y, float x, float brake) {
     }
     if(brake < -.5 || y == 0.05 || x == 0.05 || twist == 0.05)
 	{
-		FLRatio = 0;
-		FRRatio = 0;
-		RLRatio = 0;
-		RRRatio = 0;
+		FLRatio = 0.0;
+		FRRatio = 0.0;
+		RLRatio = 0.0;
+		RRRatio = 0.0;
 	}
     
 	

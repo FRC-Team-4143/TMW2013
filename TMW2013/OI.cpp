@@ -106,38 +106,38 @@ GamePad* OI::getGamePad(){
 	return gamePad;
 }
 float OI::GetJoystickX() {
-	if(fabs(driverJoystick->GetX()) < .1)
+	if(fabs(driverJoystick->GetX()) < .15)
 		return 0;
 	else
 		return driverJoystick->GetX();
 }
 float OI::GetJoystickY() {
-	if(fabs(driverJoystick->GetY()) < .1)
+	if(fabs(driverJoystick->GetY()) < .15)
 		return 0;
 	else
 		return driverJoystick->GetY();
 }
 */
 float OI::GetJoystickX() {
-	if(fabs(driverJoystick->GetRawAxis(1)) < .1)
+	if(fabs(driverJoystick->GetRawAxis(1)) < .15)
 		return 0;
 	else
 		return driverJoystick->GetRawAxis(1);
 }
 float OI::GetJoystickY() {
-	if(fabs(driverJoystick->GetRawAxis(2)) < .1)
+	if(fabs(driverJoystick->GetRawAxis(2)) < .15)
 		return 0;
 	else
 		return driverJoystick->GetRawAxis(2);
 }
 float OI::GetJoystickZ() {
-	if(fabs(driverJoystick->GetRawAxis(4)) < .1)
+	if(fabs(driverJoystick->GetRawAxis(4)) < .15)
 		return 0;
 	else
 		return driverJoystick->GetRawAxis(4);
 }
 float OI::GetJoystickA() {
-	if(fabs(driverJoystick->GetRawAxis(3)) < .1)
+	if(fabs(driverJoystick->GetRawAxis(3)) < .15)
 		return 0;
 	else
 		return driverJoystick->GetRawAxis(3);

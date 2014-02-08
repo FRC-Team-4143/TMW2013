@@ -29,6 +29,9 @@ public:
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
+
+private:
+	int loops = 0;
 };
 
 #endif
