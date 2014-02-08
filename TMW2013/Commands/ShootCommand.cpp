@@ -22,7 +22,10 @@ void ShootCommand::Execute() {
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShootCommand::IsFinished() {
-	return false;
+	if(RobotMap::shooterpot->GetVoltage() > 1.0 && RobotMap::shooterpot->GetVoltage() < 1.5)
+		return true;
+	else
+		return false;
 }
 // Called once after isFinished returns true
 void ShootCommand::End() {

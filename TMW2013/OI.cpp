@@ -49,7 +49,7 @@ OI::OI() {
 	toggledown->WhileHeld(new angledown());
 
 	shoot = new JoystickButton(driverJoystick, 1);
-	shoot->WhileHeld(new ShootCommand());
+	shoot->WhenPressed(new ShootCommand());
      
 	shootback = new JoystickButton(driverJoystick, 2);
 	shootback->WhileHeld(new ShootBackCommand());
