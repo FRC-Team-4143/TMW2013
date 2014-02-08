@@ -38,6 +38,8 @@ void Robot::RobotInit() {
 	Robot::driveTrain->SetWheelbase(21.5/2, 21.5/2, 21.5/2);
 	Robot::driveTrain->SetMaxSpeed(10);
 
+	RobotMap::shooter->Set(0);
+
   printf("getting offsets\r\n");
 	
 	FLOffset = File->getValueForKey("FLOff");

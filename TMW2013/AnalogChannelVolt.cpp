@@ -2,9 +2,10 @@
 #include <math.h>
 
 static const float rev = 5.0;
-static const float halfrev = rev/2;
+//static const int   ratio = 2; // ratio of pot to finished gear, must be int
+static const int   ratio = 1; // ratio of pot to finished gear, must be int
+static const float halfrev = rev/ratio;
 static const float scale = rev/(4.8-.2);
-static const int   ratio = 2; // ratio of pot to finished gear, must be int
 
 #define INV
 

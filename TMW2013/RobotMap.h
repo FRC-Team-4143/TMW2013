@@ -37,6 +37,9 @@ public:
 	static SpeedController* driveTrainFrontRightDrive;
 	static SpeedController* driveTrainRearLeftDrive;
 	static SpeedController* driveTrainRearRightDrive;
+	static SpeedController* shooter;
+	static PIDController* shooterpid;
+	static AnalogChannel* shooterpot;
 	static DigitalModule* i2cmodule;
 	static I2C* m_i2c;
 	//static Gyro* driveTrainGyroscope;
