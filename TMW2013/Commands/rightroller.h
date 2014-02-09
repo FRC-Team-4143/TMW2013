@@ -9,21 +9,23 @@
 // it from being updated in th future.
 
 
-#ifndef TOGGLELOCK_H
-#define TOGGLELOCK_H
+#ifndef RIGHTROLLER_H
+#define RIGHTROLLER_H
 
 
 #include "Commands/Subsystem.h"
+#include "../RobotMap.h"
 #include "../Robot.h"
+#include <Relay.h>
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class ToggleLock: public Command {
+class rightroller: public Command {
 public:
-	ToggleLock();
+	rightroller();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

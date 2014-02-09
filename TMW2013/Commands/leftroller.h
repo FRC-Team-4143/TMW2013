@@ -9,21 +9,23 @@
 // it from being updated in th future.
 
 
-#ifndef RESETGYRO_H
-#define RESETGYRO_H
+#ifndef LEFTROLLER_H
+#define LEFTROLLER_H
 
 
 #include "Commands/Subsystem.h"
+#include "../RobotMap.h"
 #include "../Robot.h"
+#include <Relay.h>
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class ResetGyro: public Command {
+class leftroller: public Command {
 public:
-	ResetGyro();
+	leftroller();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

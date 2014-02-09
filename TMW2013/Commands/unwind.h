@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef ANGLEDOWN_H
-#define ANGLEDOWN_H
+#ifndef UNWIND_H
+#define UNWIND_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class angledown: public Command {
+class unwind: public Command {
 public:
-	angledown();
+	unwind();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

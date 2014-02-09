@@ -38,7 +38,6 @@ private:
 	float Twist;
 	float Timeout;
 	int ontarget;
-	int WheelCount;
 };
 
 #endif

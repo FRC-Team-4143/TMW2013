@@ -9,21 +9,23 @@
 // it from being updated in th future.
 
 
-#ifndef ANGLEUP_H
-#define ANGLEUP_H
+#ifndef RIGHTWING_H
+#define RIGHTWING_H
 
 
 #include "Commands/Subsystem.h"
+#include "../RobotMap.h"
 #include "../Robot.h"
+#include <Relay.h>
 
 /**
  *
  *
  * @author ExampleAuthor
  */
-class angleup: public Command {
+class rightwing: public Command {
 public:
-	angleup();
+	rightwing();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

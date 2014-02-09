@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef SHOOTBACKCOMMAND_H
-#define SHOOTBACKCOMMAND_H
+#ifndef SHOOTSLOWCOMMAND_H
+#define SHOOTSLOWCOMMAND_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,14 +21,17 @@
  *
  * @author ExampleAuthor
  */
-class ShootBackCommand: public Command {
+class ShootSlowCommand: public Command {
 public:
-	ShootBackCommand();
+	ShootSlowCommand();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
+
+private:
+	int loops = 0;
 };
 
 #endif

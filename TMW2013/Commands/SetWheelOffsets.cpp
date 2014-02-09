@@ -40,15 +40,6 @@ void SetWheelOffsets::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void SetWheelOffsets::Execute() {
-	Robot::oi->setOIDigitalOutput1(true);
-	Robot::oi->setOIDigitalOutput2(true);
-	Robot::oi->setOIDigitalOutput3(true);
-	Robot::oi->setOIDigitalOutput4(true);
-	Robot::oi->setOIDigitalOutput5(true);
-	Robot::oi->setOIDigitalOutput6(true);
-	Robot::oi->setOIDigitalOutput7(true);
-	Robot::oi->setOIDigitalOutput8(true);
-	
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SetWheelOffsets::IsFinished() {
@@ -56,14 +47,6 @@ bool SetWheelOffsets::IsFinished() {
 }
 // Called once after isFinished returns true
 void SetWheelOffsets::End() {
-	Robot::oi->setOIDigitalOutput1(false);
-	Robot::oi->setOIDigitalOutput2(false);
-	Robot::oi->setOIDigitalOutput3(false);
-	Robot::oi->setOIDigitalOutput4(false);
-	Robot::oi->setOIDigitalOutput5(false);
-	Robot::oi->setOIDigitalOutput6(false);
-	Robot::oi->setOIDigitalOutput7(false);
-	Robot::oi->setOIDigitalOutput8(false);	
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run

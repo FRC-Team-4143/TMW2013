@@ -9,11 +9,12 @@
 // it from being updated in th future.
 
 
-#ifndef DRIVETOPYRAMID_H
-#define DRIVETOPYRAMID_H
+#ifndef LEFTWING_H
+#define LEFTWING_H
 
 
 #include "Commands/Subsystem.h"
+#include "../RobotMap.h"
 #include "../Robot.h"
 
 /**
@@ -21,20 +22,14 @@
  *
  * @author ExampleAuthor
  */
-class DriveToPyramid: public Command {
+class leftwing: public Command {
 public:
-	DriveToPyramid(double direction, double velocity, double timeout);
+	leftwing();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
-private:
-	double radian;
-	double speed;
-	double GyroRad;
-	float gyroAngle;
-	int CounterLimit;
 };
 
 #endif

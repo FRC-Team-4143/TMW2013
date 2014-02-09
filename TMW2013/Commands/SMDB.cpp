@@ -30,12 +30,9 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("RearLeftturns",Robot::driveTrain->rearLeftPos->getturns());
 	SmartDashboard::PutNumber("RearRightturns",Robot::driveTrain->rearRightPos->getturns());
 		
-//	SmartDashboard::PutNumber("StickDirection",Robot::oi->getDriverJoystick()->GetDirectionRadians());
-//	SmartDashboard::PutNumber("StickVelocity", (fabs(Robot::oi->getDriverJoystick()->GetY())+fabs(Robot::oi->getDriverJoystick()->GetX()))/2);
 	SmartDashboard::PutNumber("StickX", (Robot::oi->GetJoystickX()));
 	SmartDashboard::PutNumber("StickY", (Robot::oi->GetJoystickY()));
 	SmartDashboard::PutNumber("StickZ", (Robot::oi->GetJoystickZ()));
-	//SmartDashboard::PutNumber("GyroAngle", Robot::driveTrain->gyroscope->GetAngle());
 	SmartDashboard::PutData("FLpid", Robot::driveTrain->frontLeft);
 	SmartDashboard::PutNumber("FLError", Robot::driveTrain->frontLeft->GetError());
 	SmartDashboard::PutNumber("FLoutput", Robot::driveTrain->frontLeft->Get());
@@ -48,6 +45,10 @@ void SMDB::Execute() {
 	SmartDashboard::PutData("RRpid", Robot::driveTrain->rearRight);
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
 	SmartDashboard::PutNumber("RRoutput", Robot::driveTrain->rearRight->Get());
+	SmartDashboard::PutNumber("FRoutput", Robot::driveTrain->frontRightDrive->Get());
+	SmartDashboard::PutNumber("FLoutput", Robot::driveTrain->frontLeftDrive->Get());
+	SmartDashboard::PutNumber("RRoutput", Robot::driveTrain->rearRightDrive->Get());
+	SmartDashboard::PutNumber("RLoutput", Robot::driveTrain->rearLeftDrive->Get());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SMDB::IsFinished() {
