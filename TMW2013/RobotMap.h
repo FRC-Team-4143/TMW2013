@@ -37,6 +37,8 @@ public:
 	static SpeedController* driveTrainRearLeftDrive;
 	static SpeedController* driveTrainRearRightDrive;
 	static SpeedController* shooter;
+	static SpeedController* rightarm;
+	static SpeedController* leftarm;
 	static PIDController* shooterpid;
 	static AnalogChannel* shooterpot;
 	static Relay* rightwing;

@@ -28,6 +28,8 @@ SpeedController* RobotMap::driveTrainRearLeftDrive = NULL;
 SpeedController* RobotMap::driveTrainRearRightDrive = NULL;
 
 SpeedController* RobotMap::shooter = NULL;
+SpeedController* RobotMap::rightarm = NULL;
+SpeedController* RobotMap::leftarm = NULL;
 PIDController* RobotMap::shooterpid = NULL;
 AnalogChannel* RobotMap::shooterpot = NULL;
 
@@ -102,6 +104,12 @@ void RobotMap::init() {
 	shooterpot = new AnalogChannelVolt(1, 5);
 	shooterpid = new PIDController(P, I, D, F,  shooterpot,
                                           shooter, PERIOD);
+
+	rightarm = new Talon(1, 10);
+	rightarm->Set(0);
+
+	leftarm = new Talon(1, 11);
+	leftarm->Set(0);
 
 	rightwing = new Relay(1);
 	leftwing = new Relay(2);

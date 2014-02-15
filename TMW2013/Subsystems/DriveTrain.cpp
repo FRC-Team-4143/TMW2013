@@ -103,7 +103,7 @@ void DriveTrain::doneunwind(){
 	unwinding = 0;
 }
 
-void DriveTrain::Crab(float twist, float y, float x, float brake) {
+void DriveTrain::Crab(float twist, float y, float x, float brake, float armjoy) {
 
   // stop PID loop if wires wrap.
   if(unwinding ||
@@ -256,7 +256,8 @@ void DriveTrain::Steer(float radian, float speed, float a) {
 	float RRSetPoint = (1.25 + 2.5/pi*thetaRR);
 	
 	SetSteerSetpoint(FLSetPoint, FRSetPoint, RLSetPoint, RRSetPoint);
-	}
+}
+
 void DriveTrain::LeftTurn4Wheels()
 {
 	Z = ((A * X) * tan(pi - thetaRC));				//pi was subtracted out of this earlier

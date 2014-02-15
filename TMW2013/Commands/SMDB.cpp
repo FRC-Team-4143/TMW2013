@@ -21,6 +21,10 @@ void SMDB::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void SMDB::Execute() {
+	SmartDashboard::PutNumber("FRoutputDrive", Robot::driveTrain->frontRightDrive->Get());
+	SmartDashboard::PutNumber("FLoutputDrive", Robot::driveTrain->frontLeftDrive->Get());
+	SmartDashboard::PutNumber("RRoutputDrive", Robot::driveTrain->rearRightDrive->Get());
+	SmartDashboard::PutNumber("RLoutputDrive", Robot::driveTrain->rearLeftDrive->Get());
 	SmartDashboard::PutNumber("FrontLeftVolt",Robot::driveTrain->frontLeftPos->GetVoltage());
 	SmartDashboard::PutNumber("FrontRightVolt",Robot::driveTrain->frontRightPos->GetVoltage());
 	SmartDashboard::PutNumber("RearLeftVolt",Robot::driveTrain->rearLeftPos->GetVoltage());
@@ -45,10 +49,6 @@ void SMDB::Execute() {
 	SmartDashboard::PutData("RRpid", Robot::driveTrain->rearRight);
 	SmartDashboard::PutNumber("RRError", Robot::driveTrain->rearRight->GetError());
 	SmartDashboard::PutNumber("RRoutput", Robot::driveTrain->rearRight->Get());
-	SmartDashboard::PutNumber("FRoutput", Robot::driveTrain->frontRightDrive->Get());
-	SmartDashboard::PutNumber("FLoutput", Robot::driveTrain->frontLeftDrive->Get());
-	SmartDashboard::PutNumber("RRoutput", Robot::driveTrain->rearRightDrive->Get());
-	SmartDashboard::PutNumber("RLoutput", Robot::driveTrain->rearLeftDrive->Get());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SMDB::IsFinished() {

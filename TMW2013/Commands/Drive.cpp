@@ -31,7 +31,7 @@ void Drive::Execute() {
 			Twist=.4;
 		if(Twist<-.4)
 			Twist=-.4;
-		Robot::driveTrain->Crab(Twist, 0, 0, true);
+		Robot::driveTrain->Crab(Twist, 0, 0, 0, true);
 		
 		ontarget = 0;
 }
