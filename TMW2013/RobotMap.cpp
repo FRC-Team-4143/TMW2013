@@ -111,10 +111,10 @@ void RobotMap::init() {
 	leftarm = new Talon(1, 11);
 	leftarm->Set(0);
 
-	rightwing = new Relay(1);
+	rightwing = new Relay(4);
 	leftwing = new Relay(2);
-	rightroller = new Relay(3);
-	leftroller = new Relay(4);
+	leftroller = new Relay(3);
+	rightroller = new Relay(1);
 	reardeploy = new Relay(5);
 
 	m_i2c = DigitalModule::GetInstance(1)->GetI2C(0x04 << 1);

@@ -5,6 +5,7 @@
 Picker::Picker(): 
 Subsystem("Picker")
 {
+	printf("Picker::Picker()\n");
 	rightarm = RobotMap::rightarm;
 	leftarm = RobotMap::leftarm;
 	rightroller = RobotMap::rightroller;
@@ -24,19 +25,17 @@ void Picker::TeleRun(Joystick * joystick) {
         if(fabs(z) < .15)
                 z= 0;
 
-
 	rightarm->Set(x);
 	leftarm->Set(z);
 
-
 	if(joystick->GetRawButton(1))
-		rightroller->Set(Relay::kForward);
+		rightroller->Set(Relay::kReverse);
 	else
 		rightroller->Set(Relay::kOff);
 
 	if(joystick->GetRawButton(2))
-		rightroller->Set(Relay::kForward);
+		leftroller->Set(Relay::kForward);
 	else
-		rightroller->Set(Relay::kOff);
+		leftroller->Set(Relay::kOff);
 
 }
