@@ -15,7 +15,10 @@ public:
 	SpeedController* leftarm;
 	Relay* rightroller;
 	Relay* leftroller;
-
+	AnalogChannel* leftpot;
+	AnalogChannel* rightpot;
+	PIDController* leftpid;
+	PIDController* rightpid;
 
 	Picker();
 	void InitDefaultCommand();

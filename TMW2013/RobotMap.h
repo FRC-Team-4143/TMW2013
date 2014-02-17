@@ -40,7 +40,11 @@ public:
 	static SpeedController* rightarm;
 	static SpeedController* leftarm;
 	static PIDController* shooterpid;
-	static AnalogChannel* shooterpot;
+	static AnalogChannelVolt* shooterpot;
+	static AnalogChannelVolt* leftpot;
+	static AnalogChannelVolt* rightpot;
+	static PIDController* rightpid;
+	static PIDController* leftpid;
 	static Relay* rightwing;
 	static Relay* leftwing;
 	static Relay* rightroller;

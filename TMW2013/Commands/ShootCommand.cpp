@@ -9,6 +9,8 @@
 // it from being updated in th future.
 
 #define MINSHOOT 20
+#define SHOOTEND 1.3
+#define SHOOTZONE .5
 
 #include "ShootCommand.h"
 ShootCommand::ShootCommand() {
@@ -31,8 +33,7 @@ void ShootCommand::Execute() {
 bool ShootCommand::IsFinished() {
 	if(loops <= MINSHOOT)
 		return false;
-
-	if(RobotMap::shooterpot->GetVoltage() > 3.6 && RobotMap::shooterpot->GetVoltage() < 4.0)
+	if(RobotMap::shooterpot->GetVoltage() > SHOOTEND  && RobotMap::shooterpot->GetVoltage() < (SHOOTEND+SHOOTZONE) )
 		return true;
 	else
 		return false;
