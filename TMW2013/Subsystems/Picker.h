@@ -11,14 +11,18 @@
 class Picker: public Subsystem {
 private:
 public:
-	SpeedController* rightarm;
-	SpeedController* leftarm;
+	//SpeedController* rightarm;
+	//SpeedController* leftarm;
 	Relay* rightroller;
 	Relay* leftroller;
-	AnalogChannel* leftpot;
-	AnalogChannel* rightpot;
-	PIDController* leftpid;
-	PIDController* rightpid;
+	//AnalogChannel* leftpot;
+	//AnalogChannel* rightpot;
+	//PIDController* leftpid;
+	//PIDController* rightpid;
+	Solenoid* rightwingin;
+	Solenoid* rightwingout;
+	Solenoid* leftwingin;
+	Solenoid* leftwingout;
 
 	Picker();
 	void InitDefaultCommand();

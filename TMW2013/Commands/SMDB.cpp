@@ -51,14 +51,15 @@ void SMDB::Execute() {
 	SmartDashboard::PutNumber("RRoutput", Robot::driveTrain->rearRight->Get());
 
 	SmartDashboard::PutNumber("shooterpot", RobotMap::shooterpot->GetVoltage());
-	SmartDashboard::PutNumber("leftpot", RobotMap::leftpot->GetVoltage());
-	SmartDashboard::PutNumber("rightpot", RobotMap::rightpot->GetVoltage());
-	SmartDashboard::PutData("leftpid", RobotMap::leftpid);
-	SmartDashboard::PutNumber("leftpiderror", RobotMap::leftpid->GetError());
-	SmartDashboard::PutNumber("leftpidoutput", RobotMap::leftpid->Get());
-	SmartDashboard::PutData("rightpid", RobotMap::rightpid);
-	SmartDashboard::PutNumber("rightpiderror", RobotMap::rightpid->GetError());
-	SmartDashboard::PutNumber("rightpidoutput", RobotMap::rightpid->Get());
+
+//	SmartDashboard::PutNumber("leftpot", RobotMap::leftpot->GetVoltage());
+//	SmartDashboard::PutNumber("rightpot", RobotMap::rightpot->GetVoltage());
+//	SmartDashboard::PutData("leftpid", RobotMap::leftpid);
+//	SmartDashboard::PutNumber("leftpiderror", RobotMap::leftpid->GetError());
+//	SmartDashboard::PutNumber("leftpidoutput", RobotMap::leftpid->Get());
+//	SmartDashboard::PutData("rightpid", RobotMap::rightpid);
+//	SmartDashboard::PutNumber("rightpiderror", RobotMap::rightpid->GetError());
+//	SmartDashboard::PutNumber("rightpidoutput", RobotMap::rightpid->Get());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool SMDB::IsFinished() {

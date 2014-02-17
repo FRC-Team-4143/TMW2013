@@ -21,6 +21,7 @@ ShootCommand::ShootCommand() {
 void ShootCommand::Initialize() {
   loops = 0;
   printf("ShootCommand called \r\n");
+  RobotMap::compressor->Stop();
 }
 // Called repeatedly when this Command is scheduled to run
 void ShootCommand::Execute() {
@@ -41,9 +42,11 @@ bool ShootCommand::IsFinished() {
 // Called once after isFinished returns true
 void ShootCommand::End() {
 	RobotMap::shooter->Set(0);
+	RobotMap::compressor->Start();
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ShootCommand::Interrupted() {
 	RobotMap::shooter->Set(0);
+  	RobotMap::compressor->Start();
 }
