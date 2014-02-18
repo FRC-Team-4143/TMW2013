@@ -9,6 +9,7 @@
 // it from being updated in th future.
 
 #define MINSHOOT 20
+#define SHOOTZONE .5
 
 #include "ShootSlowCommand.h"
 ShootSlowCommand::ShootSlowCommand() {
@@ -32,7 +33,8 @@ bool ShootSlowCommand::IsFinished() {
 	if(loops <= MINSHOOT)
 		return false;
 
-	if(RobotMap::shooterpot->GetVoltage() > 3.6 && RobotMap::shooterpot->GetVoltage() < 4.0)
+	if(RobotMap::shooterpot->GetVoltage() > RobotMap::CamStop && 
+		RobotMap::shooterpot->GetVoltage() < (RobotMap::CamStop+SHOOTZONE))
 		return true;
 	else
 		return false;

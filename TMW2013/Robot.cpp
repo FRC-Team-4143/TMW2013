@@ -60,8 +60,9 @@ void Robot::RobotInit() {
 	Robot::driveTrain->rearLeft->Enable();
 	Robot::driveTrain->rearRight->Enable();
 
-//	if(!Prefs->ContainsKey("SteerScaling"))
-//		Prefs->PutFloat("SteerScaling",1.25);
+	if(!Prefs->ContainsKey("CamStop"))
+		Prefs->PutFloat("CamStop",1.25);
+	//RobotMap::CamStop = Prefs->GetFloat("CamStop");
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddObject("1. None", new NoneAuto());

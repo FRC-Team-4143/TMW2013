@@ -29,6 +29,9 @@ Subsystem("Picker")
 	rightwingout = RobotMap::rightwingout;
 	leftwingin = RobotMap::leftwingin;
 	leftwingout = RobotMap::leftwingout;
+	
+	reardeploy = RobotMap::reardeploy;
+	reardeployin = RobotMap::reardeployin;
 }
     
 void Picker::InitDefaultCommand() {
@@ -105,6 +108,16 @@ void Picker::TeleRun(Joystick * joystick) {
 	if(joystick->GetRawButton(6)) {
 		rightroller->Set(Relay::kReverse);
 	}
+
+	if(joystick->GetRawButton(9) || joystick->GetRawButton(8) || joystick->GetRawButton(7)) {
+		reardeploy->Set(true);
+		reardeployin->Set(false);
+	}
+	else {
+		reardeploy->Set(false);
+		reardeployin->Set(true);
+	}
+
 
 	if(!joystick->GetRawButton(4) && !joystick->GetRawButton(5)) {
 		leftroller->Set(Relay::kOff);

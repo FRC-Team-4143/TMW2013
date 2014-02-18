@@ -23,6 +23,8 @@ public:
 	Solenoid* rightwingout;
 	Solenoid* leftwingin;
 	Solenoid* leftwingout;
+	Solenoid* reardeploy;
+	Solenoid* reardeployin;
 
 	Picker();
 	void InitDefaultCommand();

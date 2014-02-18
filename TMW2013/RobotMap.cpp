@@ -43,12 +43,13 @@ Relay* RobotMap::rightroller = NULL;
 //PIDController* RobotMap::leftpid = NULL;
 //PIDController* RobotMap::rightpid = NULL;
 
-//Relay* RobotMap::reardeploy = NULL;
 
 Solenoid* RobotMap::rightwingin = NULL;
 Solenoid* RobotMap::rightwingout = NULL;
 Solenoid* RobotMap::leftwingin = NULL;
 Solenoid* RobotMap::leftwingout = NULL;
+Solenoid* RobotMap::reardeployin = NULL;
+Solenoid* RobotMap::reardeploy = NULL;
 
 
 Compressor* RobotMap::compressor = NULL;
@@ -77,6 +78,8 @@ void RobotMap::init() {
 	rightwingout = new Solenoid(2);
 	leftwingin = new Solenoid(3);
 	leftwingout = new Solenoid(4);
+	reardeploy = new Solenoid(5);
+	reardeployin = new Solenoid(6);
 
 	driveTrainFrontRightDrive = new Talon(1, 4);
 	driveTrainFrontRightPos = new AnalogChannelVolt(1, 1);

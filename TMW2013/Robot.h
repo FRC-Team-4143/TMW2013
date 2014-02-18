@@ -42,7 +42,6 @@ public:
 	virtual void TeleopPeriodic();
 	virtual void TestPeriodic();
 	
-	
 private:
 	RAWCConstants* File;
 	Preferences* Prefs;
