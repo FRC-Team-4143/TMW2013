@@ -8,7 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 
-#define MINSHOOT 20
+#define MINSHOOT 10
 #define SHOOTZONE .5
 
 #include "ShootSlowCommand.h"
@@ -20,6 +20,8 @@ ShootSlowCommand::ShootSlowCommand() {
 void ShootSlowCommand::Initialize() {
   loops = 0;
   printf("ShootSlowCommand called \r\n");
+  Prefs = Preferences::GetInstance();
+  CamStop = Prefs->GetFloat("CamStop", 1.5);
 }
 // Called repeatedly when this Command is scheduled to run
 void ShootSlowCommand::Execute() {
@@ -33,8 +35,8 @@ bool ShootSlowCommand::IsFinished() {
 	if(loops <= MINSHOOT)
 		return false;
 
-	if(RobotMap::shooterpot->GetVoltage() > RobotMap::CamStop && 
-		RobotMap::shooterpot->GetVoltage() < (RobotMap::CamStop+SHOOTZONE))
+	if(RobotMap::shooterpot->GetVoltage() > CamStop && 
+		RobotMap::shooterpot->GetVoltage() < (CamStop+SHOOTZONE))
 		return true;
 	else
 		return false;

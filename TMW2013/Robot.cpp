@@ -62,7 +62,6 @@ void Robot::RobotInit() {
 
 	if(!Prefs->ContainsKey("CamStop"))
 		Prefs->PutFloat("CamStop",1.25);
-	//RobotMap::CamStop = Prefs->GetFloat("CamStop");
 	
 	autoChooser = new SendableChooser();
 	autoChooser->AddObject("1. None", new NoneAuto());

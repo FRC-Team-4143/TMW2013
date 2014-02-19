@@ -31,7 +31,9 @@ public:
 	virtual void Interrupted();
 
 private:
+        Preferences* Prefs;
 	int loops = 0;
+	float CamStop;
 };
 
 #endif

@@ -13,18 +13,8 @@ Picker::Picker():
 Subsystem("Picker")
 {
 	printf("Picker::Picker()\n");
-	//rightarm = RobotMap::rightarm;
-	//leftarm = RobotMap::leftarm;
 	rightroller = RobotMap::rightroller;
 	leftroller = RobotMap::leftroller;
-	//leftpot = RobotMap::leftpot;
-	//rightpot = RobotMap::rightpot;
-	//leftpid = RobotMap::leftpid;
-	//rightpid = RobotMap::rightpid;
-	//leftpid->SetSetpoint(LEFTVERT);
-	//rightpid->SetSetpoint(RIGHTVERT);
-	//leftpid->Enable();
-	//rightpid->Enable();
 	rightwingin = RobotMap::rightwingin;
 	rightwingout = RobotMap::rightwingout;
 	leftwingin = RobotMap::leftwingin;
@@ -32,6 +22,13 @@ Subsystem("Picker")
 	
 	reardeploy = RobotMap::reardeploy;
 	reardeployin = RobotMap::reardeployin;
+
+	//leftwingin->Set(true);
+	//leftwingout->Set(false);
+	//rightwingin->Set(true);
+	//rightwingout->Set(false);
+	//reardeploy->Set(false);
+	//reardeployin->Set(true);
 }
     
 void Picker::InitDefaultCommand() {
@@ -43,12 +40,10 @@ void Picker::TeleRun(Joystick * joystick) {
         if(fabs(x) < .15)
                 x = 0;
 	if(x > .5) {
-		//leftpid->SetSetpoint(LEFTIN);
 		leftwingin->Set(true);
 		leftwingout->Set(false);
 	}
 	else if(x < -.5) {
-		//leftpid->SetSetpoint(LEFTOUT);
 		leftwingin->Set(false);
 		leftwingout->Set(true);
 	}
@@ -58,20 +53,15 @@ void Picker::TeleRun(Joystick * joystick) {
                 z= 0;
 	
 	if(z > .5) {
-		//rightpid->SetSetpoint(LEFTIN);
 		rightwingin->Set(true);
 		rightwingout->Set(false);
 	}
 	else if(z < -.5) {
-		//leftpid->SetSetpoint(LEFTOUT);
 		rightwingin->Set(false);
 		rightwingout->Set(true);
 	}
 
-
 	if(joystick->GetRawButton(1)) {
-		//leftpid->SetSetpoint(LEFTVERT);
-		//rightpid->SetSetpoint(RIGHTVERT);
 		leftwingin->Set(false);
 		leftwingout->Set(true);
 		rightwingin->Set(false);
@@ -117,7 +107,6 @@ void Picker::TeleRun(Joystick * joystick) {
 		reardeploy->Set(false);
 		reardeployin->Set(true);
 	}
-
 
 	if(!joystick->GetRawButton(4) && !joystick->GetRawButton(5)) {
 		leftroller->Set(Relay::kOff);

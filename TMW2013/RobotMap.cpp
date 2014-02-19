@@ -74,10 +74,10 @@ void RobotMap::init() {
 	//LiveWindow* lw = LiveWindow::GetInstance();
 
 	compressor = new Compressor(1,2);
-	rightwingin = new Solenoid(1);
-	rightwingout = new Solenoid(2);
-	leftwingin = new Solenoid(3);
-	leftwingout = new Solenoid(4);
+	leftwingin = new Solenoid(1);
+	leftwingout = new Solenoid(2);
+	rightwingin = new Solenoid(3);
+	rightwingout = new Solenoid(4);
 	reardeploy = new Solenoid(5);
 	reardeployin = new Solenoid(6);
 

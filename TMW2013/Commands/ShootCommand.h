@@ -32,6 +32,8 @@ public:
 
 private:
 	int loops = 0;
+	Preferences* Prefs;
+	float CamStop;
 };
 
 #endif
