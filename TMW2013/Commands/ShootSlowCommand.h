@@ -14,7 +14,7 @@
 
 
 #include "Commands/Subsystem.h"
-#include "../RobotMap.h"
+#include "../Robot.h"
 
 /**
  *
@@ -23,7 +23,7 @@
  */
 class ShootSlowCommand: public Command {
 public:
-	ShootSlowCommand();
+	ShootSlowCommand(Joystick *);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -31,6 +31,7 @@ public:
 	virtual void Interrupted();
 
 private:
+	Joystick * Joystick1;
         Preferences* Prefs;
 	int loops = 0;
 	float CamStop;

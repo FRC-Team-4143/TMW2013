@@ -14,7 +14,7 @@
 class AnalogChannelVolt : public AnalogChannel
 {
  public:
-  AnalogChannelVolt(UINT8 ModuleNumber, UINT32 channel);
+  AnalogChannelVolt(UINT8 ModuleNumber, UINT32 channel, bool inv, int ratio);
   virtual ~AnalogChannelVolt();
   double PIDGet();
   float GetAverageVoltage();
@@ -34,6 +34,11 @@ class AnalogChannelVolt : public AnalogChannel
   Counter *m_count;
   UINT8 m_module;
   UINT32 m_channel;
+  bool Inv;
+  float rev;
+  float halfrev;
+  float scale;
+  int Ratio;
 };
 
 #endif

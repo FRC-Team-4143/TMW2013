@@ -23,7 +23,7 @@ void CrabDrive::Initialize() {
 void CrabDrive::Execute() {
 //	Robot::driveTrain->Crab(Robot::oi->GetSWUnit()/2, -Robot::oi->GetJoystickY(), Robot::oi->GetJoystickX(), true);
 	Robot::driveTrain->Crab(Robot::oi->GetJoystickZ(), -Robot::oi->GetJoystickY(),
-                          Robot::oi->GetJoystickX(), Robot::oi->GetJoystickA(), Robot::oi->GetJoystickB());
+                          Robot::oi->GetJoystickX());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool CrabDrive::IsFinished() {

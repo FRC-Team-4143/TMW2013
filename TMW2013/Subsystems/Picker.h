@@ -3,6 +3,7 @@
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "math.h"
+#include "../AnalogChannelVolt.h"
 /**
  *
  *
@@ -11,23 +12,36 @@
 class Picker: public Subsystem {
 private:
 public:
-	//SpeedController* rightarm;
-	//SpeedController* leftarm;
 	Relay* rightroller;
 	Relay* leftroller;
-	//AnalogChannel* leftpot;
-	//AnalogChannel* rightpot;
-	//PIDController* leftpid;
-	//PIDController* rightpid;
 	Solenoid* rightwingin;
 	Solenoid* rightwingout;
 	Solenoid* leftwingin;
 	Solenoid* leftwingout;
 	Solenoid* reardeploy;
 	Solenoid* reardeployin;
+	SpeedController* shooter;
+	Compressor* compressor;
+	AnalogChannelVolt* shooterpot;
 
 	Picker();
 	void InitDefaultCommand();
-	void TeleRun(Joystick *);
+	void TeleRun(Joystick *, Joystick *);
+	void StartShooter(float);
+	void StopShooter();
+	float GetShooterPot();
+	void DeployRear();
+	void RightWingIn();
+	void RightWingStay();
+	void RightWingOut();
+	void LeftWingIn();
+	void LeftWingStay();
+	void LeftWingOut();
+	void LeftRollerIntake();
+	void LeftRollerCatch();
+	void LeftRollerOff();
+	void RightRollerIntake();
+	void RightRollerCatch();
+	void RightRollerOff();
 };
 #endif

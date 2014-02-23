@@ -1,17 +1,16 @@
 #include "AnalogChannelVolt.h"
 #include <math.h>
 
-static const float rev = 5.0;
-//static const int   ratio = 2; // ratio of pot to finished gear, must be int
-static const int   ratio = 1; // ratio of pot to finished gear, must be int
-static const float halfrev = rev/ratio;
-static const float scale = rev/(4.8-.2);
-
-#define INV
-
-AnalogChannelVolt::AnalogChannelVolt(UINT8 modulenumber, UINT32 channel)
+AnalogChannelVolt::AnalogChannelVolt(UINT8 modulenumber, UINT32 channel, bool inv, int ratio)
   : AnalogChannel(modulenumber, channel)
 {
+    Inv = inv;
+    Ratio = ratio;
+
+    rev = 5.0;
+    halfrev = rev/Ratio;
+    scale = rev/(4.8-.2);
+
     m_module = modulenumber;
     m_channel = channel;
     this->GetModule()->SetSampleRate(1000);
@@ -52,10 +51,9 @@ float AnalogChannelVolt::GetVoltage()
   temp = (((temp - halfrev) * scale) + halfrev);  // scale
   if(temp < 0) temp = 0; // min
   if(temp > rev) temp = rev; // max
-  temp = (temp / ratio) + ((m_count->Get() % ratio) * halfrev); // half scale
-#ifdef INV
-  temp = rev - temp; // inverse
-#endif
+  temp = (temp / Ratio) + ((m_count->Get() % Ratio) * halfrev); // half scale
+  if(Inv)
+     temp = rev - temp; // inverse
   return temp;
 }
 

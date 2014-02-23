@@ -2,13 +2,6 @@
 #include "../RobotMap.h"
 #include "../Commands/TelePickup.h"
 
-#define LEFTIN .4
-#define LEFTVERT .7
-#define LEFTOUT 1.05
-#define RIGHTIN .4
-#define RIGHTVERT .7
-#define RIGHTOUT 1.05
-
 Picker::Picker(): 
 Subsystem("Picker")
 {
@@ -23,96 +16,156 @@ Subsystem("Picker")
 	reardeploy = RobotMap::reardeploy;
 	reardeployin = RobotMap::reardeployin;
 
-	//leftwingin->Set(true);
-	//leftwingout->Set(false);
-	//rightwingin->Set(true);
-	//rightwingout->Set(false);
-	//reardeploy->Set(false);
-	//reardeployin->Set(true);
+	shooter = RobotMap::shooter;
+	shooterpot = RobotMap::shooterpot;
+
+	compressor = RobotMap::compressor;
+
+	leftwingin->Set(true);
+	leftwingout->Set(false);
+	rightwingin->Set(true);
+	rightwingout->Set(false);
+	reardeploy->Set(false);
+	reardeployin->Set(true);
 }
     
 void Picker::InitDefaultCommand() {
 	SetDefaultCommand(new TelePickup());
 }
 
-void Picker::TeleRun(Joystick * joystick) {
-        float x = joystick->GetRawAxis(1);
+void Picker::StartShooter(float speed) {
+	if(speed == 0.0) {
+		return StopShooter();
+	}
+		
+	compressor->Stop();
+	shooter->Set(speed);
+}
+
+void Picker::StopShooter() {
+	shooter->Set(0);
+	compressor->Start();
+}
+
+float Picker::GetShooterPot() {
+	return shooterpot->GetVoltage();
+}
+
+void Picker::DeployRear() {
+	reardeploy->Set(true);
+	reardeployin->Set(false);
+}
+
+void Picker::RightWingOut() {
+	rightwingin->Set(false);
+	rightwingout->Set(true);
+}
+
+void Picker::RightWingIn() {
+	rightwingin->Set(true);
+	rightwingout->Set(false);
+}
+
+void Picker::LeftWingOut() {
+	leftwingin->Set(false);
+	leftwingout->Set(true);
+}
+
+void Picker::LeftWingIn() {
+	leftwingin->Set(true);
+	leftwingout->Set(false);
+}
+
+void Picker::LeftWingStay() {
+	leftwingin->Set(false);
+	leftwingout->Set(false);
+}
+
+void Picker::RightWingStay() {
+	rightwingin->Set(false);
+	rightwingout->Set(false);
+}
+
+void Picker::RightRollerIntake() {
+	rightroller->Set(Relay::kReverse);
+}
+
+void Picker::RightRollerCatch() {
+	rightroller->Set(Relay::kForward);
+}
+
+void Picker::RightRollerOff() {
+	rightroller->Set(Relay::kOff);
+}
+
+void Picker::LeftRollerIntake() {
+	leftroller->Set(Relay::kForward);
+}
+
+void Picker::LeftRollerCatch() {
+	leftroller->Set(Relay::kReverse);
+}
+
+void Picker::LeftRollerOff() {
+	leftroller->Set(Relay::kOff);
+}
+
+
+void Picker::TeleRun(Joystick * drive_joystick, Joystick * op_joystick) {
+        float x = op_joystick->GetRawAxis(1);
+        float z = op_joystick->GetRawAxis(4);
+
         if(fabs(x) < .15)
                 x = 0;
-	if(x > .5) {
-		leftwingin->Set(true);
-		leftwingout->Set(false);
-	}
-	else if(x < -.5) {
-		leftwingin->Set(false);
-		leftwingout->Set(true);
-	}
 
-        float z = joystick->GetRawAxis(4);
+	if(x > .5 || op_joystick->GetRawButton(3)) {
+		LeftWingIn();
+	}
+	else if(x < -.5 || op_joystick->GetRawButton(1)) {
+		LeftWingOut();
+	}
+	else
+		LeftWingStay();
+
         if(fabs(z) < .15)
                 z= 0;
 	
-	if(z > .5) {
-		rightwingin->Set(true);
-		rightwingout->Set(false);
+	if(z > .5 || op_joystick->GetRawButton(3)) {
+		RightWingIn();
 	}
-	else if(z < -.5) {
-		rightwingin->Set(false);
-		rightwingout->Set(true);
+	else if(z < -.5 || op_joystick->GetRawButton(2)) {
+		RightWingOut();
 	}
+	else
+		RightWingStay();
 
-	if(joystick->GetRawButton(1)) {
-		leftwingin->Set(false);
-		leftwingout->Set(true);
-		rightwingin->Set(false);
-		rightwingout->Set(true);
-	}
 
-	if(joystick->GetRawButton(2)) {
-		//leftpid->SetSetpoint(LEFTOUT);
-		//rightpid->SetSetpoint(RIGHTOUT);
-		leftwingin->Set(false);
-		leftwingout->Set(true);
-		rightwingin->Set(false);
-		rightwingout->Set(true);
+	if(op_joystick->GetRawButton(5)) {
+		LeftRollerIntake();
 	}
+	else if(op_joystick->GetRawButton(4)) {
+		LeftRollerCatch();
+	}
+	else
+		LeftRollerOff();
 
-	if(joystick->GetRawButton(3)) {
-		//leftpid->SetSetpoint(LEFTIN);
-		//rightpid->SetSetpoint(RIGHTIN);
-		leftwingin->Set(true);
-		leftwingout->Set(false);
-		rightwingin->Set(true);
-		rightwingout->Set(false);
-	}
 
-	if(joystick->GetRawButton(4)) {
-		leftroller->Set(Relay::kReverse);
-		rightroller->Set(Relay::kForward);
-	}
 
-	if(joystick->GetRawButton(5)) {
-		leftroller->Set(Relay::kForward);
+	if(op_joystick->GetRawButton(6)) {
+		RightRollerIntake();
+	} 
+	else if(op_joystick->GetRawButton(4)) {
+		RightRollerCatch();
 	}
+	else
+		RightRollerOff();
 
-	if(joystick->GetRawButton(6)) {
-		rightroller->Set(Relay::kReverse);
+	if(op_joystick->GetRawButton(8)) {
+		DeployRear();
 	}
+//	else {
+//		reardeploy->Set(false);
+//		reardeployin->Set(true);
+//	}
 
-	if(joystick->GetRawButton(9) || joystick->GetRawButton(8) || joystick->GetRawButton(7)) {
-		reardeploy->Set(true);
-		reardeployin->Set(false);
-	}
-	else {
-		reardeploy->Set(false);
-		reardeployin->Set(true);
-	}
-
-	if(!joystick->GetRawButton(4) && !joystick->GetRawButton(5)) {
-		leftroller->Set(Relay::kOff);
-	}
-
-	if(!joystick->GetRawButton(4) && !joystick->GetRawButton(6)) {
-		rightroller->Set(Relay::kOff);
-	}
 }

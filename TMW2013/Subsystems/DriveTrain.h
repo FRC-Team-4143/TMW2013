@@ -164,7 +164,7 @@ public:
 	void outputLED();
 	void InitDefaultCommand();
 	void Steer(float radian, float speed, float a);
-	void Crab(float twist, float y, float x, float brake, float armjoy);
+	void Crab(float twist, float y, float x);
 	bool ResetTurns();
 	void Lock();
 	void SideLock();

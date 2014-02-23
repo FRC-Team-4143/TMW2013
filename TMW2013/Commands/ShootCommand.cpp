@@ -8,48 +8,55 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 
-#define MINSHOOT 10
+#define MINSHOOT 15
 #define SHOOTZONE .5
 
 #include "ShootCommand.h"
-ShootCommand::ShootCommand() {
-	// Use requires() here to declare subsystem dependencies
-	// eg. requires(chassis);
+ShootCommand::ShootCommand(Joystick * joystick) {
+	Requires(Robot::picker);
+	SetTimeout(1.5);
+	Joystick1 = joystick;
 }
+
 // Called just before this Command runs the first time
 void ShootCommand::Initialize() {
-  loops = 0;
+  loops = 1;
   printf("ShootCommand called \r\n");
   Prefs = Preferences::GetInstance();
   CamStop = Prefs->GetFloat("CamStop", 1.5);
+  if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
+        loops = 0; // loop will be 1 first time through loop
+  else
+ 	 Robot::picker->StartShooter(1.0); //full power
 }
 
 // Called repeatedly when this Command is scheduled to run
 void ShootCommand::Execute() {
-  	RobotMap::compressor->Stop();
-	if(loops <= MINSHOOT)
-		RobotMap::shooter->Set(1);
 	loops++;
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool ShootCommand::IsFinished() {
+	if(loops == 1) return true; // no safety
+	if(IsTimedOut()) return true;
+
 	if(loops <= MINSHOOT)
 		return false;
-	if(RobotMap::shooterpot->GetVoltage() > CamStop && 
-		RobotMap::shooterpot->GetVoltage() < (CamStop + SHOOTZONE) )
+
+	float x = Robot::picker->GetShooterPot();
+
+	if(x > CamStop && 
+		x < (CamStop + SHOOTZONE) )
 		return true;
 	else
 		return false;
 }
 // Called once after isFinished returns true
 void ShootCommand::End() {
-	RobotMap::shooter->Set(0);
-	RobotMap::compressor->Start();
+	Robot::picker->StopShooter();
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ShootCommand::Interrupted() {
-	RobotMap::shooter->Set(0);
-  	RobotMap::compressor->Start();
+	Robot::picker->StopShooter();
 }

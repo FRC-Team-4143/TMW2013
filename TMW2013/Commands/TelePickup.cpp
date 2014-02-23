@@ -7,7 +7,7 @@ void TelePickup::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void TelePickup::Execute() {
-	Robot::picker->TeleRun(Robot::oi->getPickerJoystick());
+	Robot::picker->TeleRun(Robot::oi->getDriverJoystick(), Robot::oi->getPickerJoystick());
 }
 // Make this return true when this Command no longer needs to run execute()
 bool TelePickup::IsFinished() {

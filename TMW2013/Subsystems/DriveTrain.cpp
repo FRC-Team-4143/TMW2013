@@ -102,7 +102,7 @@ void DriveTrain::doneunwind(){
 	unwinding = 0;
 }
 
-void DriveTrain::Crab(float twist, float y, float x, float brake, float armjoy) {
+void DriveTrain::Crab(float twist, float y, float x) {
 
   // stop PID loop if wires wrap.
   if(unwinding ||
@@ -187,7 +187,7 @@ void DriveTrain::Crab(float twist, float y, float x, float brake, float armjoy) 
 		RLRatio = RL;
 		RRRatio = RR;
     }
-    if(brake < -.5 || (y > 0.049 && y < .051))  
+    if(y > 0.049 && y < .051)  
 	{
 		FLRatio = 0.0;
 		FRRatio = 0.0;

@@ -24,7 +24,7 @@
 class Drive: public Command {
 public:
 	Drive();
-	Drive(float speed, float driveangle, float twistangle, int wheelCount);
+	Drive(float speed, float driveangle, float twistangle, float timeout);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
