@@ -26,8 +26,10 @@ void ShootCommand::Initialize() {
   CamStop = Prefs->GetFloat("CamStop", 1.5);
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
         loops = 0; // loop will be 1 first time through loop
-  else
+  else {
  	 Robot::picker->StartShooter(1.0); //full power
+	printf("turning on shooter motor\n");
+  }
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -37,7 +39,7 @@ void ShootCommand::Execute() {
 
 // Make this return true when this Command no longer needs to run execute()
 bool ShootCommand::IsFinished() {
-	if(loops == 1) return true; // no safety
+	if(loops == 0) return true; // no safety
 	if(IsTimedOut()) return true;
 
 	if(loops <= MINSHOOT)
@@ -54,9 +56,11 @@ bool ShootCommand::IsFinished() {
 // Called once after isFinished returns true
 void ShootCommand::End() {
 	Robot::picker->StopShooter();
+	printf("ShootCommand End\n");
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ShootCommand::Interrupted() {
 	Robot::picker->StopShooter();
+	printf("ShootCommand interrupted\n");
 }

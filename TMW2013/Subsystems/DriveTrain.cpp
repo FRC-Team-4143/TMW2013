@@ -11,8 +11,6 @@
 #include "../RobotMap.h"
 #include "../Commands/CrabDrive.h"
 
-#define MAXTURNS 100
-
 DriveTrain::DriveTrain(): 
 Subsystem("DriveTrain")
 {
