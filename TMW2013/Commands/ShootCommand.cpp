@@ -39,7 +39,7 @@ void ShootCommand::Execute() {
 
 // Make this return true when this Command no longer needs to run execute()
 bool ShootCommand::IsFinished() {
-	if(loops == 0) return true; // no safety
+	if(loops == 1) return true; // no safety
 	if(IsTimedOut()) return true;
 
 	if(loops <= MINSHOOT)

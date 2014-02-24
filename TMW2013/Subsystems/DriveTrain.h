@@ -26,7 +26,7 @@ private:
 	
 	static constexpr double pi=3.14159;
 		
-	bool unwinding = 0;
+	bool unwinding;
 	
 	//Steering Functions
 	void LeftTurn4Wheels();	//Calculates a left hand turn

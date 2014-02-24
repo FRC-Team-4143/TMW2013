@@ -37,6 +37,7 @@ Subsystem("DriveTrain")
 	RLInv = 1;
 	DriveBackFlag = false;
         robotangle = 0;
+	unwinding = false;
 }
     
 void DriveTrain::InitDefaultCommand() {

@@ -32,7 +32,7 @@ public:
 
 private:
 	Joystick * Joystick1;
-	int loops = 0;
+	int loops;
 	Preferences* Prefs;
 	float CamStop;
 };
