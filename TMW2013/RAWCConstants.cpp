@@ -107,7 +107,7 @@ void RAWCConstants::saveDataToFile(string fileName)
 	//if it fails, return
 	// print content:
 	for ( it = data.begin() ; it != data.end(); it++ ){
-		printf("Writing: %s - %f\r\n", (*it).first.c_str(),(*it).second);
+		printf("Writing: %s - %f\n", (*it).first.c_str(),(*it).second);
 		outfile << (*it).first << ", " << (*it).second << "\r\n";
 	}
 	
@@ -128,10 +128,10 @@ void RAWCConstants::restoreDataFromFile(string fileName)
 	string valueString;
 	
 	ifstream infile ( RAWC_CONSTANTS_DEFAULT_FILE );
-	printf("In restore\r\n ");
+	printf("In restore\n ");
 	if (infile.is_open())
 	{	
-		printf("File is open\r\n");
+		printf("File is open\n");
 		while (! infile.eof() )
 		{
 			//Get the key name
@@ -146,16 +146,16 @@ void RAWCConstants::restoreDataFromFile(string fileName)
 			// Convert value string to a number
 			RAWCConstant value;
 			if(from_string<RAWCConstant>(value, valueString, std::dec)){
-				printf("Got a value %f for key %s\r\n", value, key.c_str());
+				printf("Got a value %f for key %s\n", value, key.c_str());
 				data[key] = value;
 			}
 			else
 			{
-				printf( "from_string failed\r\n");
+				printf( "from_string failed\n");
 			}
 	    }
 		infile.close();
 	}
 
-	else printf("Unable to open file"); 	
+	else printf("Unable to open file\n"); 	
 }

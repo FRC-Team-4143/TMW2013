@@ -14,7 +14,7 @@ unwind::unwind() {
 }
 // Called just before this Command runs the first time
 void unwind::Initialize() {
-  printf("unwind called \r\n");
+  printf("unwind called\n");
 }
 // Called repeatedly when this Command is scheduled to run
 void unwind::Execute() {

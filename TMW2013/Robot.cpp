@@ -44,14 +44,14 @@ void Robot::RobotInit() {
 	File = RAWCConstants::getInstance();
 	Robot::driveTrain->SetWheelbase(21.5/2, 21.5/2, 21.5/2);
 
-  	printf("getting offsets\r\n");
+  	printf("getting offsets\n");
 	
 	FLOffset = File->getValueForKey("FLOff");
 	FROffset = File->getValueForKey("FROff");
 	RLOffset = File->getValueForKey("RLOff");
 	RROffset = File->getValueForKey("RROff");
 
-  	printf("done getting offsets\r\n");
+  	printf("done getting offsets\n");
 	
 	Robot::driveTrain->SetOffsets(FLOffset, FROffset, RLOffset, RROffset);
 	
@@ -80,7 +80,7 @@ void Robot::RobotInit() {
 //	if( taskSpawn("udpServer", 100, 0, 10000,
 //		(FUNCPTR) udpServer, 0,0,0,0,0,0,0,0,0,0) == ERROR)
 //	{
-//		printf("taskSpawn udpserver failed\r\n");
+//		printf("taskSpawn udpserver failed\n");
 //
 //	}
 

@@ -16,14 +16,16 @@ ShootCommand::ShootCommand(Joystick * joystick) {
 	Requires(Robot::picker);
 	SetTimeout(1.5);
 	Joystick1 = joystick;
+	DS = DriverStation::GetInstance();
+  	Prefs = Preferences::GetInstance();
 }
 
 // Called just before this Command runs the first time
 void ShootCommand::Initialize() {
   loops = 1;
-  printf("ShootCommand called \r\n");
-  Prefs = Preferences::GetInstance();
-  CamStop = Prefs->GetFloat("CamStop", 1.5);
+  printf("ShootCommand called\n");
+  //CamStop = Prefs->GetFloat("CamStop", 1.5);
+  CamStop = DS->GetAnalogIn(1);
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
         loops = 0; // loop will be 1 first time through loop
   else {

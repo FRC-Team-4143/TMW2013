@@ -16,13 +16,16 @@ ShootSlowCommand::ShootSlowCommand(Joystick * joystick) {
 	Requires(Robot::picker);
 	SetTimeout(1.5);
 	Joystick1 = joystick;
+  	Prefs = Preferences::GetInstance();
+	DS = DriverStation::GetInstance();
 }
 // Called just before this Command runs the first time
 void ShootSlowCommand::Initialize() {
   loops = 1;
-  printf("ShootSlowCommand called \r\n");
-  Prefs = Preferences::GetInstance();
-  CamStop = Prefs->GetFloat("CamStop", 1.5);
+  printf("ShootSlowCommand called \n");
+  //CamStop = Prefs->GetFloat("CamStop", 1.5);
+  CamStop = DS->GetAnalogIn(1);
+  
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
 	loops = 0; // loop will be 1 first time through loop
   else
@@ -51,11 +54,11 @@ bool ShootSlowCommand::IsFinished() {
 // Called once after isFinished returns true
 void ShootSlowCommand::End() {
 	Robot::picker->StopShooter();
-   	printf("ShootSlowCommand end \r\n");
+   	printf("ShootSlowCommand end\n");
 }
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void ShootSlowCommand::Interrupted() {
 	Robot::picker->StopShooter();
-   	printf("ShootSlowCommand interrupted\r\n");
+   	printf("ShootSlowCommand interrupted\n");
 }

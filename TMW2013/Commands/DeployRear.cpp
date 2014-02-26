@@ -16,7 +16,7 @@ DeployRear::DeployRear(float timeout) {
 }
 // Called just before this Command runs the first time
 void DeployRear::Initialize() {
-  printf("DeployRear called \r\n");
+  printf("DeployRear called\n");
   Robot::picker->DeployRear();
 }
 // Called repeatedly when this Command is scheduled to run

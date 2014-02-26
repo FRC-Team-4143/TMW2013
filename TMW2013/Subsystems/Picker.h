@@ -11,7 +11,6 @@
  */
 class Picker: public Subsystem {
 private:
-public:
 	Relay* rightroller;
 	Relay* leftroller;
 	Solenoid* rightwingin;
@@ -23,7 +22,10 @@ public:
 	SpeedController* shooter;
 	Compressor* compressor;
 	AnalogChannelVolt* shooterpot;
+	bool valvepulse;
+	int count;
 
+public:
 	Picker();
 	void InitDefaultCommand();
 	void TeleRun(Joystick *, Joystick *);

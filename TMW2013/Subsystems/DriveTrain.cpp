@@ -14,6 +14,8 @@
 DriveTrain::DriveTrain(): 
 Subsystem("DriveTrain")
 {
+	printf("DriverTrain::DriveTrain\n");
+
 	frontRightPos = RobotMap::driveTrainFrontRightPos;
 	frontRightSteer = RobotMap::driveTrainFrontRightSteer;
 	frontRight = RobotMap::driveTrainFrontRight;

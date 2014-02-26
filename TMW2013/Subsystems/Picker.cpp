@@ -27,6 +27,9 @@ Subsystem("Picker")
 	rightwingout->Set(false);
 	reardeploy->Set(false);
 	reardeployin->Set(true);
+
+	valvepulse = false;
+	count = 0;
 }
     
 void Picker::InitDefaultCommand() {
@@ -112,28 +115,47 @@ void Picker::LeftRollerOff() {
 
 
 void Picker::TeleRun(Joystick * drive_joystick, Joystick * op_joystick) {
+	count++;
+	if(count > 8) {
+		count = 0;
+		valvepulse = !valvepulse;
+	}
+	
         float x = op_joystick->GetRawAxis(1);
         float z = op_joystick->GetRawAxis(4);
 
         if(fabs(x) < .15)
                 x = 0;
 
-	if(x > .5 || op_joystick->GetRawButton(3)) {
+	if(x > .75 || op_joystick->GetRawButton(3)) {
 		LeftWingIn();
 	}
-	else if(x < -.5 || op_joystick->GetRawButton(1)) {
+	else if(x < -.75 || op_joystick->GetRawButton(1)) {
 		LeftWingOut();
 	}
-	else
+	else if(x > .25 && valvepulse) {
+		LeftWingIn();
+	}
+	else if(x < -.25 && valvepulse) {
+		LeftWingOut();
+	}
+	else {
 		LeftWingStay();
+	}
 
         if(fabs(z) < .15)
                 z= 0;
 	
-	if(z > .5 || op_joystick->GetRawButton(3)) {
+	if(z > .75 || op_joystick->GetRawButton(3)) {
 		RightWingIn();
 	}
-	else if(z < -.5 || op_joystick->GetRawButton(2)) {
+	else if(z < -.75 || op_joystick->GetRawButton(2)) {
+		RightWingOut();
+	}
+	else if(z > .25 && valvepulse) {
+		RightWingIn();
+	}
+	else if(z < -.25 && valvepulse) {
 		RightWingOut();
 	}
 	else

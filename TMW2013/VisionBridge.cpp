@@ -6,7 +6,7 @@
 #include "Robot.h"
 
 /* defines */
-#define PORT         4143   /* server's port number for bind() */ 
+#define PORT         1130   /* server's port number for bind() */ 
  
 /**************************************************************************** 
 * 
@@ -72,7 +72,7 @@ STATUS udpServer (void)
                 if (recvlen > 0) {
 			Robot::visionpacket = buf[0];
                         buf[recvlen] = 0;
-                        printf("received message: \"%s\"\n", buf);
+                        printf("received message: %s\n", buf);
                 }
     }
 }
