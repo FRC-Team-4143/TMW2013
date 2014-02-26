@@ -24,7 +24,7 @@
 class Drive: public Command {
 public:
 	Drive();
-	Drive(float speed, float driveangle, float twistangle, float timeout);
+	Drive(float speed, float driveangle, float twistangle, bool stop, float timeout);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
@@ -38,6 +38,7 @@ private:
 	float Twist;
 	float Timeout;
 	int ontarget;
+	bool Stop;
 };
 
 #endif

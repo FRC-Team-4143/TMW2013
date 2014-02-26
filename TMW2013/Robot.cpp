@@ -95,6 +95,7 @@ void Robot::DisabledPeriodic(){
 }
 void Robot::AutonomousInit() {
 	Robot::driveTrain->SetDriveBackFlag(false);
+	Robot::visionpacket = 0;
 //	autonomousCommand = (Command*) autoChooser->GetSelected();
 	autonomousCommand = new ThreeBallAuto();
 	if (autonomousCommand != NULL)

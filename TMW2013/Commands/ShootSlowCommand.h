@@ -35,6 +35,7 @@ private:
         Preferences* Prefs;
 	int loops;
 	float CamStop;
+	float ShootSpeed;
 	DriverStation * DS;
 };
 

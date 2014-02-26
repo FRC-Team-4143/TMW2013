@@ -3,31 +3,57 @@
 #include "ShootCommand.h"
 #include "ShootSlowCommand.h"
 #include "DeployRear.h"
+#include "PickerState.h"
 
 ThreeBallAuto::ThreeBallAuto() {
 	DriverStation * DS = DriverStation::GetInstance();
 
-	AddSequential(new DeployRear(1.)); // throw out back wait 1 second
+	//float camstop = DS->GetAnalogIn(1);
+	float rearwait = DS->GetAnalogIn(2);
+	float drivespeed = DS->GetAnalogIn(3);
+	float drivetime = DS->GetAnalogIn(4);
+	//float passspeed = DS->GetAnalogIn(5);
+
+	bool topshoot = DS->GetDigitalIn(1);
+	bool rightpickup = DS->GetDigitalIn(2);
+	bool leftpickup = DS->GetDigitalIn(3);
+	bool drivestraight = DS->GetDigitalIn(4);
+	bool drivevision = DS->GetDigitalIn(5);
+	bool settle = DS->GetDigitalIn(6);
+
+	AddSequential(new Drive(0, 0, 0, true, 0)); // drive stop
+	AddSequential(new DeployRear(rearwait)); // throw out back wait var seconds
+	AddSequential(new PickerState(rightpickup, rightpickup, leftpickup, leftpickup, 0));
 	AddSequential(new ShootSlowCommand(NULL)); // bring down arm
-	if( DS->GetDigitalIn(1)) {
-		AddSequential(new Drive(.4, .3, 0, 1.0)); // drive forward
-		AddSequential(new Drive(0, -.4, 0, 1.3)); // drive forward
+	AddSequential(new PickerState(0, 0, 0, 0, 0));
+
+	if(drivevision) {
+		if(Robot::visionpacket == '1')
+			AddSequential(new Drive(drivespeed, -drivespeed, 0, true, drivetime)); // drive left
+		else
+			AddSequential(new Drive(drivespeed, drivespeed, 0,  true, drivetime)); // drive right
+	} else if(drivestraight) {
+		AddSequential(new Drive(drivespeed, 0, 0, true, drivetime)); // drive straight
 	}
-	if( DS->GetDigitalIn(2)) {
-		AddSequential(new Drive(.75, 0, 0, 1.0)); // drive forward
+
+	if(settle)
+		AddSequential(new WaitCommand(1.0)); // wait to let ball settle
+
+	if(topshoot)
+		AddSequential(new ShootCommand(NULL)); // shoot
+
+	if(rightpickup) {
+		AddSequential(new PickerState(0, 1, 0, 0, 1));
+		AddSequential(new PickerState(-1, 1, 0, 0, 1));
+		AddSequential(new PickerState(1, 0, 0, 0, 0));
+		AddSequential(new ShootCommand(NULL)); // shoot
 	}
-	AddSequential(new WaitCommand(1.0)); // wait to let ball settle
-	AddSequential(new ShootCommand(NULL)); // shoot
-//	AddSequential(new Unfold());
-//	AddSequential(new Drive(0, 0, 0, .1));
-//	AddSequential(new Drive(0, .3, 0, .5));
-//	AddSequential(new Drive(0, 0, .3, .5));
-//	AddSequential(new Drive(.3, 0, 0, .5));
-//	AddSequential(new Drive(0, 0, -.3, .5));
-//	AddSequential(new ShootCommand(NULL));
-//	AddSequential(new GetRightBall());
-//	AddSequential(new ShootCommand(NULL));
-//	AddSequential(new GetLeftBall());
-//	AddSequential(new ShootCommand(NULL));
-//	AddSequential(new Wingsout());
+
+	if(leftpickup) {
+		AddSequential(new PickerState(0, 0, 0, 1, 1));
+		AddSequential(new PickerState(0, 0, -1, 1, 1));
+		AddSequential(new PickerState(0, 0, 1, 0, 0));
+		AddSequential(new ShootCommand(NULL)); // shoot
+	}
+	AddSequential(new Drive(0, 0, 0, true, 0)); // drive stop
 }
