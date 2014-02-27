@@ -25,7 +25,8 @@ void ShootSlowCommand::Initialize() {
   printf("ShootSlowCommand called \n");
   //CamStop = Prefs->GetFloat("CamStop", 1.5);
   CamStop = DS->GetAnalogIn(1);
-  ShootSpeed = DS->GetAnalogIn(5);
+  //ShootSpeed = DS->GetAnalogIn(5);
+  ShootSpeed = .5;
   
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
 	loops = 0; // loop will be 1 first time through loop

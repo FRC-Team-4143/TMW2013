@@ -28,7 +28,8 @@ ThreeBallAuto::ThreeBallAuto() {
 	AddSequential(new PickerState(0, 0, 0, 0, 0));
 
 	if(drivevision) {
-		if(Robot::visionpacket == '1')
+		printf("visionpackket %c\n", Robot::visionpacket);
+		if(Robot::visionpacket == '1') //right hot target
 			AddSequential(new Drive(drivespeed, -drivespeed, 0, true, drivetime)); // drive left
 		else
 			AddSequential(new Drive(drivespeed, drivespeed, 0,  true, drivetime)); // drive right

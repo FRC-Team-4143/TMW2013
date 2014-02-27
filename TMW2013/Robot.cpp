@@ -16,7 +16,7 @@ DriveTrain* Robot::driveTrain = 0;
 Picker* Robot::picker = 0;
 
 OI* Robot::oi = 0;
-char Robot::visionpacket = 0;
+char Robot::visionpacket = '8';
 
 STATUS udpServer (void);
 
@@ -95,7 +95,6 @@ void Robot::DisabledPeriodic(){
 }
 void Robot::AutonomousInit() {
 	Robot::driveTrain->SetDriveBackFlag(false);
-	Robot::visionpacket = 0;
 //	autonomousCommand = (Command*) autoChooser->GetSelected();
 	autonomousCommand = new ThreeBallAuto();
 	if (autonomousCommand != NULL)
