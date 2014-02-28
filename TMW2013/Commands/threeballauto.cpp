@@ -31,6 +31,8 @@ ThreeBallAuto::ThreeBallAuto() {
 	AddSequential(new ShootSlowCommand(NULL)); // bring down arm
 	AddSequential(new PickerState(0, 0, 0, 0, 0));
 
+	AddSequential(new WaitCommand(1.5)); // wait to let ball settle
+
 	if(drivevision) {
 		printf("visionpackket %c\n", Robot::visionpacket);
 		if(Robot::visionpacket == '1') //right hot target
@@ -41,7 +43,6 @@ ThreeBallAuto::ThreeBallAuto() {
 		AddSequential(new Drive(drivespeed, 0, 0, true, drivetime)); // drive straight
 	}
 
-	AddSequential(new WaitCommand(1.0)); // wait to let ball settle
 
 	if(settle1)
 		AddSequential(new WaitCommand(.5)); // wait to let ball settle
