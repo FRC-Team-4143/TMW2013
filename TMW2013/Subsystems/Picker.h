@@ -33,6 +33,7 @@ public:
 	void StopShooter();
 	float GetShooterPot();
 	void DeployRear();
+	void RetractRear();
 	void RightWingIn();
 	void RightWingStay();
 	void RightWingOut();

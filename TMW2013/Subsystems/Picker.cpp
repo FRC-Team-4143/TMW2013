@@ -59,6 +59,12 @@ void Picker::DeployRear() {
 	reardeployin->Set(false);
 }
 
+void Picker::RetractRear() {
+	reardeploy->Set(false);
+	reardeployin->Set(true);
+}
+
+
 void Picker::RightWingOut() {
 	rightwingin->Set(false);
 	rightwingout->Set(true);
@@ -146,16 +152,16 @@ void Picker::TeleRun(Joystick * drive_joystick, Joystick * op_joystick) {
         if(fabs(z) < .15)
                 z= 0;
 	
-	if(z > .75 || op_joystick->GetRawButton(3)) {
+	if(z < -.75 || op_joystick->GetRawButton(3)) {
 		RightWingIn();
 	}
-	else if(z < -.75 || op_joystick->GetRawButton(2)) {
+	else if(z > .75 || op_joystick->GetRawButton(2)) {
 		RightWingOut();
 	}
-	else if(z > .25 && valvepulse) {
+	else if(z < -.25 && valvepulse) {
 		RightWingIn();
 	}
-	else if(z < -.25 && valvepulse) {
+	else if(z > .25 && valvepulse) {
 		RightWingOut();
 	}
 	else
@@ -185,9 +191,10 @@ void Picker::TeleRun(Joystick * drive_joystick, Joystick * op_joystick) {
 	if(op_joystick->GetRawButton(8)) {
 		DeployRear();
 	}
-//	else {
-//		reardeploy->Set(false);
-//		reardeployin->Set(true);
-//	}
+	else {
+		RetractRear();
+		reardeploy->Set(false);
+		reardeployin->Set(true);
+	}
 
 }

@@ -10,6 +10,7 @@
 
 #define MINSHOOT 15
 #define SHOOTZONE .5
+#define WINGTIME 10
 
 #include "ShootSlowCommand.h"
 ShootSlowCommand::ShootSlowCommand(Joystick * joystick) {
@@ -24,14 +25,17 @@ void ShootSlowCommand::Initialize() {
   loops = 1;
   printf("ShootSlowCommand called \n");
   //CamStop = Prefs->GetFloat("CamStop", 1.5);
-  CamStop = DS->GetAnalogIn(1);
+  CamStop = DS->GetAnalogIn(1) + .5;
   //ShootSpeed = DS->GetAnalogIn(5);
   ShootSpeed = .5;
   
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
 	loops = 0; // loop will be 1 first time through loop
-  else
+  else {
+        Robot::picker->RightWingOut();
+         Robot::picker->LeftWingOut();
   	Robot::picker->StartShooter(ShootSpeed);
+  }
 }
 // Called repeatedly when this Command is scheduled to run
 void ShootSlowCommand::Execute() {
@@ -40,7 +44,13 @@ void ShootSlowCommand::Execute() {
 // Make this return true when this Command no longer needs to run execute()
 bool ShootSlowCommand::IsFinished() {
 	if(loops == 1) return true; // no safety
+
 	if(IsTimedOut()) return true; // too long --- what broke?
+
+       if(loops >= WINGTIME) {
+                Robot::picker->RightWingStay();
+                Robot::picker->LeftWingStay();
+        }
 
 	if(loops <= MINSHOOT)
 		return false; // give arm a chance to move

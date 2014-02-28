@@ -8,6 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 
+#define WINGTIME 10
 #define MINSHOOT 15
 #define SHOOTZONE .5
 
@@ -29,6 +30,8 @@ void ShootCommand::Initialize() {
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
         loops = 0; // loop will be 1 first time through loop
   else {
+ 	 Robot::picker->RightWingOut(); 
+ 	 Robot::picker->LeftWingOut(); 
  	 Robot::picker->StartShooter(1.0); //full power
 	printf("turning on shooter motor\n");
   }
@@ -43,6 +46,11 @@ void ShootCommand::Execute() {
 bool ShootCommand::IsFinished() {
 	if(loops == 1) return true; // no safety
 	if(IsTimedOut()) return true;
+
+	if(loops >= WINGTIME) {
+ 	 	Robot::picker->RightWingStay(); 
+ 	 	Robot::picker->LeftWingStay(); 
+	}
 
 	if(loops <= MINSHOOT)
 		return false;

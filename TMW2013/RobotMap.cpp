@@ -8,7 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in th future.
 
-#define TESTSWERVE
+//#define TESTSWERVE
 
 #include "RobotMap.h"
 #include "LiveWindow/LiveWindow.h"
