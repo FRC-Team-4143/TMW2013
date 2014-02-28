@@ -45,9 +45,9 @@ ThreeBallAuto::ThreeBallAuto() {
 
 
 	if(settle1)
-		AddSequential(new WaitCommand(.5)); // wait to let ball settle
+		AddSequential(new WaitCommand(1.0)); // wait to let ball settle
 	if(settle2)
-		AddSequential(new WaitCommand(.5)); // wait to let ball settle
+		AddSequential(new WaitCommand(1.0)); // wait to let ball settle
 	if(settle3)
 		AddSequential(new WaitCommand(.5)); // wait to let ball settle
 
