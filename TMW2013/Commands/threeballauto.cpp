@@ -27,7 +27,7 @@ ThreeBallAuto::ThreeBallAuto() {
 	AddSequential(new PickerState(1, 0, 1, 0, .2));
 	AddSequential(new PickerState(0, 0, 0, 0, 0));
 	AddSequential(new DeployRear(rearwait)); // throw out back wait var seconds
-	AddSequential(new PickerState(rightpickup, rightpickup, leftpickup, leftpickup, 0));
+	//AddSequential(new PickerState(rightpickup, rightpickup, leftpickup, leftpickup, 0));
 	AddSequential(new ShootSlowCommand(NULL)); // bring down arm
 	AddSequential(new PickerState(0, 0, 0, 0, 0));
 

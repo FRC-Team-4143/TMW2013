@@ -32,8 +32,8 @@ void ShootSlowCommand::Initialize() {
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
 	loops = 0; // loop will be 1 first time through loop
   else {
-        Robot::picker->RightWingOut();
-         Robot::picker->LeftWingOut();
+     //   Robot::picker->RightWingOut();
+     //    Robot::picker->LeftWingOut();
   	Robot::picker->StartShooter(ShootSpeed);
   }
 }
@@ -47,10 +47,10 @@ bool ShootSlowCommand::IsFinished() {
 
 	if(IsTimedOut()) return true; // too long --- what broke?
 
-       if(loops >= WINGTIME) {
-                Robot::picker->RightWingStay();
-                Robot::picker->LeftWingStay();
-        }
+     //  if(loops >= WINGTIME) {
+      //          Robot::picker->RightWingStay();
+       //         Robot::picker->LeftWingStay();
+       // }
 
 	if(loops <= MINSHOOT)
 		return false; // give arm a chance to move

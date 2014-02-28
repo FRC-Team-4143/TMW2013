@@ -21,9 +21,9 @@ Subsystem("Picker")
 
 	compressor = RobotMap::compressor;
 
-	leftwingin->Set(true);
+	leftwingin->Set(false);
 	leftwingout->Set(false);
-	rightwingin->Set(true);
+	rightwingin->Set(false);
 	rightwingout->Set(false);
 	reardeploy->Set(false);
 	reardeployin->Set(true);
