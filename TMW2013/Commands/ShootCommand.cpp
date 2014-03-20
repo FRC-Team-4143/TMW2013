@@ -19,27 +19,50 @@ ShootCommand::ShootCommand(Joystick * joystick) {
 	Joystick1 = joystick;
 	DS = DriverStation::GetInstance();
   	Prefs = Preferences::GetInstance();
+	if(joystick)
+		automode = false;
+	else
+		automode = true;
 }
 
 // Called just before this Command runs the first time
 void ShootCommand::Initialize() {
+  //CamStop = Prefs->GetFloat("CamStop", 1.5);
+
+  WingDelay = DS->GetDigitalIn(8);
+  CamStop = DS->GetAnalogIn(1);
+
   loops = 1;
   printf("ShootCommand called\n");
-  //CamStop = Prefs->GetFloat("CamStop", 1.5);
-  CamStop = DS->GetAnalogIn(1);
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
         loops = 0; // loop will be 1 first time through loop
   else {
- 	 Robot::picker->RightWingOut(); 
- 	 Robot::picker->LeftWingOut(); 
- 	 Robot::picker->StartShooter(1.0); //full power
-	printf("turning on shooter motor\n");
+	if(automode)
+	{
+ 		Robot::picker->StartShooter(1.0); //full power
+	}
+	else
+	{	
+		Robot::picker->Shooting();
+ 		Robot::picker->RightWingOut(); 
+ 	 	Robot::picker->LeftWingOut(); 
+		if(!WingDelay)
+ 	 		Robot::picker->StartShooter(1.0); //full power
+	}
   }
 }
 
 // Called repeatedly when this Command is scheduled to run
 void ShootCommand::Execute() {
 	loops++;
+
+	if(!automode && loops == WINGTIME)
+	{
+ 	 	Robot::picker->RightWingStay(); 
+ 	 	Robot::picker->LeftWingStay(); 
+		if(WingDelay)
+ 	 		Robot::picker->StartShooter(1.0); //full power
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -47,12 +70,7 @@ bool ShootCommand::IsFinished() {
 	if(loops == 1) return true; // no safety
 	if(IsTimedOut()) return true;
 
-	if(loops >= WINGTIME) {
- 	 	Robot::picker->RightWingStay(); 
- 	 	Robot::picker->LeftWingStay(); 
-	}
-
-	if(loops <= MINSHOOT)
+	if(loops <= MINSHOOT + (WINGTIME*WingDelay))
 		return false;
 
 	float x = Robot::picker->GetShooterPot();

@@ -30,6 +30,7 @@ Subsystem("Picker")
 
 	valvepulse = false;
 	count = 0;
+	shooting = false;
 }
     
 void Picker::InitDefaultCommand() {
@@ -48,6 +49,7 @@ void Picker::StartShooter(float speed) {
 void Picker::StopShooter() {
 	shooter->Set(0);
 	compressor->Start();
+	shooting = false;
 }
 
 float Picker::GetShooterPot() {
@@ -57,6 +59,14 @@ float Picker::GetShooterPot() {
 void Picker::DeployRear() {
 	reardeploy->Set(true);
 	reardeployin->Set(false);
+}
+
+void Picker::Shooting() {
+	shooting = true;
+}
+
+void Picker::DoneShooting() {
+	shooting = false;
 }
 
 void Picker::RetractRear() {
@@ -122,6 +132,10 @@ void Picker::LeftRollerOff() {
 
 void Picker::TeleRun(Joystick * drive_joystick, Joystick * op_joystick) {
 	count++;
+
+	if(shooting)
+		return;
+
 	if(count > 8) {
 		count = 0;
 		valvepulse = !valvepulse;
@@ -176,7 +190,6 @@ void Picker::TeleRun(Joystick * drive_joystick, Joystick * op_joystick) {
 	}
 	else
 		LeftRollerOff();
-
 
 
 	if(op_joystick->GetRawButton(6)) {

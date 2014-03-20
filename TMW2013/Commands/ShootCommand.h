@@ -36,6 +36,8 @@ private:
 	Preferences* Prefs;
 	float CamStop;
 	DriverStation* DS;
+	bool WingDelay;
+	bool automode;
 };
 
 #endif

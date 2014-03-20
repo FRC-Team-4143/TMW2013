@@ -37,6 +37,8 @@ private:
 	float CamStop;
 	float ShootSpeed;
 	DriverStation * DS;
+	bool automode;
+	bool WingDelay;
 };
 
 #endif

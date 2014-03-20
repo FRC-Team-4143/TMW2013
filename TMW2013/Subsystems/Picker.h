@@ -24,6 +24,7 @@ private:
 	AnalogChannelVolt* shooterpot;
 	bool valvepulse;
 	int count;
+	bool shooting;
 
 public:
 	Picker();
@@ -46,5 +47,7 @@ public:
 	void RightRollerIntake();
 	void RightRollerCatch();
 	void RightRollerOff();
+	void Shooting();
+	void DoneShooting();
 };
 #endif

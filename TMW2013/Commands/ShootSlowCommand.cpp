@@ -11,35 +11,57 @@
 #define MINSHOOT 15
 #define SHOOTZONE .5
 #define WINGTIME 10
+#define SLOWMOD .5
+#define SHOOTSPEED .4
 
 #include "ShootSlowCommand.h"
 ShootSlowCommand::ShootSlowCommand(Joystick * joystick) {
 	Requires(Robot::picker);
-	SetTimeout(1.5);
+	SetTimeout(2.0);
 	Joystick1 = joystick;
   	Prefs = Preferences::GetInstance();
 	DS = DriverStation::GetInstance();
+	if(joystick)
+		automode = false;
+	else
+		automode = true;
 }
 // Called just before this Command runs the first time
 void ShootSlowCommand::Initialize() {
   loops = 1;
   printf("ShootSlowCommand called \n");
   //CamStop = Prefs->GetFloat("CamStop", 1.5);
-  CamStop = DS->GetAnalogIn(1) + .5;
+  CamStop = DS->GetAnalogIn(1) + SLOWMOD;
   //ShootSpeed = DS->GetAnalogIn(5);
-  ShootSpeed = .5;
+  ShootSpeed = SHOOTSPEED;
+  WingDelay = DS->GetDigitalIn(8);
   
   if(Joystick1 != NULL && Joystick1->GetRawAxis(3) > -.5)  // right trigger safety
 	loops = 0; // loop will be 1 first time through loop
   else {
-     //   Robot::picker->RightWingOut();
-     //    Robot::picker->LeftWingOut();
-  	Robot::picker->StartShooter(ShootSpeed);
+	if(automode)
+  		Robot::picker->StartShooter(ShootSpeed);
+	else
+	{
+		Robot::picker->Shooting();
+        	Robot::picker->RightWingOut();
+        	Robot::picker->LeftWingOut();
+		if(!WingDelay)
+  			Robot::picker->StartShooter(ShootSpeed);
+	}
   }
 }
 // Called repeatedly when this Command is scheduled to run
 void ShootSlowCommand::Execute() {
 	loops++;
+
+       if(!automode && loops == WINGTIME) {
+                Robot::picker->RightWingStay();
+                Robot::picker->LeftWingStay();
+		if(WingDelay)
+  			Robot::picker->StartShooter(ShootSpeed);
+        }
+
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShootSlowCommand::IsFinished() {
@@ -47,12 +69,7 @@ bool ShootSlowCommand::IsFinished() {
 
 	if(IsTimedOut()) return true; // too long --- what broke?
 
-     //  if(loops >= WINGTIME) {
-      //          Robot::picker->RightWingStay();
-       //         Robot::picker->LeftWingStay();
-       // }
-
-	if(loops <= MINSHOOT)
+	if(loops <= MINSHOOT + (WINGTIME*WingDelay))
 		return false; // give arm a chance to move
 
 	float x = Robot::picker->GetShooterPot();

@@ -20,7 +20,7 @@ ThreeBallAuto::ThreeBallAuto() {
 	bool drivevision = DS->GetDigitalIn(5);
 	bool settle1 = DS->GetDigitalIn(6);
 	bool settle2 = DS->GetDigitalIn(7);
-	bool settle3 = DS->GetDigitalIn(8);
+	//bool settle3 = DS->GetDigitalIn(8);
 
 	AddSequential(new Drive(0, 0, 0, true, 0)); // drive stop
 	AddSequential(new DeployRear(0)); // throw out back wait var seconds
@@ -33,23 +33,27 @@ ThreeBallAuto::ThreeBallAuto() {
 
 	AddSequential(new WaitCommand(1.5)); // wait to let ball settle
 
+	if(drivevision && drivestraight) {
+		AddSequential(new Drive(drivespeed, -drivespeed/2, 0, true, drivetime)); // drive left
+	}
+
 	if(drivevision) {
 		printf("visionpackket %c\n", Robot::visionpacket);
 		if(Robot::visionpacket == '1') //right hot target
-			AddSequential(new Drive(drivespeed, -drivespeed, 0, true, drivetime)); // drive left
+			AddSequential(new Drive(drivespeed, -drivespeed/2, 0, true, drivetime)); // drive left
 		else
-			AddSequential(new Drive(drivespeed, drivespeed, 0,  true, drivetime)); // drive right
+			AddSequential(new Drive(drivespeed, drivespeed/2, 0,  true, drivetime)); // drive right
 	} else if(drivestraight) {
 		AddSequential(new Drive(drivespeed, 0, 0, true, drivetime)); // drive straight
 	}
 
 
 	if(settle1)
-		AddSequential(new WaitCommand(1.0)); // wait to let ball settle
+		AddSequential(new WaitCommand(1.5)); // wait to let ball settle
 	if(settle2)
 		AddSequential(new WaitCommand(1.0)); // wait to let ball settle
-	if(settle3)
-		AddSequential(new WaitCommand(.5)); // wait to let ball settle
+	//if(settle3)
+		//AddSequential(new WaitCommand(.5)); // wait to let ball settle
 
 	if(topshoot)
 		AddSequential(new ShootCommand(NULL)); // shoot
