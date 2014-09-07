@@ -20,7 +20,7 @@
 
 
 #ifdef TESTSWERVE
-#define MAXTURNS 5
+#define MAXTURNS 100
 #else
 #define MAXTURNS 100
 #endif

@@ -61,7 +61,7 @@ I2C* RobotMap::m_i2c = NULL;
 
 
 #ifdef TESTSWERVE
-#define RATIO 2
+#define RATIO 1
 
 #define FRD 2
 #define FRP 1
