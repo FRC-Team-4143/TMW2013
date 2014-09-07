@@ -205,6 +205,6 @@ void Picker::TeleRun(Joystick * drive_joystick, Joystick * op_joystick) {
 		DeployRear();
 	}
 	else if(op_joystick->GetRawButton(7)) {
-		RetractRear();
+		//RetractRear();
 	}
 }

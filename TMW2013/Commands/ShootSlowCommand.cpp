@@ -12,7 +12,7 @@
 #define SHOOTZONE .5
 #define WINGTIME 10
 #define SLOWMOD .5
-#define SHOOTSPEED .4
+#define SHOOTSPEED .5
 
 #include "ShootSlowCommand.h"
 ShootSlowCommand::ShootSlowCommand(Joystick * joystick) {
@@ -31,7 +31,8 @@ void ShootSlowCommand::Initialize() {
   loops = 1;
   printf("ShootSlowCommand called \n");
   //CamStop = Prefs->GetFloat("CamStop", 1.5);
-  CamStop = DS->GetAnalogIn(1) + SLOWMOD;
+  //CamStop = DS->GetAnalogIn(1) + SLOWMOD;
+  CamStop = DS->GetAnalogIn(1) + DS->GetAnalogIn(3);
   //ShootSpeed = DS->GetAnalogIn(5);
   ShootSpeed = SHOOTSPEED;
   WingDelay = DS->GetDigitalIn(8);
@@ -69,7 +70,7 @@ bool ShootSlowCommand::IsFinished() {
 
 	if(IsTimedOut()) return true; // too long --- what broke?
 
-	if(loops <= MINSHOOT + (WINGTIME*WingDelay))
+	if(!automode && loops <= MINSHOOT + (WINGTIME*WingDelay))
 		return false; // give arm a chance to move
 
 	float x = Robot::picker->GetShooterPot();

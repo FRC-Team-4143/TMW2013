@@ -10,7 +10,8 @@ ThreeBallAuto::ThreeBallAuto() {
 
 	//float camstop = DS->GetAnalogIn(1);
 	float rearwait = DS->GetAnalogIn(2);
-	float drivespeed = DS->GetAnalogIn(3);
+	//float drivespeed = DS->GetAnalogIn(3);
+	float drivespeed = .587;
 	float drivetime = DS->GetAnalogIn(4);
 
 	bool topshoot = DS->GetDigitalIn(1);
