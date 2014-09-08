@@ -19,11 +19,7 @@
  */
 
 
-#ifdef TESTSWERVE
 #define MAXTURNS 100
-#else
-#define MAXTURNS 100
-#endif
 
 
 class RobotMap {
