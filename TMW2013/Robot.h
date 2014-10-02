@@ -45,12 +45,6 @@ public:
 	virtual void TeleopPeriodic();
 	virtual void TestPeriodic();
 
-    void updateNav6();
-
-    NetworkTable *table;
-    IMUAdvanced *imu;
-    //IMU *imu;
-    SerialPort *serial_port;
     bool first_iteration;
 	
 private:

@@ -47,6 +47,9 @@ Solenoid* RobotMap::reardeploy = NULL;
 DigitalModule* RobotMap::i2cmodule = NULL;
 I2C* RobotMap::m_i2c = NULL;
 
+IMUAdvanced* RobotMap::imu = NULL;
+SerialPort* RobotMap::serial_port = NULL;
+
 #define CONTINUOUS true
 #define P 1.0
 #define I 0.0
@@ -138,6 +141,8 @@ void RobotMap::init() {
 
 	leftroller = new Relay(3);
 	rightroller = new Relay(1);
+    serial_port = new SerialPort(57600);
+    imu = new IMUAdvanced(serial_port, 50);
 
 	m_i2c = DigitalModule::GetInstance(1)->GetI2C(0x04 << 1);
 	compressor->Start();

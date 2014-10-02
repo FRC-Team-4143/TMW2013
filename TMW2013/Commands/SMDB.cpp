@@ -21,6 +21,20 @@ void SMDB::Initialize() {
 }
 // Called repeatedly when this Command is scheduled to run
 void SMDB::Execute() {
+    SmartDashboard::PutBoolean( "IMU_Connected", RobotMap::imu->IsConnected());
+    SmartDashboard::PutNumber("IMU_Yaw", RobotMap::imu->GetYaw());
+    SmartDashboard::PutNumber("IMU_Pitch", RobotMap::imu->GetPitch());
+    SmartDashboard::PutNumber("IMU_Roll", RobotMap::imu->GetRoll());
+    SmartDashboard::PutNumber("IMU_CompassHeading", RobotMap::imu->GetCompassHeading());
+    SmartDashboard::PutNumber("IMU_Update_Count", RobotMap::imu->GetUpdateCount());
+    SmartDashboard::PutNumber("IMU_Byte_Count", RobotMap::imu->GetByteCount());
+
+    SmartDashboard::PutNumber("IMU_Accel_X", RobotMap::imu->GetWorldLinearAccelX());
+    SmartDashboard::PutNumber("IMU_Accel_Y", RobotMap::imu->GetWorldLinearAccelY());
+    SmartDashboard::PutBoolean("IMU_IsMoving", RobotMap::imu->IsMoving());
+    SmartDashboard::PutNumber("IMU_Temp_C", RobotMap::imu->GetTempC());
+    SmartDashboard::PutBoolean("IMU_IsCalibrating", RobotMap::imu->IsCalibrating());
+
 	SmartDashboard::PutNumber("FRoutputDrive", Robot::driveTrain->frontRightDrive->Get());
 	SmartDashboard::PutNumber("FLoutputDrive", Robot::driveTrain->frontLeftDrive->Get());
 	SmartDashboard::PutNumber("RRoutputDrive", Robot::driveTrain->rearRightDrive->Get());

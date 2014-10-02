@@ -84,13 +84,8 @@ void Robot::RobotInit() {
 //
 //	}
 
-    table = NetworkTable::GetTable("datatable");
-    serial_port = new SerialPort(57600);
-    uint8_t update_rate_hz = 50;
-    imu = new IMUAdvanced(serial_port,update_rate_hz);
-    //imu = new IMU(serial_port,update_rate_hz);
-    if ( imu ) {
-      LiveWindow::GetInstance()->AddSensor("IMU", "Gyro", imu);
+    if ( RobotMap::imu ) {
+      LiveWindow::GetInstance()->AddSensor("IMU", "Gyro", RobotMap::imu);
     }
     first_iteration = true;
 }
@@ -103,14 +98,13 @@ void Robot::DisabledPeriodic(){
 	Scheduler::GetInstance()->Run();
 
     if ( first_iteration ) {
-        bool is_calibrating = imu->IsCalibrating();
+        bool is_calibrating = RobotMap::imu->IsCalibrating();
         if ( !is_calibrating ) {
             Wait( 0.3 );
-            imu->ZeroYaw();
+            RobotMap::imu->ZeroYaw();
             first_iteration = false;
         }
     }
-    updateNav6();
 }
 
 void Robot::AutonomousInit() {
@@ -123,7 +117,6 @@ void Robot::AutonomousInit() {
 	
 void Robot::AutonomousPeriodic() {
 	Scheduler::GetInstance()->Run();
-    updateNav6();
 }	
 void Robot::TeleopInit() {
 	// This makes sure that the autonomous stops running when
@@ -138,28 +131,9 @@ void Robot::TeleopInit() {
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
 		Scheduler::GetInstance()->Run();
-    updateNav6();
-		
 }
 void Robot::TestPeriodic() {
 	lw->Run();
-    updateNav6();
-}
-
-void Robot::updateNav6() {
-    SmartDashboard::PutBoolean( "IMU_Connected", imu->IsConnected());
-    SmartDashboard::PutNumber("IMU_Yaw", imu->GetYaw());
-    SmartDashboard::PutNumber("IMU_Pitch", imu->GetPitch());
-    SmartDashboard::PutNumber("IMU_Roll", imu->GetRoll());
-    SmartDashboard::PutNumber("IMU_CompassHeading", imu->GetCompassHeading());
-    SmartDashboard::PutNumber("IMU_Update_Count", imu->GetUpdateCount());
-    SmartDashboard::PutNumber("IMU_Byte_Count", imu->GetByteCount());
-
-    SmartDashboard::PutNumber("IMU_Accel_X", imu->GetWorldLinearAccelX());
-    SmartDashboard::PutNumber("IMU_Accel_Y", imu->GetWorldLinearAccelY());
-    SmartDashboard::PutBoolean("IMU_IsMoving", imu->IsMoving());
-    SmartDashboard::PutNumber("IMU_Temp_C", imu->GetTempC());
-    SmartDashboard::PutBoolean("IMU_IsCalibrating", imu->IsCalibrating());
 }
 
 

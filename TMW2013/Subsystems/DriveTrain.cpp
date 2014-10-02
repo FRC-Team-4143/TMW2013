@@ -67,7 +67,9 @@ void DriveTrain::ToggleFrontBack(){
 }
 
 void DriveTrain::outputLED(){
-	RobotMap::m_i2c->Write(0x0, 40*driveFront);
+    float yaw = -RobotMap::imu->GetYaw() + 180;
+
+	RobotMap::m_i2c->Write(0x0, yaw * 80 / 360 );
 }
 
 bool DriveTrain::unwindwheel(AnalogChannelVolt * wheel, PIDController * pid){
@@ -104,6 +106,7 @@ void DriveTrain::doneunwind(){
 }
 
 void DriveTrain::Crab(float twist, float y, float x) {
+    outputLED();
 
   // stop PID loop if wires wrap.
   if(unwinding ||
