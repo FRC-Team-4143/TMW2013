@@ -205,6 +205,9 @@ void DriveTrain::Crab(float twist, float y, float x) {
 	
 }
 void DriveTrain::Steer(float radian, float speed, float a) {
+	SetSteerSetpoint(a,a,a,a);
+	SetDriveSpeed(0,0,0,0);
+    return;
 	
 	A=a;
 	

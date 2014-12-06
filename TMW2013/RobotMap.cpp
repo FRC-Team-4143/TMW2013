@@ -60,7 +60,7 @@ SerialPort* RobotMap::serial_port = NULL;
 #define POTMIN 0.2
 #define POTMAX 4.8
 #define STEERPOW  1.0
-#define TOLERANCE 0.2
+#define TOLERANCE 0.05
 #define PERIOD .02
 
 #define RATIO 1

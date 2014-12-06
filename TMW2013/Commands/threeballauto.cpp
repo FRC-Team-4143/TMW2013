@@ -4,6 +4,8 @@
 #include "ShootSlowCommand.h"
 #include "DeployRear.h"
 #include "PickerState.h"
+#include "LockRobot.h"
+#include "Rotate.h"
 
 ThreeBallAuto::ThreeBallAuto() {
 	DriverStation * DS = DriverStation::GetInstance();
@@ -11,7 +13,7 @@ ThreeBallAuto::ThreeBallAuto() {
 	//float camstop = DS->GetAnalogIn(1);
 	float rearwait = DS->GetAnalogIn(2);
 	//float drivespeed = DS->GetAnalogIn(3);
-	float drivespeed = .587;
+	float drivespeed = 1;
 	float drivetime = DS->GetAnalogIn(4);
 
 	bool topshoot = DS->GetDigitalIn(1);
@@ -23,7 +25,31 @@ ThreeBallAuto::ThreeBallAuto() {
 	bool settle2 = DS->GetDigitalIn(7);
 	//bool settle3 = DS->GetDigitalIn(8);
 
+    RobotMap::imu->ZeroYaw();
+    AddSequential(new LockRobot(2));
 	AddSequential(new Drive(0, 0, 0, true, 0)); // drive stop
+	AddSequential(new Rotate(90, true, 3)); // twist
+	AddSequential(new WaitCommand(2.0)); // wait to let ball settle
+	AddSequential(new Rotate(-90, true, 3)); // twist
+	AddSequential(new Drive(drivespeed, 0, 0, true, drivetime)); // drive straight
+	AddSequential(new WaitCommand(.25)); // wait to let ball settle
+    AddSequential(new LockRobot(1, 1.25));
+	AddSequential(new Drive(0, drivespeed, 0, true, drivetime)); // drive straight
+	AddSequential(new WaitCommand(.25)); // wait to let ball settle
+    AddSequential(new LockRobot(1, 2.5));
+	AddSequential(new Drive(-drivespeed, 0, 0, true, drivetime)); // drive straight
+	AddSequential(new WaitCommand(.25)); // wait to let ball settle
+    AddSequential(new LockRobot(1, 3.75));
+	AddSequential(new Drive(0, -drivespeed, 0, true, drivetime)); // drive straight
+	AddSequential(new WaitCommand(.25)); // wait to let ball settle
+    AddSequential(new LockRobot(1, 0));
+	AddSequential(new Drive(0, 0, 0, true, .4)); // stop
+	//AddSequential(new Drive(1.0, 0, .3, false, 2)); // drive arc
+	//AddSequential(new Drive(-1.0, 0, -.3, true, 2)); // drive reverse arc
+    return;
+    
+
+
 	AddSequential(new DeployRear(0)); // throw out back wait var seconds
 	AddSequential(new PickerState(1, 0, 1, 0, .2));
 	AddSequential(new PickerState(0, 0, 0, 0, 0));

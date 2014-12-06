@@ -10,6 +10,6 @@ file(GLOB_RECURSE SOURCE_CODE *.cpp)
 add_executable(my-code ${SOURCE_CODE})
 target_link_libraries(my-code ${WPILib_LIBRARY})
 
-add_make_deploy(my-code 10.41.43.2) # where your team number is xxyy
-#add_make_deploy2(my-code 10.88.86.2) # where your team number is xxyy
+#add_make_deploy(my-code 10.41.43.2) # where your team number is xxyy
+add_make_deploy(my-code 10.4.13.2) # where your team number is xxyy
 
